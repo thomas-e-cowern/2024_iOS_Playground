@@ -14,6 +14,7 @@
 		4DEB9ED12B49BFBE009E7B22 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DEB9ED02B49BFBE009E7B22 /* users.json */; };
 		4DEB9ED32B49C025009E7B22 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB9ED22B49C025009E7B22 /* User.swift */; };
 		4DEB9ED52B49C0AB009E7B22 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB9ED42B49C0AB009E7B22 /* Bundle-Decodable.swift */; };
+		4DEB9EDB2B49C6F0009E7B22 /* Binding+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB9EDA2B49C6F0009E7B22 /* Binding+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		4DEB9ED02B49BFBE009E7B22 /* users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		4DEB9ED22B49C025009E7B22 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4DEB9ED42B49C0AB009E7B22 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		4DEB9EDA2B49C6F0009E7B22 /* Binding+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		4DEB9EC12B49BEF3009E7B22 /* FilteringList */ = {
 			isa = PBXGroup;
 			children = (
+				4DEB9ED92B49C6C8009E7B22 /* Extensions */,
 				4DEB9ED82B49C0D4009E7B22 /* Utilities */,
 				4DEB9ED72B49C0C9009E7B22 /* Data */,
 				4DEB9ED62B49C0B9009E7B22 /* Models */,
@@ -98,6 +101,14 @@
 				4DEB9ED42B49C0AB009E7B22 /* Bundle-Decodable.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4DEB9ED92B49C6C8009E7B22 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4DEB9EDA2B49C6F0009E7B22 /* Binding+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DEB9EDB2B49C6F0009E7B22 /* Binding+Extensions.swift in Sources */,
 				4DEB9EC52B49BEF3009E7B22 /* ContentView.swift in Sources */,
 				4DEB9EC32B49BEF3009E7B22 /* FilteringListApp.swift in Sources */,
 				4DEB9ED32B49C025009E7B22 /* User.swift in Sources */,
