@@ -15,6 +15,7 @@
 		4DEB9ED32B49C025009E7B22 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB9ED22B49C025009E7B22 /* User.swift */; };
 		4DEB9ED52B49C0AB009E7B22 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB9ED42B49C0AB009E7B22 /* Bundle-Decodable.swift */; };
 		4DEB9EDB2B49C6F0009E7B22 /* Binding+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB9EDA2B49C6F0009E7B22 /* Binding+Extensions.swift */; };
+		4DEB9EDD2B4B26C2009E7B22 /* FilteringList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB9EDC2B4B26C2009E7B22 /* FilteringList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		4DEB9ED22B49C025009E7B22 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4DEB9ED42B49C0AB009E7B22 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		4DEB9EDA2B49C6F0009E7B22 /* Binding+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extensions.swift"; sourceTree = "<group>"; };
+		4DEB9EDC2B4B26C2009E7B22 /* FilteringList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				4DEB9EC42B49BEF3009E7B22 /* ContentView.swift */,
 				4DEB9EC62B49BEF6009E7B22 /* Assets.xcassets */,
 				4DEB9EC82B49BEF6009E7B22 /* Preview Content */,
+				4DEB9EDC2B4B26C2009E7B22 /* FilteringList.swift */,
 			);
 			path = FilteringList;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DEB9EDD2B4B26C2009E7B22 /* FilteringList.swift in Sources */,
 				4DEB9EDB2B49C6F0009E7B22 /* Binding+Extensions.swift in Sources */,
 				4DEB9EC52B49BEF3009E7B22 /* ContentView.swift in Sources */,
 				4DEB9EC32B49BEF3009E7B22 /* FilteringListApp.swift in Sources */,
