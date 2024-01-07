@@ -14,7 +14,7 @@ struct FilteringList<T: Identifiable, Content: View>: View {
     @State private var filteredString = ""
     
     let listItems: [T]
-    let filterKeyPaths: KeyPath<T, String>
+    let filterKeyPaths: [KeyPath<T, String>]
     let content: (T) -> Content
     
     var body: some View {
@@ -28,7 +28,7 @@ struct FilteringList<T: Identifiable, Content: View>: View {
         }
     }
     
-    init(_ data: [T], filterKeys: KeyPath<T, String>, @ViewBuilder rowContent: @escaping (T) -> Content) {
+    init(_ data: [T], filterKeys: KeyPath<T, String>..., @ViewBuilder rowContent: @escaping (T) -> Content) {
         listItems = data
         filterKeyPaths = filterKeys
         content = rowContent
@@ -40,9 +40,11 @@ struct FilteringList<T: Identifiable, Content: View>: View {
         if cleanedFilter.isEmpty {
             filteredItems = listItems
         } else {
-            filteredItems = listItems.filter {
-                element in element[keyPath: filterKeyPaths]
-                    .localizedCaseInsensitiveContains(cleanedFilter)
+            filteredItems = listItems.filter { element in
+                filterKeyPaths.contains {
+                    element[keyPath: $0]
+                        .localizedCaseInsensitiveContains(cleanedFilter)
+                }
             }
         }
     }
