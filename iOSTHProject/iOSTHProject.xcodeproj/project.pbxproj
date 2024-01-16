@@ -55,6 +55,7 @@
 		4DAC26972B56B03F000A4EC9 /* iOSTHProject */ = {
 			isa = PBXGroup;
 			children = (
+				4DAC26AB2B56B8C4000A4EC9 /* Features */,
 				4DAC26A62B56B0B6000A4EC9 /* Resources */,
 				4DAC26982B56B03F000A4EC9 /* iOSTHProjectApp.swift */,
 				4DAC269A2B56B03F000A4EC9 /* ContentView.swift */,
@@ -79,6 +80,125 @@
 				4DAC26A92B56B72E000A4EC9 /* Theme.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		4DAC26AB2B56B8C4000A4EC9 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				4DAC26AC2B56B8D0000A4EC9 /* People */,
+				4DAC26AD2B56B8D6000A4EC9 /* Create */,
+				4DAC26AE2B56B8E1000A4EC9 /* Detail */,
+				4DAC26AF2B56B8E9000A4EC9 /* Settings */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		4DAC26AC2B56B8D0000A4EC9 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				4DAC26B02B56B923000A4EC9 /* Views */,
+				4DAC26B12B56B92C000A4EC9 /* Models */,
+				4DAC26B22B56B931000A4EC9 /* ViewModels */,
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
+		4DAC26AD2B56B8D6000A4EC9 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				4DAC26B52B56B95C000A4EC9 /* Views */,
+				4DAC26B42B56B955000A4EC9 /* Models */,
+				4DAC26B32B56B948000A4EC9 /* ViewModels */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
+		4DAC26AE2B56B8E1000A4EC9 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				4DAC26B82B56B96F000A4EC9 /* Views */,
+				4DAC26B72B56B96B000A4EC9 /* Models */,
+				4DAC26B62B56B963000A4EC9 /* ViewModels */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		4DAC26AF2B56B8E9000A4EC9 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4DAC26B92B56B977000A4EC9 /* Views */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		4DAC26B02B56B923000A4EC9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4DAC26B12B56B92C000A4EC9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4DAC26B22B56B931000A4EC9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4DAC26B32B56B948000A4EC9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4DAC26B42B56B955000A4EC9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4DAC26B52B56B95C000A4EC9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4DAC26B62B56B963000A4EC9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4DAC26B72B56B96B000A4EC9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4DAC26B82B56B96F000A4EC9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4DAC26B92B56B977000A4EC9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
