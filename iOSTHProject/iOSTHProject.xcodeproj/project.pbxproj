@@ -11,6 +11,8 @@
 		4DAC269B2B56B03F000A4EC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC269A2B56B03F000A4EC9 /* ContentView.swift */; };
 		4DAC269D2B56B042000A4EC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DAC269C2B56B042000A4EC9 /* Assets.xcassets */; };
 		4DAC26A02B56B042000A4EC9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DAC269F2B56B042000A4EC9 /* Preview Assets.xcassets */; };
+		4DAC26A82B56B1EC000A4EC9 /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC26A72B56B1EC000A4EC9 /* Symbols.swift */; };
+		4DAC26AA2B56B72E000A4EC9 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC26A92B56B72E000A4EC9 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		4DAC269A2B56B03F000A4EC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4DAC269C2B56B042000A4EC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DAC269F2B56B042000A4EC9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4DAC26A72B56B1EC000A4EC9 /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
+		4DAC26A92B56B72E000A4EC9 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 		4DAC26972B56B03F000A4EC9 /* iOSTHProject */ = {
 			isa = PBXGroup;
 			children = (
+				4DAC26A62B56B0B6000A4EC9 /* Resources */,
 				4DAC26982B56B03F000A4EC9 /* iOSTHProjectApp.swift */,
 				4DAC269A2B56B03F000A4EC9 /* ContentView.swift */,
 				4DAC269C2B56B042000A4EC9 /* Assets.xcassets */,
@@ -65,6 +70,15 @@
 				4DAC269F2B56B042000A4EC9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4DAC26A62B56B0B6000A4EC9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4DAC26A72B56B1EC000A4EC9 /* Symbols.swift */,
+				4DAC26A92B56B72E000A4EC9 /* Theme.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +151,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DAC26A82B56B1EC000A4EC9 /* Symbols.swift in Sources */,
+				4DAC26AA2B56B72E000A4EC9 /* Theme.swift in Sources */,
 				4DAC269B2B56B03F000A4EC9 /* ContentView.swift in Sources */,
 				4DAC26992B56B03F000A4EC9 /* iOSTHProjectApp.swift in Sources */,
 			);
