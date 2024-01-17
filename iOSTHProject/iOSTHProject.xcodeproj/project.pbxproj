@@ -15,6 +15,7 @@
 		4D40D5EC2B581B5300B561CB /* StaticJSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40D5EB2B581B5300B561CB /* StaticJSONMapper.swift */; };
 		4D40D5EE2B582A6100B561CB /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40D5ED2B582A6100B561CB /* PeopleView.swift */; };
 		4D40D5F02B5841AC00B561CB /* PersonItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40D5EF2B5841AC00B561CB /* PersonItemView.swift */; };
+		4D40D5F42B58446D00B561CB /* PillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40D5F32B58446D00B561CB /* PillView.swift */; };
 		4DAC26992B56B03F000A4EC9 /* iOSTHProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC26982B56B03F000A4EC9 /* iOSTHProjectApp.swift */; };
 		4DAC269B2B56B03F000A4EC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC269A2B56B03F000A4EC9 /* ContentView.swift */; };
 		4DAC269D2B56B042000A4EC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DAC269C2B56B042000A4EC9 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		4D40D5EB2B581B5300B561CB /* StaticJSONMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticJSONMapper.swift; sourceTree = "<group>"; };
 		4D40D5ED2B582A6100B561CB /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		4D40D5EF2B5841AC00B561CB /* PersonItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonItemView.swift; sourceTree = "<group>"; };
+		4D40D5F32B58446D00B561CB /* PillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillView.swift; sourceTree = "<group>"; };
 		4DAC26952B56B03F000A4EC9 /* iOSTHProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTHProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DAC26982B56B03F000A4EC9 /* iOSTHProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTHProjectApp.swift; sourceTree = "<group>"; };
 		4DAC269A2B56B03F000A4EC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 		4D40D5E62B581A7400B561CB /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				4D40D5F12B58444700B561CB /* Views */,
 				4D40D5EA2B581B4000B561CB /* Mapper */,
 				4D40D5E72B581A8200B561CB /* Models */,
 			);
@@ -85,6 +88,14 @@
 				4D40D5EB2B581B5300B561CB /* StaticJSONMapper.swift */,
 			);
 			path = Mapper;
+			sourceTree = "<group>";
+		};
+		4D40D5F12B58444700B561CB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4D40D5F32B58446D00B561CB /* PillView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4DAC268C2B56B03F000A4EC9 = {
@@ -337,6 +348,7 @@
 				4DAC26AA2B56B72E000A4EC9 /* Theme.swift in Sources */,
 				4DAC269B2B56B03F000A4EC9 /* ContentView.swift in Sources */,
 				4DAC26992B56B03F000A4EC9 /* iOSTHProjectApp.swift in Sources */,
+				4D40D5F42B58446D00B561CB /* PillView.swift in Sources */,
 				4D40D5E32B5818A300B561CB /* UserDetailReponse.swift in Sources */,
 				4D40D5E52B58196400B561CB /* UsersResponse.swift in Sources */,
 				4D40D5F02B5841AC00B561CB /* PersonItemView.swift in Sources */,

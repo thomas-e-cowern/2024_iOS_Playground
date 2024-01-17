@@ -18,12 +18,7 @@ struct PersonItemView: View {
                 .frame(height: 130)
             VStack(alignment: .leading) {
                 
-                Text("#\(user)")
-                    .font(.system(.caption, design: .rounded).bold())
-                    .foregroundStyle(.white)
-                    .padding(.horizontal, 9)
-                    .padding(.vertical, 4)
-                    .background(Theme.pill, in: Capsule())
+                PillView(id: user)
                 
                 Text("<first name> <last name>")
                     .font(.system(.body, design: .rounded))
