@@ -12,7 +12,11 @@ struct iOSTHProjectApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                ContentView()
+                PeopleView()
+                    .tabItem {
+                        Symbols.person
+                        Text("Home")
+                    }
             }
         }
     }
