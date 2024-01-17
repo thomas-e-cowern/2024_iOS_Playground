@@ -10,6 +10,7 @@
 		4D40D5DF2B58126A00B561CB /* UsersStaticData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D40D5DE2B58126A00B561CB /* UsersStaticData.json */; };
 		4D40D5E12B5812CA00B561CB /* SingleUserData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D40D5E02B5812CA00B561CB /* SingleUserData.json */; };
 		4D40D5E32B5818A300B561CB /* UserDetailReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40D5E22B5818A300B561CB /* UserDetailReponse.swift */; };
+		4D40D5E52B58196400B561CB /* UsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40D5E42B58196400B561CB /* UsersResponse.swift */; };
 		4DAC26992B56B03F000A4EC9 /* iOSTHProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC26982B56B03F000A4EC9 /* iOSTHProjectApp.swift */; };
 		4DAC269B2B56B03F000A4EC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC269A2B56B03F000A4EC9 /* ContentView.swift */; };
 		4DAC269D2B56B042000A4EC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DAC269C2B56B042000A4EC9 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		4D40D5DE2B58126A00B561CB /* UsersStaticData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UsersStaticData.json; sourceTree = "<group>"; };
 		4D40D5E02B5812CA00B561CB /* SingleUserData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SingleUserData.json; sourceTree = "<group>"; };
 		4D40D5E22B5818A300B561CB /* UserDetailReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailReponse.swift; sourceTree = "<group>"; };
+		4D40D5E42B58196400B561CB /* UsersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersResponse.swift; sourceTree = "<group>"; };
 		4DAC26952B56B03F000A4EC9 /* iOSTHProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTHProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DAC26982B56B03F000A4EC9 /* iOSTHProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTHProjectApp.swift; sourceTree = "<group>"; };
 		4DAC269A2B56B03F000A4EC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		4DAC26B12B56B92C000A4EC9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4D40D5E42B58196400B561CB /* UsersResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				4DAC269B2B56B03F000A4EC9 /* ContentView.swift in Sources */,
 				4DAC26992B56B03F000A4EC9 /* iOSTHProjectApp.swift in Sources */,
 				4D40D5E32B5818A300B561CB /* UserDetailReponse.swift in Sources */,
+				4D40D5E52B58196400B561CB /* UsersResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
