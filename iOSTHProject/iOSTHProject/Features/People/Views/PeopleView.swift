@@ -14,7 +14,7 @@ struct PeopleView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Theme.background
+                background
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 16) {
                         ForEach(0...5, id: \.self) { item in
@@ -51,13 +51,7 @@ struct PeopleView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
-                    Button(action: {
-                        
-                    }, label: {
-                        Symbols.plus
-                            .font(.system(.headline, design: .rounded))
-                            .bold()
-                    })
+                    create
                 }
             }
         }
@@ -66,4 +60,20 @@ struct PeopleView: View {
 
 #Preview {
     PeopleView()
+}
+
+extension PeopleView {
+    var create: some View {
+        Button(action: {
+            
+        }, label: {
+            Symbols.plus
+                .font(.system(.headline, design: .rounded))
+                .bold()
+        })
+    }
+    
+    var background: some View {
+        Theme.background
+    }
 }
