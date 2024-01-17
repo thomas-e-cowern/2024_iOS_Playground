@@ -20,7 +20,7 @@
         }
       ],
       "color" : {
-        "platform" : "XR",
+        "platform" : "ios",
         "reference" : "secondarySystemBackgroundColor"
       },
       "idiom" : "universal"
