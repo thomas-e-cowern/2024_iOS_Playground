@@ -12,6 +12,7 @@
 		4D40D5E32B5818A300B561CB /* UserDetailReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40D5E22B5818A300B561CB /* UserDetailReponse.swift */; };
 		4D40D5E52B58196400B561CB /* UsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40D5E42B58196400B561CB /* UsersResponse.swift */; };
 		4D40D5E92B581AA900B561CB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40D5E82B581AA900B561CB /* Models.swift */; };
+		4D40D5EC2B581B5300B561CB /* StaticJSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40D5EB2B581B5300B561CB /* StaticJSONMapper.swift */; };
 		4DAC26992B56B03F000A4EC9 /* iOSTHProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC26982B56B03F000A4EC9 /* iOSTHProjectApp.swift */; };
 		4DAC269B2B56B03F000A4EC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC269A2B56B03F000A4EC9 /* ContentView.swift */; };
 		4DAC269D2B56B042000A4EC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DAC269C2B56B042000A4EC9 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		4D40D5E22B5818A300B561CB /* UserDetailReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailReponse.swift; sourceTree = "<group>"; };
 		4D40D5E42B58196400B561CB /* UsersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersResponse.swift; sourceTree = "<group>"; };
 		4D40D5E82B581AA900B561CB /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		4D40D5EB2B581B5300B561CB /* StaticJSONMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticJSONMapper.swift; sourceTree = "<group>"; };
 		4DAC26952B56B03F000A4EC9 /* iOSTHProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTHProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DAC26982B56B03F000A4EC9 /* iOSTHProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTHProjectApp.swift; sourceTree = "<group>"; };
 		4DAC269A2B56B03F000A4EC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 		4D40D5E62B581A7400B561CB /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				4D40D5EA2B581B4000B561CB /* Mapper */,
 				4D40D5E72B581A8200B561CB /* Models */,
 			);
 			path = Base;
@@ -70,6 +73,14 @@
 				4D40D5E82B581AA900B561CB /* Models.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4D40D5EA2B581B4000B561CB /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				4D40D5EB2B581B5300B561CB /* StaticJSONMapper.swift */,
+			);
+			path = Mapper;
 			sourceTree = "<group>";
 		};
 		4DAC268C2B56B03F000A4EC9 = {
@@ -314,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D40D5EC2B581B5300B561CB /* StaticJSONMapper.swift in Sources */,
 				4DAC26A82B56B1EC000A4EC9 /* Symbols.swift in Sources */,
 				4DAC26AA2B56B72E000A4EC9 /* Theme.swift in Sources */,
 				4DAC269B2B56B03F000A4EC9 /* ContentView.swift in Sources */,
