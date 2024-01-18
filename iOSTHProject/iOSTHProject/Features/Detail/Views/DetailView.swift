@@ -15,23 +15,8 @@ struct DetailView: View {
             
             VStack(alignment: .leading, spacing: 18) {
                 
-                VStack(alignment: .leading, spacing: 8) {
-                    
-                    PillView(id: 8)
-                    
-
-                    Group {
-                        firstName
-                        
-                        lastName
-                        
-                        email
-                    }
-                    .foregroundColor(Theme.text)
-                }
-                .padding(.horizontal, 8)
-                .padding(.vertical, 18)
-                .background(Theme.detailBackground, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                general
+                
             }
             .padding()
         }
@@ -49,6 +34,22 @@ private extension DetailView {
 }
 
 private extension DetailView {
+    
+    var general: some View {
+        VStack(alignment: .leading, spacing: 8, content: {
+            PillView(id: 0)
+            
+            Group {
+                firstName
+                lastName
+                email
+            }
+            .foregroundStyle(Theme.text)
+        })
+        .padding(.horizontal, 9)
+        .padding(.vertical, 10)
+        .background(Theme.detailBackground, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+    }
     
     @ViewBuilder
     var firstName: some View {
