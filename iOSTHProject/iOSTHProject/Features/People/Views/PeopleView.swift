@@ -19,7 +19,7 @@ struct PeopleView: View {
                 background
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 16) {
-                        ForEach(users, id: \.self) { user in
+                        ForEach(users, id: \.id) { user in
                             PersonItemView(user: user)
                         }
                     }
@@ -35,8 +35,10 @@ struct PeopleView: View {
             }
             .onAppear {
                 do {
-                    let res = try StaticJSONMapper.decode(file: "UserStaticData", type: UsersResponse
+                    let res = try StaticJSONMapper.decode(file: "UsersStaticData", type: UsersResponse
                         .self)
+                    
+                    users = res.data
                 } catch {
                     // TODO Hande error
                     print("Error in people view: \(error.localizedDescription)")

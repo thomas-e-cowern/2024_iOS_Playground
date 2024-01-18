@@ -20,7 +20,7 @@ struct PersonItemView: View {
                 
                 PillView(id: user.id)
                 
-                Text("<first name> <last name>")
+                Text("\(user.firstName) \(user.lastName)")
                     .font(.system(.body, design: .rounded))
                     .foregroundStyle(Theme.text)
                     
@@ -35,7 +35,13 @@ struct PersonItemView: View {
     }
 }
 
-//#Preview {
-//    PersonItemView(user: )
-//        .frame(width: 250)
-//}
+#Preview {
+    
+    var previewUser: User {
+        let users = try! StaticJSONMapper.decode(file: "UsersStaticData", type: UsersResponse.self)
+        
+        return users.data.first!
+    }
+    
+    return PersonItemView(user: previewUser)
+}
