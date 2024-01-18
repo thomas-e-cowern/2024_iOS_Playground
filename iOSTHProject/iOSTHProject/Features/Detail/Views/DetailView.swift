@@ -19,14 +19,21 @@ struct DetailView: View {
                     
                     PillView(id: 8)
                     
-                    firstName
-                    
-                    lastName
-                    
-                    email
+
+                    Group {
+                        firstName
+                        
+                        lastName
+                        
+                        email
+                    }
+                    .foregroundColor(Theme.text)
                 }
+                .padding(.horizontal, 8)
+                .padding(.vertical, 18)
+                .background(Theme.detailBackground, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
             }
-            
+            .padding()
         }
     }
 }
