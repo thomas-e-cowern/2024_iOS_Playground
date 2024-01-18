@@ -15,7 +15,14 @@ struct DetailView: View {
             
             VStack(alignment: .leading, spacing: 18) {
                 
-                general
+                Group {
+                    general
+                    link
+                }
+                .padding(.horizontal, 9)
+                .padding(.vertical, 10)
+                .background(Theme.detailBackground, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                
                 
             }
             .padding()
@@ -28,8 +35,30 @@ struct DetailView: View {
 }
 
 private extension DetailView {
+    
     var background: some View {
         Theme.background
+    }
+    
+    var link: some View {
+        Link(destination: URL(string: "https://regres.in/#support-heading")!, label: {
+            
+            VStack(alignment: .leading, spacing: 8, content: {
+                Text("Support Regres")
+                    .foregroundStyle(Theme.text)
+                    .font(.system(.body, design: .rounded)
+                        .weight(.semibold)
+                    )
+                
+                Text("https://regres.in/#support-heading")
+            })
+            
+            Spacer()
+            
+            Symbols.link
+                .font(.system(.title3, design: .rounded))
+        })
+
     }
 }
 
@@ -46,9 +75,7 @@ private extension DetailView {
             }
             .foregroundStyle(Theme.text)
         })
-        .padding(.horizontal, 9)
-        .padding(.vertical, 10)
-        .background(Theme.detailBackground, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+        
     }
     
     @ViewBuilder
