@@ -11,23 +11,35 @@ struct PeopleView: View {
     
     private let columns = Array(repeating: GridItem(.flexible()), count: 2)
     
+    @State private var users: [User] = []
+    
     var body: some View {
         NavigationStack {
             ZStack {
                 background
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 16) {
-                        ForEach(0...5, id: \.self) { item in
-                            PersonItemView(user: item)
+                        ForEach(users, id: \.self) { user in
+                            PersonItemView(user: user)
                         }
                     }
                     .padding()
                 }
                 .navigationTitle("People")
+                
             }
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     create
+                }
+            }
+            .onAppear {
+                do {
+                    let res = try StaticJSONMapper.decode(file: "UserStaticData", type: UsersResponse
+                        .self)
+                } catch {
+                    // TODO Hande error
+                    print("Error in people view: \(error.localizedDescription)")
                 }
             }
         }

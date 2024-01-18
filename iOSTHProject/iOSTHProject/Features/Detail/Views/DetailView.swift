@@ -18,6 +18,8 @@ struct DetailView: View {
             
             VStack(alignment: .leading, spacing: 18) {
                 
+                avatar
+                
                 Group {
                     general
                     link
@@ -30,6 +32,7 @@ struct DetailView: View {
             }
             .padding()
         }
+        .navigationTitle("Details")
         .onAppear {
             do {
                 userInfo = try StaticJSONMapper.decode(file: "SingleUserData", type: UserDetailResponse.self)
@@ -42,13 +45,31 @@ struct DetailView: View {
 }
 
 #Preview {
-    DetailView()
+    NavigationStack {
+        DetailView()
+    }
 }
 
 private extension DetailView {
     
     var background: some View {
         Theme.background
+    }
+    
+    @ViewBuilder
+    var avatar: some View {
+        if let userAvatar = userInfo?.data.avatar, let avatarUrl = URL(string: userAvatar) {
+            AsyncImage(url: avatarUrl) { image in
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(height: 250)
+                    .clipped()
+            } placeholder: {
+                ProgressView()
+            }
+            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+        }
     }
     
     @ViewBuilder
