@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct DetailView: View {
+    
+    @State private var userInfo: UserDetailResponse?
+    
     var body: some View {
         ZStack {
             
@@ -27,6 +30,14 @@ struct DetailView: View {
             }
             .padding()
         }
+        .onAppear {
+            do {
+                userInfo = try StaticJSONMapper.decode(file: "SingleUserData", type: UserDetailResponse.self)
+            } catch {
+            // TODO: Handle errors
+                print("Error in detail view onAppear: \(error.localizedDescription)")
+            }
+        }
     }
 }
 
@@ -40,25 +51,32 @@ private extension DetailView {
         Theme.background
     }
     
+    @ViewBuilder
     var link: some View {
-        Link(destination: URL(string: "https://regres.in/#support-heading")!, label: {
+        
+        if let supportString = userInfo?.support.url,
+           let supportUrl = URL(string: supportString),
+           let supportText = userInfo?.support.text {
             
-            VStack(alignment: .leading, spacing: 8, content: {
-                Text("Support Regres")
-                    .foregroundStyle(Theme.text)
-                    .font(.system(.body, design: .rounded)
-                        .weight(.semibold)
-                    )
+            Link(destination: supportUrl, label: {
                 
-                Text("https://regres.in/#support-heading")
+                VStack(alignment: .leading, spacing: 8, content: {
+                    Text(supportText)
+                        .foregroundStyle(Theme.text)
+                        .font(.system(.body, design: .rounded)
+                            .weight(.semibold)
+                        )
+                        .multilineTextAlignment(.leading)
+                    
+                    Text(supportString)
+                })
+                
+                Spacer()
+                
+                Symbols.link
+                    .font(.system(.title3, design: .rounded))
             })
-            
-            Spacer()
-            
-            Symbols.link
-                .font(.system(.title3, design: .rounded))
-        })
-
+        }
     }
 }
 
@@ -66,7 +84,7 @@ private extension DetailView {
     
     var general: some View {
         VStack(alignment: .leading, spacing: 8, content: {
-            PillView(id: 0)
+            PillView(id: userInfo?.data.id ?? 0)
             
             Group {
                 firstName
@@ -85,7 +103,7 @@ private extension DetailView {
                 .weight(.semibold)
             )
         
-        Text("<first name here>")
+        Text(userInfo?.data.firstName ?? "-")
             .font(.system(.subheadline, design: .rounded))
         
         Divider()
@@ -98,7 +116,7 @@ private extension DetailView {
                 .weight(.semibold)
             )
         
-        Text("<last name here>")
+        Text(userInfo?.data.lastName ?? "-")
             .font(.system(.subheadline, design: .rounded))
         
         Divider()
@@ -111,7 +129,7 @@ private extension DetailView {
                 .weight(.semibold)
             )
         
-        Text("<email here>")
+        Text(userInfo?.data.email ?? "-")
             .font(.system(.subheadline, design: .rounded))
     }
 }
