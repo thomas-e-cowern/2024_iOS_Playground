@@ -16,6 +16,7 @@
 		4D40D5EE2B582A6100B561CB /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40D5ED2B582A6100B561CB /* PeopleView.swift */; };
 		4D40D5F02B5841AC00B561CB /* PersonItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40D5EF2B5841AC00B561CB /* PersonItemView.swift */; };
 		4D40D5F42B58446D00B561CB /* PillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40D5F32B58446D00B561CB /* PillView.swift */; };
+		4D67FD502B5956A300B91F17 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D67FD4F2B5956A300B91F17 /* DetailView.swift */; };
 		4DAC26992B56B03F000A4EC9 /* iOSTHProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC26982B56B03F000A4EC9 /* iOSTHProjectApp.swift */; };
 		4DAC269B2B56B03F000A4EC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC269A2B56B03F000A4EC9 /* ContentView.swift */; };
 		4DAC269D2B56B042000A4EC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DAC269C2B56B042000A4EC9 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		4D40D5ED2B582A6100B561CB /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		4D40D5EF2B5841AC00B561CB /* PersonItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonItemView.swift; sourceTree = "<group>"; };
 		4D40D5F32B58446D00B561CB /* PillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillView.swift; sourceTree = "<group>"; };
+		4D67FD4F2B5956A300B91F17 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		4DAC26952B56B03F000A4EC9 /* iOSTHProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTHProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DAC26982B56B03F000A4EC9 /* iOSTHProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTHProjectApp.swift; sourceTree = "<group>"; };
 		4DAC269A2B56B03F000A4EC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 		4DAC26B82B56B96F000A4EC9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4D67FD4F2B5956A300B91F17 /* DetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D40D5EC2B581B5300B561CB /* StaticJSONMapper.swift in Sources */,
+				4D67FD502B5956A300B91F17 /* DetailView.swift in Sources */,
 				4DAC26A82B56B1EC000A4EC9 /* Symbols.swift in Sources */,
 				4D40D5EE2B582A6100B561CB /* PeopleView.swift in Sources */,
 				4DAC26AA2B56B72E000A4EC9 /* Theme.swift in Sources */,
