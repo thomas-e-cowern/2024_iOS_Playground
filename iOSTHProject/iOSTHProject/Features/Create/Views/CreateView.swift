@@ -8,17 +8,29 @@
 import SwiftUI
 
 struct CreateView: View {
+    
+    @Environment(\.dismiss) private var dismiss
+    
     var body: some View {
-        Form {
-            
-            firstName
-            lastName
-            job
-            
-            Section {
-                submit
+        NavigationView {
+            Form {
+                
+                firstName
+                lastName
+                job
+                
+                Section {
+                    submit
+                }
+            }
+            .navigationTitle("Create")
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    done
+                }
             }
         }
+        
     }
 }
 
@@ -43,5 +55,13 @@ private extension CreateView {
         Button("Submit") {
             // TODO submit info to API
         }
+    }
+    
+    var done: some View {
+        Button(action: {
+            dismiss()
+        }, label: {
+            Text("Done")
+        })
     }
 }

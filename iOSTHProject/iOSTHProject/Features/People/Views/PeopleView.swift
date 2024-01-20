@@ -12,6 +12,7 @@ struct PeopleView: View {
     private let columns = Array(repeating: GridItem(.flexible()), count: 2)
     
     @State private var users: [User] = []
+    @State private var showCreate: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -48,6 +49,9 @@ struct PeopleView: View {
                     print("Error in people view: \(error.localizedDescription)")
                 }
             }
+            .sheet(isPresented: $showCreate, content: {
+                CreateView()
+            })
         }
     }
 }
@@ -59,7 +63,7 @@ struct PeopleView: View {
 extension PeopleView {
     var create: some View {
         Button(action: {
-            
+            showCreate.toggle()
         }, label: {
             Symbols.plus
                 .font(.system(.headline, design: .rounded))
