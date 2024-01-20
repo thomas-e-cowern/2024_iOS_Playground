@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D29019E2B5C2F6F00C07156 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D29019D2B5C2F6F00C07156 /* CreateView.swift */; };
 		4D40D5DF2B58126A00B561CB /* UsersStaticData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D40D5DE2B58126A00B561CB /* UsersStaticData.json */; };
 		4D40D5E12B5812CA00B561CB /* SingleUserData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D40D5E02B5812CA00B561CB /* SingleUserData.json */; };
 		4D40D5E32B5818A300B561CB /* UserDetailReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40D5E22B5818A300B561CB /* UserDetailReponse.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D29019D2B5C2F6F00C07156 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		4D40D5DE2B58126A00B561CB /* UsersStaticData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UsersStaticData.json; sourceTree = "<group>"; };
 		4D40D5E02B5812CA00B561CB /* SingleUserData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SingleUserData.json; sourceTree = "<group>"; };
 		4D40D5E22B5818A300B561CB /* UserDetailReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailReponse.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 		4DAC26B52B56B95C000A4EC9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4D29019D2B5C2F6F00C07156 /* CreateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				4DAC269B2B56B03F000A4EC9 /* ContentView.swift in Sources */,
 				4DAC26992B56B03F000A4EC9 /* iOSTHProjectApp.swift in Sources */,
 				4D40D5F42B58446D00B561CB /* PillView.swift in Sources */,
+				4D29019E2B5C2F6F00C07156 /* CreateView.swift in Sources */,
 				4D40D5E32B5818A300B561CB /* UserDetailReponse.swift in Sources */,
 				4D40D5E52B58196400B561CB /* UsersResponse.swift in Sources */,
 				4D40D5F02B5841AC00B561CB /* PersonItemView.swift in Sources */,
