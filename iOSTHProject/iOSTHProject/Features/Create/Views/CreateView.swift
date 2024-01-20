@@ -10,14 +10,13 @@ import SwiftUI
 struct CreateView: View {
     var body: some View {
         Form {
-            TextField("First Name", text: .constant(""))
-            TextField("Last Name", text: .constant(""))
-            TextField("Job", text: .constant(""))
+            
+            firstName
+            lastName
+            job
             
             Section {
-                Button("Submit") {
-                    // TODO submit info to API
-                }
+                submit
             }
         }
     }
@@ -28,5 +27,21 @@ struct CreateView: View {
 }
 
 private extension CreateView {
+    var firstName: some View {
+        TextField("First Name", text: .constant(""))
+    }
     
+    var lastName: some View {
+        TextField("Last Name", text: .constant(""))
+    }
+    
+    var job: some View {
+        TextField("Job", text: .constant(""))
+    }
+    
+    var submit: some View {
+        Button("Submit") {
+            // TODO submit info to API
+        }
+    }
 }
