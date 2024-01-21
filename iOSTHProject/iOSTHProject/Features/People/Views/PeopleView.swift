@@ -39,14 +39,14 @@ struct PeopleView: View {
                 }
             }
             .onAppear {
-                do {
-                    let res = try StaticJSONMapper.decode(file: "UsersStaticData", type: UsersResponse
-                        .self)
-                    
-                    users = res.data
-                } catch {
-                    // TODO Hande error
-                    print("Error in people view: \(error.localizedDescription)")
+     
+                NetworkingManager.shared.request("https://reqres.in/api/users", type: UsersResponse.self) { res in
+                    switch res {
+                    case.success(let response):
+                        users = response.data
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    }
                 }
             }
             .sheet(isPresented: $showCreate, content: {
