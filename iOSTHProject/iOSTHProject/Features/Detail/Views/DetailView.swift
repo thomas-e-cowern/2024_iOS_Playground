@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DetailView: View {
     
+    let userId: Int
     @State private var userInfo: UserDetailResponse?
     
     var body: some View {
@@ -45,8 +46,15 @@ struct DetailView: View {
 }
 
 #Preview {
-    NavigationStack {
-        DetailView()
+    
+    var previewUserId: Int {
+        let users = try! StaticJSONMapper.decode(file: "UsersStaticData", type: UsersResponse.self)
+        
+        return users.data.first?.id ?? 1
+    }
+    
+    return NavigationStack {
+       DetailView(userId: previewUserId)
     }
 }
 
