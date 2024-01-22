@@ -31,6 +31,11 @@ struct CreateView: View {
                     done
                 }
             }
+            .onChange(of: vm.state) { formState in
+                if formState == .successful {
+                    dismiss()
+                }
+            }
         }
         
     }
@@ -61,7 +66,7 @@ private extension CreateView {
     
     var done: some View {
         Button(action: {
-            dismiss()
+            //
         }, label: {
             Text("Done")
         })
