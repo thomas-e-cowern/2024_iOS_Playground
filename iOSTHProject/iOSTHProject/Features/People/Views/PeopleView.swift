@@ -11,7 +11,7 @@ struct PeopleView: View {
     
     private let columns = Array(repeating: GridItem(.flexible()), count: 2)
     
-    @State private var users: [User] = []
+    @StateObject private var vm = PeopleViewModel()
     @State private var showCreate: Bool = false
     
     var body: some View {
@@ -20,7 +20,7 @@ struct PeopleView: View {
                 background
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 16) {
-                        ForEach(users, id: \.id) { user in
+                        ForEach(vm.users, id: \.id) { user in
                             NavigationLink {
                                 DetailView()
                             } label: {
@@ -39,8 +39,8 @@ struct PeopleView: View {
                 }
             }
             .onAppear {
-     
-   
+                vm.fetchUsers()
+
             }
             .sheet(isPresented: $showCreate, content: {
                 CreateView()
