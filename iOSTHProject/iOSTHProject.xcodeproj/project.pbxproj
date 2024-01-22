@@ -11,6 +11,7 @@
 		4D2901A12B5C487400C07156 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2901A02B5C487400C07156 /* NetworkingManager.swift */; };
 		4D2901A32B5EAAE600C07156 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2901A22B5EAAE600C07156 /* PeopleViewModel.swift */; };
 		4D2901A52B5EB52D00C07156 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2901A42B5EB52D00C07156 /* DetailViewModel.swift */; };
+		4D2901A72B5F02FF00C07156 /* NewPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2901A62B5F02FF00C07156 /* NewPerson.swift */; };
 		4D40D5DF2B58126A00B561CB /* UsersStaticData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D40D5DE2B58126A00B561CB /* UsersStaticData.json */; };
 		4D40D5E12B5812CA00B561CB /* SingleUserData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D40D5E02B5812CA00B561CB /* SingleUserData.json */; };
 		4D40D5E32B5818A300B561CB /* UserDetailReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40D5E22B5818A300B561CB /* UserDetailReponse.swift */; };
@@ -34,6 +35,7 @@
 		4D2901A02B5C487400C07156 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		4D2901A22B5EAAE600C07156 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
 		4D2901A42B5EB52D00C07156 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		4D2901A62B5F02FF00C07156 /* NewPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPerson.swift; sourceTree = "<group>"; };
 		4D40D5DE2B58126A00B561CB /* UsersStaticData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UsersStaticData.json; sourceTree = "<group>"; };
 		4D40D5E02B5812CA00B561CB /* SingleUserData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SingleUserData.json; sourceTree = "<group>"; };
 		4D40D5E22B5818A300B561CB /* UserDetailReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailReponse.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 		4DAC26B42B56B955000A4EC9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4D2901A62B5F02FF00C07156 /* NewPerson.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				4DAC26A82B56B1EC000A4EC9 /* Symbols.swift in Sources */,
 				4D40D5EE2B582A6100B561CB /* PeopleView.swift in Sources */,
 				4DAC26AA2B56B72E000A4EC9 /* Theme.swift in Sources */,
+				4D2901A72B5F02FF00C07156 /* NewPerson.swift in Sources */,
 				4DAC269B2B56B03F000A4EC9 /* ContentView.swift in Sources */,
 				4DAC26992B56B03F000A4EC9 /* iOSTHProjectApp.swift in Sources */,
 				4D40D5F42B58446D00B561CB /* PillView.swift in Sources */,
