@@ -55,7 +55,7 @@ final class NetworkingManager {
         dataTask.resume()
     }
     
-    func request(methodType: MethodType = .POST, _ absoluteURL: String, completion: @escaping (Result<Void, Error>) -> Void) {
+    func request(methodType: MethodType = .GET, _ absoluteURL: String, completion: @escaping (Result<Void, Error>) -> Void) {
         
         guard let url = URL(string: absoluteURL) else {
             completion(.failure(NetworkingError.invalidUrl))
@@ -95,7 +95,7 @@ extension NetworkingManager {
     
     enum MethodType {
         case GET
-        case POST
+        case POST(data: Data?)
     }
 }
 
@@ -106,8 +106,9 @@ private extension NetworkingManager {
         switch methodType {
         case .GET:
             request.httpMethod = "GET"
-        case .POST:
+        case .POST(let data):
             request.httpMethod = "POST"
+            request.httpBody = data
         }
         
         return request
