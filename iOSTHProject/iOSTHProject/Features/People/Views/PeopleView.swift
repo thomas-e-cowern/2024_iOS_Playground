@@ -40,14 +40,7 @@ struct PeopleView: View {
             }
             .onAppear {
      
-                NetworkingManager.shared.request("https://reqres.in/api/users", type: UsersResponse.self) { res in
-                    switch res {
-                    case.success(let response):
-                        users = response.data
-                    case .failure(let error):
-                        print(error.localizedDescription)
-                    }
-                }
+   
             }
             .sheet(isPresented: $showCreate, content: {
                 CreateView()
