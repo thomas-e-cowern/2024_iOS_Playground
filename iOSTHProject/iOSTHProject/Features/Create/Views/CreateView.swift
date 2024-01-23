@@ -33,6 +33,16 @@ struct CreateView: View {
             }
             .onChange(of: vm.state) { formState in
                 if formState == .successful {
+                    vm.success.toggle()
+                }
+            }
+            .alert(isPresented: $vm.hasError, error: vm.error) {
+                Button("Retry") {
+                    // Do nothing
+                }
+            }
+            .alert("User successfully created", isPresented: $vm.success) {
+                Button("OK", role: .cancel) {
                     dismiss()
                 }
             }
@@ -66,7 +76,7 @@ private extension CreateView {
     
     var done: some View {
         Button(action: {
-            //
+            dismiss()
         }, label: {
             Text("Done")
         })

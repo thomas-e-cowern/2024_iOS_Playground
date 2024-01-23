@@ -37,6 +37,11 @@ struct DetailView: View {
         .onAppear {
             vm.fetchDetail(for: userId)
         }
+        .alert(isPresented: $vm.hasError, error: vm.error) {
+            Button("Retry") {
+                // Do nothing
+            }
+        }
     }
 }
 
@@ -45,7 +50,7 @@ struct DetailView: View {
     var previewUserId: Int {
         let users = try! StaticJSONMapper.decode(file: "UsersStaticData", type: UsersResponse.self)
         
-        return users.data.first?.id ?? 1
+        return users.data.first?.id ?? 3
     }
     
     return NavigationStack {

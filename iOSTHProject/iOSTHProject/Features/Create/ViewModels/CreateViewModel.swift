@@ -9,6 +9,9 @@ import Foundation
 
 final class CreateViewModel: ObservableObject {
     
+    @Published private(set) var error: NetworkingManager.NetworkingError?
+    @Published var hasError: Bool = false
+    @Published var success: Bool = false
     @Published var person = NewPerson()
     @Published private(set) var state: SubmissionState?
     
@@ -21,9 +24,12 @@ final class CreateViewModel: ObservableObject {
             DispatchQueue.main.async {
                 switch res {
                 case .success():
+                    print("Success creating user")
                     self?.state = .successful
                 case .failure(let error):
                     self?.state = .unsuccessful
+                    self?.hasError = true
+                    self?.error = error as? NetworkingManager.NetworkingError
                     print("Error in createPerson: \(error.localizedDescription)")
                     break
                 }
