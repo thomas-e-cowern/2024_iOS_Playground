@@ -25,6 +25,7 @@ struct CreateView: View {
                     submit
                 }
             }
+            .disabled(vm.state == .submitting)
             .navigationTitle("Create")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
@@ -41,9 +42,9 @@ struct CreateView: View {
                     // Do nothing
                 }
             }
-            .alert("User successfully created", isPresented: $vm.success) {
-                Button("OK", role: .cancel) {
-                    dismiss()
+            .overlay {
+                if vm.state == .submitting {
+                    ProgressView()
                 }
             }
         }

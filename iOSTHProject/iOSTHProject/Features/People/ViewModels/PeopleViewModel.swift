@@ -11,10 +11,13 @@ final class PeopleViewModel: ObservableObject {
     @Published private(set) var users: [User] = []
     @Published private(set) var error: NetworkingManager.NetworkingError?
     @Published var hasError: Bool = false
+    @Published private(set) var isLoading: Bool = false
     
     func fetchUsers() {
-        NetworkingManager.shared.request("https://reqres.in/api/users", type: UsersResponse.self) { res in
+        isLoading = true
+        NetworkingManager.shared.request("https://reqres.in/api/users?delay=5", type: UsersResponse.self) { res in
             DispatchQueue.main.async {
+                defer { self.isLoading = false }
                 switch res {
                 case.success(let response):
                     self.users = response.data
