@@ -45,6 +45,7 @@ struct CreateView: View {
             .overlay {
                 if vm.state == .submitting {
                     ProgressView()
+                        .tint(.green)
                 }
             }
         }

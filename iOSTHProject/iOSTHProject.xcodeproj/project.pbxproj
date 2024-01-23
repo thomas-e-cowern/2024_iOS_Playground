@@ -29,6 +29,7 @@
 		4DAC26A02B56B042000A4EC9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DAC269F2B56B042000A4EC9 /* Preview Assets.xcassets */; };
 		4DAC26A82B56B1EC000A4EC9 /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC26A72B56B1EC000A4EC9 /* Symbols.swift */; };
 		4DAC26AA2B56B72E000A4EC9 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC26A92B56B72E000A4EC9 /* Theme.swift */; };
+		4DFFC1142B605A6C005952B0 /* CheckmarkPopoverVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFC1132B605A6C005952B0 /* CheckmarkPopoverVIew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		4DAC26A72B56B1EC000A4EC9 /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 		4DAC26A92B56B72E000A4EC9 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		4DAC26BA2B56C07D000A4EC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4DFFC1132B605A6C005952B0 /* CheckmarkPopoverVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkPopoverVIew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				4D40D5F32B58446D00B561CB /* PillView.swift */,
+				4DFFC1132B605A6C005952B0 /* CheckmarkPopoverVIew.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				4D40D5EE2B582A6100B561CB /* PeopleView.swift in Sources */,
 				4DAC26AA2B56B72E000A4EC9 /* Theme.swift in Sources */,
 				4D2901A72B5F02FF00C07156 /* NewPerson.swift in Sources */,
+				4DFFC1142B605A6C005952B0 /* CheckmarkPopoverVIew.swift in Sources */,
 				4D2901A92B5F03A700C07156 /* CreateViewModel.swift in Sources */,
 				4DAC269B2B56B03F000A4EC9 /* ContentView.swift in Sources */,
 				4DAC26992B56B03F000A4EC9 /* iOSTHProjectApp.swift in Sources */,
