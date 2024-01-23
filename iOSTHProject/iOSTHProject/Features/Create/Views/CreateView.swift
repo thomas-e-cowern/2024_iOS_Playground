@@ -13,6 +13,8 @@ struct CreateView: View {
     
     @StateObject private var vm = CreateViewModel()
     
+    let successfulAction: () -> Void
+    
     var body: some View {
         NavigationView {
             Form {
@@ -34,7 +36,8 @@ struct CreateView: View {
             }
             .onChange(of: vm.state) { formState in
                 if formState == .successful {
-                    vm.success.toggle()
+                    dismiss()
+                    successfulAction()
                 }
             }
             .alert(isPresented: $vm.hasError, error: vm.error) {
@@ -54,7 +57,7 @@ struct CreateView: View {
 }
 
 #Preview {
-    CreateView()
+    CreateView(successfulAction: {})
 }
 
 private extension CreateView {
