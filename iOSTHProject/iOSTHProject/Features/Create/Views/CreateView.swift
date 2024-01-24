@@ -34,7 +34,7 @@ struct CreateView: View {
                 Section {
                     submit
                 }
-            }
+            } //: End of form
             .disabled(vm.state == .submitting)
             .navigationTitle("Create")
             .toolbar {
@@ -48,11 +48,7 @@ struct CreateView: View {
                     successfulAction()
                 }
             }
-            .alert(isPresented: $vm.hasError, error: vm.error) {
-                Button("Retry") {
-                    // Do nothing
-                }
-            }
+            .alert(isPresented: $vm.hasError, error: vm.error) { }
             .overlay {
                 if vm.state == .submitting {
                     ProgressView()
@@ -60,7 +56,7 @@ struct CreateView: View {
                 }
             }
         }
-        
+
     }
 }
 
@@ -95,7 +91,9 @@ private extension CreateView {
     var submit: some View {
         Button("Submit") {
             focusedField = nil
-            vm.createPerson()
+            Task {
+                await vm.createPerson()
+            }
         }
     }
     
