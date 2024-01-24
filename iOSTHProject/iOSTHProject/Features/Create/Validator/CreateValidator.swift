@@ -10,7 +10,17 @@ import Foundation
 struct CreateValidator {
     
     func validate(_ person: NewPerson) throws {
+        if person.firstName.isEmpty {
+            throw CreateValidatorError.invalidFirstName
+        }
         
+        if person.lastName.isEmpty {
+            throw CreateValidatorError.invalidLastName
+        }
+        
+        if person.job.isEmpty {
+            throw CreateValidatorError.invalidJob
+        }
     }
 }
 
