@@ -31,6 +31,7 @@
 		4DAC26AA2B56B72E000A4EC9 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC26A92B56B72E000A4EC9 /* Theme.swift */; };
 		4DFFC1142B605A6C005952B0 /* CheckmarkPopoverVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFC1132B605A6C005952B0 /* CheckmarkPopoverVIew.swift */; };
 		4DFFC1172B61374A005952B0 /* CreateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFC1162B61374A005952B0 /* CreateValidator.swift */; };
+		4DFFC11A2B6161EB005952B0 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFC1192B6161EB005952B0 /* HapticsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		4DAC26BA2B56C07D000A4EC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4DFFC1132B605A6C005952B0 /* CheckmarkPopoverVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkPopoverVIew.swift; sourceTree = "<group>"; };
 		4DFFC1162B61374A005952B0 /* CreateValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateValidator.swift; sourceTree = "<group>"; };
+		4DFFC1192B6161EB005952B0 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		4D40D5E62B581A7400B561CB /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				4DFFC1182B6161D8005952B0 /* Haptics */,
 				4D29019F2B5C485C00C07156 /* API */,
 				4D40D5F12B58444700B561CB /* Views */,
 				4D40D5EA2B581B4000B561CB /* Mapper */,
@@ -313,6 +316,14 @@
 			path = Validator;
 			sourceTree = "<group>";
 		};
+		4DFFC1182B6161D8005952B0 /* Haptics */ = {
+			isa = PBXGroup;
+			children = (
+				4DFFC1192B6161EB005952B0 /* HapticsManager.swift */,
+			);
+			path = Haptics;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -394,6 +405,7 @@
 				4D2901A72B5F02FF00C07156 /* NewPerson.swift in Sources */,
 				4DFFC1142B605A6C005952B0 /* CheckmarkPopoverVIew.swift in Sources */,
 				4D2901A92B5F03A700C07156 /* CreateViewModel.swift in Sources */,
+				4DFFC11A2B6161EB005952B0 /* HapticsManager.swift in Sources */,
 				4DAC269B2B56B03F000A4EC9 /* ContentView.swift in Sources */,
 				4DAC26992B56B03F000A4EC9 /* iOSTHProjectApp.swift in Sources */,
 				4D40D5F42B58446D00B561CB /* PillView.swift in Sources */,
