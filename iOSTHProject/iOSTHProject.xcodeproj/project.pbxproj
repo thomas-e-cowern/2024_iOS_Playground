@@ -30,6 +30,7 @@
 		4DAC26A82B56B1EC000A4EC9 /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC26A72B56B1EC000A4EC9 /* Symbols.swift */; };
 		4DAC26AA2B56B72E000A4EC9 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC26A92B56B72E000A4EC9 /* Theme.swift */; };
 		4DFFC1142B605A6C005952B0 /* CheckmarkPopoverVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFC1132B605A6C005952B0 /* CheckmarkPopoverVIew.swift */; };
+		4DFFC1172B61374A005952B0 /* CreateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFC1162B61374A005952B0 /* CreateValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		4DAC26A92B56B72E000A4EC9 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		4DAC26BA2B56C07D000A4EC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4DFFC1132B605A6C005952B0 /* CheckmarkPopoverVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkPopoverVIew.swift; sourceTree = "<group>"; };
+		4DFFC1162B61374A005952B0 /* CreateValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 		4DAC26AD2B56B8D6000A4EC9 /* Create */ = {
 			isa = PBXGroup;
 			children = (
+				4DFFC1152B613736005952B0 /* Validator */,
 				4DAC26B52B56B95C000A4EC9 /* Views */,
 				4DAC26B42B56B955000A4EC9 /* Models */,
 				4DAC26B32B56B948000A4EC9 /* ViewModels */,
@@ -302,6 +305,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		4DFFC1152B613736005952B0 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				4DFFC1162B61374A005952B0 /* CreateValidator.swift */,
+			);
+			path = Validator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -376,6 +387,7 @@
 			files = (
 				4D40D5EC2B581B5300B561CB /* StaticJSONMapper.swift in Sources */,
 				4D67FD502B5956A300B91F17 /* DetailView.swift in Sources */,
+				4DFFC1172B61374A005952B0 /* CreateValidator.swift in Sources */,
 				4DAC26A82B56B1EC000A4EC9 /* Symbols.swift in Sources */,
 				4D40D5EE2B582A6100B561CB /* PeopleView.swift in Sources */,
 				4DAC26AA2B56B72E000A4EC9 /* Theme.swift in Sources */,
