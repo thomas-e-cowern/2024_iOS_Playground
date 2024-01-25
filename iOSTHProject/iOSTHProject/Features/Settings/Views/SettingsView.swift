@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SettingsView: View {
+    
+    @AppStorage(UserDefaultKeys.hapticsEnabled) private var hapticsEnabled: Bool = true
+    
     var body: some View {
         NavigationView(content: {
             Form {
@@ -24,6 +27,6 @@ struct SettingsView: View {
 
 extension SettingsView {
     var haptics: some View {
-        Toggle("Enable Haptics", isOn: .constant(true))
+        Toggle("Enable Haptics", isOn: $hapticsEnabled)
     }
 }

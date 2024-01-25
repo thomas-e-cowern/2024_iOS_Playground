@@ -33,6 +33,7 @@
 		4DFFC1172B61374A005952B0 /* CreateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFC1162B61374A005952B0 /* CreateValidator.swift */; };
 		4DFFC11A2B6161EB005952B0 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFC1192B6161EB005952B0 /* HapticsManager.swift */; };
 		4DFFC11C2B6198F3005952B0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFC11B2B6198F3005952B0 /* SettingsView.swift */; };
+		4DFFC11F2B619BA4005952B0 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFC11E2B619BA4005952B0 /* UserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		4DFFC1162B61374A005952B0 /* CreateValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateValidator.swift; sourceTree = "<group>"; };
 		4DFFC1192B6161EB005952B0 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		4DFFC11B2B6198F3005952B0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4DFFC11E2B619BA4005952B0 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		4D40D5E62B581A7400B561CB /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				4DFFC11D2B619B8F005952B0 /* UserDefaults */,
 				4DFFC1182B6161D8005952B0 /* Haptics */,
 				4D29019F2B5C485C00C07156 /* API */,
 				4D40D5F12B58444700B561CB /* Views */,
@@ -327,6 +330,14 @@
 			path = Haptics;
 			sourceTree = "<group>";
 		};
+		4DFFC11D2B619B8F005952B0 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				4DFFC11E2B619BA4005952B0 /* UserDefaults.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -413,6 +424,7 @@
 				4DAC26992B56B03F000A4EC9 /* iOSTHProjectApp.swift in Sources */,
 				4D40D5F42B58446D00B561CB /* PillView.swift in Sources */,
 				4D29019E2B5C2F6F00C07156 /* CreateView.swift in Sources */,
+				4DFFC11F2B619BA4005952B0 /* UserDefaults.swift in Sources */,
 				4D40D5E32B5818A300B561CB /* UserDetailReponse.swift in Sources */,
 				4D40D5E52B58196400B561CB /* UsersResponse.swift in Sources */,
 				4D40D5F02B5841AC00B561CB /* PersonItemView.swift in Sources */,
