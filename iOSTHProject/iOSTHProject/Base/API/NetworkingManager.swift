@@ -15,14 +15,14 @@ final class NetworkingManager {
         
     }
     
-    func request<T: Codable>(methodType: MethodType = .GET, _ absoluteURL: String, type: T.Type, completion: @escaping (Result<T, Error>) -> Void ) {
+    func request<T: Codable>(_ endpoint: Endpoints, type: T.Type, completion: @escaping (Result<T, Error>) -> Void ) {
         
-        guard let url = URL(string: absoluteURL) else {
+        guard let url = endpoint.url else {
             completion(.failure(NetworkingError.invalidUrl))
             return
         }
         
-        let request = buildRequest(from: url, methodType: methodType)
+        let request = buildRequest(from: url, methodType: endpoint.methodType)
         
         let dataTask = URLSession.shared.dataTask(with: request) { data, response, error in
             if (error != nil) {
@@ -55,14 +55,14 @@ final class NetworkingManager {
         dataTask.resume()
     }
     
-    func request(methodType: MethodType = .GET, _ absoluteURL: String, completion: @escaping (Result<Void, Error>) -> Void) {
+    func request(_ endpoint: Endpoints, completion: @escaping (Result<Void, Error>) -> Void) {
         
-        guard let url = URL(string: absoluteURL) else {
+        guard let url = endpoint.url else {
             completion(.failure(NetworkingError.invalidUrl))
             return
         }
         
-        let request = buildRequest(from: url, methodType: methodType)
+        let request = buildRequest(from: url, methodType: endpoint.methodType)
         
         let dataTask = URLSession.shared.dataTask(with: request) { data, response, error in
             if (error != nil) {
@@ -93,10 +93,7 @@ extension NetworkingManager {
         case faileToDecode(error: Error)
     }
     
-    enum MethodType {
-        case GET
-        case POST(data: Data?)
-    }
+    
 }
 
 extension NetworkingManager.NetworkingError {
@@ -117,7 +114,7 @@ extension NetworkingManager.NetworkingError {
 }
 
 private extension NetworkingManager {
-    func buildRequest(from url: URL, methodType: MethodType) -> URLRequest {
+    func buildRequest(from url: URL, methodType: Endpoints.MethodType) -> URLRequest {
         var request = URLRequest(url: url)
         
         switch methodType {

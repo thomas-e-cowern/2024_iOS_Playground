@@ -10,7 +10,14 @@ import Foundation
 enum Endpoints {
     case people
     case detail(id: Int)
-    case create
+    case create(data: Data?)
+}
+
+extension Endpoints {
+    enum MethodType {
+        case GET
+        case POST(data: Data?)
+    }
 }
 
 extension Endpoints {
@@ -23,6 +30,16 @@ extension Endpoints {
             return "/api/users"
         case .detail(let id):
             return "/api/users/\(id)"
+        }
+    }
+    
+    var methodType: MethodType {
+        switch self {
+        case .people,
+             .detail:
+            return .GET
+        case .create(let data):
+            return .POST(data: data)
         }
     }
 }
