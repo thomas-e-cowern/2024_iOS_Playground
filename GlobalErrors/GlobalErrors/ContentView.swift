@@ -52,13 +52,24 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Button(action: {
-                
+                do {
+                    try authenticate()
+                } catch {
+                    errorWrapper = ErrorWrapper(error: error, guidancee: "Please check your user and password and try again")
+                }
             }, label: {
                 Text("Throw Error")
             })
             .buttonStyle(.bordered)
         }
         .padding()
+        .sheet(item: $errorWrapper) { errorWrapper in
+            ErrorView(errorWrapper: errorWrapper)
+        }
+    }
+    
+    private func authenticate() throws {
+        throw AuthenticationError.invalidCredentials
     }
 }
 
