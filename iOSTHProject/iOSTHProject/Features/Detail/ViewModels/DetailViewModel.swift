@@ -15,7 +15,10 @@ final class DetailViewModel: ObservableObject {
     @Published private(set) var isLoading: Bool = false
     
     func fetchDetail(for id: Int) {
+        
         isLoading = true
+        defer { self.isLoading = false }
+        
         NetworkingManager.shared.request(.detail(id: id), type: UserDetailResponse.self) { res in
             DispatchQueue.main.async {
                 defer { self.isLoading = false }
