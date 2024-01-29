@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+class ErrorState: ObservableObject {
+    @Published var errorWrapper: ErrorWrapper?
+}
+
 struct ErrorWrapper: Identifiable {
     let id = UUID()
     let error: Error
@@ -43,7 +47,7 @@ struct ErrorView_Preview: PreviewProvider {
 
 struct ContentView: View {
     
-    @State private var errorWrapper: ErrorWrapper?
+    @EnvironmentObject private var errorState: ErrorState
     
     enum AuthenticationError: Error {
         case invalidCredentials
@@ -55,7 +59,7 @@ struct ContentView: View {
                 do {
                     try authenticate()
                 } catch {
-                    errorWrapper = ErrorWrapper(error: error, guidancee: "Please check your user and password and try again")
+                    errorState.errorWrapper = ErrorWrapper(error: error, guidancee: "Please check your user and password and try again")
                 }
             }, label: {
                 Text("Throw Error")
@@ -63,9 +67,6 @@ struct ContentView: View {
             .buttonStyle(.bordered)
         }
         .padding()
-        .sheet(item: $errorWrapper) { errorWrapper in
-            ErrorView(errorWrapper: errorWrapper)
-        }
     }
     
     private func authenticate() throws {
@@ -75,4 +76,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environmentObject(ErrorState())
 }
