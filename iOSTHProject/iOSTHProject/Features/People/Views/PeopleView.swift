@@ -14,6 +14,7 @@ struct PeopleView: View {
     @StateObject private var vm = PeopleViewModel()
     @State private var showCreate: Bool = false
     @State private var showSuccess: Bool = false
+    @State private var hasAppeared: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -41,9 +42,15 @@ struct PeopleView: View {
                 ToolbarItem(placement: .primaryAction) {
                     create
                 }
+                ToolbarItem(placement: .topBarLeading) {
+                    refresh
+                }
             }
             .task {
-                await vm.fetchUsers()
+                if !hasAppeared {
+                    await vm.fetchUsers()
+                    hasAppeared = true
+                }
             }
             .sheet(isPresented: $showCreate, content: {
                 CreateView(successfulAction: {
@@ -95,5 +102,16 @@ extension PeopleView {
     
     var background: some View {
         Theme.background
+    }
+    
+    var refresh: some View {
+        Button(action: {
+            Task {
+                await vm.fetchUsers()
+            }
+        }, label: {
+            Symbols.refresh
+        })
+        .disabled(vm.isLoading)
     }
 }
