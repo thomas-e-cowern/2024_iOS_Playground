@@ -30,6 +30,11 @@ struct PeopleView: View {
                                     DetailView(userId: user.id)
                                 } label: {
                                     PersonItemView(user: user)
+                                        .task {
+                                            if vm.hasReachedEnd(of: user) {
+                                                await vm.fetchNextUserPage()
+                                            }
+                                        }
                                 }
                             }
                         }
