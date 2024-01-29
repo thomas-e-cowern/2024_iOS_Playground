@@ -65,7 +65,7 @@ extension Endpoints {
         }
         
         #if DEBUG
-        requestQueryItems?.append(URLQueryItem(name: "delay", value: "1"))
+        requestQueryItems?.append(URLQueryItem(name: "delay", value: "5"))
         #endif
         
         urlComponents.queryItems = requestQueryItems

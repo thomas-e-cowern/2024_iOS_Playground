@@ -31,7 +31,7 @@ struct PeopleView: View {
                                 } label: {
                                     PersonItemView(user: user)
                                         .task {
-                                            if vm.hasReachedEnd(of: user) {
+                                            if vm.hasReachedEnd(of: user) && !vm.isFetching{
                                                 await vm.fetchNextUserPage()
                                             }
                                         }
@@ -39,6 +39,11 @@ struct PeopleView: View {
                             }
                         }
                         .padding()
+                    }
+                    .overlay(alignment: .bottom) {
+                        if vm.isFetching {
+                            ProgressView()
+                        }
                     }
                 }
             }
