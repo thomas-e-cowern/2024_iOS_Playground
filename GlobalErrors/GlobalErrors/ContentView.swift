@@ -42,12 +42,21 @@ struct ErrorView_Preview: PreviewProvider {
 }
 
 struct ContentView: View {
+    
+    @State private var errorWrapper: ErrorWrapper?
+    
+    enum AuthenticationError: Error {
+        case invalidCredentials
+    }
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button(action: {
+                
+            }, label: {
+                Text("Throw Error")
+            })
+            .buttonStyle(.bordered)
         }
         .padding()
     }
