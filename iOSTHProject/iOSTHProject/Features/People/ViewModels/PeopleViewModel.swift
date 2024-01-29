@@ -13,6 +13,7 @@ final class PeopleViewModel: ObservableObject {
     @Published var hasError: Bool = false
     @Published private(set) var isLoading: Bool = false
     
+    @MainActor
     func fetchUsers() async {
         
         isLoading = true

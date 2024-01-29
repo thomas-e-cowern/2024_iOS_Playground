@@ -19,43 +19,29 @@ final class CreateViewModel: ObservableObject {
     
     @MainActor
     func createPerson() async {
-        
         do {
             try validator.validate(person)
             
             state = .submitting
-            
             let encoder = JSONEncoder()
             encoder.keyEncodingStrategy = .convertToSnakeCase
-            let data = try? encoder.encode(person)
+            let data = try encoder.encode(person)
             
-            NetworkingManager.shared.request(.create(data: data)) { [weak self] res in
-                DispatchQueue.main.async {
-                    switch res {
-                    case .success():
-                        print("Success creating user")
-                        self?.state = .successful
-                    case .failure(let error):
-                        self?.state = .unsuccessful
-                        self?.hasError = true
-                        if let networkingError = error as? NetworkingManager.NetworkingError {
-                            self?.error = .networkingError(error: networkingError)
-                        }
-                        
-//                        Could also be done this way:
-//                        self?.error = .networkingError(error: error as! NetworkingManager.NetworkingError)
-                        
-                        print("Error in createPerson: \(error.localizedDescription)")
-                        break
-                    }
-                }
-            }
+            try await NetworkingManager.shared.request(.create(data: data))
+            
+            state = .successful
         } catch {
+            
             self.hasError = true
-            if let validationError = error as? CreateValidator.CreateValidatorError {
-                self.error = .validationError(error: validationError)
+            
+            switch error {
+            case is NetworkingManager.NetworkingError:
+                self.error = .networkingError(error: error as! NetworkingManager.NetworkingError)
+            case is CreateValidator.CreateValidatorError:
+                self.error = .validationError(error: error as! CreateValidator.CreateValidatorError)
+            default:
+                self.error = .system(error: error)
             }
-            print("Error in validator: \(error.localizedDescription)")
         }
     }
 }
@@ -72,6 +58,7 @@ extension CreateViewModel {
     enum FormError: LocalizedError {
         case networkingError(error: LocalizedError)
         case validationError(error: LocalizedError)
+        case system(error: Error)
     }
 }
 
@@ -81,6 +68,8 @@ extension CreateViewModel.FormError {
         case .networkingError(let error),
                 .validationError(let error):
             return error.errorDescription
+        case .system(let error):
+            return error.localizedDescription
         }
     }
 }

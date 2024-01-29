@@ -14,6 +14,7 @@ final class DetailViewModel: ObservableObject {
     @Published var hasError: Bool = false
     @Published private(set) var isLoading: Bool = false
     
+    @MainActor
     func fetchDetail(for id: Int) async {
         
         isLoading = true

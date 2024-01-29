@@ -45,7 +45,7 @@ final class NetworkingManager {
         
         let request = buildRequest(from: url, methodType: endpoint.methodType)
         
-        let (data, response) = try await URLSession.shared.data(for: request)
+        let (_, response) = try await URLSession.shared.data(for: request)
         
         guard let response = response as? HTTPURLResponse, (200...300) ~= response.statusCode else {
             let statusCode = (response as! HTTPURLResponse).statusCode
