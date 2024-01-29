@@ -14,22 +14,19 @@ final class DetailViewModel: ObservableObject {
     @Published var hasError: Bool = false
     @Published private(set) var isLoading: Bool = false
     
-    func fetchDetail(for id: Int) {
+    func fetchDetail(for id: Int) async {
         
         isLoading = true
         defer { self.isLoading = false }
         
-        NetworkingManager.shared.request(.detail(id: id), type: UserDetailResponse.self) { res in
-            DispatchQueue.main.async {
-                defer { self.isLoading = false }
-                switch res {
-                case.success(let response):
-                    self.userInfo = response
-                case .failure(let error):
-                    print(error.localizedDescription)
-                    self.hasError = true
-                    self.error = error as? NetworkingManager.NetworkingError
-                }
+        do {
+            self.userInfo = try await NetworkingManager.shared.request(.detail(id: id), type: UserDetailResponse.self)
+        } catch {
+            self.hasError = true
+            if let networkingError = error as? NetworkingManager.NetworkingError {
+                self.error = networkingError
+            } else {
+                self.error = .custom(error: error)
             }
         }
     }
