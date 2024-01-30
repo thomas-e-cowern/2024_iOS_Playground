@@ -30,11 +30,22 @@ class JSONMapperTests: XCTestCase {
         XCTAssertEqual(userResponse?.data[0].firstName, "Michael", "firstName should be Michael")
         XCTAssertEqual(userResponse?.data[0].lastName, "Lawson", "firstName should be Lawson")
         XCTAssertEqual(userResponse?.data[0].avatar, "https://reqres.in/img/faces/7-image.jpg", "Avatar url should be https://reqres.in/img/faces/7-image.jpg")
+        
+        // TODO: Add remainder of mapper test cases
 
     }
     
     func test_with_missing_file_error_throws() {
-        XCTFail()
+        XCTAssertThrowsError(try StaticJSONMapper.decode(file: "", type: UsersResponse.self), "An error should be thrown")
+        do {
+            _ = try StaticJSONMapper.decode(file: "", type: UsersResponse.self)
+        } catch {
+            guard let mappingError = error as? StaticJSONMapper.MappingError else {
+                XCTFail("This is the wrong type of error")
+                return
+            }
+            XCTAssertEqual(mappingError, StaticJSONMapper.MappingError.failedToGetContents, "This should be a failed to get contents error")
+        }
     }
     
     func test_with_invalid_json_error_throws() {
