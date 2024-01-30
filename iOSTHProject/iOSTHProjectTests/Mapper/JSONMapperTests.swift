@@ -68,7 +68,7 @@ class JSONMapperTests: XCTestCase {
             _ = try StaticJSONMapper.decode(file: "UsersStaticData", type: UserDetailResponse.self)
         } catch {
             if error is StaticJSONMapper.MappingError {
-                XCTFail("This is the wrond type of error, expecting a system error")
+                XCTFail("This is the wrong type of error, expecting a system error")
             }
         }
     }
