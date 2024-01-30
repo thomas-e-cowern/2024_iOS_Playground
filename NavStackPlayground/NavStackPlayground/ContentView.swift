@@ -23,8 +23,10 @@ struct ContentView: View {
         .init(name: "Madded 2023", rating: "88")
     ]
     
+    @State private var path: [Game] = []
+    
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             List {
                 Section("Platforms") {
                     ForEach(platforms, id: \.name) { platform in
@@ -36,10 +38,14 @@ struct ContentView: View {
                 }
                 
                 Section("Games") {
-                    ForEach(games, id: \.name) { game in
-                        NavigationLink(value: game, label: {
-                            Text(game.name)
-                        })
+//                    ForEach(games, id: \.name) { game in
+//                        NavigationLink(value: game, label: {
+//                            Text(game.name)
+//                        })
+//                    }
+                    
+                    Button("Add Games") {
+                        path = games
                     }
                 }
             }
@@ -53,8 +59,14 @@ struct ContentView: View {
             }
             .navigationDestination(for: Game.self) { game in
                 ZStack {
-                    Text("\(game.name) - \(game.rating)")
-                        .font(.largeTitle).bold()
+                    VStack {
+                        Text("\(game.name) - \(game.rating)")
+                            .font(.largeTitle).bold()
+                            .padding()
+                        Button("Back to root") {
+                            path = []
+                        }
+                    }                    
                 }
             }
         }
