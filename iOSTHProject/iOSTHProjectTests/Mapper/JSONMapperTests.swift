@@ -48,7 +48,28 @@ class JSONMapperTests: XCTestCase {
         }
     }
     
+    func test_with_invalid_filename_error_throws() {
+        XCTAssertThrowsError(try StaticJSONMapper.decode(file: "dsfsdfd", type: UsersResponse.self), "An error should be thrown")
+        do {
+            _ = try StaticJSONMapper.decode(file: "", type: UsersResponse.self)
+        } catch {
+            guard let mappingError = error as? StaticJSONMapper.MappingError else {
+                XCTFail("This is the wrong type of error")
+                return
+            }
+            XCTAssertEqual(mappingError, StaticJSONMapper.MappingError.failedToGetContents, "This should be a failed to get contents error")
+        }
+    }
+    
     func test_with_invalid_json_error_throws() {
-        XCTFail()
+        XCTAssertThrowsError(try StaticJSONMapper.decode(file: "UsersStaticData", type: UserDetailResponse.self), "An error shoule be thrown")
+        
+        do {
+            _ = try StaticJSONMapper.decode(file: "UsersStaticData", type: UserDetailResponse.self)
+        } catch {
+            if error is StaticJSONMapper.MappingError {
+                XCTFail("This is the wrond type of error, expecting a system error")
+            }
+        }
     }
 }
