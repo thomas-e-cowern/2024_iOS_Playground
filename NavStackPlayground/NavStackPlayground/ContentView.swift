@@ -23,7 +23,7 @@ struct ContentView: View {
         .init(name: "Madded 2023", rating: "88")
     ]
     
-    @State private var path: [Game] = []
+    @State private var path = NavigationPath()
     
     var body: some View {
         NavigationStack(path: $path) {
@@ -38,14 +38,10 @@ struct ContentView: View {
                 }
                 
                 Section("Games") {
-//                    ForEach(games, id: \.name) { game in
-//                        NavigationLink(value: game, label: {
-//                            Text(game.name)
-//                        })
-//                    }
-                    
-                    Button("Add Games") {
-                        path = games
+                    ForEach(games, id: \.name) { game in
+                        NavigationLink(value: game, label: {
+                            Text(game.name)
+                        })
                     }
                 }
             }
@@ -53,8 +49,18 @@ struct ContentView: View {
             .navigationDestination(for: Platform.self) { platform in
                 ZStack {
                     platform.color.ignoresSafeArea()
-                    Label(platform.name, systemImage: platform.imageName)
-                        .font(.largeTitle).bold()
+                    VStack {
+                        Label(platform.name, systemImage: platform.imageName)
+                            .font(.largeTitle).bold()
+                        
+                        List {
+                            ForEach(games, id: \.name) { game in
+                                NavigationLink(value: game, label: {
+                                    Text(game.name)
+                                })
+                            }
+                        }
+                    }
                 }
             }
             .navigationDestination(for: Game.self) { game in
@@ -62,11 +68,22 @@ struct ContentView: View {
                     VStack {
                         Text("\(game.name) - \(game.rating)")
                             .font(.largeTitle).bold()
-                            .padding()
-                        Button("Back to root") {
-                            path = []
+                        
+                        VStack {
+                            Button("Recommended Game") {
+                                path.append(games.randomElement()!)
+                            }
+                            
+                            Button("Go to another platform") {
+                                path.append(platforms.randomElement()!)
+                            }
+                            
+                            Button("Go home") {
+                                path.removeLast(path.count)
+                            }
                         }
-                    }                    
+                        .buttonStyle(.borderedProminent)
+                    }
                 }
             }
         }
