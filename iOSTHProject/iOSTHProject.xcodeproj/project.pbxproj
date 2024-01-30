@@ -23,6 +23,8 @@
 		4D40D5F02B5841AC00B561CB /* PersonItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40D5EF2B5841AC00B561CB /* PersonItemView.swift */; };
 		4D40D5F42B58446D00B561CB /* PillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40D5F32B58446D00B561CB /* PillView.swift */; };
 		4D67FD502B5956A300B91F17 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D67FD4F2B5956A300B91F17 /* DetailView.swift */; };
+		4D8685CA2B6920E800419AF2 /* iOSTHProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8685C92B6920E800419AF2 /* iOSTHProjectTests.swift */; };
+		4D8685D22B69211B00419AF2 /* JSONMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8685D12B69211B00419AF2 /* JSONMapperTests.swift */; };
 		4DAC26992B56B03F000A4EC9 /* iOSTHProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC26982B56B03F000A4EC9 /* iOSTHProjectApp.swift */; };
 		4DAC269B2B56B03F000A4EC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC269A2B56B03F000A4EC9 /* ContentView.swift */; };
 		4DAC269D2B56B042000A4EC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DAC269C2B56B042000A4EC9 /* Assets.xcassets */; };
@@ -36,6 +38,16 @@
 		4DFFC11F2B619BA4005952B0 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFC11E2B619BA4005952B0 /* UserDefaults.swift */; };
 		4DFFC1212B628EC1005952B0 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFC1202B628EC1005952B0 /* Endpoints.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4D8685CB2B6920E800419AF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DAC268D2B56B03F000A4EC9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DAC26942B56B03F000A4EC9;
+			remoteInfo = iOSTHProject;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4D29019D2B5C2F6F00C07156 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
@@ -54,6 +66,9 @@
 		4D40D5EF2B5841AC00B561CB /* PersonItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonItemView.swift; sourceTree = "<group>"; };
 		4D40D5F32B58446D00B561CB /* PillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillView.swift; sourceTree = "<group>"; };
 		4D67FD4F2B5956A300B91F17 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		4D8685C72B6920E800419AF2 /* iOSTHProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTHProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D8685C92B6920E800419AF2 /* iOSTHProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTHProjectTests.swift; sourceTree = "<group>"; };
+		4D8685D12B69211B00419AF2 /* JSONMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMapperTests.swift; sourceTree = "<group>"; };
 		4DAC26952B56B03F000A4EC9 /* iOSTHProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTHProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DAC26982B56B03F000A4EC9 /* iOSTHProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTHProjectApp.swift; sourceTree = "<group>"; };
 		4DAC269A2B56B03F000A4EC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +86,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4D8685C42B6920E800419AF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4DAC26922B56B03F000A4EC9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,10 +159,28 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		4D8685C82B6920E800419AF2 /* iOSTHProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				4D8685D02B69210A00419AF2 /* Mapper */,
+				4D8685C92B6920E800419AF2 /* iOSTHProjectTests.swift */,
+			);
+			path = iOSTHProjectTests;
+			sourceTree = "<group>";
+		};
+		4D8685D02B69210A00419AF2 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				4D8685D12B69211B00419AF2 /* JSONMapperTests.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
 		4DAC268C2B56B03F000A4EC9 = {
 			isa = PBXGroup;
 			children = (
 				4DAC26972B56B03F000A4EC9 /* iOSTHProject */,
+				4D8685C82B6920E800419AF2 /* iOSTHProjectTests */,
 				4DAC26962B56B03F000A4EC9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -149,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				4DAC26952B56B03F000A4EC9 /* iOSTHProject.app */,
+				4D8685C72B6920E800419AF2 /* iOSTHProjectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -344,6 +385,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4D8685C62B6920E800419AF2 /* iOSTHProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D8685CF2B6920E800419AF2 /* Build configuration list for PBXNativeTarget "iOSTHProjectTests" */;
+			buildPhases = (
+				4D8685C32B6920E800419AF2 /* Sources */,
+				4D8685C42B6920E800419AF2 /* Frameworks */,
+				4D8685C52B6920E800419AF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D8685CC2B6920E800419AF2 /* PBXTargetDependency */,
+			);
+			name = iOSTHProjectTests;
+			productName = iOSTHProjectTests;
+			productReference = 4D8685C72B6920E800419AF2 /* iOSTHProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4DAC26942B56B03F000A4EC9 /* iOSTHProject */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DAC26A32B56B042000A4EC9 /* Build configuration list for PBXNativeTarget "iOSTHProject" */;
@@ -371,6 +430,10 @@
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					4D8685C62B6920E800419AF2 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 4DAC26942B56B03F000A4EC9;
+					};
 					4DAC26942B56B03F000A4EC9 = {
 						CreatedOnToolsVersion = 15.2;
 					};
@@ -390,11 +453,19 @@
 			projectRoot = "";
 			targets = (
 				4DAC26942B56B03F000A4EC9 /* iOSTHProject */,
+				4D8685C62B6920E800419AF2 /* iOSTHProjectTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4D8685C52B6920E800419AF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4DAC26932B56B03F000A4EC9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,6 +480,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4D8685C32B6920E800419AF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D8685D22B69211B00419AF2 /* JSONMapperTests.swift in Sources */,
+				4D8685CA2B6920E800419AF2 /* iOSTHProjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4DAC26912B56B03F000A4EC9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -442,7 +522,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4D8685CC2B6920E800419AF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DAC26942B56B03F000A4EC9 /* iOSTHProject */;
+			targetProxy = 4D8685CB2B6920E800419AF2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		4D8685CD2B6920E800419AF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 56F54J4H3N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mobilesoftwareservices.iOSTHProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSTHProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iOSTHProject";
+			};
+			name = Debug;
+		};
+		4D8685CE2B6920E800419AF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 56F54J4H3N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mobilesoftwareservices.iOSTHProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSTHProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iOSTHProject";
+			};
+			name = Release;
+		};
 		4DAC26A12B56B042000A4EC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -629,6 +753,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4D8685CF2B6920E800419AF2 /* Build configuration list for PBXNativeTarget "iOSTHProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D8685CD2B6920E800419AF2 /* Debug */,
+				4D8685CE2B6920E800419AF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4DAC26902B56B03F000A4EC9 /* Build configuration list for PBXProject "iOSTHProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
