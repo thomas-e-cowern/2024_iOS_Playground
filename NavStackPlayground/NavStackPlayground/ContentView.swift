@@ -16,12 +16,45 @@ struct ContentView: View {
         .init(name: "Mobile", imageName: "iphone", color: .mint)
     ]
     
+    var games: [Game] = [
+        .init(name: "Minecraft", rating: "99"),
+        .init(name: "God of War", rating: "98"),
+        .init(name: "Fortnite", rating: "92"),
+        .init(name: "Madded 2023", rating: "88")
+    ]
+    
     var body: some View {
-        List {
-            Section("Platofrms") {
-                ForEach(platforms, id: \.name) { platform in
+        NavigationStack {
+            List {
+                Section("Platforms") {
+                    ForEach(platforms, id: \.name) { platform in
+                        NavigationLink(value: platform, label: {
+                            Label(platform.name, systemImage: platform.imageName)
+                                .foregroundColor(platform.color)
+                        })
+                    }
+                }
+                
+                Section("Games") {
+                    ForEach(games, id: \.name) { game in
+                        NavigationLink(value: game, label: {
+                            Text(game.name)
+                        })
+                    }
+                }
+            }
+            .navigationTitle("Gaming")
+            .navigationDestination(for: Platform.self) { platform in
+                ZStack {
+                    platform.color.ignoresSafeArea()
                     Label(platform.name, systemImage: platform.imageName)
-                        .foregroundColor(platform.color)
+                        .font(.largeTitle).bold()
+                }
+            }
+            .navigationDestination(for: Game.self) { game in
+                ZStack {
+                    Text("\(game.name) - \(game.rating)")
+                        .font(.largeTitle).bold()
                 }
             }
         }
@@ -32,8 +65,13 @@ struct ContentView: View {
     ContentView()
 }
 
-struct Platform {
+struct Platform: Hashable {
     let name: String
     let imageName: String
     let color: Color
+}
+
+struct Game: Hashable {
+    let name: String
+    let rating: String
 }
