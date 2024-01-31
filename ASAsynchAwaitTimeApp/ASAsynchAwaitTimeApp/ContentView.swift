@@ -47,8 +47,6 @@ struct ContentView: View {
         }
         
         let (data, response) = try await URLSession.shared.data(from: url) 
-        print("Response: \(response)")
-        print("Data: \(data)")
         
         return try JSONDecoder().decode(CurrentDate.self, from: data)
     }
