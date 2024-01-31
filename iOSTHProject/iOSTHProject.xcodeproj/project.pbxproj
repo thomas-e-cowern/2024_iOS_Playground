@@ -23,6 +23,7 @@
 		4D40D5F02B5841AC00B561CB /* PersonItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40D5EF2B5841AC00B561CB /* PersonItemView.swift */; };
 		4D40D5F42B58446D00B561CB /* PillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40D5F32B58446D00B561CB /* PillView.swift */; };
 		4D67FD502B5956A300B91F17 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D67FD4F2B5956A300B91F17 /* DetailView.swift */; };
+		4D85C4452B6A8E4700F24A5A /* NetworkingEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D85C4442B6A8E4700F24A5A /* NetworkingEndpointTests.swift */; };
 		4D8685CA2B6920E800419AF2 /* iOSTHProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8685C92B6920E800419AF2 /* iOSTHProjectTests.swift */; };
 		4D8685D22B69211B00419AF2 /* JSONMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8685D12B69211B00419AF2 /* JSONMapperTests.swift */; };
 		4D8685D52B6950B400419AF2 /* CreateFormValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8685D42B6950B400419AF2 /* CreateFormValidatorTests.swift */; };
@@ -67,6 +68,7 @@
 		4D40D5EF2B5841AC00B561CB /* PersonItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonItemView.swift; sourceTree = "<group>"; };
 		4D40D5F32B58446D00B561CB /* PillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillView.swift; sourceTree = "<group>"; };
 		4D67FD4F2B5956A300B91F17 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		4D85C4442B6A8E4700F24A5A /* NetworkingEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingEndpointTests.swift; sourceTree = "<group>"; };
 		4D8685C72B6920E800419AF2 /* iOSTHProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTHProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D8685C92B6920E800419AF2 /* iOSTHProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTHProjectTests.swift; sourceTree = "<group>"; };
 		4D8685D12B69211B00419AF2 /* JSONMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMapperTests.swift; sourceTree = "<group>"; };
@@ -161,9 +163,26 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		4D85C4422B6A8E2300F24A5A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4D85C4432B6A8E2D00F24A5A /* Endpoint */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		4D85C4432B6A8E2D00F24A5A /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				4D85C4442B6A8E4700F24A5A /* NetworkingEndpointTests.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
 		4D8685C82B6920E800419AF2 /* iOSTHProjectTests */ = {
 			isa = PBXGroup;
 			children = (
+				4D85C4422B6A8E2300F24A5A /* Networking */,
 				4D8685D32B69508200419AF2 /* Form */,
 				4D8685D02B69210A00419AF2 /* Mapper */,
 				4D8685C92B6920E800419AF2 /* iOSTHProjectTests.swift */,
@@ -495,6 +514,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D85C4452B6A8E4700F24A5A /* NetworkingEndpointTests.swift in Sources */,
 				4D8685D22B69211B00419AF2 /* JSONMapperTests.swift in Sources */,
 				4D8685D52B6950B400419AF2 /* CreateFormValidatorTests.swift in Sources */,
 				4D8685CA2B6920E800419AF2 /* iOSTHProjectTests.swift in Sources */,
