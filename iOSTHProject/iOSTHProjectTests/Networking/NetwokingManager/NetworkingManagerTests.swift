@@ -26,10 +26,10 @@ class NetworkingManagerTests: XCTestCase {
         url = nil
     }
 
-    func test_with_successful_response_is_valid() {
+    func test_with_successful_response_is_valid() async throws {
         guard let path = Bundle.main.path(forResource: "UsersStaticData", ofType: "json"),
               let data = FileManager.default.contents(atPath: path) else {
-            XCTFail("Failed to det static users file")
+            XCTFail("Failed to get static users file")
             return
         }
         
@@ -37,6 +37,12 @@ class NetworkingManagerTests: XCTestCase {
             let response = HTTPURLResponse(url: self.url, statusCode: 200, httpVersion: nil, headerFields: nil)
             return (response!, data)
         }
+        
+        let result = try await NetworkingManager.shared.request(session: session, .people(page: 1), type: UsersResponse.self)
+        
+        let staticJson = try StaticJSONMapper.decode(file: "UsersStaticData", type: UsersResponse.self)
+        
+        XCTAssertEqual(result, staticJson, "The returned response should be decoded successfully")
     }
 
 }

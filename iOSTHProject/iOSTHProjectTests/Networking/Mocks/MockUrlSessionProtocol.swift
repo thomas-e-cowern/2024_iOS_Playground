@@ -33,4 +33,8 @@ class MockUrlSessionProtocol: URLProtocol {
         }
         client?.urlProtocolDidFinishLoading(self)
     }
+    
+    override func stopLoading() {
+        // empty
+    }
 }
