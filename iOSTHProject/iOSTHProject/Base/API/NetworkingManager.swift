@@ -62,10 +62,27 @@ extension NetworkingManager {
         case custom(error: Error)
         case invalidStatusCode(statusCode: Int)
         case invalidData
-        case faileToDecode(error: Error)
+        case failedToDecode(error: Error)
     }
-    
-    
+}
+
+extension NetworkingManager.NetworkingError: Equatable {
+    static func == (lhs: NetworkingManager.NetworkingError, rhs: NetworkingManager.NetworkingError) -> Bool {
+        switch(lhs, rhs) {
+        case (.invalidUrl, .invalidUrl):
+            return true
+        case (.custom(let lhsType), .custom(let rhsType)):
+            return lhsType.localizedDescription == rhsType.localizedDescription
+        case (.invalidStatusCode(let lhsType), .invalidStatusCode(let rhsType)):
+            return lhsType == rhsType
+        case (.invalidData, .invalidData):
+            return true
+        case (.failedToDecode(let lhsType), .failedToDecode(let rhsType)):
+            return lhsType.localizedDescription == rhs.localizedDescription
+        default:
+            return false
+        }
+    }
 }
 
 extension NetworkingManager.NetworkingError {
@@ -77,7 +94,7 @@ extension NetworkingManager.NetworkingError {
             return "Status code falls into the wrong range"
         case .invalidData:
             return "Response data is invalid"
-        case .faileToDecode:
+        case .failedToDecode:
             return "Failed to decode data"
         case .custom(let error):
             return "Something went wrong \(error.localizedDescription)"

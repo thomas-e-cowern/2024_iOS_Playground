@@ -44,5 +44,33 @@ class NetworkingManagerTests: XCTestCase {
         
         XCTAssertEqual(result, staticJson, "The returned response should be decoded successfully")
     }
+    
+    func test_with_successful_response_void_is_valid() async throws {
+        MockUrlSessionProtocol.loadingHandler = {
+            let response = HTTPURLResponse(url: self.url, statusCode: 200, httpVersion: nil, headerFields: nil)
+            return (response!, nil)
+        }
+        
+        _ = try await NetworkingManager.shared.request(session: session, .people(page: 1))
+    }
+    
+    func test_with_unsuccessful_response_code_range_is_invalid() async {
+        MockUrlSessionProtocol.loadingHandler = {
+            let response = HTTPURLResponse(url: self.url, statusCode: 400, httpVersion: nil, headerFields: nil)
+            return (response!, nil)
+        }
+        
+        do {
+            _ = try await NetworkingManager.shared.request(session: session, .people(page: 1), type: UsersResponse.self)
+            return
+        } catch {
+            guard let networkingError = error as? NetworkingManager.NetworkingError else {
+                XCTFail("Wrong type of error, expecting networking manager networking error")
+                return
+            }
+            
+            XCTAssertEqual(networkingError, NetworkingManager.NetworkingError.invalidStatusCode(statusCode: 400), "Error should be a networking error which throws an invalid status code")
+        }
+    }
 
 }
