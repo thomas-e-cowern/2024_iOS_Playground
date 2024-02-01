@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D1D7CA42B6BF35B00F9FBD1 /* MockUrlSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D7CA32B6BF35B00F9FBD1 /* MockUrlSessionProtocol.swift */; };
 		4D29019E2B5C2F6F00C07156 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D29019D2B5C2F6F00C07156 /* CreateView.swift */; };
 		4D2901A12B5C487400C07156 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2901A02B5C487400C07156 /* NetworkingManager.swift */; };
 		4D2901A32B5EAAE600C07156 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2901A22B5EAAE600C07156 /* PeopleViewModel.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D1D7CA32B6BF35B00F9FBD1 /* MockUrlSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUrlSessionProtocol.swift; sourceTree = "<group>"; };
 		4D29019D2B5C2F6F00C07156 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		4D2901A02B5C487400C07156 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		4D2901A22B5EAAE600C07156 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
@@ -107,6 +109,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D1D7CA22B6BF33C00F9FBD1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				4D1D7CA32B6BF35B00F9FBD1 /* MockUrlSessionProtocol.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		4D29019F2B5C485C00C07156 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +176,7 @@
 		4D85C4422B6A8E2300F24A5A /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				4D1D7CA22B6BF33C00F9FBD1 /* Mocks */,
 				4D85C4432B6A8E2D00F24A5A /* Endpoint */,
 			);
 			path = Networking;
@@ -515,6 +526,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D85C4452B6A8E4700F24A5A /* NetworkingEndpointTests.swift in Sources */,
+				4D1D7CA42B6BF35B00F9FBD1 /* MockUrlSessionProtocol.swift in Sources */,
 				4D8685D22B69211B00419AF2 /* JSONMapperTests.swift in Sources */,
 				4D8685D52B6950B400419AF2 /* CreateFormValidatorTests.swift in Sources */,
 				4D8685CA2B6920E800419AF2 /* iOSTHProjectTests.swift in Sources */,
