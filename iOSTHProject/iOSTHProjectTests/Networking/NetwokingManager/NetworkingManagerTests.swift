@@ -91,4 +91,25 @@ class NetworkingManagerTests: XCTestCase {
             XCTAssertEqual(networkingError, NetworkingManager.NetworkingError.invalidStatusCode(statusCode: 400), "Error should be a networking error which throws an invalid status code")
         }
     }
+    
+    func test_with_successful_response_code_with_invalid_json() async {
+        guard let path = Bundle.main.path(forResource: "UsersStaticData", ofType: "json"),
+              let data = FileManager.default.contents(atPath: path) else {
+            XCTFail("Failed to get static users file")
+            return
+        }
+        
+        MockUrlSessionProtocol.loadingHandler = {
+            let response = HTTPURLResponse(url: self.url, statusCode: 200, httpVersion: nil, headerFields: nil)
+            return (response!, data)
+        }
+        
+        do {
+            _ = try await NetworkingManager.shared.request(session: session, .people(page: 1), type: UserDetailResponse.self)
+        } catch {
+            if error is NetworkingManager.NetworkingError {
+                XCTFail("The error should be a system decoding error")
+            }
+        }
+    }
 }
