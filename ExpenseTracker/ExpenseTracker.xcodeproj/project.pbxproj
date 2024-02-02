@@ -16,6 +16,7 @@
 		4D6D5D9D2B6D4D7500B2B40D /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6D5D9C2B6D4D7500B2B40D /* PreviewData.swift */; };
 		4D6D5D9F2B6D4E6B00B2B40D /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6D5D9E2B6D4E6B00B2B40D /* TransactionRow.swift */; };
 		4D6D5DA12B6D6ABE00B2B40D /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6D5DA02B6D6ABE00B2B40D /* TransactionListViewModel.swift */; };
+		4D6D5DA32B6D7A1F00B2B40D /* RecentTransactionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6D5DA22B6D7A1F00B2B40D /* RecentTransactionsList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		4D6D5D9C2B6D4D7500B2B40D /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		4D6D5D9E2B6D4E6B00B2B40D /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
 		4D6D5DA02B6D6ABE00B2B40D /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
+		4D6D5DA22B6D7A1F00B2B40D /* RecentTransactionsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTransactionsList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				4D6D5D8A2B6D394600B2B40D /* ExpenseTrackerApp.swift */,
 				4D6D5D8C2B6D394600B2B40D /* ContentView.swift */,
+				4D6D5DA22B6D7A1F00B2B40D /* RecentTransactionsList.swift */,
 				4D6D5D982B6D3E7000B2B40D /* Utilities.swift */,
 				4D6D5D9A2B6D4C1600B2B40D /* TransactionModel.swift */,
 				4D6D5D9E2B6D4E6B00B2B40D /* TransactionRow.swift */,
@@ -157,6 +160,7 @@
 				4D6D5D8D2B6D394600B2B40D /* ContentView.swift in Sources */,
 				4D6D5D9F2B6D4E6B00B2B40D /* TransactionRow.swift in Sources */,
 				4D6D5D992B6D3E7000B2B40D /* Utilities.swift in Sources */,
+				4D6D5DA32B6D7A1F00B2B40D /* RecentTransactionsList.swift in Sources */,
 				4D6D5DA12B6D6ABE00B2B40D /* TransactionListViewModel.swift in Sources */,
 				4D6D5D8B2B6D394600B2B40D /* ExpenseTrackerApp.swift in Sources */,
 			);

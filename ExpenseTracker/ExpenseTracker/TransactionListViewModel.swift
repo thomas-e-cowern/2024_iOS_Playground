@@ -43,7 +43,7 @@ final class TransactionListViewModel: ObservableObject {
                 }
             } receiveValue: { [weak self] result in
                 self?.transactions = result
-                dump(self?.transactions)
+//                dump(self?.transactions)
             }
             .store(in: &cancellables)
     }
