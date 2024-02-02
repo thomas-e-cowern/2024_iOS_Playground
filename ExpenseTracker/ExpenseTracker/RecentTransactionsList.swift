@@ -32,6 +32,13 @@ struct RecentTransactionsList: View {
                 }
             }
             .padding(.top)
+            
+            // MARK: Transactions list
+            ForEach(transactionListVM.transactions) { transaction in
+                TransactionRow(transaction: transaction)
+                
+                Divider()
+            }
         }
         .padding()
         .background(Theme.systemBackground)
