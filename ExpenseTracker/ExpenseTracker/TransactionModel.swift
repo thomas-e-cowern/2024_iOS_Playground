@@ -14,7 +14,7 @@ struct Transaction: Identifiable {
     let account: String
     var merchant: String
     let amount: Double
-    let type: TransactionType.rawValue
+    let type: TransactionType.RawValue
     var categoryId: Int
     var category: String
     var isPending: Bool
@@ -22,3 +22,9 @@ struct Transaction: Identifiable {
     var isExpense: Bool
     var isEdited: Bool
 }
+
+enum TransactionType: String {
+    case debit = "debit"
+    case credit = "credit"
+}
+

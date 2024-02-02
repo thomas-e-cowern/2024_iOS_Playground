@@ -14,3 +14,4 @@ enum Theme {
     static let icon = Color("Icon")
     static let systemBackground = Color(uiColor: .systemBackground)
 }
+
