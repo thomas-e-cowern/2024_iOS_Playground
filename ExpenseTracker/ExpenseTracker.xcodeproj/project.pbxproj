@@ -12,6 +12,7 @@
 		4D6D5D8F2B6D394700B2B40D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D6D5D8E2B6D394700B2B40D /* Assets.xcassets */; };
 		4D6D5D922B6D394700B2B40D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D6D5D912B6D394700B2B40D /* Preview Assets.xcassets */; };
 		4D6D5D992B6D3E7000B2B40D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6D5D982B6D3E7000B2B40D /* Extensions.swift */; };
+		4D6D5D9B2B6D4C1600B2B40D /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6D5D9A2B6D4C1600B2B40D /* TransactionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		4D6D5D8E2B6D394700B2B40D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D6D5D912B6D394700B2B40D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D6D5D982B6D3E7000B2B40D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4D6D5D9A2B6D4C1600B2B40D /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				4D6D5D982B6D3E7000B2B40D /* Extensions.swift */,
 				4D6D5D8E2B6D394700B2B40D /* Assets.xcassets */,
 				4D6D5D902B6D394700B2B40D /* Preview Content */,
+				4D6D5D9A2B6D4C1600B2B40D /* TransactionModel.swift */,
 			);
 			path = ExpenseTracker;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D6D5D9B2B6D4C1600B2B40D /* TransactionModel.swift in Sources */,
 				4D6D5D8D2B6D394600B2B40D /* ContentView.swift in Sources */,
 				4D6D5D992B6D3E7000B2B40D /* Extensions.swift in Sources */,
 				4D6D5D8B2B6D394600B2B40D /* ExpenseTrackerApp.swift in Sources */,
