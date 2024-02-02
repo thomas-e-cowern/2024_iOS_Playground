@@ -13,6 +13,14 @@ struct TransactionRow: View {
     
     var body: some View {
         HStack(spacing: 20) {
+            
+            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .fill(Color.icon.opacity(0.3))
+                .frame(width: 44, height: 44)
+                .overlay {
+                    Image(systemName: "pencil.and.scribble")
+                }
+            
             VStack(alignment: .leading, spacing: 6) {
                 // MARK: Transaction merchant
                 Text(transaction.merchant)
@@ -35,7 +43,7 @@ struct TransactionRow: View {
             Spacer()
             
             // MARK: Transaction amount
-            Text(transaction.amount, format: .currency(code: "USD"))
+            Text(transaction.signedAmout, format: .currency(code: "USD"))
                 .bold()
                 .foregroundStyle(transaction.type == TransactionType.credit.rawValue ? Color.text : .primary)
         }
