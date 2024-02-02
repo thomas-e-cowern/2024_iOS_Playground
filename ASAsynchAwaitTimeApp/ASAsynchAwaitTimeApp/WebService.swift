@@ -14,7 +14,7 @@ class WebService {
             fatalError("URL is incorrect")
         }
         
-        let (data, response) = try await URLSession.shared.data(from: url)
+        let (data, _) = try await URLSession.shared.data(from: url)
         
         return try JSONDecoder().decode(CurrentDate.self, from: data)
     }

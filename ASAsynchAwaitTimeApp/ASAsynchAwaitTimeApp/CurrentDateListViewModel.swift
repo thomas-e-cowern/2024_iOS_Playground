@@ -10,13 +10,18 @@ import Foundation
 class CurrentDateListViewModel: ObservableObject {
     @Published var currentDates: [CurrentDateViewModel] = []
     
-    func getAllDates() async throws {
-        let currentDate = try await WebService().getDates()
-        
-        if let currentDate = currentDate {
-            let currentDateVM = CurrentDateViewModel(currentDate: currentDate)
-            currentDates.append(currentDateVM)
+    func getAllDates() async {
+        do {
+            let currentDate = try await WebService().getDates()
+            
+            if let currentDate = currentDate {
+                let currentDateVM = CurrentDateViewModel(currentDate: currentDate)
+                currentDates.append(currentDateVM)
+            }
+        } catch {
+            print("Error in CurrentDateListViewModel: \(error.localizedDescription)")
         }
+        
     }
 }
 

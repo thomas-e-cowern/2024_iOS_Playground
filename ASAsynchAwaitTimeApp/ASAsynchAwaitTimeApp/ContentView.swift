@@ -9,12 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var currentDates: [CurrentDate] = []
+    @StateObject private var currentDateListVM = CurrentDateListViewModel()
     
     var body: some View {
         NavigationView {
             VStack {
-                List(currentDates, id: \.id) { date in
+                List(currentDateListVM.currentDates, id: \.id) { date in
                     Text("\(date.date)")
                 }
                 .listStyle(.plain)
@@ -23,7 +23,7 @@ struct ContentView: View {
                     ToolbarItem {
                         Button {
                             Task {
-                                await populateDates()
+                                await currentDateListVM.getAllDates()
                             }
                             
                         } label: {
@@ -35,33 +35,10 @@ struct ContentView: View {
             .padding()
             .onAppear {
                 Task {
-                    await populateDates()
+                    await currentDateListVM.getAllDates()
                 }
             }
         }
-    }
-    
-    private func getDate() async throws -> CurrentDate? {
-        guard let url = URL(string: "https://planet-useful-bathroom.glitch.me/current-date") else {
-            fatalError("URL is incorrect")
-        }
-        
-        let (data, response) = try await URLSession.shared.data(from: url) 
-        
-        return try JSONDecoder().decode(CurrentDate.self, from: data)
-    }
-    
-    private func populateDates() async {
-        do {
-            guard let currentDate = try await getDate() else {
-                return
-            }
-            
-            self.currentDates.append(currentDate)
-        } catch {
-            print("Error getting dates in ContentView: \(error.localizedDescription)")
-        }
-        
     }
 }
 
