@@ -36,3 +36,10 @@ enum TransactionType: String {
     case credit = "credit"
 }
 
+struct Category {
+    let id: Int
+    let name: String
+    let icon: String
+    var mainCategoryId: Int?
+}
+
