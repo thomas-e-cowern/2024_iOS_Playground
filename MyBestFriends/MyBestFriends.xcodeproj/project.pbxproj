@@ -55,12 +55,12 @@
 		4D2DC94A2B7136B9007326DB /* MyBestFriends */ = {
 			isa = PBXGroup;
 			children = (
+				4D2DC95E2B715374007326DB /* Models */,
 				4D2DC94B2B7136B9007326DB /* MyBestFriendsApp.swift */,
 				4D2DC94D2B7136B9007326DB /* ContentView.swift */,
 				4D2DC9592B713780007326DB /* ContactsDataModel.xcdatamodeld */,
 				4D2DC94F2B7136BC007326DB /* Assets.xcassets */,
 				4D2DC9512B7136BC007326DB /* Preview Content */,
-				4D2DC95C2B713A18007326DB /* Contact.swift */,
 			);
 			path = MyBestFriends;
 			sourceTree = "<group>";
@@ -71,6 +71,14 @@
 				4D2DC9522B7136BC007326DB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4D2DC95E2B715374007326DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4D2DC95C2B713A18007326DB /* Contact.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
