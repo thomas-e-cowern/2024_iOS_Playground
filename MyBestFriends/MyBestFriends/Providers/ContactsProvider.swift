@@ -12,16 +12,23 @@ final class ContactsProvider {
     
     static let shared = ContactsProvider()
     
-    private let persistantContainer: NSPersistentContainer
+    private let persistentContainer: NSPersistentContainer
     
     var viewContext: NSManagedObjectContext {
-        persistantContainer.viewContext
+        persistentContainer.viewContext
     }
     
+    var newContext: NSManagedObjectContext {
+        let context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        context.persistentStoreCoordinator = persistentContainer.persistentStoreCoordinator
+        return context
+    }
+    
+    
     private init() {
-        persistantContainer = NSPersistentContainer(name: "ContactsDataModel")
-        persistantContainer.viewContext.automaticallyMergesChangesFromParent = true
-        persistantContainer.loadPersistentStores { _, error in
+        persistentContainer = NSPersistentContainer(name: "ContactsDataModel")
+        persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
+        persistentContainer.loadPersistentStores { _, error in
             if let error {
                 fatalError("Unable to load store with error: \(error.localizedDescription)")
             }

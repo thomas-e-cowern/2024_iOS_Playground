@@ -17,6 +17,7 @@
 		4D2DC9632B717380007326DB /* ContactRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DC9622B717380007326DB /* ContactRowView.swift */; };
 		4D2DC9662B7173D9007326DB /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DC9652B7173D9007326DB /* ContactDetailView.swift */; };
 		4D2DC9682B7175F1007326DB /* CreateContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DC9672B7175F1007326DB /* CreateContactView.swift */; };
+		4D2DC96B2B717987007326DB /* EditContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DC96A2B717987007326DB /* EditContactViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		4D2DC9622B717380007326DB /* ContactRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRowView.swift; sourceTree = "<group>"; };
 		4D2DC9652B7173D9007326DB /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 		4D2DC9672B7175F1007326DB /* CreateContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContactView.swift; sourceTree = "<group>"; };
+		4D2DC96A2B717987007326DB /* EditContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		4D2DC94A2B7136B9007326DB /* MyBestFriends */ = {
 			isa = PBXGroup;
 			children = (
+				4D2DC9692B717973007326DB /* ViewModels */,
 				4D2DC9642B7173B6007326DB /* Views */,
 				4D2DC95F2B715614007326DB /* Providers */,
 				4D2DC95E2B715374007326DB /* Models */,
@@ -107,6 +110,14 @@
 				4D2DC9672B7175F1007326DB /* CreateContactView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4D2DC9692B717973007326DB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4D2DC96A2B717987007326DB /* EditContactViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +193,7 @@
 				4D2DC95D2B713A18007326DB /* Contact.swift in Sources */,
 				4D2DC9612B715624007326DB /* ContactsProvider.swift in Sources */,
 				4D2DC9662B7173D9007326DB /* ContactDetailView.swift in Sources */,
+				4D2DC96B2B717987007326DB /* EditContactViewModel.swift in Sources */,
 				4D2DC95B2B713780007326DB /* ContactsDataModel.xcdatamodeld in Sources */,
 				4D2DC94E2B7136B9007326DB /* ContentView.swift in Sources */,
 				4D2DC9682B7175F1007326DB /* CreateContactView.swift in Sources */,

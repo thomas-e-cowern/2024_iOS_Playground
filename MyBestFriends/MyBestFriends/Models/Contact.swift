@@ -14,7 +14,7 @@ final class Contact: NSManagedObject {
     @NSManaged var email: String
     @NSManaged var favorite: Bool
     @NSManaged var name: String
-    @NSManaged var notess: String
+    @NSManaged var notes: String
     @NSManaged var phone: String
     
     override func awakeFromInsert() {
