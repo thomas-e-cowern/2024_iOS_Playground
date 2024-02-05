@@ -11,6 +11,8 @@
 		4D2DC94E2B7136B9007326DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DC94D2B7136B9007326DB /* ContentView.swift */; };
 		4D2DC9502B7136BC007326DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D2DC94F2B7136BC007326DB /* Assets.xcassets */; };
 		4D2DC9532B7136BC007326DB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D2DC9522B7136BC007326DB /* Preview Assets.xcassets */; };
+		4D2DC95B2B713780007326DB /* ContactsDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DC9592B713780007326DB /* ContactsDataModel.xcdatamodeld */; };
+		4D2DC95D2B713A18007326DB /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DC95C2B713A18007326DB /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		4D2DC94D2B7136B9007326DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4D2DC94F2B7136BC007326DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D2DC9522B7136BC007326DB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4D2DC95A2B713780007326DB /* ContactsDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactsDataModel.xcdatamodel; sourceTree = "<group>"; };
+		4D2DC95C2B713A18007326DB /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +57,10 @@
 			children = (
 				4D2DC94B2B7136B9007326DB /* MyBestFriendsApp.swift */,
 				4D2DC94D2B7136B9007326DB /* ContentView.swift */,
+				4D2DC9592B713780007326DB /* ContactsDataModel.xcdatamodeld */,
 				4D2DC94F2B7136BC007326DB /* Assets.xcassets */,
 				4D2DC9512B7136BC007326DB /* Preview Content */,
+				4D2DC95C2B713A18007326DB /* Contact.swift */,
 			);
 			path = MyBestFriends;
 			sourceTree = "<group>";
@@ -137,6 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D2DC95D2B713A18007326DB /* Contact.swift in Sources */,
+				4D2DC95B2B713780007326DB /* ContactsDataModel.xcdatamodeld in Sources */,
 				4D2DC94E2B7136B9007326DB /* ContentView.swift in Sources */,
 				4D2DC94C2B7136B9007326DB /* MyBestFriendsApp.swift in Sources */,
 			);
@@ -344,6 +352,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4D2DC9592B713780007326DB /* ContactsDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4D2DC95A2B713780007326DB /* ContactsDataModel.xcdatamodel */,
+			);
+			currentVersion = 4D2DC95A2B713780007326DB /* ContactsDataModel.xcdatamodel */;
+			path = ContactsDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4D2DC9402B7136B9007326DB /* Project object */;
 }
