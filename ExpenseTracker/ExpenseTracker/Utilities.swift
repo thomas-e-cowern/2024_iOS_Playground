@@ -91,4 +91,6 @@ extension Category {
         .software,
         .creditCardPayment
     ]
+    
+    static let all: [Category] = categories + subCategories
 }
