@@ -27,12 +27,12 @@ struct ContentView: View {
                             NavigationLink {
                                 ContactDetailView(contact: contact)
                             } label: {
-                                ContactRowView(contact: contact)
+                                ContactRowView(contact: contact, provider: provider)
                                     .swipeActions(allowsFullSwipe: true) {
                                         
                                         Button(role: .destructive) {
                                             do {
-                                                try delete(contact)
+                                                try provider.delete(contact, in: provider.viewContext)
                                             } catch {
                                                 print("Error deleting contact: \(error.localizedDescription)")
                                             }
@@ -96,19 +96,4 @@ struct ContentView: View {
     let emptyPreview = ContactsProvider.shared
     return ContentView(provider: emptyPreview)
         .environment(\.managedObjectContext, emptyPreview.viewContext)
-}
-
-private extension ContentView {
-    func delete(_ contact: Contact) throws {
-        let context = provider.viewContext
-        let existingContact = try context.existingObject(with: contact.objectID)
-        context.delete(existingContact)
-        
-        Task(priority: .background) {
-            try await context.perform {
-                try context.save()
-            }
-        }
-        
-    }
 }

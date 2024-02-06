@@ -13,6 +13,8 @@ struct ContactRowView: View {
     
     @ObservedObject var contact: Contact
     
+    let provider: ContactsProvider
+    
     var body: some View {
 
         VStack(alignment: .leading, spacing: 0) {
@@ -45,9 +47,7 @@ private extension ContactRowView {
     func toggleFavorite() {
         contact.favorite.toggle()
         do {
-            if moc.hasChanges {
-                try moc.save()
-            }
+            try provider.persist(in: moc)
         } catch {
             print("Error in toggleFavorite: \(error.localizedDescription)")
         }
@@ -55,5 +55,6 @@ private extension ContactRowView {
 }
 
 #Preview {
-    ContactRowView(contact: .preview())
+    let previewProvider = ContactsProvider.shared
+    return ContactRowView(contact: .preview(context: previewProvider.viewContext), provider: previewProvider)
 }
