@@ -17,14 +17,20 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(contacts) { contact in
-                    
-                    NavigationLink {
-                        ContactDetailView(contact: contact)
-                    } label: {
-                        ContactRowView(contact: contact)
+            ZStack {
+                if !contacts.isEmpty {
+                    List {
+                        ForEach(contacts) { contact in
+                            
+                            NavigationLink {
+                                ContactDetailView(contact: contact)
+                            } label: {
+                                ContactRowView(contact: contact)
+                            }
+                        }
                     }
+                } else {
+                    NoContactView()
                 }
             }
             .toolbar {
@@ -47,19 +53,17 @@ struct ContentView: View {
     }
 }
         
-#Preview {
+#Preview("Contacts with data") {
     let preview = ContactsProvider.shared
     return ContentView(provider: preview)
         .environment(\.managedObjectContext, preview.viewContext)
-        .previewDisplayName("Contacts with data")
         .onAppear {
             Contact.makePreview(count: 10, In: preview.viewContext)
         }
 }
 
-#Preview {
+#Preview("Contacts with no data") {
     let emptyPreview = ContactsProvider.shared
     return ContentView(provider: emptyPreview)
         .environment(\.managedObjectContext, emptyPreview.viewContext)
-        .previewDisplayName("Contacts with no data")
 }

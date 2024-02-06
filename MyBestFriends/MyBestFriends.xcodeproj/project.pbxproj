@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D2C830F2B7279AA00B0C0AB /* NoContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2C830E2B7279AA00B0C0AB /* NoContactView.swift */; };
 		4D2DC94C2B7136B9007326DB /* MyBestFriendsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DC94B2B7136B9007326DB /* MyBestFriendsApp.swift */; };
 		4D2DC94E2B7136B9007326DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DC94D2B7136B9007326DB /* ContentView.swift */; };
 		4D2DC9502B7136BC007326DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D2DC94F2B7136BC007326DB /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D2C830E2B7279AA00B0C0AB /* NoContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoContactView.swift; sourceTree = "<group>"; };
 		4D2DC9482B7136B9007326DB /* MyBestFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBestFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D2DC94B2B7136B9007326DB /* MyBestFriendsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBestFriendsApp.swift; sourceTree = "<group>"; };
 		4D2DC94D2B7136B9007326DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				4D2DC9622B717380007326DB /* ContactRowView.swift */,
 				4D2DC9652B7173D9007326DB /* ContactDetailView.swift */,
 				4D2DC9672B7175F1007326DB /* CreateContactView.swift */,
+				4D2C830E2B7279AA00B0C0AB /* NoContactView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				4D2DC94E2B7136B9007326DB /* ContentView.swift in Sources */,
 				4D2DC9682B7175F1007326DB /* CreateContactView.swift in Sources */,
 				4D2DC9632B717380007326DB /* ContactRowView.swift in Sources */,
+				4D2C830F2B7279AA00B0C0AB /* NoContactView.swift in Sources */,
 				4D2DC94C2B7136B9007326DB /* MyBestFriendsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
