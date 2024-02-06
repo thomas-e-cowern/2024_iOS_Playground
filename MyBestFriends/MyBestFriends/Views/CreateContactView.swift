@@ -35,7 +35,7 @@ struct CreateContactView: View {
                 TextField("", text: $vm.contact.notes, axis: .vertical)
             }
         }
-        .navigationTitle("Name Here")
+        .navigationTitle(vm.isNew ? "New Contact" : "Update Contact")
         .toolbar {
             ToolbarItem(placement: .confirmationAction) {
                 Button("Done") {

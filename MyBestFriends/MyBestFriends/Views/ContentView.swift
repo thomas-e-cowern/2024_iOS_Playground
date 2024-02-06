@@ -11,6 +11,8 @@ struct ContentView: View {
     
     @State private var isShowingNewContact: Bool = false
     
+    @State private var contactToEdit: Contact?
+    
     @FetchRequest(fetchRequest: Contact.all(), animation: .default) var contacts
     
     var provider = ContactsProvider.shared
@@ -43,7 +45,7 @@ struct ContentView: View {
                                         .tint(.red)
                                         
                                         Button {
-                                            //
+                                            contactToEdit = contact
                                         } label: {
                                             Label(
                                                 title: { Text("Edit") },
@@ -62,16 +64,18 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button(action: {
-                        isShowingNewContact.toggle()
+                        contactToEdit = .empty(context: provider.newContext)
                     }, label: {
                         Image(systemName: "plus")
                             .font(.title3)
                     })
                 }
             }
-            .sheet(isPresented: $isShowingNewContact, content: {
+            .sheet(item: $contactToEdit, onDismiss: {
+                contactToEdit = nil
+            }, content: { contact in
                 NavigationStack {
-                    CreateContactView(vm: .init(provider: provider))
+                    CreateContactView(vm: .init(provider: provider, contact: contact))
                 }
             })
             .navigationTitle("Contacts")
