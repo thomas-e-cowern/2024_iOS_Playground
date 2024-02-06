@@ -60,7 +60,8 @@ extension Contact {
         case .all:
             return config.query.isEmpty ? NSPredicate(value: true) : NSPredicate(format: "name CONTAINS[cd] %@", config.query)
         case .fave:
-            return config.query.isEmpty ? NSPredicate(value: true) : NSPredicate(format: "name CONTAINS[cd] %@ AND favorite == %@", config.query, NSNumber(value: true))
+            return config.query.isEmpty ? NSPredicate(format: "favorite == %@", NSNumber(value: true)) :
+            NSPredicate(format: "name CONTAINS[cd] %@ AND favorite == %@", config.query, NSNumber(value: true))
         }
         
     }

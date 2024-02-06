@@ -75,13 +75,32 @@ struct ContentView: View {
             }
             .searchable(text: $searchConfig.query)
             .toolbar {
-                ToolbarItem(placement: .primaryAction) {
+                ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
                         contactToEdit = .empty(context: provider.newContext)
                     }, label: {
                         Image(systemName: "plus")
                             .font(.title3)
                     })
+                }
+                
+                ToolbarItem(placement: .topBarTrailing) {
+                    Menu {
+                        Section {
+                            Text("Filter")
+                            Picker(selection: $searchConfig.filter) {
+                                Text("All").tag(SearchConfig.filter.all)
+                                Text("Favorites").tag(SearchConfig.filter.fave)
+                            } label: {
+                                Text("Filter Favorites")
+                            }
+
+                        }
+                    } label: {
+                        Image(systemName: "ellipsis")
+                            .symbolVariant(.circle)
+                            .font(.title2)
+                    }
                 }
             }
             .sheet(item: $contactToEdit, onDismiss: {
