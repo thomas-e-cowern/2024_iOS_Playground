@@ -26,6 +26,32 @@ struct ContentView: View {
                                 ContactDetailView(contact: contact)
                             } label: {
                                 ContactRowView(contact: contact)
+                                    .swipeActions(allowsFullSwipe: true) {
+                                        
+                                        Button(role: .destructive) {
+                                            do {
+                                                try delete(contact)
+                                            } catch {
+                                                print("Error deleting contact: \(error.localizedDescription)")
+                                            }
+                                        } label: {
+                                            Label(
+                                                title: { Text("Delete") },
+                                                icon: { Image(systemName: "trash") }
+                                            )
+                                        }
+                                        .tint(.red)
+                                        
+                                        Button {
+                                            //
+                                        } label: {
+                                            Label(
+                                                title: { Text("Edit") },
+                                                icon: { Image(systemName: "pencil") }
+                                            )
+                                        }
+                                        .tint(.orange)
+                                    }
                             }
                         }
                     }
@@ -66,4 +92,19 @@ struct ContentView: View {
     let emptyPreview = ContactsProvider.shared
     return ContentView(provider: emptyPreview)
         .environment(\.managedObjectContext, emptyPreview.viewContext)
+}
+
+private extension ContentView {
+    func delete(_ contact: Contact) throws {
+        let context = provider.viewContext
+        let existingContact = try context.existingObject(with: contact.objectID)
+        context.delete(existingContact)
+        
+        Task(priority: .background) {
+            try await context.perform {
+                try context.save()
+            }
+        }
+        
+    }
 }
