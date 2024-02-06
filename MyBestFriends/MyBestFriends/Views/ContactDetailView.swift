@@ -8,17 +8,20 @@
 import SwiftUI
 
 struct ContactDetailView: View {
+    
+    let contact: Contact
+    
     var body: some View {
         List {
             Section("General") {
                 LabeledContent {
-                    Text("Email here")
+                    Text(contact.email)
                 } label: {
                     Text("Email")
                 }
                 
                 LabeledContent {
-                    Text("Phone number here")
+                    Text(contact.phone)
                 } label: {
                     Text("Phone Number")
                 }
@@ -26,20 +29,20 @@ struct ContactDetailView: View {
                 LabeledContent {
                     Text(.now, style: .date)
                 } label: {
-                    Text("Birthday")
+                    Text("\(contact.dob)")
                 }
             }
             
             Section("notes") {
-                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In pellentesque massa placerat duis ultricies. Habitant morbi tristique senectus et netus et malesuada fames ac. Ultricies tristique nulla aliquet enim tortor at auctor. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi.")
+                Text(contact.notes)
             }
         }
-        .navigationTitle("Name Here")
+        .navigationTitle(contact.formattedName)
     }
 }
 
-#Preview {
-    NavigationStack {
-        ContactDetailView()
-    }
-}
+//#Preview {
+//    NavigationStack {
+//        ContactDetailView()
+//    }
+//}

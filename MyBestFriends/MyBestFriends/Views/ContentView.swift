@@ -21,7 +21,7 @@ struct ContentView: View {
                 ForEach(contacts) { contact in
                     
                     NavigationLink {
-                        ContactDetailView()
+                        ContactDetailView(contact: contact)
                     } label: {
                         ContactRowView(contact: contact)
                     }
