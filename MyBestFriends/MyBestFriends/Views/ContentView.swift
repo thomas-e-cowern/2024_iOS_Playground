@@ -48,5 +48,18 @@ struct ContentView: View {
 }
         
 #Preview {
-    ContentView()
+    let preview = ContactsProvider.shared
+    return ContentView(provider: preview)
+        .environment(\.managedObjectContext, preview.viewContext)
+        .previewDisplayName("Contacts with data")
+        .onAppear {
+            Contact.makePreview(count: 10, In: preview.viewContext)
+        }
+}
+
+#Preview {
+    let emptyPreview = ContactsProvider.shared
+    return ContentView(provider: emptyPreview)
+        .environment(\.managedObjectContext, emptyPreview.viewContext)
+        .previewDisplayName("Contacts with no data")
 }
