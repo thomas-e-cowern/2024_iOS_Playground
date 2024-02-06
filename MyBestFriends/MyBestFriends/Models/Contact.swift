@@ -49,3 +49,35 @@ extension Contact {
         return request
     }
 }
+
+// This creates random contacts to use in previews during development
+extension Contact {
+    
+    @discardableResult
+    func makePreview(count: Int, In context: NSManagedObjectContext) -> [Contact] {
+        
+        var contacts: [Contact] = []
+        
+        for i in 0..<count {
+            let contact = Contact(context: context)
+            contact.name = "name \(i)"
+            contact.email = "name\(i)@email.com"
+            contact.favorite = Bool.random()
+            contact.phone = "14\(i)-\(i)98-20\(i)5"
+            contact.dob = Calendar.current.date(byAdding: .day, value: -i, to: .now) ?? .now
+            contact.notes = "This is the note for contact \(i)"
+            contacts.append(contact)
+        }
+        
+        return contacts
+    }
+    
+    func preview(context: NSManagedObjectContext = ContactsProvider.shared.viewContext) -> Contact {
+        return makePreview(count: 1, In: context)[0]
+    }
+    
+    func empty(context: NSManagedObjectContext = ContactsProvider.shared.viewContext) -> Contact {
+        return Contact(context: context)
+    }
+    
+}
