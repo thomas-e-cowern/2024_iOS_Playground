@@ -54,6 +54,6 @@ private extension ContactRowView {
     }
 }
 
-//#Preview {
-//    ContactRowView()
-//}
+#Preview {
+    ContactRowView(contact: .preview())
+}

@@ -27,9 +27,9 @@ struct ContactDetailView: View {
                 }
                 
                 LabeledContent {
-                    Text(.now, style: .date)
+                    Text("\(contact.dob, style: .date)")
                 } label: {
-                    Text("\(contact.dob)")
+                    Text("Date of Birth")
                 }
             }
             
@@ -41,8 +41,8 @@ struct ContactDetailView: View {
     }
 }
 
-//#Preview {
-//    NavigationStack {
-//        ContactDetailView()
-//    }
-//}
+#Preview {
+    NavigationStack {
+        ContactDetailView(contact: .preview())
+    }
+}
