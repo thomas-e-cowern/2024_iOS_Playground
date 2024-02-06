@@ -26,6 +26,7 @@ final class ContactsProvider {
     
     
     private init() {
+        print("in init in ContactsProvider")
         persistentContainer = NSPersistentContainer(name: "ContactsDataModel")
         persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
         persistentContainer.loadPersistentStores { _, error in

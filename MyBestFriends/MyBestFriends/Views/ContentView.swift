@@ -11,17 +11,19 @@ struct ContentView: View {
     
     @State private var isShowingNewContact: Bool = false
     
+    @FetchRequest(fetchRequest: Contact.all(), animation: .default) var contacts
+    
     var provider = ContactsProvider.shared
     
     var body: some View {
         NavigationStack {
             List {
-                ForEach(0...19, id: \.self) { item in
+                ForEach(contacts) { contact in
                     
                     NavigationLink {
                         ContactDetailView()
                     } label: {
-                        ContactRowView()
+                        ContactRowView(contact: contact)
                     }
                 }
             }

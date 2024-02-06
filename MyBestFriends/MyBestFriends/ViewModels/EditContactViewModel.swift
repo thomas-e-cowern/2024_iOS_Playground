@@ -20,7 +20,9 @@ final class EditContactViewModel: ObservableObject {
     }
     
     func save() throws {
+
         if context.hasChanges {
+
             try context.save()
         }
     }

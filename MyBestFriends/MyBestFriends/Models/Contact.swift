@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-final class Contact: NSManagedObject {
+final class Contact: NSManagedObject, Identifiable {
     
     @NSManaged var dob: Date
     @NSManaged var email: String
@@ -17,6 +17,10 @@ final class Contact: NSManagedObject {
     @NSManaged var notes: String
     @NSManaged var phone: String
     
+    var isBirthday: Bool {
+        Calendar.current.isDateInToday(dob)
+    }
+    
     override func awakeFromInsert() {
         super.awakeFromInsert()
         
@@ -24,4 +28,20 @@ final class Contact: NSManagedObject {
         setPrimitiveValue(false, forKey: "favorite")
     }
     
+}
+
+extension Contact {
+    
+    private static var contactsFetchRequest: NSFetchRequest<Contact> {
+        NSFetchRequest(entityName: "Contact")
+    }
+    
+    static func all() -> NSFetchRequest<Contact> {
+        let request: NSFetchRequest<Contact> = contactsFetchRequest
+        request.sortDescriptors = [
+            NSSortDescriptor(keyPath: \Contact.name, ascending: true)
+        ]
+        
+        return request
+    }
 }
