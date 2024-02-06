@@ -25,6 +25,12 @@ final class Contact: NSManagedObject, Identifiable {
         "\(isBirthday ? "🎂" : "")\(name)"
     }
     
+    var isValid: Bool {
+        !name.isEmpty &&
+        !email.isEmpty &&
+        !phone.isEmpty
+    }
+    
     override func awakeFromInsert() {
         super.awakeFromInsert()
         
@@ -47,6 +53,16 @@ extension Contact {
         ]
         
         return request
+    }
+    
+    static func filter(with config: SearchConfig) -> NSPredicate {
+        switch config.filter {
+        case .all:
+            return config.query.isEmpty ? NSPredicate(value: true) : NSPredicate(format: "name CONTAINS[cd] %@", config.query)
+        case .fave:
+            return config.query.isEmpty ? NSPredicate(value: true) : NSPredicate(format: "name CONTAINS[cd] %@ AND favorite == %@", config.query, NSNumber(value: true))
+        }
+        
     }
 }
 

@@ -7,11 +7,23 @@
 
 import SwiftUI
 
+struct SearchConfig: Equatable {
+    
+    enum filter {
+        case all, fave
+    }
+    
+    var filter: filter = .all
+    var query: String = ""
+}
+
 struct ContentView: View {
     
     @State private var isShowingNewContact: Bool = false
     
     @State private var contactToEdit: Contact?
+    
+    @State private var searchConfig: SearchConfig = .init()
     
     @FetchRequest(fetchRequest: Contact.all(), animation: .default) var contacts
     
@@ -32,7 +44,7 @@ struct ContentView: View {
                                         
                                         Button(role: .destructive) {
                                             do {
-                                                try provider.delete(contact, in: provider.viewContext)
+                                                try provider.delete(contact, in: provider.newContext)
                                             } catch {
                                                 print("Error deleting contact: \(error.localizedDescription)")
                                             }
@@ -61,6 +73,7 @@ struct ContentView: View {
                     NoContactView()
                 }
             }
+            .searchable(text: $searchConfig.query)
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button(action: {
@@ -79,6 +92,9 @@ struct ContentView: View {
                 }
             })
             .navigationTitle("Contacts")
+            .onChange(of: searchConfig) { oldValue, newValue in
+                contacts.nsPredicate = Contact.filter(with: newValue)
+            }
         }
     }
 }

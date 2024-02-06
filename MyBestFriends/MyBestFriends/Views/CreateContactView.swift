@@ -13,6 +13,8 @@ struct CreateContactView: View {
     
     @ObservedObject var vm: EditContactViewModel
     
+    @State private var hasError: Bool = false
+    
     var body: some View {
         List {
             Section("General") {
@@ -39,12 +41,7 @@ struct CreateContactView: View {
         .toolbar {
             ToolbarItem(placement: .confirmationAction) {
                 Button("Done") {
-                    do {
-                        try vm.save()
-                        dismiss()
-                    } catch {
-                        print(error.localizedDescription)
-                    }
+                    validate()
                 }
             }
             
@@ -54,6 +51,9 @@ struct CreateContactView: View {
                 }
             }
         }
+        .alert("There appears to be an error", isPresented: $hasError, actions: {}) {
+            Text("Name, email and phone number are required entries")
+        }
     }
 }
 
@@ -62,5 +62,20 @@ struct CreateContactView: View {
         let preview = ContactsProvider.shared
         CreateContactView(vm: .init(provider: preview))
             .environment(\.managedObjectContext, preview.viewContext)
+    }
+}
+
+private extension CreateContactView {
+    func validate() {
+        if vm.contact.isValid {
+            do {
+                try vm.save()
+                dismiss()
+            } catch {
+                print("Error in validate: \(error.localizedDescription)")
+            }
+        } else {
+            hasError = true
+        }
     }
 }
