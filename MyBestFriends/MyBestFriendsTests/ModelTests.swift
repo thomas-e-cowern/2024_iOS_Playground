@@ -71,18 +71,24 @@ final class ModelTests: XCTestCase {
     }
     
     func testFilterFaveContactsRequestIsValid() {
-        
+        let request = Contact.filter(with: .init(filter: .fave))
+        XCTAssertEqual("favorite == 1", request.predicateFormat)
     }
     
     func testFilterAllFavContactsRequestIsValid() {
-        
+        let request = Contact.filter(with: .init(filter: .all))
+        XCTAssertEqual("TRUEPREDICATE", request.predicateFormat)
     }
     
     func testFilterAllWithQueryContactRequestIsValid() {
-        
+        let query = "tunds"
+        let request = Contact.filter(with: .init(query: query))
+        XCTAssertEqual("name CONTAINS[cd] \"\(query)\"", request.predicateFormat)
     }
     
     func testFilterFavWithQueryContactRequestIsValid() {
-        
+        let query = "tunds"
+        let request = Contact.filter(with: .init(filter: .fave, query: query))
+        XCTAssertEqual("name CONTAINS[cd] \"\(query)\" AND favorite == 1", request.predicateFormat)
     }
 }
