@@ -58,7 +58,7 @@ extension Category {
     static let homeSupplies = Category(id: 602, name: "Home Supplies", icon: "lightbulb.circle.fill", mainCategoryId: 6)
     static let paycheque = Category(id: 701, name: "Paycheque", icon: "dollarsign.circle.fill", mainCategoryId: 7)
     static let software = Category(id: 801, name: "Software", icon: "desktopcomputer", mainCategoryId: 8)
-    static let creditCardPayment = Category(id: 901, name: "creditcard.fill", icon: "", mainCategoryId: 9)
+    static let creditCardPayment = Category(id: 901, name: "Bill Payment", icon: "creditcard.fill", mainCategoryId: 9)
 }
 
 extension Category {

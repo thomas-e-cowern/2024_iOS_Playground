@@ -51,12 +51,13 @@ struct TransactionRow: View {
     }
 }
 
-#Preview {
+#Preview("Transaction View Light") {
+    
     TransactionRow(transaction: transationcPreviewData)
         .preferredColorScheme(.light)
 }
 
-#Preview {
+#Preview("Transaction View Dark") {
     TransactionRow(transaction: transationcPreviewData)
         .preferredColorScheme(.dark)
 }

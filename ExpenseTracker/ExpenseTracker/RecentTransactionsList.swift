@@ -47,7 +47,7 @@ struct RecentTransactionsList: View {
     }
 }
 
-#Preview {
+#Preview("Recent Transactions Light") {
     
     let transactionListVM: TransactionListViewModel = {
         let transactionListVM = TransactionListViewModel()
@@ -60,7 +60,7 @@ struct RecentTransactionsList: View {
         .preferredColorScheme(.light)
 }
 
-#Preview {
+#Preview("Recent Transactions Dark") {
     
     let transactionListVM: TransactionListViewModel = {
         let transactionListVM = TransactionListViewModel()
