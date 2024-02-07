@@ -42,11 +42,32 @@ final class ModelTests: XCTestCase {
     }
     
     func testContactsBirthdayIsValid() {
-        
+        let contact = Contact.preview(context: provider.viewContext)
+        XCTAssertTrue(contact.isBirthday)
+    }
+    
+    func testContactsBirthdayIsNatValid() throws {
+        let contact = try XCTUnwrap(Contact.makePreview(count: 2, in: provider.viewContext).last)
+        XCTAssertFalse(contact.isBirthday)
     }
     
     func testMakeContactsPreviewIsValid() {
+        let count = 5
+        let contacts = Contact.makePreview(count: 5, in: provider.viewContext)
         
+        for i in 0..<contacts.count {
+            let item = contacts[i]
+            XCTAssertEqual(item.name, "name \(i)")
+            XCTAssertEqual(item.email, "name\(i)@email.com")
+            XCTAssertNotNil(item.favorite)
+            XCTAssertEqual(item.phone, "14\(i)-\(i)98-20\(i)5")
+            XCTAssertEqual(item.notes, "This is the note for contact \(i)")
+            
+            let dateToCompare = Calendar.current.date(byAdding: .day, value: -i, to: .now)
+            let dobDay = Calendar.current.dateComponents([.day], from: item.dob, to: dateToCompare!).day
+            
+            XCTAssertEqual(dobDay, 0)
+        }
     }
     
     func testFilterFaveContactsRequestIsValid() {

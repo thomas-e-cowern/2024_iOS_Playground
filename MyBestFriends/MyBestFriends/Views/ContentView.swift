@@ -140,7 +140,7 @@ struct ContentView: View {
     return ContentView(provider: preview)
         .environment(\.managedObjectContext, preview.viewContext)
         .onAppear {
-            Contact.makePreview(count: 10, In: preview.viewContext)
+            Contact.makePreview(count: 10, in: preview.viewContext)
         }
 }
 

@@ -71,7 +71,7 @@ extension Contact {
 extension Contact {
     
     @discardableResult
-    static func makePreview(count: Int, In context: NSManagedObjectContext) -> [Contact] {
+    static func makePreview(count: Int, in context: NSManagedObjectContext) -> [Contact] {
         
         var contacts: [Contact] = []
         
@@ -90,7 +90,7 @@ extension Contact {
     }
     
     static func preview(context: NSManagedObjectContext = ContactsProvider.shared.viewContext) -> Contact {
-        return makePreview(count: 1, In: context)[0]
+        return makePreview(count: 1, in: context)[0]
     }
     
     static func empty(context: NSManagedObjectContext = ContactsProvider.shared.viewContext) -> Contact {
