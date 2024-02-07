@@ -32,11 +32,13 @@ final class ModelTests: XCTestCase {
     }
     
     func testContactIsNotValid() {
-        
+        let contact = Contact.empty(context: provider.viewContext)
+        XCTAssertFalse(contact.isValid)
     }
     
     func testContactIsValid() {
-        
+        let contact = Contact.preview(context: provider.viewContext)
+        XCTAssertTrue(contact.isValid)
     }
     
     func testContactsBirthdayIsValid() {
