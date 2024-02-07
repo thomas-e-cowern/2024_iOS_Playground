@@ -29,6 +29,14 @@ struct Transaction: Identifiable, Decodable {
     var signedAmout: Double {
         return type == TransactionType.credit.rawValue ? amount : -amount
     }
+    
+    var icon: String {
+        if let category = Category.all.first(where:  { $0.id == categoryId }) {
+            return category.icon
+        }
+        
+        return "pencil.and.scribble"
+    }
 }
 
 enum TransactionType: String {
