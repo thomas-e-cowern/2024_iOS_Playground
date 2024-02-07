@@ -97,4 +97,8 @@ extension Contact {
         return Contact(context: context)
     }
     
+    static func sort(order: Sort) -> [NSSortDescriptor] {
+        [NSSortDescriptor(keyPath: \Contact.name, ascending: order == .asc)]
+    }
+    
 }
