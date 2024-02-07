@@ -19,7 +19,7 @@
 		4D2DC9662B7173D9007326DB /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DC9652B7173D9007326DB /* ContactDetailView.swift */; };
 		4D2DC9682B7175F1007326DB /* CreateContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DC9672B7175F1007326DB /* CreateContactView.swift */; };
 		4D2DC96B2B717987007326DB /* EditContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DC96A2B717987007326DB /* EditContactViewModel.swift */; };
-		4D608B202B73C2A500FFCD6F /* MyBestFriendsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D608B1F2B73C2A500FFCD6F /* MyBestFriendsTests.swift */; };
+		4D608B272B73C2FA00FFCD6F /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D608B262B73C2FA00FFCD6F /* ModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,7 @@
 		4D2DC9672B7175F1007326DB /* CreateContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContactView.swift; sourceTree = "<group>"; };
 		4D2DC96A2B717987007326DB /* EditContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactViewModel.swift; sourceTree = "<group>"; };
 		4D608B1D2B73C2A500FFCD6F /* MyBestFriendsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBestFriendsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D608B1F2B73C2A500FFCD6F /* MyBestFriendsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBestFriendsTests.swift; sourceTree = "<group>"; };
+		4D608B262B73C2FA00FFCD6F /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +148,7 @@
 		4D608B1E2B73C2A500FFCD6F /* MyBestFriendsTests */ = {
 			isa = PBXGroup;
 			children = (
-				4D608B1F2B73C2A500FFCD6F /* MyBestFriendsTests.swift */,
+				4D608B262B73C2FA00FFCD6F /* ModelTests.swift */,
 			);
 			path = MyBestFriendsTests;
 			sourceTree = "<group>";
@@ -270,7 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D608B202B73C2A500FFCD6F /* MyBestFriendsTests.swift in Sources */,
+				4D608B272B73C2FA00FFCD6F /* ModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

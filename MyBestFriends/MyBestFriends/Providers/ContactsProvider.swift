@@ -31,7 +31,7 @@ final class ContactsProvider {
         persistentContainer = NSPersistentContainer(name: "ContactsDataModel")
         
         // Using previews to view data that is not persisted
-        if EnvironmentValues.isPreview || Thread.isRunningXCTest {
+        if EnvironmentValues.isPreview || Thread.current.isRunningXCTest {
             persistentContainer.persistentStoreDescriptions.first?.url = .init(fileURLWithPath: "/dev/null")
         }
         
@@ -75,7 +75,7 @@ extension EnvironmentValues {
 
 // Returns true if running a unit test
 extension Thread {
-    static var isRunningXCTest: Bool {
+    var isRunningXCTest: Bool {
         for key in self.threadDictionary.allKeys {
             guard let keyAsString = key as? String else {
                 continue
