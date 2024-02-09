@@ -14,7 +14,7 @@ struct ContentView: View {
                 Section("Foods") {
                     ForEach(foods) { food in
                         NavigationLink(value: food) {
-                            FoodItemView(food: food)
+                            MenuItemView(item: food)
                         }
                     }
                 }
@@ -22,7 +22,7 @@ struct ContentView: View {
                 Section("Drinks") {
                     ForEach(drinks) { drink in
                         NavigationLink(value: drink) {
-                            FoodItemView(food: drink)
+                            MenuItemView(item: drink)
                         }
                     }
                 }
@@ -31,6 +31,9 @@ struct ContentView: View {
             .navigationTitle("Menu")
             .navigationDestination(for: Food.self) { food in
                 FoodDetailView(food: food)
+            }
+            .navigationDestination(for: Drink.self) { drink in
+                DrinkDetailView(drink: drink)
             }
         }
     }
