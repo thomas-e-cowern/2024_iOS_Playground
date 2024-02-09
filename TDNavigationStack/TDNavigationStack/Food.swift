@@ -54,3 +54,21 @@ struct Drink: Identifiable, Hashable {
     let isFizzy: Bool
     let price: Decimal
 }
+
+let drinks: [Drink] = [
+    Drink(name: "🥤",
+          title: "Soda",
+          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          isFizzy: true,
+          price: 2.99),
+    Drink(name: "🧋",
+          title: "Boba Tea",
+          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          isFizzy: false,
+          price: 3.99),
+    Drink(name: "🧃",
+          title: "Juice",
+          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          isFizzy: false,
+          price: 0.99)
+]

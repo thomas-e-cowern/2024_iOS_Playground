@@ -11,9 +11,19 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(foods) { food in
-                    NavigationLink(value: food) {
-                        FoodItemView(food: food)
+                Section("Foods") {
+                    ForEach(foods) { food in
+                        NavigationLink(value: food) {
+                            FoodItemView(food: food)
+                        }
+                    }
+                }
+                
+                Section("Drinks") {
+                    ForEach(drinks) { drink in
+                        NavigationLink(value: drink) {
+                            FoodItemView(food: drink)
+                        }
                     }
                 }
             }
