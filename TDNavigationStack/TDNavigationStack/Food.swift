@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Food: Identifiable {
+struct Food: Identifiable, Hashable {
     var id: String { "\(name)_\(title)" }
     let name: String
     let title: String
@@ -45,3 +45,12 @@ let foods: [Food] = [
          description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
          price: 12.99)
 ]
+
+struct Drink: Identifiable, Hashable {
+    var id: String { "\(name)_\(title)" }
+    let name: String
+    let title: String
+    let description: String
+    let isFizzy: Bool
+    let price: Decimal
+}

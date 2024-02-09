@@ -12,13 +12,15 @@ struct ContentView: View {
         NavigationStack {
             List {
                 ForEach(foods) { food in
-                    NavigationLink(food.title, value: food.price)
+                    NavigationLink(value: food) {
+                        FoodItemView(food: food)
+                    }
                 }
             }
             .listStyle(.insetGrouped)
             .navigationTitle("Menu")
-            .navigationDestination(for: Decimal.self) { foodPrice in
-                Text(foodPrice, format: .currency(code: "USD"))
+            .navigationDestination(for: Food.self) { food in
+                FoodDetailView(food: food)
             }
         }
     }
