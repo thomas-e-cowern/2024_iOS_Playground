@@ -17,6 +17,9 @@
 		4DC171E42B7660C300F8FB19 /* DrinkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC171E32B7660C300F8FB19 /* DrinkDetailView.swift */; };
 		4DC171E62B766D1200F8FB19 /* DessertDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC171E52B766D1200F8FB19 /* DessertDetailView.swift */; };
 		4DC171E92B7693A400F8FB19 /* AllergiesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC171E82B7693A400F8FB19 /* AllergiesDetailView.swift */; };
+		4DC171EB2B76B8A000F8FB19 /* ShoppingCartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC171EA2B76B8A000F8FB19 /* ShoppingCartManager.swift */; };
+		4DC171ED2B76B8D700F8FB19 /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC171EC2B76B8D700F8FB19 /* CartButton.swift */; };
+		4DC171EF2B76B9A400F8FB19 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC171EE2B76B9A400F8FB19 /* CartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		4DC171E32B7660C300F8FB19 /* DrinkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailView.swift; sourceTree = "<group>"; };
 		4DC171E52B766D1200F8FB19 /* DessertDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailView.swift; sourceTree = "<group>"; };
 		4DC171E82B7693A400F8FB19 /* AllergiesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergiesDetailView.swift; sourceTree = "<group>"; };
+		4DC171EA2B76B8A000F8FB19 /* ShoppingCartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartManager.swift; sourceTree = "<group>"; };
+		4DC171EC2B76B8D700F8FB19 /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
+		4DC171EE2B76B9A400F8FB19 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 				4DC171E32B7660C300F8FB19 /* DrinkDetailView.swift */,
 				4DC171E52B766D1200F8FB19 /* DessertDetailView.swift */,
 				4DC171E82B7693A400F8FB19 /* AllergiesDetailView.swift */,
+				4DC171EA2B76B8A000F8FB19 /* ShoppingCartManager.swift */,
+				4DC171EC2B76B8D700F8FB19 /* CartButton.swift */,
+				4DC171EE2B76B9A400F8FB19 /* CartView.swift */,
 			);
 			path = TDNavigationStack;
 			sourceTree = "<group>";
@@ -161,8 +170,11 @@
 				4DC171E62B766D1200F8FB19 /* DessertDetailView.swift in Sources */,
 				4DC171E22B75749C00F8FB19 /* Food.swift in Sources */,
 				4DC171D22B7573DB00F8FB19 /* ContentView.swift in Sources */,
+				4DC171EF2B76B9A400F8FB19 /* CartView.swift in Sources */,
 				4DC171E42B7660C300F8FB19 /* DrinkDetailView.swift in Sources */,
+				4DC171EB2B76B8A000F8FB19 /* ShoppingCartManager.swift in Sources */,
 				4DC171D02B7573DB00F8FB19 /* TDNavigationStackApp.swift in Sources */,
+				4DC171ED2B76B8D700F8FB19 /* CartButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
