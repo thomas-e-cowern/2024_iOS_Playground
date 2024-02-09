@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MenuItemView: View {
     
-    let item: MenuItem
+    let item: any MenuItem
     
     var body: some View {
         LabeledContent {
