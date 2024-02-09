@@ -26,6 +26,14 @@ struct ContentView: View {
                         }
                     }
                 }
+                
+                Section("Dessert") {
+                    ForEach(desserts) { dessert in
+                        NavigationLink(value: dessert) {
+                            MenuItemView(item: dessert)
+                        }
+                    }
+                }
             }
             .listStyle(.insetGrouped)
             .navigationTitle("Menu")
@@ -34,6 +42,9 @@ struct ContentView: View {
             }
             .navigationDestination(for: Drink.self) { drink in
                 DrinkDetailView(drink: drink)
+            }
+            .navigationDestination(for: Dessert.self) { dessert in
+                Text(dessert.description)
             }
         }
     }
