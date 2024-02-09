@@ -9,18 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 ForEach(foods) { food in
-                    NavigationLink {
-                        FoodDetailView(food: food)
-                    } label: {
-                        FoodItemView(food: food)
-                    }
+                    NavigationLink(food.title, value: food.price)
                 }
             }
             .listStyle(.insetGrouped)
             .navigationTitle("Menu")
+            .navigationDestination(for: Decimal.self) { foodPrice in
+                Text(foodPrice, format: .currency(code: "USD"))
+            }
         }
     }
 }
