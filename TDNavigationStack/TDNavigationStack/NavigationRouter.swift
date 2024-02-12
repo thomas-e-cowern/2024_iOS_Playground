@@ -15,4 +15,8 @@ final class NavigationRouter: ObservableObject {
     func push(to screen: Route) {
         routes.append(screen)
     }
+    
+    func reset() {
+        routes.removeLast(routes.count)
+    }
 }

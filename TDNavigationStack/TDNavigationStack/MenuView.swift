@@ -59,6 +59,7 @@ struct MenuView: View {
             }
         }
         .environmentObject(cartManager)
+        .environmentObject(routerManager)
     }
 }
 
