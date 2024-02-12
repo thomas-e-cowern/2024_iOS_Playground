@@ -25,6 +25,7 @@
 		4DCBEC742B7A41F60009D2BF /* LocationsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCBEC732B7A41F60009D2BF /* LocationsDetailView.swift */; };
 		4DCBEC762B7A42930009D2BF /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCBEC752B7A42930009D2BF /* MenuView.swift */; };
 		4DCBEC782B7A52240009D2BF /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCBEC772B7A52240009D2BF /* Route.swift */; };
+		4DCBEC7A2B7A53D80009D2BF /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCBEC792B7A53D80009D2BF /* NavigationRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		4DCBEC732B7A41F60009D2BF /* LocationsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsDetailView.swift; sourceTree = "<group>"; };
 		4DCBEC752B7A42930009D2BF /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		4DCBEC772B7A52240009D2BF /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		4DCBEC792B7A53D80009D2BF /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				4DCBEC732B7A41F60009D2BF /* LocationsDetailView.swift */,
 				4DCBEC752B7A42930009D2BF /* MenuView.swift */,
 				4DCBEC772B7A52240009D2BF /* Route.swift */,
+				4DCBEC792B7A53D80009D2BF /* NavigationRouter.swift */,
 			);
 			path = TDNavigationStack;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DCBEC702B7A411C0009D2BF /* IngredientsDetailView.swift in Sources */,
+				4DCBEC7A2B7A53D80009D2BF /* NavigationRouter.swift in Sources */,
 				4DC171DE2B75742700F8FB19 /* MenuItemView.swift in Sources */,
 				4DC171E02B75743400F8FB19 /* FoodDetailView.swift in Sources */,
 				4DC171E92B7693A400F8FB19 /* AllergiesDetailView.swift in Sources */,
