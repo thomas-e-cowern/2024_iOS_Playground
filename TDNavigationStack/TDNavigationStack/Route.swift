@@ -10,6 +10,7 @@ import SwiftUI
 
 enum Route: Hashable, View {
     case menuItem(item: any MenuItem)
+    case cart
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(self.hashValue)
@@ -19,6 +20,10 @@ enum Route: Hashable, View {
         switch (lhs, rhs) {
         case (.menuItem(let lhsItem), .menuItem(let rhsItem)):
             return lhsItem.id == rhsItem.id
+        case (.cart, .cart):
+            return true
+        default:
+            return false
         }
     }
     
@@ -36,6 +41,8 @@ enum Route: Hashable, View {
             default:
                 EmptyView()
             }
+        case .cart:
+            CartView()
         }
     }
 }
