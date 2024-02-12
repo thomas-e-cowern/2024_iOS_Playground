@@ -180,6 +180,22 @@ let foods: [Food] = [
                      long: -0.1275, lat: 51.507222),
             Location(name: "Location 4",
                      long: -0.1275, lat: 51.507222)
+         ]),
+    Food(name: "🥟", title: "Dumpling", description: "Best dumplings with recycled human flesh, no bones", price: 6.99, ingredients: [
+            Ingredient(name: "Ingredient 1", quantity: 10),
+            Ingredient(name: "Ingredient 2", quantity: 5),
+            Ingredient(name: "Ingredient 3", quantity: 5)
+        ],
+         allergies: nil,
+         locations: [
+            Location(name: "Location 1",
+                     long: -0.1275, lat: 51.507222),
+            Location(name: "Location 2",
+                     long: -0.1275, lat: 51.507222),
+            Location(name: "Location 3",
+                     long: -0.1275, lat: 51.507222),
+            Location(name: "Location 4",
+                     long: -0.1275, lat: 51.507222)
          ])
 ]
 
@@ -202,20 +218,20 @@ let drinks: [Drink] = [
           isFizzy: true,
           price: 2.99,
           ingredients: [
-             Ingredient(name: "Ingredient 1", quantity: 10),
-             Ingredient(name: "Ingredient 2", quantity: 5),
-             Ingredient(name: "Ingredient 3", quantity: 5)
+            Ingredient(name: "Ingredient 1", quantity: 10),
+            Ingredient(name: "Ingredient 2", quantity: 5),
+            Ingredient(name: "Ingredient 3", quantity: 5)
           ],
           allergies: nil,
           locations: [
-             Location(name: "Location 1",
-                      long: -0.1275, lat: 51.507222),
-             Location(name: "Location 2",
-                      long: -0.1275, lat: 51.507222),
-             Location(name: "Location 3",
-                      long: -0.1275, lat: 51.507222),
-             Location(name: "Location 4",
-                      long: -0.1275, lat: 51.507222)
+            Location(name: "Location 1",
+                     long: -0.1275, lat: 51.507222),
+            Location(name: "Location 2",
+                     long: -0.1275, lat: 51.507222),
+            Location(name: "Location 3",
+                     long: -0.1275, lat: 51.507222),
+            Location(name: "Location 4",
+                     long: -0.1275, lat: 51.507222)
           ]),
     Drink(name: "🧋",
           title: "Boba Tea",
@@ -223,24 +239,24 @@ let drinks: [Drink] = [
           isFizzy: false,
           price: 3.99,
           ingredients: [
-             Ingredient(name: "Ingredient 1", quantity: 10),
-             Ingredient(name: "Ingredient 2", quantity: 5),
-             Ingredient(name: "Ingredient 3", quantity: 5)
+            Ingredient(name: "Ingredient 1", quantity: 10),
+            Ingredient(name: "Ingredient 2", quantity: 5),
+            Ingredient(name: "Ingredient 3", quantity: 5)
           ],
           allergies: [
-             Allergy(name: "Allergie 1"),
-             Allergy(name: "Allergie 2"),
-             Allergy(name: "Allergie 3")
+            Allergy(name: "Allergie 1"),
+            Allergy(name: "Allergie 2"),
+            Allergy(name: "Allergie 3")
           ],
           locations: [
-             Location(name: "Location 1",
-                      long: -0.1275, lat: 51.507222),
-             Location(name: "Location 2",
-                      long: -0.1275, lat: 51.507222),
-             Location(name: "Location 3",
-                      long: -0.1275, lat: 51.507222),
-             Location(name: "Location 4",
-                      long: -0.1275, lat: 51.507222)
+            Location(name: "Location 1",
+                     long: -0.1275, lat: 51.507222),
+            Location(name: "Location 2",
+                     long: -0.1275, lat: 51.507222),
+            Location(name: "Location 3",
+                     long: -0.1275, lat: 51.507222),
+            Location(name: "Location 4",
+                     long: -0.1275, lat: 51.507222)
           ]),
     Drink(name: "🧃",
           title: "Juice",
@@ -248,20 +264,20 @@ let drinks: [Drink] = [
           isFizzy: false,
           price: 0.99,
           ingredients: [
-             Ingredient(name: "Ingredient 1", quantity: 10),
-             Ingredient(name: "Ingredient 2", quantity: 5),
-             Ingredient(name: "Ingredient 3", quantity: 5)
+            Ingredient(name: "Ingredient 1", quantity: 10),
+            Ingredient(name: "Ingredient 2", quantity: 5),
+            Ingredient(name: "Ingredient 3", quantity: 5)
           ],
           allergies: nil,
           locations: [
-             Location(name: "Location 1",
-                      long: -0.1275, lat: 51.507222),
-             Location(name: "Location 2",
-                      long: -0.1275, lat: 51.507222),
-             Location(name: "Location 3",
-                      long: -0.1275, lat: 51.507222),
-             Location(name: "Location 4",
-                      long: -0.1275, lat: 51.507222)
+            Location(name: "Location 1",
+                     long: -0.1275, lat: 51.507222),
+            Location(name: "Location 2",
+                     long: -0.1275, lat: 51.507222),
+            Location(name: "Location 3",
+                     long: -0.1275, lat: 51.507222),
+            Location(name: "Location 4",
+                     long: -0.1275, lat: 51.507222)
           ])
 ]
 
@@ -285,24 +301,24 @@ let desserts: [Dessert] = [
             isCold: true,
             price: 0.99,
             ingredients: [
-               Ingredient(name: "Ingredient 1", quantity: 10),
-               Ingredient(name: "Ingredient 2", quantity: 5),
-               Ingredient(name: "Ingredient 3", quantity: 5)
+                Ingredient(name: "Ingredient 1", quantity: 10),
+                Ingredient(name: "Ingredient 2", quantity: 5),
+                Ingredient(name: "Ingredient 3", quantity: 5)
             ],
             allergies: [
-               Allergy(name: "Allergie 1"),
-               Allergy(name: "Allergie 2"),
-               Allergy(name: "Allergie 3")
+                Allergy(name: "Allergie 1"),
+                Allergy(name: "Allergie 2"),
+                Allergy(name: "Allergie 3")
             ],
             locations: [
-               Location(name: "Location 1",
-                        long: -0.1275, lat: 51.507222),
-               Location(name: "Location 2",
-                        long: -0.1275, lat: 51.507222),
-               Location(name: "Location 3",
-                        long: -0.1275, lat: 51.507222),
-               Location(name: "Location 4",
-                        long: -0.1275, lat: 51.507222)
+                Location(name: "Location 1",
+                         long: -0.1275, lat: 51.507222),
+                Location(name: "Location 2",
+                         long: -0.1275, lat: 51.507222),
+                Location(name: "Location 3",
+                         long: -0.1275, lat: 51.507222),
+                Location(name: "Location 4",
+                         long: -0.1275, lat: 51.507222)
             ]),
     Dessert(name: "🍩",
             title: "Doughnut",
@@ -310,24 +326,24 @@ let desserts: [Dessert] = [
             isCold: false,
             price: 0.99,
             ingredients: [
-               Ingredient(name: "Ingredient 1", quantity: 10),
-               Ingredient(name: "Ingredient 2", quantity: 5),
-               Ingredient(name: "Ingredient 3", quantity: 5)
+                Ingredient(name: "Ingredient 1", quantity: 10),
+                Ingredient(name: "Ingredient 2", quantity: 5),
+                Ingredient(name: "Ingredient 3", quantity: 5)
             ],
             allergies: [
-               Allergy(name: "Allergie 1"),
-               Allergy(name: "Allergie 2"),
-               Allergy(name: "Allergie 3")
+                Allergy(name: "Allergie 1"),
+                Allergy(name: "Allergie 2"),
+                Allergy(name: "Allergie 3")
             ],
             locations: [
-               Location(name: "Location 1",
-                        long: -0.1275, lat: 51.507222),
-               Location(name: "Location 2",
-                        long: -0.1275, lat: 51.507222),
-               Location(name: "Location 3",
-                        long: -0.1275, lat: 51.507222),
-               Location(name: "Location 4",
-                        long: -0.1275, lat: 51.507222)
+                Location(name: "Location 1",
+                         long: -0.1275, lat: 51.507222),
+                Location(name: "Location 2",
+                         long: -0.1275, lat: 51.507222),
+                Location(name: "Location 3",
+                         long: -0.1275, lat: 51.507222),
+                Location(name: "Location 4",
+                         long: -0.1275, lat: 51.507222)
             ])
 ]
 
