@@ -11,10 +11,10 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                NavigationLink(destination: HomeView()) {
+                NavigationLink(destination: CoursesView()) {
                     Label("Courses", systemImage: "book")
                 }
-                NavigationLink(destination: HomeView()) {
+                NavigationLink(destination: TutorialView()) {
                     Label("Tutorials", systemImage: "square")
                 }
             }
