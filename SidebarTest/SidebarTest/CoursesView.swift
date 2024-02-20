@@ -9,10 +9,26 @@ import SwiftUI
 
 struct CoursesView: View {
     
-    @State private var courses: [Course] = []
+    @State private var courses: [Course] = [
+        Course(name: "Early Indian Art", description: "Early Indian Art Description", courseNumber: 101),
+        Course(name: "English for writers", description: "English for writers Description", courseNumber: 202),
+        Course(name: "Intro to french", description: "Intro to french Description", courseNumber: 303)
+    ]
     
     var body: some View {
-        Text("Courses View")
+        List {
+            ForEach(courses, id: \.id) { course in
+                VStack {
+                    HStack(spacing: 10) {
+                        Text(course.name)
+                            .font(.title)
+                        Text("Course #: \(course.courseNumber, format: .number)")
+                            .font(.subheadline)
+                    }
+                    Text(course.description)
+                }
+            }
+        }
     }
 }
 

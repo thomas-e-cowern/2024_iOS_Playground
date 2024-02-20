@@ -14,6 +14,8 @@
 		4DE5C70F2B852036006D08B2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE5C70E2B852036006D08B2 /* HomeView.swift */; };
 		4DE5C7112B852187006D08B2 /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE5C7102B852187006D08B2 /* CoursesView.swift */; };
 		4DE5C7132B852191006D08B2 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE5C7122B852191006D08B2 /* TutorialView.swift */; };
+		4DE5C7152B852241006D08B2 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE5C7142B852241006D08B2 /* Course.swift */; };
+		4DE5C7172B852289006D08B2 /* Tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE5C7162B852289006D08B2 /* Tutorial.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		4DE5C70E2B852036006D08B2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4DE5C7102B852187006D08B2 /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
 		4DE5C7122B852191006D08B2 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		4DE5C7142B852241006D08B2 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		4DE5C7162B852289006D08B2 /* Tutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutorial.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				4DE5C70E2B852036006D08B2 /* HomeView.swift */,
 				4DE5C7102B852187006D08B2 /* CoursesView.swift */,
 				4DE5C7122B852191006D08B2 /* TutorialView.swift */,
+				4DE5C7142B852241006D08B2 /* Course.swift */,
+				4DE5C7162B852289006D08B2 /* Tutorial.swift */,
 			);
 			path = SidebarTest;
 			sourceTree = "<group>";
@@ -146,10 +152,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DE5C7152B852241006D08B2 /* Course.swift in Sources */,
 				4DE5C70F2B852036006D08B2 /* HomeView.swift in Sources */,
 				4DE5C7032B851FCC006D08B2 /* ContentView.swift in Sources */,
 				4DE5C7012B851FCC006D08B2 /* SidebarTestApp.swift in Sources */,
 				4DE5C7132B852191006D08B2 /* TutorialView.swift in Sources */,
+				4DE5C7172B852289006D08B2 /* Tutorial.swift in Sources */,
 				4DE5C7112B852187006D08B2 /* CoursesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
