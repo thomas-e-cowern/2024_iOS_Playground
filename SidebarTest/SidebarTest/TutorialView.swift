@@ -9,10 +9,18 @@ import SwiftUI
 
 struct TutorialView: View {
     
-    @State private var tutorials: [Tutorial] = []
+    @State private var tutorials: [Tutorial] = [
+        Tutorial(name: "Microsft Windows Tutorial", description: "Microsft Windows Tutorial Description", tutorialNumber: 901),
+        Tutorial(name: "Mac OS Tutorial", description: "Mac OS Tutorial Description", tutorialNumber: 902),
+        Tutorial(name: "Programming for morons", description: "Programming for morons Description", tutorialNumber: 903)
+    ]
     
     var body: some View {
-        Text("Tutorial View")
+        List {
+            ForEach(tutorials, id: \.id) { tutoial in
+                TutorialRowView(tutorial: tutoial)
+            }
+        }
     }
 }
 

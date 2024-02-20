@@ -12,12 +12,4 @@ struct Course {
     let name: String
     let description: String
     let courseNumber: Int
-    
-    var courseSampleData: [Course] {
-        return [
-            Course(name: "Early Indian Art", description: "Early Indian Art Description", courseNumber: 001),
-            Course(name: "English for writers", description: "English for writers Description", courseNumber: 002),
-            Course(name: "Intro to french", description: "Intro to french Description", courseNumber: 003)
-        ]
-    }
 }
