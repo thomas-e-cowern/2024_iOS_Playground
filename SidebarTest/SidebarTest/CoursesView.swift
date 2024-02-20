@@ -18,15 +18,7 @@ struct CoursesView: View {
     var body: some View {
         List {
             ForEach(courses, id: \.id) { course in
-                VStack {
-                    HStack(spacing: 10) {
-                        Text(course.name)
-                            .font(.title)
-                        Text("Course #: \(course.courseNumber, format: .number)")
-                            .font(.subheadline)
-                    }
-                    Text(course.description)
-                }
+                CourseRowView(course: course)
             }
         }
     }

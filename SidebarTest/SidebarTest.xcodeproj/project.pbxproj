@@ -16,6 +16,7 @@
 		4DE5C7132B852191006D08B2 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE5C7122B852191006D08B2 /* TutorialView.swift */; };
 		4DE5C7152B852241006D08B2 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE5C7142B852241006D08B2 /* Course.swift */; };
 		4DE5C7172B852289006D08B2 /* Tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE5C7162B852289006D08B2 /* Tutorial.swift */; };
+		4DE5C7192B852599006D08B2 /* CourseRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE5C7182B852599006D08B2 /* CourseRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		4DE5C7122B852191006D08B2 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		4DE5C7142B852241006D08B2 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		4DE5C7162B852289006D08B2 /* Tutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutorial.swift; sourceTree = "<group>"; };
+		4DE5C7182B852599006D08B2 /* CourseRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				4DE5C7122B852191006D08B2 /* TutorialView.swift */,
 				4DE5C7142B852241006D08B2 /* Course.swift */,
 				4DE5C7162B852289006D08B2 /* Tutorial.swift */,
+				4DE5C7182B852599006D08B2 /* CourseRowView.swift */,
 			);
 			path = SidebarTest;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			files = (
 				4DE5C7152B852241006D08B2 /* Course.swift in Sources */,
 				4DE5C70F2B852036006D08B2 /* HomeView.swift in Sources */,
+				4DE5C7192B852599006D08B2 /* CourseRowView.swift in Sources */,
 				4DE5C7032B851FCC006D08B2 /* ContentView.swift in Sources */,
 				4DE5C7012B851FCC006D08B2 /* SidebarTestApp.swift in Sources */,
 				4DE5C7132B852191006D08B2 /* TutorialView.swift in Sources */,
