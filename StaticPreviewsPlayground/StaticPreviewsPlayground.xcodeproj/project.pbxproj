@@ -13,6 +13,8 @@
 		4D226A932B8A6BB3004DC5DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D226A922B8A6BB3004DC5DA /* Preview Assets.xcassets */; };
 		4D226A9A2B8A6C55004DC5DA /* posts.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D226A992B8A6C55004DC5DA /* posts.json */; };
 		4D226A9C2B8A6D5D004DC5DA /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D226A9B2B8A6D5D004DC5DA /* PreviewData.swift */; };
+		4D226A9E2B8A6F86004DC5DA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D226A9D2B8A6F85004DC5DA /* Post.swift */; };
+		4D226AA02B8A72B9004DC5DA /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D226A9F2B8A72B9004DC5DA /* PostListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		4D226A922B8A6BB3004DC5DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D226A992B8A6C55004DC5DA /* posts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = posts.json; sourceTree = "<group>"; };
 		4D226A9B2B8A6D5D004DC5DA /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		4D226A9D2B8A6F85004DC5DA /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		4D226A9F2B8A72B9004DC5DA /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 				4D226A8D2B8A6BB1004DC5DA /* ContentView.swift */,
 				4D226A8F2B8A6BB3004DC5DA /* Assets.xcassets */,
 				4D226A912B8A6BB3004DC5DA /* Preview Content */,
+				4D226A9F2B8A72B9004DC5DA /* PostListView.swift */,
 			);
 			path = StaticPreviewsPlayground;
 			sourceTree = "<group>";
@@ -69,6 +74,7 @@
 				4D226A922B8A6BB3004DC5DA /* Preview Assets.xcassets */,
 				4D226A992B8A6C55004DC5DA /* posts.json */,
 				4D226A9B2B8A6D5D004DC5DA /* PreviewData.swift */,
+				4D226A9D2B8A6F85004DC5DA /* Post.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -147,6 +153,8 @@
 				4D226A8E2B8A6BB1004DC5DA /* ContentView.swift in Sources */,
 				4D226A8C2B8A6BB1004DC5DA /* StaticPreviewsPlaygroundApp.swift in Sources */,
 				4D226A9C2B8A6D5D004DC5DA /* PreviewData.swift in Sources */,
+				4D226A9E2B8A6F86004DC5DA /* Post.swift in Sources */,
+				4D226AA02B8A72B9004DC5DA /* PostListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
