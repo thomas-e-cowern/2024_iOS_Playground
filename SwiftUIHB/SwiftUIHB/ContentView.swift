@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var hasSeenIntro: Bool = UserDefaults.standard.onboardingViewShown
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            if hasSeenIntro {
+                HomeView()
+            } else {
+                OnboardingTabView()
+            }
         }
         .padding()
+        .onAppear {
+            print("onboardingViewShown: \(UserDefaults.standard.onboardingViewShown)")
+        }
     }
 }
 

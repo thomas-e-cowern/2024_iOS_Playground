@@ -13,6 +13,13 @@ struct IntroViewThree: View {
             Text("Intro View Three")
                 .foregroundStyle(.white)
                 .font(.title)
+            
+            Button {
+                UserDefaults.standard.onboardingViewShown = true
+            } label: {
+                Text("Let's go....")
+            }
+
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.green)
