@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PostListView: View {
     
-    let posts: [Post]
+    @State var posts: [Post]
     
     var body: some View {
         List(posts, id: \.id) { post in
@@ -17,12 +17,18 @@ struct PostListView: View {
                 Text(post.title)
                     .font(.headline)
                 Text(post.body)
-                    
+                
             }
+        }
+        .onAppear {
+            posts = PreviewData.load(name: "posts")
         }
     }
 }
 
 #Preview {
-    PostListView(posts: PreviewData.load(name: "posts"))
+    
+    let previewPosts: [Post] = PreviewData.load(name: "posts")
+    
+    return PostListView(posts: previewPosts)
 }
