@@ -10,9 +10,12 @@ import SwiftUI
 struct OnboardingTabView: View {
     var body: some View {
         TabView {
-            RoundedRectangle(cornerRadius: 30).padding()
-            RoundedRectangle(cornerRadius: 30).padding()
-            RoundedRectangle(cornerRadius: 30).padding()
+            IntroViewOne()
+                .padding()
+            IntroViewTwo()
+                .padding()
+            IntroViewThree()
+                .padding()
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
     }
