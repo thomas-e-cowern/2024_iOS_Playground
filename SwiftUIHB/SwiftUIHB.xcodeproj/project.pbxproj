@@ -15,6 +15,7 @@
 		4D0B1CE42B8D06BD0095101E /* IntroViewOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B1CE32B8D06BD0095101E /* IntroViewOne.swift */; };
 		4D0B1CE62B8D07C70095101E /* IntroViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B1CE52B8D07C70095101E /* IntroViewTwo.swift */; };
 		4D0B1CE82B8D08260095101E /* IntroViewThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B1CE72B8D08260095101E /* IntroViewThree.swift */; };
+		4D0B1CEA2B8D23530095101E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B1CE92B8D23530095101E /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		4D0B1CE32B8D06BD0095101E /* IntroViewOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewOne.swift; sourceTree = "<group>"; };
 		4D0B1CE52B8D07C70095101E /* IntroViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewTwo.swift; sourceTree = "<group>"; };
 		4D0B1CE72B8D08260095101E /* IntroViewThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewThree.swift; sourceTree = "<group>"; };
+		4D0B1CE92B8D23530095101E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				4D0B1CE32B8D06BD0095101E /* IntroViewOne.swift */,
 				4D0B1CE52B8D07C70095101E /* IntroViewTwo.swift */,
 				4D0B1CE72B8D08260095101E /* IntroViewThree.swift */,
+				4D0B1CE92B8D23530095101E /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D0B1CE82B8D08260095101E /* IntroViewThree.swift in Sources */,
+				4D0B1CEA2B8D23530095101E /* HomeView.swift in Sources */,
 				4D0B1CE62B8D07C70095101E /* IntroViewTwo.swift in Sources */,
 				4D0B1CD42B8CFBB20095101E /* ContentView.swift in Sources */,
 				4D0B1CE12B8CFC460095101E /* OnboardingTabView.swift in Sources */,
