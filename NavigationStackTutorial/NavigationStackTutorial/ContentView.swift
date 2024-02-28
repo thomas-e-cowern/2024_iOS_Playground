@@ -32,6 +32,13 @@ struct ContentView: View {
         .init(name: "Pontiac")
     ]
     
+    let cars: [Car] = [
+        .init(make: "Chevy", model: "Camaro", year: 2010),
+        .init(make: "Ford", model: "Mustang", year: 2017),
+        .init(make: "Chrysler", model: "Daddy Van", year: 2019),
+        .init(make: "Pontiac", model: "Fiero", year: 1985)
+    ]
+    
     var body: some View {
         NavigationStack {
             List {
@@ -42,9 +49,20 @@ struct ContentView: View {
                         }
                     }
                 }
+                
+                Section("Cars") {
+                    ForEach(cars) { car in
+                        NavigationLink(value: car) {
+                            Text(car.descrtiption)
+                        }
+                    }
+                }
             }
             .navigationDestination(for: CarBrand.self) { brand in
                 Text("Welcome to \(brand.name)")
+            }
+            .navigationDestination(for: Car.self) { car in
+                Color.red
             }
         }
     }
