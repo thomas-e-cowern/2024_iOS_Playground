@@ -39,31 +39,70 @@ struct ContentView: View {
         .init(make: "Pontiac", model: "Fiero", year: 1985)
     ]
     
+    @State private var navigationPath = [CarBrand]()
+    @State private var showFullStack: Bool = false
+    
     var body: some View {
-        NavigationStack {
-            List {
-                Section("Manufacturers") {
-                    ForEach(brands) { brand in
-                        NavigationLink(value: brand) {
-                            Text(brand.name)
+        NavigationStack(path: $navigationPath) {
+            VStack {
+                List {
+                    Section("Manufacturers") {
+                        ForEach(brands) { brand in
+                            NavigationLink(value: brand) {
+                                Text(brand.name)
+                            }
                         }
                     }
+                    
+                    Section("Cars") {
+                        ForEach(cars) { car in
+                            NavigationLink(value: car) {
+                                Text(car.descrtiption)
+                            }
+                        }
+                    }
+                }
+                .navigationDestination(for: CarBrand.self) { brand in
+                    VStack {
+                        viewForBrand(brand)
+                        
+                        Button(action: {
+                            navigationPath = []
+                        }, label: {
+                            Text("Go to root")
+                        })
+                    }
+                }
+                .navigationDestination(for: Car.self) { car in
+                    Color.red
                 }
                 
-                Section("Cars") {
-                    ForEach(cars) { car in
-                        NavigationLink(value: car) {
-                            Text(car.descrtiption)
-                        }
+                Button(action: {
+                    showFullStack.toggle()
+                    if showFullStack {
+                        navigationPath = brands
+                    } else {
+                        navigationPath = [brands[0], brands[2], brands[1]]
                     }
-                }
+                }, label: {
+                    Text("View All")
+                })
             }
-            .navigationDestination(for: CarBrand.self) { brand in
-                Text("Welcome to \(brand.name)")
-            }
-            .navigationDestination(for: Car.self) { car in
-                Color.red
-            }
+        }
+    }
+    
+    func viewForBrand(_ brand: CarBrand) -> AnyView {
+        switch brand.name {
+        case "Chevy":
+            return AnyView(Color.red)
+        case "Ford":
+            return AnyView(Color.blue)
+        case "Chrysler":
+            return AnyView(Color.green)
+        case "Pontiac":
+            return AnyView(Color.gray)
+        default:
+            return AnyView(Color.white)
         }
     }
 }
