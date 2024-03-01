@@ -24,6 +24,12 @@ struct ContentView: View {
             
             Map(position: $position) {
                 UserAnnotation()
+                
+                MapCircle(center: .cupertinoVillage, radius: 50)
+                    .foregroundStyle(.blue.opacity(0.4))
+                
+                MapCircle(center: .appleCampus, radius: 500)
+                    .foregroundStyle(.orange.opacity(0.4))
             }
         }
     }
