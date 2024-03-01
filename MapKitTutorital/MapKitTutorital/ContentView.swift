@@ -35,6 +35,14 @@ struct ContentView: View {
         .task {
             await locationManager.startRegionMonitoring()
         }
+        .sheet(item: $locationManager.locationEvent) { event in
+            VStack {
+                Image(artwork[event.identifier] ?? "No Image Provided")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Text(event.identifier)
+            }
+        }
     }
 }
 

@@ -36,6 +36,11 @@ enum LocationError: LocalizedError {
     }
 }
 
+struct LocationEvent: Identifiable {
+    let id = UUID()
+    let identifier: String
+}
+
 @Observable
 class LocationManager: NSObject, CLLocationManagerDelegate {
     
@@ -43,6 +48,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     static let shared = LocationManager()
     var error: LocationError? = nil
     var monitor: CLMonitor?
+    var locationEvent: LocationEvent?
     
     var region: MKCoordinateRegion = MKCoordinateRegion()
     
@@ -54,15 +60,16 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
    
     func startRegionMonitoring() async {
         monitor = await CLMonitor("RegionMonitor")
-        await monitor?.add(CLMonitor.CircularGeographicCondition.cupertinoVillage, identifier: "CupertinoVillage", assuming: .unsatisfied)
+        await monitor?.add(CLMonitor.CircularGeographicCondition.cupertinoVillage, identifier: "cupertinoVillage", assuming: .unsatisfied)
         
-        await monitor?.add(CLMonitor.CircularGeographicCondition.appleCampus, identifier: "AppleCamput", assuming: .unsatisfied)
+        await monitor?.add(CLMonitor.CircularGeographicCondition.appleCampus, identifier: "appleCampus", assuming: .unsatisfied)
         
         Task {
             for try await event in await monitor!.events {
                 switch event.state {
                 case .satisfied:
-                    print("Satisfied")
+                    guard let lastEvent = await monitor!.record(for: event.identifier)?.lastEvent else { continue }
+                    locationEvent = LocationEvent(identifier: lastEvent.identifier)
                 case .unsatisfied:
                     print("Unsatisfied")
                 case .unmonitored:
@@ -82,7 +89,7 @@ extension LocationManager {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         locations.last.map {
             region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: $0.coordinate.latitude, longitude: $0.coordinate.longitude),
-                                                    span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+            span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
         }
     }
     
