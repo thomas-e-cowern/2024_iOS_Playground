@@ -61,14 +61,11 @@
 		4D1130582B965E930042C935 /* SwiftuiRouting */ = {
 			isa = PBXGroup;
 			children = (
+				4DC42B932B96656700C13BB4 /* Views */,
 				4D1130672B965EDF0042C935 /* Models */,
 				4D1130592B965E930042C935 /* SwiftuiRoutingApp.swift */,
-				4D11305B2B965E930042C935 /* ContentView.swift */,
 				4D11305D2B965E9A0042C935 /* Assets.xcassets */,
 				4D11305F2B965E9A0042C935 /* Preview Content */,
-				4DC42B8D2B96600500C13BB4 /* MovieListScreen.swift */,
-				4DC42B8F2B96603000C13BB4 /* MovieDetailScreen.swift */,
-				4DC42B912B96606000C13BB4 /* MovieReviewScreen.swift */,
 			);
 			path = SwiftuiRouting;
 			sourceTree = "<group>";
@@ -88,6 +85,17 @@
 				4D11306A2B965F060042C935 /* Review.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4DC42B932B96656700C13BB4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4D11305B2B965E930042C935 /* ContentView.swift */,
+				4DC42B8D2B96600500C13BB4 /* MovieListScreen.swift */,
+				4DC42B8F2B96603000C13BB4 /* MovieDetailScreen.swift */,
+				4DC42B912B96606000C13BB4 /* MovieReviewScreen.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
