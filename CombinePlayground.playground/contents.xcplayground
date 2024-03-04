@@ -3,5 +3,6 @@
     <pages>
         <page name='SubscribingToPublisher'/>
         <page name='Untitled Page'/>
+        <page name='ErrorHandling'/>
     </pages>
 </playground>
