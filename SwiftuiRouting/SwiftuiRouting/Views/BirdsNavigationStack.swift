@@ -8,8 +8,24 @@
 import SwiftUI
 
 struct BirdsNavigationStack: View {
+    @Environment(Router.self) private var router
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        @Bindable var router = router
+        
+        NavigationStack(path: $router.birdRoutes) {
+            Button("Go to detail") {
+                router.birdRoutes.append(.detail(Bird(name: "Sparrow")))
+            }.navigationDestination(for: BirdRoute.self) { route in
+                switch route {
+                case .home:
+                    Text("Home")
+                case .detail:
+                    BirdDetailScreen(name: "Bluejay")
+                }
+            }
+        }
     }
 }
 

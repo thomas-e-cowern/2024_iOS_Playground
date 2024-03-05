@@ -17,20 +17,21 @@ enum Route: Hashable {
 struct SwiftuiRoutingApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
-                MovieListScreen()
-                    .navigationDestination(for: Route.self) { route in
-                        switch route {
-                        case .list:
-                            MovieListScreen()
-                        case .detail(let movie):
-                            MovieDetailScreen(movie: movie)
-                        case .reviews(let reviews):
-                            MovieReviewScreen(reviews: reviews)
-                            
-                        }
-                    }
-            }
+            ContentView()
+//            NavigationStack {
+//                MovieListScreen()
+//                    .navigationDestination(for: Route.self) { route in
+//                        switch route {
+//                        case .list:
+//                            MovieListScreen()
+//                        case .detail(let movie):
+//                            MovieDetailScreen(movie: movie)
+//                        case .reviews(let reviews):
+//                            MovieReviewScreen(reviews: reviews)
+//                            
+//                        }
+//                    }
+//            }
         }
     }
 }

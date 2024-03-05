@@ -16,6 +16,8 @@
 		4DA538592B974F880044A5C4 /* BirdsNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA538582B974F880044A5C4 /* BirdsNavigationStack.swift */; };
 		4DA5385B2B974F960044A5C4 /* PlantsNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5385A2B974F960044A5C4 /* PlantsNavigationStack.swift */; };
 		4DA5385D2B974FAC0044A5C4 /* BackyardNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5385C2B974FAC0044A5C4 /* BackyardNavigationStack.swift */; };
+		4DA538602B9757790044A5C4 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5385F2B9757790044A5C4 /* Routing.swift */; };
+		4DA538642B975A010044A5C4 /* BirdDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA538632B975A010044A5C4 /* BirdDetailScreen.swift */; };
 		4DC42B8E2B96600500C13BB4 /* MovieListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC42B8D2B96600500C13BB4 /* MovieListScreen.swift */; };
 		4DC42B902B96603000C13BB4 /* MovieDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC42B8F2B96603000C13BB4 /* MovieDetailScreen.swift */; };
 		4DC42B922B96606000C13BB4 /* MovieReviewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC42B912B96606000C13BB4 /* MovieReviewScreen.swift */; };
@@ -32,6 +34,8 @@
 		4DA538582B974F880044A5C4 /* BirdsNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdsNavigationStack.swift; sourceTree = "<group>"; };
 		4DA5385A2B974F960044A5C4 /* PlantsNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsNavigationStack.swift; sourceTree = "<group>"; };
 		4DA5385C2B974FAC0044A5C4 /* BackyardNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardNavigationStack.swift; sourceTree = "<group>"; };
+		4DA5385F2B9757790044A5C4 /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
+		4DA538632B975A010044A5C4 /* BirdDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdDetailScreen.swift; sourceTree = "<group>"; };
 		4DC42B8D2B96600500C13BB4 /* MovieListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListScreen.swift; sourceTree = "<group>"; };
 		4DC42B8F2B96603000C13BB4 /* MovieDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailScreen.swift; sourceTree = "<group>"; };
 		4DC42B912B96606000C13BB4 /* MovieReviewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieReviewScreen.swift; sourceTree = "<group>"; };
@@ -67,6 +71,7 @@
 		4D1130582B965E930042C935 /* SwiftuiRouting */ = {
 			isa = PBXGroup;
 			children = (
+				4DA5385E2B9757630044A5C4 /* Utilities */,
 				4DC42B932B96656700C13BB4 /* Views */,
 				4D1130672B965EDF0042C935 /* Models */,
 				4D1130592B965E930042C935 /* SwiftuiRoutingApp.swift */,
@@ -93,6 +98,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		4DA5385E2B9757630044A5C4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4DA5385F2B9757790044A5C4 /* Routing.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		4DC42B932B96656700C13BB4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +116,7 @@
 				4DA538582B974F880044A5C4 /* BirdsNavigationStack.swift */,
 				4DA5385A2B974F960044A5C4 /* PlantsNavigationStack.swift */,
 				4DA5385C2B974FAC0044A5C4 /* BackyardNavigationStack.swift */,
+				4DA538632B975A010044A5C4 /* BirdDetailScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,6 +196,8 @@
 				4D11306B2B965F060042C935 /* Review.swift in Sources */,
 				4DC42B902B96603000C13BB4 /* MovieDetailScreen.swift in Sources */,
 				4DA5385B2B974F960044A5C4 /* PlantsNavigationStack.swift in Sources */,
+				4DA538642B975A010044A5C4 /* BirdDetailScreen.swift in Sources */,
+				4DA538602B9757790044A5C4 /* Routing.swift in Sources */,
 				4DC42B922B96606000C13BB4 /* MovieReviewScreen.swift in Sources */,
 				4D11305A2B965E930042C935 /* SwiftuiRoutingApp.swift in Sources */,
 				4DA5385D2B974FAC0044A5C4 /* BackyardNavigationStack.swift in Sources */,

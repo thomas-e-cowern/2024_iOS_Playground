@@ -8,8 +8,24 @@
 import SwiftUI
 
 struct PlantsNavigationStack: View {
+    @Environment(Router.self) private var router
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        @Bindable var router = router
+        
+        NavigationStack(path: $router.plantRoutes) {
+            Button("Plants Go to detail") {
+                router.plantRoutes.append(.detail)
+            }.navigationDestination(for: PlantRoute.self) { route in
+                switch route {
+                case .home:
+                    Text("Home")
+                case .detail:
+                    Text("Plant Detail")
+                }
+            }
+        }
     }
 }
 

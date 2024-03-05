@@ -9,7 +9,15 @@ import SwiftUI
 
 struct BackyardNavigationStack: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            List(1...10, id: \.self) { index in
+                NavigationLink {
+                    Text("Backyard Detail \(index)")
+                } label: {
+                    Text("Backyard \(index)")
+                }
+            }.navigationTitle("Backyards")
+        }
     }
 }
 

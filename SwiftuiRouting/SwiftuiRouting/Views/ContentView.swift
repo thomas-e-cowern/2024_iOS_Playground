@@ -33,9 +33,9 @@ extension AppScreen {
     var destination: some View {
         switch self {
         case .backyards:
-            Text("Backyards")
+            BackyardNavigationStack()
         case .birds:
-            Text("Birds")
+            BirdsNavigationStack()
         case .plants:
             Text("Plants")
         }
