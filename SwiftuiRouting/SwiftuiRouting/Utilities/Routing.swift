@@ -21,8 +21,14 @@ enum BirdRoute: Hashable {
     case detail(Bird)
 }
 
+enum BackyardRoute: Hashable {
+    case home
+    case detail
+}
+
 @Observable
 class Router {
     var birdRoutes: [BirdRoute] = []
     var plantRoutes: [PlantRoute] = []
+    var BackyardRoutes: [BackyardRoute] = []
 }

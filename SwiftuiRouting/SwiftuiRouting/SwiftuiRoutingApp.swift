@@ -15,9 +15,13 @@ enum Route: Hashable {
 
 @main
 struct SwiftuiRoutingApp: App {
+    
+    @State private var router = Router()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(router)
 //            NavigationStack {
 //                MovieListScreen()
 //                    .navigationDestination(for: Route.self) { route in

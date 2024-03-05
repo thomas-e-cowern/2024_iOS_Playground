@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct BackyardNavigationStack: View {
+    
+    @Environment(Router.self) private var router
+    
     var body: some View {
         NavigationStack {
             List(1...10, id: \.self) { index in
