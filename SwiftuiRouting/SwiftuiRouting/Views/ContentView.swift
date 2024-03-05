@@ -28,13 +28,42 @@ extension AppScreen {
             Label("Plants", systemImage: "leaf")
         }
     }
+    
+    @ViewBuilder
+    var destination: some View {
+        switch self {
+        case .backyards:
+            Text("Backyards")
+        case .birds:
+            Text("Birds")
+        case .plants:
+            Text("Plants")
+        }
+    }
+}
+
+struct AppTabView: View {
+    
+    @Binding var selection: AppScreen?
+    
+    var body: some View {
+        TabView(selection: $selection) {
+            ForEach(AppScreen.allCases) { screen in
+                screen.destination
+                    .tag(screen as AppScreen?)
+                    .tabItem {
+                        screen.label
+                    }
+            }
+        }
+    }
 }
 
 struct ContentView: View {
     
     var body: some View {
         VStack {
-            
+            AppTabView(selection: .constant(.backyards))
         }
     }
 }
