@@ -16,6 +16,11 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .onAppear {
+            print("👍👍👍👍 Observation Response below 👍👍👍👍")
+            let observations: [BirdObservation] = try! StaticJSONMapper.decode(file: "StaticBirdData", type: [BirdObservation].self)
+            dump(observations)
+        }
     }
 }
 
