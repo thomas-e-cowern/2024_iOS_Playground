@@ -61,9 +61,11 @@ struct AppTabView: View {
 
 struct ContentView: View {
     
+    @State private var selection: AppScreen? = .backyards
+    
     var body: some View {
         VStack {
-            AppTabView(selection: .constant(.backyards))
+            AppTabView(selection: $selection)
         }
     }
 }

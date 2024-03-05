@@ -13,6 +13,9 @@
 		4D1130612B965E9A0042C935 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D1130602B965E9A0042C935 /* Preview Assets.xcassets */; };
 		4D1130692B965EF00042C935 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1130682B965EF00042C935 /* Movie.swift */; };
 		4D11306B2B965F060042C935 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11306A2B965F060042C935 /* Review.swift */; };
+		4DA538592B974F880044A5C4 /* BirdsNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA538582B974F880044A5C4 /* BirdsNavigationStack.swift */; };
+		4DA5385B2B974F960044A5C4 /* PlantsNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5385A2B974F960044A5C4 /* PlantsNavigationStack.swift */; };
+		4DA5385D2B974FAC0044A5C4 /* BackyardNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5385C2B974FAC0044A5C4 /* BackyardNavigationStack.swift */; };
 		4DC42B8E2B96600500C13BB4 /* MovieListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC42B8D2B96600500C13BB4 /* MovieListScreen.swift */; };
 		4DC42B902B96603000C13BB4 /* MovieDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC42B8F2B96603000C13BB4 /* MovieDetailScreen.swift */; };
 		4DC42B922B96606000C13BB4 /* MovieReviewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC42B912B96606000C13BB4 /* MovieReviewScreen.swift */; };
@@ -26,6 +29,9 @@
 		4D1130602B965E9A0042C935 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D1130682B965EF00042C935 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		4D11306A2B965F060042C935 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		4DA538582B974F880044A5C4 /* BirdsNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdsNavigationStack.swift; sourceTree = "<group>"; };
+		4DA5385A2B974F960044A5C4 /* PlantsNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsNavigationStack.swift; sourceTree = "<group>"; };
+		4DA5385C2B974FAC0044A5C4 /* BackyardNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardNavigationStack.swift; sourceTree = "<group>"; };
 		4DC42B8D2B96600500C13BB4 /* MovieListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListScreen.swift; sourceTree = "<group>"; };
 		4DC42B8F2B96603000C13BB4 /* MovieDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailScreen.swift; sourceTree = "<group>"; };
 		4DC42B912B96606000C13BB4 /* MovieReviewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieReviewScreen.swift; sourceTree = "<group>"; };
@@ -94,6 +100,9 @@
 				4DC42B8D2B96600500C13BB4 /* MovieListScreen.swift */,
 				4DC42B8F2B96603000C13BB4 /* MovieDetailScreen.swift */,
 				4DC42B912B96606000C13BB4 /* MovieReviewScreen.swift */,
+				4DA538582B974F880044A5C4 /* BirdsNavigationStack.swift */,
+				4DA5385A2B974F960044A5C4 /* PlantsNavigationStack.swift */,
+				4DA5385C2B974FAC0044A5C4 /* BackyardNavigationStack.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,9 +181,12 @@
 				4D11305C2B965E930042C935 /* ContentView.swift in Sources */,
 				4D11306B2B965F060042C935 /* Review.swift in Sources */,
 				4DC42B902B96603000C13BB4 /* MovieDetailScreen.swift in Sources */,
+				4DA5385B2B974F960044A5C4 /* PlantsNavigationStack.swift in Sources */,
 				4DC42B922B96606000C13BB4 /* MovieReviewScreen.swift in Sources */,
 				4D11305A2B965E930042C935 /* SwiftuiRoutingApp.swift in Sources */,
+				4DA5385D2B974FAC0044A5C4 /* BackyardNavigationStack.swift in Sources */,
 				4D1130692B965EF00042C935 /* Movie.swift in Sources */,
+				4DA538592B974F880044A5C4 /* BirdsNavigationStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
