@@ -8,5 +8,7 @@
 import Foundation
 
 struct Review: Hashable {
+    let id: Int
+    let movieId: Int
     let text: String
 }

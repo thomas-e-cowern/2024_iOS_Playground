@@ -7,15 +7,35 @@
 
 import SwiftUI
 
+enum AppScreen: Hashable, Identifiable, CaseIterable {
+    case backyards
+    case birds
+    case plants
+    
+    var id: AppScreen { self }
+}
+
+extension AppScreen {
+    
+    @ViewBuilder
+    var label: some View {
+        switch self {
+        case .backyards:
+            Label("Backyards", systemImage: "tree")
+        case .birds:
+            Label("Birds", systemImage: "bird")
+        case .plants:
+            Label("Plants", systemImage: "leaf")
+        }
+    }
+}
+
 struct ContentView: View {
     
-    let movies = [Movie(name: "Spiderman"), Movie(name: "Batman")]
-    
     var body: some View {
-        List(movies, id: \.self) { movie in
-            NavigationLink(movie.name, value: Route.detail(movie))
+        VStack {
+            
         }
-        .padding()
     }
 }
 
