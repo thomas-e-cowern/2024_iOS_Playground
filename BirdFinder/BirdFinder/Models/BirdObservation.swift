@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - BirdObservation
-struct BirdObservation: Codable {
+struct BirdObservation: Codable, Hashable {
     let speciesCode: String
     let comName: String
     let sciName: String

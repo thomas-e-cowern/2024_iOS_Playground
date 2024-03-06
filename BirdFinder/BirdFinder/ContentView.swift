@@ -8,17 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var observations = [BirdObservation]()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            NavigationStack {
+                List(observations, id: \.self) { observation in
+                    NavigationLink {
+                        ObservationDetailView(observation: observation)
+                    } label: {
+                        Text(observation.comName)
+                    }
+                }
+            }
         }
         .padding()
         .onAppear {
             print("👍👍👍👍 Observation Response below 👍👍👍👍")
-            let observations: [BirdObservation] = try! StaticJSONMapper.decode(file: "StaticBirdData", type: [BirdObservation].self)
+            observations = try! StaticJSONMapper.decode(file: "StaticBirdData", type: [BirdObservation].self)
             dump(observations)
         }
     }

@@ -15,6 +15,7 @@
 		4DA538822B976DA10044A5C4 /* StaticBirdData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DA538812B976DA10044A5C4 /* StaticBirdData.json */; };
 		4DA538852B9774FE0044A5C4 /* BirdObservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA538842B9774FE0044A5C4 /* BirdObservation.swift */; };
 		4DA538882B977B290044A5C4 /* StaticJSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA538872B977B290044A5C4 /* StaticJSONMapper.swift */; };
+		4DA5388A2B97B66A0044A5C4 /* ObservationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA538892B97B66A0044A5C4 /* ObservationDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		4DA538812B976DA10044A5C4 /* StaticBirdData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StaticBirdData.json; sourceTree = "<group>"; };
 		4DA538842B9774FE0044A5C4 /* BirdObservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdObservation.swift; sourceTree = "<group>"; };
 		4DA538872B977B290044A5C4 /* StaticJSONMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticJSONMapper.swift; sourceTree = "<group>"; };
+		4DA538892B97B66A0044A5C4 /* ObservationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				4DA538772B97692A0044A5C4 /* Preview Content */,
 				4DA5387F2B976A710044A5C4 /* Credits.json */,
 				4DA538812B976DA10044A5C4 /* StaticBirdData.json */,
+				4DA538892B97B66A0044A5C4 /* ObservationDetailView.swift */,
 			);
 			path = BirdFinder;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DA5388A2B97B66A0044A5C4 /* ObservationDetailView.swift in Sources */,
 				4DA538882B977B290044A5C4 /* StaticJSONMapper.swift in Sources */,
 				4DA538742B9769270044A5C4 /* ContentView.swift in Sources */,
 				4DA538722B9769270044A5C4 /* BirdFinderApp.swift in Sources */,
