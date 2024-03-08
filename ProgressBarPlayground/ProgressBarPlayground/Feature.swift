@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct Feature: Identifiable {
+    var id = UUID()
+    var title: String
+    var subtitle: String
+    var image: String
+    var endOnboarding: Bool
+}

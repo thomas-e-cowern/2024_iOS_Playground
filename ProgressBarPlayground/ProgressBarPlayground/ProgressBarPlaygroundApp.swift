@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct ProgressBarPlaygroundApp: App {
+    
+    @AppStorage("isOnboarding") var isOnboarding = true
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if isOnboarding {
+                OnboardingContainerView()
+            } else {
+                ContentView()
+            }
         }
     }
 }

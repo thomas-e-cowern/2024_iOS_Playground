@@ -11,6 +11,22 @@ struct ContentView: View {
     
     @State var percent: CGFloat = 0
     
+    init() {
+//        for familyName in UIFont.familyNames {
+//            print("Family Name: \(familyName)")
+//            
+//            for fontName in UIFont.fontNames(forFamilyName: familyName) {
+//                print("Font Name: \(fontName)")
+//            }
+//        }
+        
+//        let fontManager = NSFontManager.shared
+//        let fonts = fontManager.availableFonts
+//        for name in fonts {
+//            print(name)
+//        }
+    }
+    
     var body: some View {
         VStack(spacing: 50) {
             if percent < 100 {
@@ -38,7 +54,7 @@ struct ContentView: View {
     }
     
     func makeMove() {
-        let timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+        _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
             if percent <= 99 {
                 percent = percent + 1
             } else {

@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct CustomFonts {
+    static let FA5 = "FontAwesome5Free-Regular"
+}

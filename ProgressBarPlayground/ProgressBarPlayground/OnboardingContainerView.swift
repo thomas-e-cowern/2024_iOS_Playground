@@ -9,7 +9,15 @@ import SwiftUI
 
 struct OnboardingContainerView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            
+            TabView {
+                ForEach(features) { feature in
+                    OnboardingContentView(feature: feature)
+                }
+            }
+            .tabViewStyle(PageTabViewStyle())
+        }
     }
 }
 
