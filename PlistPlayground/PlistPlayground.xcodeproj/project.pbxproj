@@ -56,9 +56,9 @@
 				4D6B5EF62BA0A61E006C5F4B /* Info.plist */,
 				4D6B5EE72BA09D8C006C5F4B /* PlistPlaygroundApp.swift */,
 				4D6B5EE92BA09D8C006C5F4B /* ContentView.swift */,
+				4D6B5EFB2BA0A85D006C5F4B /* Config.xcconfig */,
 				4D6B5EEB2BA09D8F006C5F4B /* Assets.xcassets */,
 				4D6B5EED2BA09D8F006C5F4B /* Preview Content */,
-				4D6B5EFB2BA0A85D006C5F4B /* Config.xcconfig */,
 			);
 			path = PlistPlayground;
 			sourceTree = "<group>";
@@ -270,6 +270,7 @@
 		};
 		4D6B5EF32BA09D8F006C5F4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D6B5EFB2BA0A85D006C5F4B /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
