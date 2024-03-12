@@ -97,3 +97,6 @@ iOSTHProject/iOSTHProject.xcodeproj/project.xcworkspace/xcuserdata/thomascowern.
 .DS_Store
 AdvancedSwift/FilteringList/.DS_Store
 AdvancedSwift/FilteringList/FilteringList/.DS_Store
+
+# Plist Test
+/PlistPlayground/PlistPlayground/Config.xcconfig
