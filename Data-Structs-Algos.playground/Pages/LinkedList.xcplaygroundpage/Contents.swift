@@ -27,6 +27,16 @@ struct LinkedList<Value> {
     // Append adds new value at the tail
     mutating func append(_ value: Value) {
         
+        // Check to see if the list is empty, if so push the value onto the list
+        guard !isEmpty else {
+            push(value)
+            return
+        }
+        
+        // Create a new node, assign the next variable of the tail to the new node, assign the node to the tail
+        let node = Node(value: value)
+        tail?.next = node
+        tail = node
     }
 }
 
@@ -68,6 +78,7 @@ var list = LinkedList<Int>()
 list.push(2)
 list.push(5)
 list.push(17)
+list.append(78)
 
 print(list)
 //let node1 = Node(value: 1)
