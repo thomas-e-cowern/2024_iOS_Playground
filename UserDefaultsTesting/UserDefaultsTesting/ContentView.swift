@@ -20,22 +20,21 @@ struct Note: Codable {
 
 }
 
-// Create Note
-let note = Note(title: "My Note", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
-
 
 struct ContentView: View {
     
     @State private var title: String = ""
     @State private var noteBody: String = ""
-    @State private var notes: [Note] = []
+    @State var notes: [Note]?
+    
+    @StateObject private var cvm = ContentViewModel()
     
     var body: some View {
         VStack {
             
             VStack {
                 Form {
-                    ForEach(notes, id: \.id) { note in
+                    ForEach(notes!, id: \.id) { note in
                         VStack(alignment: .leading) {
                             Text(note.title)
                                 .font(.title2)
@@ -56,48 +55,29 @@ struct ContentView: View {
             
             
             Button("Save") {
-                do {
-                    let note = Note(title: title, body: noteBody)
-                    
-                    notes.append(note)
-                    
-                    // Create JSON Encoder
-                    let encoder = JSONEncoder()
-
-                    // Encode Note
-                    let data = try encoder.encode(notes)
-                    
-                    // Write/Set Data
-                    UserDefaults.standard.set(data, forKey: "notes")
-
-                } catch {
-                    print("Unable to Encode Note (\(error))")
-                }
+                cvm.saveNote(title: title, noteBody: noteBody)
+                notes = cvm.getNotes()
+                title = ""
+                noteBody = ""
             }
             
         }
         .padding()
         .onAppear {
-            // Read/Get Data
-            if let data = UserDefaults.standard.data(forKey: "notes") {
-                do {
-                    // Create JSON Decoder
-                    let decoder = JSONDecoder()
-
-                    // Decode Note
-                    notes = try decoder.decode([Note].self, from: data)
-                    
-                    print(notes)
-
-                } catch {
-                    print("Unable to Decode Notes (\(error))")
-                }
-            }
+            notes = cvm.getNotes()
         }
     }
         
 }
 
 #Preview {
-    ContentView()
+    
+    var previewContentView: [Note] {
+        let notes = [Note(title: "note 1", body: "note body for 1")]
+        
+        return notes
+    }
+    
+    
+     return ContentView(notes: previewContentView)
 }
