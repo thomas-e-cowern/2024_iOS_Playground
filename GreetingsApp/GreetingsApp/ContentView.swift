@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .leading) {
             
             BackgroundView()
             
@@ -27,7 +27,7 @@ struct ContentView: View {
                 Spacer()
                 
             }
-            .padding(.trailing, 20)
+            .padding()
         }
     }
 }
