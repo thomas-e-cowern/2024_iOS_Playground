@@ -19,6 +19,7 @@ func reducer(_ state: State, _ action: Action) -> State {
     
     switch action {
     case _ as IncrementAction:
+        print("\(state.counter)")
         state.counter += 1
     default:
         break

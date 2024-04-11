@@ -27,7 +27,7 @@ struct ContentView: View {
         let props = map(state: store.state)
         
         VStack {
-            Text("\(store.state)")
+            Text("\(props.counter)")
                 .padding()
             Button("Increment") {
                 props.onIncrement()
@@ -37,5 +37,9 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    
+    let store = Store(reducer: reducer)
+    
+    return ContentView()
+        .environmentObject(store)
 }
