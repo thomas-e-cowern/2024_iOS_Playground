@@ -14,10 +14,20 @@ struct State {
 }
 
 func reducer(_ state: State, _ action: Action) -> State {
+    
+    var state = state
+    
+    switch action {
+    case _ as IncrementAction:
+        state.counter += 1
+    default:
+        break
+    }
+    
     return state
 }
 
-class Store {
+class Store: ObservableObject {
     
     var reducer: Reducer
     var state: State
@@ -26,6 +36,12 @@ class Store {
         self.reducer = reducer
         self.state = state
     }
+    
+    func dispatch(action: Action) {
+        state = reducer(state, action)
+    }
 }
 
 protocol Action {  }
+
+struct IncrementAction: Action {  }
