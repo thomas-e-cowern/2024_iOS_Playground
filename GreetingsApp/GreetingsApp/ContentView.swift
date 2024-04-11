@@ -8,20 +8,36 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let messages: [DataItemModel] = [
+        DataItemModel(text: "Hello World", color: .green), DataItemModel(text: "Welcome to swift", color: .orange), DataItemModel(text: "Are you ready to...", color: .yellow), DataItemModel(text: "Start exploring", color: .red), DataItemModel(text: "Awesome!", color: .purple)
+    ]
+    
     var body: some View {
         VStack(alignment: .leading) {
+            
+            // Title
+            VStack(alignment: .leading, spacing: 0) {
+                Text("Greetings")
+                    .font(.largeTitle)
+                    .fontWeight(.semibold)
+                Text("Exploaring iOS Programming")
+                    .font(.headline)
+                    .fontWeight(.thin)
+            }
+            
+            Spacer()
   
-            TextView(text: "Hello World", color: .green)
+            ForEach(messages, id: \.id) { message in
+                TextView(text: message.text, color: message.color)
+            }
             
-            TextView(text: "Welcome to swift", color: .orange)
+            Spacer()
             
-            TextView(text: "Are you ready to...", color: .yellow)
-            
-            TextView(text: "Start exploring", color: .red)
-            
-            TextView(text: "Awesome!", color: .purple)
+            Spacer()
             
         }
+        .padding(.trailing, 20)
     }
 }
 
