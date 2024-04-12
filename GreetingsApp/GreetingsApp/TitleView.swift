@@ -9,13 +9,13 @@ import SwiftUI
 
 struct TitleView: View {
     
-    @State private var subtitle = "Exploaring iOS Programming"
+    @State private var subtitle: LocalizedStringKey = "Exploaring iOS Programming"
     @State private var isRotated: Bool = false
     
     let lineWidth = 15.0
     let diameter = 70.0
     
-    let subtitles: [String] = [
+    let subtitles: [LocalizedStringKey] = [
         "Exploaring iOS Programming",
         "Programming Recipes",
         "A quest for knowledge",
@@ -44,7 +44,7 @@ struct TitleView: View {
             }
             .onTapGesture {
                 // change subtitle
-                subtitle =  subtitles.randomElement() ?? "This is empty..."
+                subtitle =  subtitles.randomElement() ?? LocalizedStringKey("This is empty...")
             }
             
             Spacer()
