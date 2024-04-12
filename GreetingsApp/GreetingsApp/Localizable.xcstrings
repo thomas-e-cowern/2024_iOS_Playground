@@ -2,22 +2,134 @@
   "sourceLanguage" : "en",
   "strings" : {
     "A quest for knowledge" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una ricerca di conoscenza"
+          }
+        }
+      }
     },
     "A search for employment" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una ricerca di occupazione"
+          }
+        }
+      }
+    },
+    "Are you ready to..." : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sei pronto per..."
+          }
+        }
+      }
+    },
+    "Awesome!" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eccezionale!"
+          }
+        }
+      }
     },
     "Exploaring iOS Programming" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esplorazione della programmazione iOS"
+          }
+        }
+      }
     },
     "Greetings" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saluti"
+          }
+        }
+      }
+    },
+    "Hello World" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ciao mondo"
+          }
+        }
+      }
     },
     "Programming Recipes" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ricette di programmazione"
+          }
+        }
+      }
+    },
+    "Start exploring" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inizia a esplorare"
+          }
+        }
+      }
+    },
+    "Sup" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supp"
+          }
+        }
+      }
     },
     "This is empty..." : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questo è vuoto..."
+          }
+        }
+      }
+    },
+    "Welcome to swift" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benvenuto in Swift"
+          }
+        }
+      }
+    },
+    "What!" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Che cosa!"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
