@@ -10,7 +10,11 @@ import SwiftUI
 struct MessagesView: View {
     
     let messages: [DataItemModel] = [
-        DataItemModel(text: "Hello World", color: .green), DataItemModel(text: "Welcome to swift", color: .orange), DataItemModel(text: "Are you ready to...", color: .yellow), DataItemModel(text: "Start exploring", color: .red), DataItemModel(text: "Awesome!", color: .purple)
+        DataItemModel(text: "Hello World", color: .myGreen), 
+        DataItemModel(text: "Welcome to swift", color: .myGrey),
+        DataItemModel(text: "Are you ready to...", color: .yellow),
+        DataItemModel(text: "Start exploring", color: .red),
+        DataItemModel(text: "Awesome!", color: .myPurple)
     ]
     
     var body: some View {
