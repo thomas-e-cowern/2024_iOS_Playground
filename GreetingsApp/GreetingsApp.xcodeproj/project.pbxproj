@@ -21,6 +21,7 @@
 		4D0BC5BE2BCAA38F0097810A /* LandscapeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0BC5BD2BCAA38F0097810A /* LandscapeContentView.swift */; };
 		4DAC7F672BCAA4F60000B102 /* GreetingsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC7F662BCAA4F60000B102 /* GreetingsTextView.swift */; };
 		4DAC7F692BCAA99B0000B102 /* RotatableCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC7F682BCAA99B0000B102 /* RotatableCircleView.swift */; };
+		4DAC7F6B2BCAB2900000B102 /* VerticalTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC7F6A2BCAB2900000B102 /* VerticalTitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		4D0BC5BD2BCAA38F0097810A /* LandscapeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeContentView.swift; sourceTree = "<group>"; };
 		4DAC7F662BCAA4F60000B102 /* GreetingsTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsTextView.swift; sourceTree = "<group>"; };
 		4DAC7F682BCAA99B0000B102 /* RotatableCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatableCircleView.swift; sourceTree = "<group>"; };
+		4DAC7F6A2BCAB2900000B102 /* VerticalTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalTitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			children = (
 				4D0BC5AA2BC81E360097810A /* TextView.swift */,
 				4D0BC5AE2BC826DA0097810A /* TitleView.swift */,
+				4DAC7F6A2BCAB2900000B102 /* VerticalTitleView.swift */,
 				4D0BC5812BC6C6A00097810A /* ContentView.swift */,
 				4D0BC5B22BC828040097810A /* BackgroundView.swift */,
 				4D0BC5B02BC8270A0097810A /* MessagesView.swift */,
@@ -206,6 +209,7 @@
 				4D0BC5822BC6C6A00097810A /* ContentView.swift in Sources */,
 				4D0BC5802BC6C6A00097810A /* GreetingsAppApp.swift in Sources */,
 				4D0BC5BE2BCAA38F0097810A /* LandscapeContentView.swift in Sources */,
+				4DAC7F6B2BCAB2900000B102 /* VerticalTitleView.swift in Sources */,
 				4D0BC5AF2BC826DA0097810A /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

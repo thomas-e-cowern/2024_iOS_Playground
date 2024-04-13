@@ -15,10 +15,10 @@ struct LandscapeContentView: View {
             
             HStack {
                 
-                TitleView()
-                
-                Spacer()
+                VerticalTitleView()
       
+                Spacer()
+                
                 MessagesView()
                 
             }

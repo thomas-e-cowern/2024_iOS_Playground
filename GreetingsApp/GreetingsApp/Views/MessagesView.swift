@@ -18,8 +18,10 @@ struct MessagesView: View {
     ]
     
     var body: some View {
-        ForEach(messages, id: \.id) { message in
-            TextView(text: message.text, color: message.color)
+        VStack(alignment: .leading) {
+            ForEach(messages, id: \.id) { message in
+                TextView(text: message.text, color: message.color)
+            }
         }
     }
 }
