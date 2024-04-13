@@ -22,6 +22,11 @@ struct LanguageOptionsView: View {
                 Button("Italian") {
                     language = "it"
                     layoutDirectionString = LEFT_TO_RIGHT
+                    print("Italian Chosen")
+                }
+                Button("Arabic") {
+                    language = "ar"
+                    layoutDirectionString = RIGHT_TO_LEFT
                 }
             }
     }

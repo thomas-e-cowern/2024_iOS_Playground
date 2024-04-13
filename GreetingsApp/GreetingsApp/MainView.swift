@@ -12,6 +12,9 @@ struct MainView: View {
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @Environment(\.verticalSizeClass) var verticalSizeClass
     
+    @Binding var language: String
+    @Binding var layoutDirectionString: String
+    
     var isPortraitPhone: Bool {
         horizontalSizeClass == .compact && verticalSizeClass == .regular
     }
@@ -23,14 +26,28 @@ struct MainView: View {
     var body: some View {
         // Portrait mode
         if isPortraitPhone || isiPad {
-            ContentView()
+            NavigationStack {
+                ContentView()
+                    .toolbar {
+                        ToolbarItem(placement: .topBarTrailing) {
+                            LanguageOptionsView(language: $language, layoutDirectionString: $layoutDirectionString)
+                        }
+                    }
+            }
         } else {
             // Landscape mode
-            LandscapeContentView()
+            NavigationStack {
+                LandscapeContentView()
+                    .toolbar {
+                        ToolbarItem(placement: .topBarTrailing) {
+                            LanguageOptionsView(language: $language, layoutDirectionString: $layoutDirectionString)
+                        }
+                    }
+            }
         }
     }
 }
 
 #Preview {
-    MainView()
+    MainView(language: .constant("en"), layoutDirectionString: .constant(LEFT_TO_RIGHT))
 }

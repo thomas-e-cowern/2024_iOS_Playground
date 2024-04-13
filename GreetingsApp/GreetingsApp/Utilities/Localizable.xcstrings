@@ -3,6 +3,12 @@
   "strings" : {
     "A quest for knowledge" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "طلب المعرفة"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13,6 +19,12 @@
     },
     "A search for employment" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "البحث عن عمل"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21,8 +33,30 @@
         }
       }
     },
+    "Arabic" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عربي"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arabo"
+          }
+        }
+      }
+    },
     "Are you ready to..." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هل انت مستعد ل..."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -33,6 +67,12 @@
     },
     "Awesome!" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مذهل!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -41,8 +81,30 @@
         }
       }
     },
+    "English" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إنجليزي"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inglese"
+          }
+        }
+      }
+    },
     "Exploaring iOS Programming" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "استكشاف برمجة iOS"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -52,10 +114,29 @@
       }
     },
     "Exploring iOS Programming" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "استكشاف برمجة iOS"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esplorando la programmazione iOS"
+          }
+        }
+      }
     },
     "Greetings" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحيات"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -66,6 +147,12 @@
     },
     "Hello World" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مرحبا بالعالم"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -74,8 +161,30 @@
         }
       }
     },
+    "Italian" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ايطالي"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Italiano"
+          }
+        }
+      }
+    },
     "Programming Recipes" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وصفات البرمجة"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -86,6 +195,12 @@
     },
     "Start exploring" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ابدأ بالاستكشاف"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -96,6 +211,12 @@
     },
     "Sup" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رشفة"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -106,6 +227,12 @@
     },
     "This is empty..." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هذا فارغ..."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -116,6 +243,12 @@
     },
     "Welcome to swift" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مرحبا بكم في سويفت"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -126,6 +259,12 @@
     },
     "What!" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ماذا!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
