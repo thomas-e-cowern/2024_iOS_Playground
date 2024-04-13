@@ -20,6 +20,7 @@
 		4D0BC5B92BC9A5DA0097810A /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 4D0BC5B82BC9A5DA0097810A /* Localizable.xcstrings */; };
 		4D0BC5BE2BCAA38F0097810A /* LandscapeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0BC5BD2BCAA38F0097810A /* LandscapeContentView.swift */; };
 		4DAC7F672BCAA4F60000B102 /* GreetingsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC7F662BCAA4F60000B102 /* GreetingsTextView.swift */; };
+		4DAC7F692BCAA99B0000B102 /* RotatableCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC7F682BCAA99B0000B102 /* RotatableCircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		4D0BC5B82BC9A5DA0097810A /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		4D0BC5BD2BCAA38F0097810A /* LandscapeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeContentView.swift; sourceTree = "<group>"; };
 		4DAC7F662BCAA4F60000B102 /* GreetingsTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsTextView.swift; sourceTree = "<group>"; };
+		4DAC7F682BCAA99B0000B102 /* RotatableCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatableCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				4D0BC5B02BC8270A0097810A /* MessagesView.swift */,
 				4D0BC5BD2BCAA38F0097810A /* LandscapeContentView.swift */,
 				4DAC7F662BCAA4F60000B102 /* GreetingsTextView.swift */,
+				4DAC7F682BCAA99B0000B102 /* RotatableCircleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				4D0BC5AD2BC821380097810A /* DataItemModel.swift in Sources */,
 				4D0BC5AB2BC81E360097810A /* TextView.swift in Sources */,
 				4DAC7F672BCAA4F60000B102 /* GreetingsTextView.swift in Sources */,
+				4DAC7F692BCAA99B0000B102 /* RotatableCircleView.swift in Sources */,
 				4D0BC5B12BC8270A0097810A /* MessagesView.swift in Sources */,
 				4D0BC5B32BC828040097810A /* BackgroundView.swift in Sources */,
 				4D0BC5822BC6C6A00097810A /* ContentView.swift in Sources */,
