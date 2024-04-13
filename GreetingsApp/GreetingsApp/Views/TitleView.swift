@@ -15,13 +15,6 @@ struct TitleView: View {
     let lineWidth = 15.0
     let diameter = 70.0
     
-    let subtitles: [LocalizedStringKey] = [
-        "Exploaring iOS Programming",
-        "Programming Recipes",
-        "A quest for knowledge",
-        "A search for employment"
-    ]
-    
     var angle: Angle {
         isRotated ? .zero : .degrees(360)
     }
@@ -32,20 +25,8 @@ struct TitleView: View {
     
     var body: some View {
         HStack {
-            VStack(alignment: .leading, spacing: 0) {
-                Text("Greetings")
-                    .font(.largeTitle)
-                    .fontWeight(.semibold)
-                Text(subtitle)
-                    .font(.headline)
-                    .fontWeight(.thin)
-                
-                
-            }
-            .onTapGesture {
-                // change subtitle
-                subtitle =  subtitles.randomElement() ?? LocalizedStringKey("This is empty...")
-            }
+
+            GreetingsTextView(subtitle: $subtitle)
             
             Spacer()
             
