@@ -10,8 +10,10 @@ import SwiftUI
 @main
 struct GreetingsAppApp: App {
     
-    @State private var language: String = "en"
-    @State private var languageDirectionString: String = LEFT_TO_RIGHT
+//    @State private var language: String = "en"
+//    @State private var languageDirectionString: String = LEFT_TO_RIGHT
+    @AppStorage("language") var language: String = "en"
+    @AppStorage("languageDirectionsString") var languageDirectionString: String = LEFT_TO_RIGHT
     
     var layoutDirection: LayoutDirection {
         languageDirectionString == LEFT_TO_RIGHT ? .leftToRight : .rightToLeft
