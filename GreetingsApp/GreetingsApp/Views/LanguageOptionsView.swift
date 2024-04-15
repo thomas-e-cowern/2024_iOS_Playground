@@ -13,22 +13,25 @@ struct LanguageOptionsView: View {
     @Binding var layoutDirectionString: String
     
     var body: some View {
-        Image(systemName: "gearshape.fill")
-            .contextMenu {
-                Button("English") {
-                    language = "en"
-                    layoutDirectionString = LEFT_TO_RIGHT
-                }
-                Button("Italian") {
-                    language = "it"
-                    layoutDirectionString = LEFT_TO_RIGHT
-                    print("Italian Chosen")
-                }
-                Button("Arabic") {
-                    language = "ar"
-                    layoutDirectionString = RIGHT_TO_LEFT
-                }
+        
+        Menu {
+            Button("English") {
+                language = "en"
+                layoutDirectionString = LEFT_TO_RIGHT
             }
+            Button("Italian") {
+                language = "it"
+                layoutDirectionString = LEFT_TO_RIGHT
+            }
+            Button("Arabic") {
+                language = "ar"
+                layoutDirectionString = RIGHT_TO_LEFT
+            }
+
+        } label: {
+            Image(systemName: "gearshape.fill")
+                .foregroundStyle(Color.black)
+        }
     }
 }
 
