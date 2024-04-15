@@ -34,7 +34,11 @@ struct TextView: View {
     }
     
     var font: Font {
+#if os(macOS)
+        .title
+#elseif os(iOS)
         isiPad ? .largeTitle : .body
+#endif
     }
     
     var body: some View {

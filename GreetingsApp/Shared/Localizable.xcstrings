@@ -164,9 +164,6 @@
         }
       }
     },
-    "iOS App" : {
-
-    },
     "Italian" : {
       "localizations" : {
         "ar" : {
@@ -182,9 +179,6 @@
           }
         }
       }
-    },
-    "MAC APP" : {
-
     },
     "Programming Recipes" : {
       "localizations" : {
