@@ -7,12 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D03D0952BCDB60B00F07469 /* DataItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D03D0942BCDB60B00F07469 /* DataItemModel.swift */; };
+		4D03D0962BCDB64C00F07469 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D0BC5832BC6C6A30097810A /* Assets.xcassets */; };
+		4D03D0972BCDB65800F07469 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 4D0BC5B82BC9A5DA0097810A /* Localizable.xcstrings */; };
+		4D03D0982BCDB65F00F07469 /* GreetingsTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1254922BCD6EE0002CDCFE /* GreetingsTip.swift */; };
+		4D03D0992BCDB66600F07469 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0BC5AA2BC81E360097810A /* TextView.swift */; };
+		4D03D09A2BCDB68200F07469 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0BC5AE2BC826DA0097810A /* TitleView.swift */; };
+		4D03D09B2BCDB68400F07469 /* VerticalTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC7F6A2BCAB2900000B102 /* VerticalTitleView.swift */; };
+		4D03D09C2BCDB68700F07469 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0BC5812BC6C6A00097810A /* ContentView.swift */; };
+		4D03D09D2BCDB68A00F07469 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0BC5B22BC828040097810A /* BackgroundView.swift */; };
+		4D03D09E2BCDB68C00F07469 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0BC5B02BC8270A0097810A /* MessagesView.swift */; };
+		4D03D09F2BCDB68F00F07469 /* LandscapeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0BC5BD2BCAA38F0097810A /* LandscapeContentView.swift */; };
+		4D03D0A02BCDB69200F07469 /* GreetingsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC7F662BCAA4F60000B102 /* GreetingsTextView.swift */; };
+		4D03D0A12BCDB69600F07469 /* RotatableCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC7F682BCAA99B0000B102 /* RotatableCircleView.swift */; };
+		4D03D0A22BCDB69900F07469 /* LanguageOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC7F6E2BCAC3DA0000B102 /* LanguageOptionsView.swift */; };
+		4D03D0A32BCDB69E00F07469 /* DataItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D03D0942BCDB60B00F07469 /* DataItemModel.swift */; };
 		4D0BC5802BC6C6A00097810A /* GreetingsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0BC57F2BC6C6A00097810A /* GreetingsAppApp.swift */; };
 		4D0BC5822BC6C6A00097810A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0BC5812BC6C6A00097810A /* ContentView.swift */; };
 		4D0BC5842BC6C6A30097810A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D0BC5832BC6C6A30097810A /* Assets.xcassets */; };
 		4D0BC5872BC6C6A30097810A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D0BC5862BC6C6A30097810A /* Preview Assets.xcassets */; };
 		4D0BC5AB2BC81E360097810A /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0BC5AA2BC81E360097810A /* TextView.swift */; };
-		4D0BC5AD2BC821380097810A /* DataItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0BC5AC2BC821370097810A /* DataItemModel.swift */; };
 		4D0BC5AF2BC826DA0097810A /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0BC5AE2BC826DA0097810A /* TitleView.swift */; };
 		4D0BC5B12BC8270A0097810A /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0BC5B02BC8270A0097810A /* MessagesView.swift */; };
 		4D0BC5B32BC828040097810A /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0BC5B22BC828040097810A /* BackgroundView.swift */; };
@@ -20,6 +34,9 @@
 		4D0BC5B92BC9A5DA0097810A /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 4D0BC5B82BC9A5DA0097810A /* Localizable.xcstrings */; };
 		4D0BC5BE2BCAA38F0097810A /* LandscapeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0BC5BD2BCAA38F0097810A /* LandscapeContentView.swift */; };
 		4D1254932BCD6EE0002CDCFE /* GreetingsTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1254922BCD6EE0002CDCFE /* GreetingsTip.swift */; };
+		4D12549B2BCDAE69002CDCFE /* GreetingsMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D12549A2BCDAE69002CDCFE /* GreetingsMacApp.swift */; };
+		4D496A6D2BCDB8CF00570D2A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D496A6C2BCDB8CF00570D2A /* MainView.swift */; };
+		4D496A6E2BCDB8F100570D2A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC7F702BCAC42B0000B102 /* Constants.swift */; };
 		4DAC7F672BCAA4F60000B102 /* GreetingsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC7F662BCAA4F60000B102 /* GreetingsTextView.swift */; };
 		4DAC7F692BCAA99B0000B102 /* RotatableCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC7F682BCAA99B0000B102 /* RotatableCircleView.swift */; };
 		4DAC7F6B2BCAB2900000B102 /* VerticalTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC7F6A2BCAB2900000B102 /* VerticalTitleView.swift */; };
@@ -29,13 +46,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D03D0942BCDB60B00F07469 /* DataItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataItemModel.swift; path = "Shared/New Group/DataItemModel.swift"; sourceTree = SOURCE_ROOT; };
 		4D0BC57C2BC6C6A00097810A /* GreetingsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreetingsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D0BC57F2BC6C6A00097810A /* GreetingsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsAppApp.swift; sourceTree = "<group>"; };
 		4D0BC5812BC6C6A00097810A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4D0BC5832BC6C6A30097810A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D0BC5862BC6C6A30097810A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D0BC5AA2BC81E360097810A /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
-		4D0BC5AC2BC821370097810A /* DataItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataItemModel.swift; sourceTree = "<group>"; };
 		4D0BC5AE2BC826DA0097810A /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		4D0BC5B02BC8270A0097810A /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		4D0BC5B22BC828040097810A /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
@@ -43,6 +60,10 @@
 		4D0BC5B82BC9A5DA0097810A /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		4D0BC5BD2BCAA38F0097810A /* LandscapeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeContentView.swift; sourceTree = "<group>"; };
 		4D1254922BCD6EE0002CDCFE /* GreetingsTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsTip.swift; sourceTree = "<group>"; };
+		4D1254982BCDAE69002CDCFE /* GreetingsMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreetingsMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D12549A2BCDAE69002CDCFE /* GreetingsMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsMacApp.swift; sourceTree = "<group>"; };
+		4D1254A12BCDAE6B002CDCFE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4D496A6C2BCDB8CF00570D2A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4DAC7F662BCAA4F60000B102 /* GreetingsTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsTextView.swift; sourceTree = "<group>"; };
 		4DAC7F682BCAA99B0000B102 /* RotatableCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatableCircleView.swift; sourceTree = "<group>"; };
 		4DAC7F6A2BCAB2900000B102 /* VerticalTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalTitleView.swift; sourceTree = "<group>"; };
@@ -59,13 +80,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4D1254952BCDAE69002CDCFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D03D0A42BCDB7E700F07469 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				4DAC7F702BCAC42B0000B102 /* Constants.swift */,
+				4D03D0942BCDB60B00F07469 /* DataItemModel.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		4D0BC5732BC6C6A00097810A = {
 			isa = PBXGroup;
 			children = (
+				4D1254A62BCDAEEF002CDCFE /* Shared */,
 				4D0BC57E2BC6C6A00097810A /* GreetingsApp */,
+				4D1254992BCDAE69002CDCFE /* GreetingsMac */,
 				4D0BC57D2BC6C6A00097810A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				4D0BC57C2BC6C6A00097810A /* GreetingsApp.app */,
+				4D1254982BCDAE69002CDCFE /* GreetingsMac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,13 +121,9 @@
 		4D0BC57E2BC6C6A00097810A /* GreetingsApp */ = {
 			isa = PBXGroup;
 			children = (
-				4D1254912BCD6ED0002CDCFE /* Tips */,
 				4D0BC5BC2BCAA3060097810A /* Utilities */,
-				4D0BC5BB2BCAA2DC0097810A /* Views */,
-				4D0BC5BA2BCAA2CD0097810A /* Models */,
 				4D0BC57F2BC6C6A00097810A /* GreetingsAppApp.swift */,
 				4DAC7F6C2BCAB5F40000B102 /* MainView.swift */,
-				4D0BC5832BC6C6A30097810A /* Assets.xcassets */,
 				4D0BC5852BC6C6A30097810A /* Preview Content */,
 			);
 			path = GreetingsApp;
@@ -99,14 +135,6 @@
 				4D0BC5862BC6C6A30097810A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		4D0BC5BA2BCAA2CD0097810A /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				4D0BC5AC2BC821370097810A /* DataItemModel.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		4D0BC5BB2BCAA2DC0097810A /* Views */ = {
@@ -129,9 +157,7 @@
 		4D0BC5BC2BCAA3060097810A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				4D0BC5B82BC9A5DA0097810A /* Localizable.xcstrings */,
 				4D0BC5B42BC987780097810A /* LaunchScreen.storyboard */,
-				4DAC7F702BCAC42B0000B102 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -142,6 +168,36 @@
 				4D1254922BCD6EE0002CDCFE /* GreetingsTip.swift */,
 			);
 			path = Tips;
+			sourceTree = "<group>";
+		};
+		4D1254992BCDAE69002CDCFE /* GreetingsMac */ = {
+			isa = PBXGroup;
+			children = (
+				4D12549A2BCDAE69002CDCFE /* GreetingsMacApp.swift */,
+				4D496A6C2BCDB8CF00570D2A /* MainView.swift */,
+				4D1254A02BCDAE6B002CDCFE /* Preview Content */,
+			);
+			path = GreetingsMac;
+			sourceTree = "<group>";
+		};
+		4D1254A02BCDAE6B002CDCFE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4D1254A12BCDAE6B002CDCFE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4D1254A62BCDAEEF002CDCFE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4D03D0A42BCDB7E700F07469 /* New Group */,
+				4D0BC5832BC6C6A30097810A /* Assets.xcassets */,
+				4D0BC5B82BC9A5DA0097810A /* Localizable.xcstrings */,
+				4D1254912BCD6ED0002CDCFE /* Tips */,
+				4D0BC5BB2BCAA2DC0097810A /* Views */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +220,23 @@
 			productReference = 4D0BC57C2BC6C6A00097810A /* GreetingsApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4D1254972BCDAE69002CDCFE /* GreetingsMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D1254A32BCDAE6B002CDCFE /* Build configuration list for PBXNativeTarget "GreetingsMac" */;
+			buildPhases = (
+				4D1254942BCDAE69002CDCFE /* Sources */,
+				4D1254952BCDAE69002CDCFE /* Frameworks */,
+				4D1254962BCDAE69002CDCFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GreetingsMac;
+			productName = GreetingsMac;
+			productReference = 4D1254982BCDAE69002CDCFE /* GreetingsMac.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -175,6 +248,9 @@
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					4D0BC57B2BC6C6A00097810A = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					4D1254972BCDAE69002CDCFE = {
 						CreatedOnToolsVersion = 15.3;
 					};
 				};
@@ -197,6 +273,7 @@
 			projectRoot = "";
 			targets = (
 				4D0BC57B2BC6C6A00097810A /* GreetingsApp */,
+				4D1254972BCDAE69002CDCFE /* GreetingsMac */,
 			);
 		};
 /* End PBXProject section */
@@ -213,6 +290,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4D1254962BCDAE69002CDCFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D03D0962BCDB64C00F07469 /* Assets.xcassets in Resources */,
+				4D03D0972BCDB65800F07469 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -220,7 +306,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D0BC5AD2BC821380097810A /* DataItemModel.swift in Sources */,
 				4DAC7F6D2BCAB5F40000B102 /* MainView.swift in Sources */,
 				4D0BC5AB2BC81E360097810A /* TextView.swift in Sources */,
 				4DAC7F672BCAA4F60000B102 /* GreetingsTextView.swift in Sources */,
@@ -228,6 +313,7 @@
 				4D0BC5B12BC8270A0097810A /* MessagesView.swift in Sources */,
 				4D1254932BCD6EE0002CDCFE /* GreetingsTip.swift in Sources */,
 				4D0BC5B32BC828040097810A /* BackgroundView.swift in Sources */,
+				4D03D0952BCDB60B00F07469 /* DataItemModel.swift in Sources */,
 				4D0BC5822BC6C6A00097810A /* ContentView.swift in Sources */,
 				4D0BC5802BC6C6A00097810A /* GreetingsAppApp.swift in Sources */,
 				4DAC7F6F2BCAC3DA0000B102 /* LanguageOptionsView.swift in Sources */,
@@ -235,6 +321,28 @@
 				4DAC7F712BCAC42B0000B102 /* Constants.swift in Sources */,
 				4DAC7F6B2BCAB2900000B102 /* VerticalTitleView.swift in Sources */,
 				4D0BC5AF2BC826DA0097810A /* TitleView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D1254942BCDAE69002CDCFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D03D0A32BCDB69E00F07469 /* DataItemModel.swift in Sources */,
+				4D496A6D2BCDB8CF00570D2A /* MainView.swift in Sources */,
+				4D03D09F2BCDB68F00F07469 /* LandscapeContentView.swift in Sources */,
+				4D03D0982BCDB65F00F07469 /* GreetingsTip.swift in Sources */,
+				4D03D09B2BCDB68400F07469 /* VerticalTitleView.swift in Sources */,
+				4D496A6E2BCDB8F100570D2A /* Constants.swift in Sources */,
+				4D03D0A02BCDB69200F07469 /* GreetingsTextView.swift in Sources */,
+				4D03D09E2BCDB68C00F07469 /* MessagesView.swift in Sources */,
+				4D03D09D2BCDB68A00F07469 /* BackgroundView.swift in Sources */,
+				4D03D09C2BCDB68700F07469 /* ContentView.swift in Sources */,
+				4D03D0A12BCDB69600F07469 /* RotatableCircleView.swift in Sources */,
+				4D03D0992BCDB66600F07469 /* TextView.swift in Sources */,
+				4D03D0A22BCDB69900F07469 /* LanguageOptionsView.swift in Sources */,
+				4D12549B2BCDAE69002CDCFE /* GreetingsMacApp.swift in Sources */,
+				4D03D09A2BCDB68200F07469 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +492,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = mobilesoftwareservices.GreetingsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -414,9 +526,77 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = mobilesoftwareservices.GreetingsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4D1254A42BCDAE6B002CDCFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GreetingsMac/Preview Content\"";
+				DEVELOPMENT_TEAM = 56F54J4H3N;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mobilesoftwareservices.GreetingsMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4D1254A52BCDAE6B002CDCFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GreetingsMac/Preview Content\"";
+				DEVELOPMENT_TEAM = 56F54J4H3N;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mobilesoftwareservices.GreetingsMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -437,6 +617,15 @@
 			buildConfigurations = (
 				4D0BC58B2BC6C6A30097810A /* Debug */,
 				4D0BC58C2BC6C6A30097810A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D1254A32BCDAE6B002CDCFE /* Build configuration list for PBXNativeTarget "GreetingsMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D1254A42BCDAE6B002CDCFE /* Debug */,
+				4D1254A52BCDAE6B002CDCFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
