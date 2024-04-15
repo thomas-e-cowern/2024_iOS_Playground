@@ -81,6 +81,9 @@
         }
       }
     },
+    "Click on text and disc" : {
+
+    },
     "English" : {
       "localizations" : {
         "ar" : {
@@ -224,6 +227,9 @@
           }
         }
       }
+    },
+    "Text will be randomly generated and will have some nice animations" : {
+
     },
     "This is empty..." : {
       "localizations" : {
