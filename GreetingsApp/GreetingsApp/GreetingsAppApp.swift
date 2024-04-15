@@ -20,12 +20,20 @@ struct GreetingsAppApp: App {
         languageDirectionString == LEFT_TO_RIGHT ? .leftToRight : .rightToLeft
     }
     
+    let resetTip: Bool = false
+    
     var body: some Scene {
         WindowGroup {
             MainView(language: $language, layoutDirectionString: $languageDirectionString)
                 .environment(\.locale, Locale(identifier: language))
                 .environment(\.layoutDirection, layoutDirection)
                 .task {
+                    /// use for testing.
+                    if resetTip {
+                        try? Tips.resetDatastore()
+                    }
+                   
+                    
                     try? Tips.configure([
                         .displayFrequency(.immediate),
                         .datastoreLocation(.applicationDefault)
