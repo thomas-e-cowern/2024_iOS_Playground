@@ -12,10 +12,26 @@ struct SunAndMoonView: View {
     var lightMode: Bool
     
     var body: some View {
-        Text("Sun and moon view")
+        HStack(spacing: 30) {
+            Image(systemName: "sun.max.fill")
+                .imageScale(.large)
+                .foregroundStyle(lightMode ? .sunAndMoonSelected : .sunAndMoonNotSelected)
+            
+            Image(systemName: "moon.fill")
+                .imageScale(.large)
+                .foregroundStyle(lightMode ? .sunAndMoonNotSelected : .sunAndMoonSelected)
+        }
+        .padding()
+        .background(.secondaryBackground)
+        .clipShape(RoundedRectangle(cornerRadius: 20))
     }
 }
 
-#Preview {
+#Preview("Dark Mode") {
+    return SunAndMoonView(lightMode: false)
+}
+
+
+#Preview("Light Mode") {
     SunAndMoonView(lightMode: true)
 }
