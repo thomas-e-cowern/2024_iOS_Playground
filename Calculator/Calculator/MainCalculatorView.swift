@@ -14,13 +14,36 @@ struct MainCalculatorView: View {
     @State var mainResult: String = "0"
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            
+            primaryBackgroundColor
+                .ignoresSafeArea()
+            
+            VStack {
+                SunAndMoonView(lightMode: lightMode)
+                    .onTapGesture {
+                        withAnimation {
+                            lightMode.toggle()
+                        }
+                    }
+                
+                
+                Spacer()
+                
+                ComputationView(mainResult: mainResult, currentComputation: currentComputation)
+                
+                Spacer()
+                
+                CalculatorButtonsView(currentComputation: $currentComputation, mainResult: $mainResult)
+                
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
+                Text("Hello, world!")
+                
+            }
         }
-        .padding()
+        .environment(\.colorScheme, lightMode ? .light : .dark)
     }
 }
 
