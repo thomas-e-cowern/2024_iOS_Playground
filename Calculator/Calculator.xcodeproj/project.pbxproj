@@ -11,6 +11,7 @@
 		4D496A802BCED5F500570D2A /* MainCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D496A7F2BCED5F500570D2A /* MainCalculatorView.swift */; };
 		4D496A822BCED5F700570D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D496A812BCED5F700570D2A /* Assets.xcassets */; };
 		4D496A852BCED5F700570D2A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D496A842BCED5F700570D2A /* Preview Assets.xcassets */; };
+		4D496A8C2BCED98000570D2A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D496A8B2BCED97F00570D2A /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		4D496A7F2BCED5F500570D2A /* MainCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCalculatorView.swift; sourceTree = "<group>"; };
 		4D496A812BCED5F700570D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D496A842BCED5F700570D2A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4D496A8B2BCED97F00570D2A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				4D496A7D2BCED5F500570D2A /* CalculatorApp.swift */,
 				4D496A7F2BCED5F500570D2A /* MainCalculatorView.swift */,
+				4D496A8B2BCED97F00570D2A /* Constants.swift */,
 				4D496A812BCED5F700570D2A /* Assets.xcassets */,
 				4D496A832BCED5F700570D2A /* Preview Content */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				4D496A802BCED5F500570D2A /* MainCalculatorView.swift in Sources */,
 				4D496A7E2BCED5F500570D2A /* CalculatorApp.swift in Sources */,
+				4D496A8C2BCED98000570D2A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
