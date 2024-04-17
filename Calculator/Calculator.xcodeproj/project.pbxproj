@@ -16,6 +16,7 @@
 		4D496A902BCEE94D00570D2A /* ComputationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D496A8F2BCEE94D00570D2A /* ComputationView.swift */; };
 		4D496A922BCEEB1C00570D2A /* CalculatorButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D496A912BCEEB1C00570D2A /* CalculatorButtonsView.swift */; };
 		4DC10A332BCFF1770097CDEE /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC10A322BCFF1770097CDEE /* Enumerations.swift */; };
+		4DC10A352BCFF46D0097CDEE /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC10A342BCFF46D0097CDEE /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		4D496A8F2BCEE94D00570D2A /* ComputationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputationView.swift; sourceTree = "<group>"; };
 		4D496A912BCEEB1C00570D2A /* CalculatorButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonsView.swift; sourceTree = "<group>"; };
 		4DC10A322BCFF1770097CDEE /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
+		4DC10A342BCFF46D0097CDEE /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				4D496A7D2BCED5F500570D2A /* CalculatorApp.swift */,
 				4D496A7F2BCED5F500570D2A /* MainCalculatorView.swift */,
 				4DC10A322BCFF1770097CDEE /* Enumerations.swift */,
+				4DC10A342BCFF46D0097CDEE /* ButtonView.swift */,
 				4D496A912BCEEB1C00570D2A /* CalculatorButtonsView.swift */,
 				4D496A8F2BCEE94D00570D2A /* ComputationView.swift */,
 				4D496A8D2BCEE79D00570D2A /* SunAndMoonView.swift */,
@@ -154,6 +157,7 @@
 			files = (
 				4DC10A332BCFF1770097CDEE /* Enumerations.swift in Sources */,
 				4D496A922BCEEB1C00570D2A /* CalculatorButtonsView.swift in Sources */,
+				4DC10A352BCFF46D0097CDEE /* ButtonView.swift in Sources */,
 				4D496A8E2BCEE79D00570D2A /* SunAndMoonView.swift in Sources */,
 				4D496A802BCED5F500570D2A /* MainCalculatorView.swift in Sources */,
 				4D496A902BCEE94D00570D2A /* ComputationView.swift in Sources */,

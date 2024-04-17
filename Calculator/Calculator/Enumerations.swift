@@ -33,3 +33,15 @@ enum CalculatorButton: String {
     case negative = "IMGplus.forwardslash.minus"
     case undo = "IMGarrow.counterclockwise"
 }
+
+let enumOperators: [CalculatorButton] = [
+    .subtract,
+    .add,
+    .divide,
+    .multiply
+]
+
+let multiplySymbol: String = CalculatorButton.multiply.rawValue
+let divisionSymbol: String = CalculatorButton.divide.rawValue
+
+let operators: String = "+-\(multiplySymbol)\(divisionSymbol)"
