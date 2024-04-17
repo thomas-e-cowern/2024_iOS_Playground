@@ -24,13 +24,31 @@ struct ButtonView: View {
         return value.contains("IMG") ? nil : value
     }
     
+    let buttonDimension: CGFloat = UIScreen.main.bounds.width / 5
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Text(text ?? "")
+            Image(systemName: systemImage ?? "")
+        }
+        .font(.title2)
+        .fontWeight(.semibold)
+        .frame(width: buttonDimension, height: buttonDimension)
+        .background(bgColor)
+        .clipShape(RoundedRectangle(cornerRadius: 15))
+        .shadow(radius: 2)
     }
     
-    let buttonDimension: CGFloat = UIScreen.
+    
 }
 
-#Preview {
-    ButtonView(calculatorButton: .one, fgColor: .digits, bgColor: buttonBackgroundColor)
+#Preview("Light Mode") {
+    ButtonView(calculatorButton: .undo, fgColor: .digits, bgColor: buttonBackgroundColor)
+        .preferredColorScheme(.light)
+}
+
+#Preview("Dark Mode") {
+    ButtonView(calculatorButton: .undo, fgColor: .digits, bgColor: buttonBackgroundColor)
+        .preferredColorScheme(.dark)
+        
 }
