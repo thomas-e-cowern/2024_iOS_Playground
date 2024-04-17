@@ -59,6 +59,8 @@ struct CalculatorButtonsView: View {
                 }
             }
         }
+        .padding()
+        .background(secondaryBackgroundColor.clipShape(RoundedRectangle(cornerRadius: 20)))
     }
 }
 

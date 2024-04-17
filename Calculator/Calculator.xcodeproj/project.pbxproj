@@ -19,6 +19,7 @@
 		4DC10A352BCFF46D0097CDEE /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC10A342BCFF46D0097CDEE /* ButtonView.swift */; };
 		4DC10A372BD008A20097CDEE /* CalculatorButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC10A362BD008A20097CDEE /* CalculatorButtonModel.swift */; };
 		4DC10A3A2BD009310097CDEE /* ButtonRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC10A392BD009310097CDEE /* ButtonRowModel.swift */; };
+		4DC10A3C2BD02FB10097CDEE /* StringHelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC10A3B2BD02FB10097CDEE /* StringHelperFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		4DC10A342BCFF46D0097CDEE /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		4DC10A362BD008A20097CDEE /* CalculatorButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonModel.swift; sourceTree = "<group>"; };
 		4DC10A392BD009310097CDEE /* ButtonRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRowModel.swift; sourceTree = "<group>"; };
+		4DC10A3B2BD02FB10097CDEE /* StringHelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelperFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				4D496A8D2BCEE79D00570D2A /* SunAndMoonView.swift */,
 				4D496A8B2BCED97F00570D2A /* Constants.swift */,
 				4D496A812BCED5F700570D2A /* Assets.xcassets */,
+				4DC10A3B2BD02FB10097CDEE /* StringHelperFunctions.swift */,
 				4D496A832BCED5F700570D2A /* Preview Content */,
 			);
 			path = Calculator;
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DC10A372BD008A20097CDEE /* CalculatorButtonModel.swift in Sources */,
+				4DC10A3C2BD02FB10097CDEE /* StringHelperFunctions.swift in Sources */,
 				4DC10A332BCFF1770097CDEE /* Enumerations.swift in Sources */,
 				4D496A922BCEEB1C00570D2A /* CalculatorButtonsView.swift in Sources */,
 				4DC10A352BCFF46D0097CDEE /* ButtonView.swift in Sources */,
