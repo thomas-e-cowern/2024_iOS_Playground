@@ -34,6 +34,7 @@ struct ButtonView: View {
         .font(.title2)
         .fontWeight(.semibold)
         .frame(width: buttonDimension, height: buttonDimension)
+        .foregroundStyle(fgColor)
         .background(bgColor)
         .clipShape(RoundedRectangle(cornerRadius: 15))
         .shadow(radius: 2)
