@@ -33,3 +33,7 @@ func formatResult(val: Double) -> String {
     
     return result ?? "0"
 }
+
+func lastCharIsDigit(str: String) -> Bool {
+    return "0123456789".contains(getLastCharacter(str: str))
+}

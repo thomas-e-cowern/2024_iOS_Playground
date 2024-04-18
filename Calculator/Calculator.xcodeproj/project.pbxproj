@@ -81,8 +81,8 @@
 				4D496A8F2BCEE94D00570D2A /* ComputationView.swift */,
 				4D496A8D2BCEE79D00570D2A /* SunAndMoonView.swift */,
 				4D496A8B2BCED97F00570D2A /* Constants.swift */,
-				4D496A812BCED5F700570D2A /* Assets.xcassets */,
 				4DC10A3B2BD02FB10097CDEE /* StringHelperFunctions.swift */,
+				4D496A812BCED5F700570D2A /* Assets.xcassets */,
 				4D496A832BCED5F700570D2A /* Preview Content */,
 			);
 			path = Calculator;
