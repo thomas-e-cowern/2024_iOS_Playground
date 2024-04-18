@@ -49,7 +49,7 @@ struct CalculatorButtonsView: View {
                 GridRow {
                     ForEach(rowModel.row) { buttonModel in
                         Button {
-                            print("\(buttonModel.color) Button pressed")
+                            buttonPressed(calulatorButton: buttonModel.calculatorButton)
                         } label: {
                             ButtonView(calculatorButton: buttonModel.calculatorButton, fgColor: buttonModel.color, bgColor: buttonBackgroundColor)
                         }
@@ -61,6 +61,33 @@ struct CalculatorButtonsView: View {
         }
         .padding()
         .background(secondaryBackgroundColor.clipShape(RoundedRectangle(cornerRadius: 20)))
+    }
+    
+    func buttonPressed(calulatorButton: CalculatorButton) {
+        switch calulatorButton {
+        case .clear:
+            currentComputation = ""
+            mainResult = "0"
+            
+        case .equal, .negative:
+            print("Eq/Ne")
+        case .decimal:
+            print("dec")
+        case .percent:
+            print("per")
+        case .undo:
+            print("Undo")
+            currentComputation = String(currentComputation.dropLast())
+        case .add, .subtract, .divide, .multiply:
+            print("Operations")
+            if lastCharIsDigit(str:currentComputation) {
+                currentComputation += calulatorButton.rawValue
+            }
+            
+        default:
+            print("Digits")
+            currentComputation += calulatorButton.rawValue
+        }
     }
 }
 
