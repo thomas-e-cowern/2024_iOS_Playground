@@ -75,19 +75,26 @@ struct CalculatorButtonsView: View {
             print("dec")
         case .percent:
             print("per")
+            if lastCharIsDigit(str: currentComputation) {
+                appendToCurrentComputation(calculatorButton: calulatorButton)
+            }
         case .undo:
             print("Undo")
             currentComputation = String(currentComputation.dropLast())
         case .add, .subtract, .divide, .multiply:
             print("Operations")
-            if lastCharIsDigit(str:currentComputation) {
-                currentComputation += calulatorButton.rawValue
+            if lastCharIsDigitOrPercent(str:currentComputation) {
+                appendToCurrentComputation(calculatorButton: calulatorButton)
             }
             
         default:
             print("Digits")
             currentComputation += calulatorButton.rawValue
         }
+    }
+    
+    func appendToCurrentComputation(calculatorButton: CalculatorButton) {
+        currentComputation += calculatorButton.rawValue
     }
 }
 
