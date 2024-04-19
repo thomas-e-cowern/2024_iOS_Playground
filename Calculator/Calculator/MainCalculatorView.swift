@@ -36,11 +36,6 @@ struct MainCalculatorView: View {
                 
                 CalculatorButtonsView(currentComputation: $currentComputation, mainResult: $mainResult)
                 
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                Text("Hello, world!")
-                
             }
         }
         .environment(\.colorScheme, lightMode ? .light : .dark)

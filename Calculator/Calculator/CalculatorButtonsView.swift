@@ -70,7 +70,6 @@ struct CalculatorButtonsView: View {
             mainResult = "0"
             
         case .equal, .negative:
-            print("Eq/Ne")
             if !currentComputation.isEmpty {
                 if !lastCharIsAnOperator(str: currentComputation) {
                     let sign = calculatorButton == .negative ? -1.0 : 1.0
@@ -83,7 +82,6 @@ struct CalculatorButtonsView: View {
                 }
             }
         case .decimal:
-            print("dec")
             if let lastOccuranceOfDecimal = currentComputation.lastIndex(of: ".") {
                 if lastCharIsDigit(str: currentComputation) {
                     let startIndex = currentComputation.index(lastOccuranceOfDecimal, offsetBy: 1)
@@ -104,21 +102,17 @@ struct CalculatorButtonsView: View {
                 }
             }
         case .percent:
-            print("per")
             if lastCharIsDigit(str: currentComputation) {
                 appendToCurrentComputation(calculatorButton: calculatorButton)
             }
         case .undo:
-            print("Undo")
             currentComputation = String(currentComputation.dropLast())
         case .add, .subtract, .divide, .multiply:
-            print("Operations")
             if lastCharIsDigitOrPercent(str:currentComputation) {
                 appendToCurrentComputation(calculatorButton: calculatorButton)
             }
             
         default:
-            print("Digits")
             currentComputation += calculatorButton.rawValue
         }
     }
