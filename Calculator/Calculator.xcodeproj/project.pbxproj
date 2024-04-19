@@ -71,17 +71,12 @@
 		4D496A7C2BCED5F500570D2A /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				4DABB5092BD2B8440082FD29 /* Extensions */,
+				4DABB5082BD2B8110082FD29 /* Helpers */,
+				4DABB5072BD2B7FC0082FD29 /* Constants */,
+				4DABB5062BD2B7E90082FD29 /* Views */,
 				4DC10A382BD0091D0097CDEE /* Models */,
 				4D496A7D2BCED5F500570D2A /* CalculatorApp.swift */,
-				4D496A7F2BCED5F500570D2A /* MainCalculatorView.swift */,
-				4DC10A322BCFF1770097CDEE /* Enumerations.swift */,
-				4DC10A342BCFF46D0097CDEE /* ButtonView.swift */,
-				4DC10A3D2BD05E790097CDEE /* ButtonView3D.swift */,
-				4D496A912BCEEB1C00570D2A /* CalculatorButtonsView.swift */,
-				4D496A8F2BCEE94D00570D2A /* ComputationView.swift */,
-				4D496A8D2BCEE79D00570D2A /* SunAndMoonView.swift */,
-				4D496A8B2BCED97F00570D2A /* Constants.swift */,
-				4DC10A3B2BD02FB10097CDEE /* StringHelperFunctions.swift */,
 				4D496A812BCED5F700570D2A /* Assets.xcassets */,
 				4D496A832BCED5F700570D2A /* Preview Content */,
 			);
@@ -94,6 +89,43 @@
 				4D496A842BCED5F700570D2A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4DABB5062BD2B7E90082FD29 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4D496A7F2BCED5F500570D2A /* MainCalculatorView.swift */,
+				4DC10A342BCFF46D0097CDEE /* ButtonView.swift */,
+				4DC10A3D2BD05E790097CDEE /* ButtonView3D.swift */,
+				4D496A912BCEEB1C00570D2A /* CalculatorButtonsView.swift */,
+				4D496A8F2BCEE94D00570D2A /* ComputationView.swift */,
+				4D496A8D2BCEE79D00570D2A /* SunAndMoonView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		4DABB5072BD2B7FC0082FD29 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				4DC10A322BCFF1770097CDEE /* Enumerations.swift */,
+				4D496A8B2BCED97F00570D2A /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		4DABB5082BD2B8110082FD29 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4DC10A3B2BD02FB10097CDEE /* StringHelperFunctions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4DABB5092BD2B8440082FD29 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		4DC10A382BD0091D0097CDEE /* Models */ = {
