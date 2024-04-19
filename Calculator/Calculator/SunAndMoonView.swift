@@ -20,8 +20,11 @@ struct SunAndMoonView: View {
             Image(systemName: "moon.fill")
                 .imageScale(.large)
                 .foregroundStyle(lightMode ? .sunAndMoonNotSelected : .sunAndMoonSelected)
+                
         }
         .padding()
+        .font(UIDevice.isIPad ? .title : .none)
+        .fontWeight(UIDevice.isIPad ? .semibold : .regular)
         .background(.secondaryBackground)
         .clipShape(RoundedRectangle(cornerRadius: 20))
     }

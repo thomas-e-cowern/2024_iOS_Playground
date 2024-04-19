@@ -31,10 +31,15 @@ struct MainCalculatorView: View {
                 Spacer()
                 
                 ComputationView(mainResult: mainResult, currentComputation: currentComputation)
+                    .padding(.horizontal, UIDevice.isIPad ? UIScreen.main.bounds.width * 0.1 : 0)
                 
                 Spacer()
                 
                 CalculatorButtonsView(currentComputation: $currentComputation, mainResult: $mainResult)
+                
+                if UIDevice.isIPad {
+                    Spacer()
+                }
                 
             }
         }
