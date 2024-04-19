@@ -11,7 +11,12 @@ import SwiftUI
 struct CalculatorApp: App {
     var body: some Scene {
         WindowGroup {
-            MainCalculatorView()
+            if UIDevice.isIPad {
+                Text("iPad")
+            } else {
+                Text("iPhone")
+                MainCalculatorView()
+            }
         }
     }
 }
