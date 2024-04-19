@@ -11,6 +11,7 @@ struct CalculatorButtonsView: View {
     
     @Binding var currentComputation: String
     @Binding var mainResult: String
+    let width: CGFloat
     
     let buttonData: [ButtonRowModel] = [
         ButtonRowModel(row: [CalculatorButtonModel(calculatorButton: .clear,        color: foregroundTopButtonsColor),
@@ -51,7 +52,7 @@ struct CalculatorButtonsView: View {
                         Button {
                             buttonPressed(calculatorButton: buttonModel.calculatorButton)
                         } label: {
-                            ButtonView(calculatorButton: buttonModel.calculatorButton, fgColor: buttonModel.color, bgColor: buttonBackgroundColor)
+                            ButtonView(calculatorButton: buttonModel.calculatorButton, fgColor: buttonModel.color, bgColor: buttonBackgroundColor, width: width)
                         }
 
                         
@@ -142,11 +143,11 @@ struct CalculatorButtonsView: View {
 }
 
 #Preview("Light Mode") {
-    CalculatorButtonsView(currentComputation: .constant("5 + 1"), mainResult: .constant("6"))
+    CalculatorButtonsView(currentComputation: .constant("5 + 1"), mainResult: .constant("6"), width: 375)
         .preferredColorScheme(.light)
 }
 
 #Preview("Dark Mode") {
-    CalculatorButtonsView(currentComputation: .constant("5 + 1"), mainResult: .constant("6"))
+    CalculatorButtonsView(currentComputation: .constant("5 + 1"), mainResult: .constant("6"), width: 375)
         .preferredColorScheme(.dark)
 }

@@ -14,36 +14,39 @@ struct MainCalculatorView: View {
     @State var mainResult: String = "0"
     
     var body: some View {
-        ZStack {
-            
-            primaryBackgroundColor
-                .ignoresSafeArea()
-            
-            VStack {
-                SunAndMoonView(lightMode: lightMode)
-                    .onTapGesture {
-                        withAnimation {
-                            lightMode.toggle()
+        GeometryReader { geo in
+            ZStack {
+                
+                primaryBackgroundColor
+                    .ignoresSafeArea()
+                
+                VStack {
+                    SunAndMoonView(lightMode: lightMode)
+                        .onTapGesture {
+                            withAnimation {
+                                lightMode.toggle()
+                            }
                         }
-                    }
-                
-                
-                Spacer()
-                
-                ComputationView(mainResult: mainResult, currentComputation: currentComputation)
-                    .padding(.horizontal, UIDevice.isIPad ? UIScreen.main.bounds.width * 0.1 : 0)
-                
-                Spacer()
-                
-                CalculatorButtonsView(currentComputation: $currentComputation, mainResult: $mainResult)
-                
-                if UIDevice.isIPad {
+                    
+                    
                     Spacer()
+                    
+                    ComputationView(mainResult: mainResult, currentComputation: currentComputation)
+                        .padding(.horizontal, UIDevice.isIPad ? geo.size.width * 0.1 : 10)
+                    
+                    Spacer()
+                    
+                    CalculatorButtonsView(currentComputation: $currentComputation, mainResult: $mainResult, width: geo.size.width)
+                    
+                    if UIDevice.isIPad {
+                        Spacer()
+                    }
+                    
                 }
-                
             }
+            .environment(\.colorScheme, lightMode ? .light : .dark)
         }
-        .environment(\.colorScheme, lightMode ? .light : .dark)
+        
     }
 }
 

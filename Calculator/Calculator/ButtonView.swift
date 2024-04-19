@@ -12,6 +12,7 @@ struct ButtonView: View {
     let calculatorButton: CalculatorButton
     let fgColor: Color
     let bgColor: Color
+    let width: CGFloat
     
     var systemImage: String? {
         let value = calculatorButton.rawValue
@@ -24,7 +25,9 @@ struct ButtonView: View {
         return value.contains("IMG") ? nil : value
     }
     
-    let buttonDimension: CGFloat = UIScreen.main.bounds.width / 5
+    var buttonDimension: CGFloat {
+        width / 5
+    }
     
     var body: some View {
         ZStack {
@@ -44,12 +47,12 @@ struct ButtonView: View {
 }
 
 #Preview("Light Mode") {
-    ButtonView(calculatorButton: .undo, fgColor: .digits, bgColor: buttonBackgroundColor)
+    ButtonView(calculatorButton: .undo, fgColor: .digits, bgColor: buttonBackgroundColor, width: 375)
         .preferredColorScheme(.light)
 }
 
 #Preview("Dark Mode") {
-    ButtonView(calculatorButton: .undo, fgColor: .digits, bgColor: buttonBackgroundColor)
+    ButtonView(calculatorButton: .undo, fgColor: .digits, bgColor: buttonBackgroundColor, width: 375)
         .preferredColorScheme(.dark)
         
 }
