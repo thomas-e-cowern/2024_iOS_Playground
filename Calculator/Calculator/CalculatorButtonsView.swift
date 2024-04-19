@@ -16,7 +16,7 @@ struct CalculatorButtonsView: View {
         ButtonRowModel(row: [CalculatorButtonModel(calculatorButton: .clear,        color: foregroundTopButtonsColor),
             CalculatorButtonModel(calculatorButton: .negative, color: foregroundTopButtonsColor),
             CalculatorButtonModel(calculatorButton: .percent, color: foregroundTopButtonsColor),
-                             CalculatorButtonModel(calculatorButton: .divide, color: foregroundTopButtonsColor)]),
+                             CalculatorButtonModel(calculatorButton: .divide, color: .foregroundSideButtons)]),
         ButtonRowModel(row: [
             CalculatorButtonModel(calculatorButton: .seven),
             CalculatorButtonModel(calculatorButton: .eight),
@@ -121,9 +121,10 @@ struct CalculatorButtonsView: View {
             workings += "0"
         }
         
+        let expr = NSExpression(format: workings)
+        let exprValue = expr.expressionValue(with: nil, context: nil) as! Double
         
-        
-        return 0.0
+        return exprValue
     }
 }
 
