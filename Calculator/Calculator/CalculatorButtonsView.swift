@@ -84,6 +84,25 @@ struct CalculatorButtonsView: View {
             }
         case .decimal:
             print("dec")
+            if let lastOccuranceOfDecimal = currentComputation.lastIndex(of: ".") {
+                if lastCharIsDigit(str: currentComputation) {
+                    let startIndex = currentComputation.index(lastOccuranceOfDecimal, offsetBy: 1)
+                    let endIndex = currentComputation.endIndex
+                    let range = startIndex..<endIndex
+                    let rightSubstring = String(currentComputation[range])
+                    
+                    // if only digits to right, do not add decimal, otherwise do...
+                    if Int(rightSubstring) == nil && !rightSubstring.isEmpty {
+                        currentComputation += "."
+                    }
+                }
+            } else {
+                if currentComputation.isEmpty {
+                    currentComputation += ".0"
+                } else if lastCharIsDigit(str: currentComputation) {
+                    currentComputation += "."
+                }
+            }
         case .percent:
             print("per")
             if lastCharIsDigit(str: currentComputation) {
