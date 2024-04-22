@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Alarm
+
+  Created by Thomas Cowern on 4/22/24.
+  
+*/
+"alarm" = "alarm";
+"on" = "on";
+"off" = "off";
+"Add Alarm" = "Add Alarm";
