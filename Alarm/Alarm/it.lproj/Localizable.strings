@@ -5,26 +5,27 @@
   Created by Thomas Cowern on 4/22/24.
   
 */
-"alarm" = "alarm";
-"on" = "on";
-"off" = "off";
-"create" = "create";
-"Add Alarm" = "Add Alarm";
-"Alarm List" = "Alarm List";
-"About" = "About";
-"No Alarms" = "No Alarms";
-"to Anton's page" = "to Anton's page";
-"The UI for this nice Alarm app was largely inspired by the amazing work of Anton Leogky." = "The UI for this nice Alarm app was largely inspired by the amazing work of Anton Leogky.";
-"you did it! here you can manage your alarm, change time and other things" = "you did it! here you can manage your alarm, change time and other things";
-"hello there!" = "hello there!";
-"let's add an alarm" = "let's add an alarm";
-"start" = "start";
-"end" = "end";
-"Have a great day!" = "Have a great day!";
-"Activity completed." = "Activity completed.";
-"Enable notifications, please" = "Enable notifications, please";
-"Set the alarm" = "Set the alarm";
+"alarm" = "allarme";
+"on" = "";
+"off" = "";
+"create" = "creare";
+"Add Alarm" = "Aggiungi allarme";
+"Alarm List" = "Elenco allarmi";
+"About" = "Informazioni";
+"No Alarms" = "Nessun allarme";
+"to Anton's page" = "alla pagina di Anton";
+"The UI for this nice Alarm app was largely inspired by the amazing work of Anton Leogky." = "L'interfaccia utente di questa simpatica app Alarm è stata in gran parte ispirata dall'incredibile lavoro di Anton Leogky.";
+"you did it! here you can manage your alarm, change time and other things" = "ce l'hai fatta! qui puoi gestire la tua sveglia, cambiare l'ora e altre cose";
+"hello there!" = "ciao!";
+"let's add an alarm" = "aggiungiamo una sveglia";
+"start" = "comienzo";
+"end" = "final";
+"Have a great day!" = "Vi auguro una buona giornata!
+";
+"Activity completed." = "Attività completata.";
+"Enable notifications, please" = "Abilita le notifiche, per favore";
+"Set the alarm" = "Imposta l'allarme";
 "Sound" = "Sound";
-"Cancel" = "Cancel";
-"Save" = "Save";
-"enable" = "enable";
+"Cancel" = "Annulla";
+"Save" = "Salvare";
+"enable" = "abilitare";

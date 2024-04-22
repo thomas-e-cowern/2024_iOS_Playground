@@ -8,17 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		4D7214A82BD6E56200C693BC /* AlarmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7214A72BD6E56200C693BC /* AlarmApp.swift */; };
-		4D7214AA2BD6E56200C693BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7214A92BD6E56200C693BC /* ContentView.swift */; };
+		4D7214AA2BD6E56200C693BC /* MainAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7214A92BD6E56200C693BC /* MainAlarmView.swift */; };
 		4D7214AC2BD6E56400C693BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D7214AB2BD6E56400C693BC /* Assets.xcassets */; };
 		4D7214AF2BD6E56400C693BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D7214AE2BD6E56400C693BC /* Preview Assets.xcassets */; };
+		4D9B3D532BD6F1300092DEFC /* GrayedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B3D522BD6F1300092DEFC /* GrayedTextView.swift */; };
+		4D9B3D562BD712530092DEFC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D9B3D542BD712530092DEFC /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4D7214A42BD6E56200C693BC /* Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D7214A72BD6E56200C693BC /* AlarmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmApp.swift; sourceTree = "<group>"; };
-		4D7214A92BD6E56200C693BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4D7214A92BD6E56200C693BC /* MainAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAlarmView.swift; sourceTree = "<group>"; };
 		4D7214AB2BD6E56400C693BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D7214AE2BD6E56400C693BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4D9B3D522BD6F1300092DEFC /* GrayedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayedTextView.swift; sourceTree = "<group>"; };
+		4D9B3D552BD712530092DEFC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D9B3D572BD712DE0092DEFC /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D9B3D582BD712DE0092DEFC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D9B3D592BD712DF0092DEFC /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D9B3D5A2BD712E00092DEFC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D9B3D5B2BD712E00092DEFC /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +60,17 @@
 		4D7214A62BD6E56200C693BC /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				4D9B3D4D2BD6F0D60092DEFC /* Model */,
+				4D9B3D4C2BD6F0CD0092DEFC /* View Models */,
+				4D9B3D4B2BD6F0C50092DEFC /* Views */,
+				4D9B3D4A2BD6F0BC0092DEFC /* Constants */,
+				4D9B3D492BD6F0B60092DEFC /* Fonts */,
+				4D9B3D482BD6F0AA0092DEFC /* Time and Date */,
+				4D9B3D472BD6F0960092DEFC /* Local Notification */,
+				4D9B3D462BD6F08F0092DEFC /* Sounds */,
 				4D7214A72BD6E56200C693BC /* AlarmApp.swift */,
-				4D7214A92BD6E56200C693BC /* ContentView.swift */,
+				4D7214A92BD6E56200C693BC /* MainAlarmView.swift */,
+				4D9B3D542BD712530092DEFC /* Localizable.strings */,
 				4D7214AB2BD6E56400C693BC /* Assets.xcassets */,
 				4D7214AD2BD6E56400C693BC /* Preview Content */,
 			);
@@ -65,6 +83,95 @@
 				4D7214AE2BD6E56400C693BC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4D9B3D462BD6F08F0092DEFC /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		4D9B3D472BD6F0960092DEFC /* Local Notification */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Local Notification";
+			sourceTree = "<group>";
+		};
+		4D9B3D482BD6F0AA0092DEFC /* Time and Date */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Time and Date";
+			sourceTree = "<group>";
+		};
+		4D9B3D492BD6F0B60092DEFC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4D9B3D4A2BD6F0BC0092DEFC /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		4D9B3D4B2BD6F0C50092DEFC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4D9B3D512BD6F1070092DEFC /* Unused Views */,
+				4D9B3D502BD6F0F80092DEFC /* Supporting Views */,
+				4D9B3D4F2BD6F0F10092DEFC /* Subviews */,
+				4D9B3D4E2BD6F0EA0092DEFC /* Main Views */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4D9B3D4C2BD6F0CD0092DEFC /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		4D9B3D4D2BD6F0D60092DEFC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4D9B3D4E2BD6F0EA0092DEFC /* Main Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Main Views";
+			sourceTree = "<group>";
+		};
+		4D9B3D4F2BD6F0F10092DEFC /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		4D9B3D502BD6F0F80092DEFC /* Supporting Views */ = {
+			isa = PBXGroup;
+			children = (
+				4D9B3D522BD6F1300092DEFC /* GrayedTextView.swift */,
+			);
+			path = "Supporting Views";
+			sourceTree = "<group>";
+		};
+		4D9B3D512BD6F1070092DEFC /* Unused Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Unused Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,6 +216,11 @@
 			knownRegions = (
 				en,
 				Base,
+				pl,
+				it,
+				fr,
+				es,
+				tr,
 			);
 			mainGroup = 4D72149B2BD6E56200C693BC;
 			productRefGroup = 4D7214A52BD6E56200C693BC /* Products */;
@@ -126,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D7214AF2BD6E56400C693BC /* Preview Assets.xcassets in Resources */,
+				4D9B3D562BD712530092DEFC /* Localizable.strings in Resources */,
 				4D7214AC2BD6E56400C693BC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,12 +250,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D7214AA2BD6E56200C693BC /* ContentView.swift in Sources */,
+				4D7214AA2BD6E56200C693BC /* MainAlarmView.swift in Sources */,
 				4D7214A82BD6E56200C693BC /* AlarmApp.swift in Sources */,
+				4D9B3D532BD6F1300092DEFC /* GrayedTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4D9B3D542BD712530092DEFC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D9B3D552BD712530092DEFC /* en */,
+				4D9B3D572BD712DE0092DEFC /* fr */,
+				4D9B3D582BD712DE0092DEFC /* it */,
+				4D9B3D592BD712DF0092DEFC /* pl */,
+				4D9B3D5A2BD712E00092DEFC /* es */,
+				4D9B3D5B2BD712E00092DEFC /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4D7214B02BD6E56400C693BC /* Debug */ = {

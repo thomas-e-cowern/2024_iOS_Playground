@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MainAlarmView.swift
 //  Alarm
 //
 //  Created by Thomas Cowern on 4/22/24.
