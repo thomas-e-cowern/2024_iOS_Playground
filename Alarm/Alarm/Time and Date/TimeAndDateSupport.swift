@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: Functions
 func dateToPercent(date: Date) -> CGFloat {
     let result = getTimeComponents(date: date)
     
@@ -41,3 +42,26 @@ func getTimeFromDate(date: Date) -> String {
 func addHourToDate(date: Date, numberOfHours: Int, numberOfMinutes: Int) -> Date {
     return date.addingTimeInterval(TimeInterval(numberOfMinutes * 60 + numberOfHours * 3600))
 }
+
+func formatDate(date: Date) -> String {
+    let result = getTimeComponents(date: date)
+    
+    return "\(result.day)-\(result.month)-\(result.year)(\(result.hour):\(result.minute))"
+}
+
+// Get hours and seconds
+func dateToTimeMode(date: Date) -> TimeModel {
+    let result = getTimeComponents(date: date)
+    
+    return TimeModel(hour: result.hour, minute: result.minute)
+}
+
+// MARK: Extensions
+// Subtract dates
+extension Date {
+    static func - (lhs: Date, rhs: Date) -> TimeInterval {
+        lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate
+    }
+}
+
+
