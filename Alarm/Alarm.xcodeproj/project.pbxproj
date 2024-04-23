@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D63C0752BD7DA58007B6F93 /* Color Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D63C0742BD7DA58007B6F93 /* Color Constants.swift */; };
+		4D63C0772BD7DCFB007B6F93 /* TimeOfDayIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D63C0762BD7DCFB007B6F93 /* TimeOfDayIcon.swift */; };
+		4D63C0792BD7DD92007B6F93 /* TimeAndDateSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D63C0782BD7DD92007B6F93 /* TimeAndDateSupport.swift */; };
 		4D7214A82BD6E56200C693BC /* AlarmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7214A72BD6E56200C693BC /* AlarmApp.swift */; };
 		4D7214AA2BD6E56200C693BC /* MainAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7214A92BD6E56200C693BC /* MainAlarmView.swift */; };
 		4D7214AC2BD6E56400C693BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D7214AB2BD6E56400C693BC /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D63C0742BD7DA58007B6F93 /* Color Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color Constants.swift"; sourceTree = "<group>"; };
+		4D63C0762BD7DCFB007B6F93 /* TimeOfDayIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfDayIcon.swift; sourceTree = "<group>"; };
+		4D63C0782BD7DD92007B6F93 /* TimeAndDateSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAndDateSupport.swift; sourceTree = "<group>"; };
 		4D7214A42BD6E56200C693BC /* Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D7214A72BD6E56200C693BC /* AlarmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmApp.swift; sourceTree = "<group>"; };
 		4D7214A92BD6E56200C693BC /* MainAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAlarmView.swift; sourceTree = "<group>"; };
@@ -102,6 +108,7 @@
 		4D9B3D482BD6F0AA0092DEFC /* Time and Date */ = {
 			isa = PBXGroup;
 			children = (
+				4D63C0782BD7DD92007B6F93 /* TimeAndDateSupport.swift */,
 			);
 			path = "Time and Date";
 			sourceTree = "<group>";
@@ -116,6 +123,7 @@
 		4D9B3D4A2BD6F0BC0092DEFC /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				4D63C0742BD7DA58007B6F93 /* Color Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				4D9B3D522BD6F1300092DEFC /* GrayedTextView.swift */,
+				4D63C0762BD7DCFB007B6F93 /* TimeOfDayIcon.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -250,9 +259,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D63C0752BD7DA58007B6F93 /* Color Constants.swift in Sources */,
 				4D7214AA2BD6E56200C693BC /* MainAlarmView.swift in Sources */,
+				4D63C0792BD7DD92007B6F93 /* TimeAndDateSupport.swift in Sources */,
 				4D7214A82BD6E56200C693BC /* AlarmApp.swift in Sources */,
 				4D9B3D532BD6F1300092DEFC /* GrayedTextView.swift in Sources */,
+				4D63C0772BD7DCFB007B6F93 /* TimeOfDayIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
