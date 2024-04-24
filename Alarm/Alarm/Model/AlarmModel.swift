@@ -72,5 +72,6 @@ struct AlarmModel: Identifiable {
             AlarmModel( title: "Yo yo !", body: "Peace", repeats: false, sounds: .lagrima, alarmEnabled: true, start: Date(), end: addHourToDate(date: Date(), numberOfHours: 0, numberOfMinutes: 20), activity: "sun.max.fill", colorIndex: 2),
             AlarmModel( title: "Another title", body: "Peace", repeats: false, sounds: .lagrima, alarmEnabled: false, start: Date(), end: addHourToDate(date: Date(), numberOfHours: 0, numberOfMinutes: 30), activity: "figure.skiing.downhill", colorIndex: 1)
         ]
+            .sorted(by: {$0.endTime < $1.endTime})
     }
 }
