@@ -19,7 +19,7 @@ struct SplashScreenView: View {
                 MainAlarmView()
             } else {
                 ZStack {
-                    Text("Else here...")
+                    FourCoolCirclesView(color1: .blue, color2: .clear)
                     
                     VStack {
                         VStack(alignment: .leading, spacing: 0) {

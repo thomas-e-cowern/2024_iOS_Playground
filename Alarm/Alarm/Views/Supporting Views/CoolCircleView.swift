@@ -10,8 +10,8 @@ import SwiftUI
 struct CoolCircleView: View {
     
     let radius: CGFloat
-    let color1 = yellow
-    let color2 = Color.clear
+    let color1: Color
+    let color2: Color
     
     var body: some View {
         Circle()
@@ -23,5 +23,5 @@ struct CoolCircleView: View {
 }
 
 #Preview {
-    CoolCircleView(radius: 100.0)
+    CoolCircleView(radius: 100.0, color1: yellow, color2: lightYellow)
 }
