@@ -20,7 +20,8 @@ struct EnableNotificationsView: View {
                 Button(action: {
                     print("Notifications Enabled")
                 }, label: {
-                    Text("Enable")
+                    ButtonView(text: "enable")
+                        .padding()
                 })
             }
         }
