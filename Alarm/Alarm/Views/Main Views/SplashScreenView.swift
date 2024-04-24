@@ -34,9 +34,10 @@ struct SplashScreenView: View {
                                 fontSize = 36.0
                             }
                         }
+                        
+                        
+                        Spacer()
                     }
-                    
-                    Spacer()
                 }
             }
         }
