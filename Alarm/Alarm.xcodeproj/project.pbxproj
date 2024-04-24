@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4D2B855E2BD93C2000A9C436 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B855D2BD93C2000A9C436 /* SplashScreenView.swift */; };
+		4D2B85602BD940E100A9C436 /* FourCoolCirclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B855F2BD940E100A9C436 /* FourCoolCirclesView.swift */; };
+		4D2B85622BD941BF00A9C436 /* CoolCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B85612BD941BF00A9C436 /* CoolCircleView.swift */; };
 		4D63C0752BD7DA58007B6F93 /* Color Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D63C0742BD7DA58007B6F93 /* Color Constants.swift */; };
 		4D63C0772BD7DCFB007B6F93 /* TimeOfDayIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D63C0762BD7DCFB007B6F93 /* TimeOfDayIcon.swift */; };
 		4D63C0792BD7DD92007B6F93 /* TimeAndDateSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D63C0782BD7DD92007B6F93 /* TimeAndDateSupport.swift */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		4D2B855D2BD93C2000A9C436 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		4D2B855F2BD940E100A9C436 /* FourCoolCirclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourCoolCirclesView.swift; sourceTree = "<group>"; };
+		4D2B85612BD941BF00A9C436 /* CoolCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolCircleView.swift; sourceTree = "<group>"; };
 		4D63C0742BD7DA58007B6F93 /* Color Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color Constants.swift"; sourceTree = "<group>"; };
 		4D63C0762BD7DCFB007B6F93 /* TimeOfDayIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfDayIcon.swift; sourceTree = "<group>"; };
 		4D63C0782BD7DD92007B6F93 /* TimeAndDateSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAndDateSupport.swift; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 			children = (
 				4D9B3D522BD6F1300092DEFC /* GrayedTextView.swift */,
 				4D63C0762BD7DCFB007B6F93 /* TimeOfDayIcon.swift */,
+				4D2B855F2BD940E100A9C436 /* FourCoolCirclesView.swift */,
+				4D2B85612BD941BF00A9C436 /* CoolCircleView.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -283,6 +289,8 @@
 				4D63C07F2BD818F8007B6F93 /* ActivityConstants.swift in Sources */,
 				4D63C07B2BD7F5F7007B6F93 /* TimeModel.swift in Sources */,
 				4D7214A82BD6E56200C693BC /* AlarmApp.swift in Sources */,
+				4D2B85622BD941BF00A9C436 /* CoolCircleView.swift in Sources */,
+				4D2B85602BD940E100A9C436 /* FourCoolCirclesView.swift in Sources */,
 				4D9B3D532BD6F1300092DEFC /* GrayedTextView.swift in Sources */,
 				4D63C0772BD7DCFB007B6F93 /* TimeOfDayIcon.swift in Sources */,
 			);
