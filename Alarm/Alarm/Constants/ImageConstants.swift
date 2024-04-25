@@ -9,3 +9,4 @@ import Foundation
 
 let welcome = "welcome"
 let appImagesSamples = "AppImageSamples"
+let beachImage = "undraw_Beach_day_cser"

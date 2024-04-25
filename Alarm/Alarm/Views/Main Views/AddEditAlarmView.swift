@@ -21,8 +21,18 @@ struct AddEditAlarmView: View {
                 .ignoresSafeArea()
             
             VStack {
-                Text("you did it! here you can manage your alarm, change time and other things")
-                    .padding()
+                if showYouDidItView {
+                    YouDidItView()
+                } else {
+                    Text("ToBedWakeUpView")
+                }
+            }
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                withAnimation {
+                    showYouDidItView = false
+                }
             }
         }
     }

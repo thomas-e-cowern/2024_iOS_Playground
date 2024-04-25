@@ -53,6 +53,7 @@
 		4D9B3D562BD712530092DEFC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D9B3D542BD712530092DEFC /* Localizable.strings */; };
 		4DD4B8D62BDA7EEC005A7DA3 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD4B8D52BDA7EEC005A7DA3 /* AboutView.swift */; };
 		4DD4B8D82BDA8CDA005A7DA3 /* AddEditAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD4B8D72BDA8CDA005A7DA3 /* AddEditAlarmView.swift */; };
+		4DD4B8DA2BDA91DA005A7DA3 /* YouDidItView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD4B8D92BDA91DA005A7DA3 /* YouDidItView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,7 @@
 		4D9B3D5B2BD712E00092DEFC /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4DD4B8D52BDA7EEC005A7DA3 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		4DD4B8D72BDA8CDA005A7DA3 /* AddEditAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditAlarmView.swift; sourceTree = "<group>"; };
+		4DD4B8D92BDA91DA005A7DA3 /* YouDidItView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouDidItView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +279,7 @@
 				4D2B855D2BD93C2000A9C436 /* SplashScreenView.swift */,
 				4DD4B8D52BDA7EEC005A7DA3 /* AboutView.swift */,
 				4DD4B8D72BDA8CDA005A7DA3 /* AddEditAlarmView.swift */,
+				4DD4B8D92BDA91DA005A7DA3 /* YouDidItView.swift */,
 			);
 			path = "Main Views";
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				4D63C0752BD7DA58007B6F93 /* Color Constants.swift in Sources */,
 				4D2B859A2BD9745500A9C436 /* ScreenConstants.swift in Sources */,
 				4D63C0812BD819FA007B6F93 /* SoundsConstants.swift in Sources */,
+				4DD4B8DA2BDA91DA005A7DA3 /* YouDidItView.swift in Sources */,
 				4D2B85982BD9734600A9C436 /* MainGradientView.swift in Sources */,
 				4DD4B8D62BDA7EEC005A7DA3 /* AboutView.swift in Sources */,
 				4D63C07D2BD816CD007B6F93 /* AlarmModel.swift in Sources */,
