@@ -8,3 +8,4 @@
 import Foundation
 
 let welcome = "welcome"
+let appImagesSamples = "AppImageSamples"
