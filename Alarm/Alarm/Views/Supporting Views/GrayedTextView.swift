@@ -18,7 +18,6 @@ struct GrayedTextView: View {
                 .foregroundStyle(Color.gray)
             .font(font)
         }
-        .padding()
     }
 }
 

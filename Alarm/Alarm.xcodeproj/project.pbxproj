@@ -54,6 +54,7 @@
 		4DD4B8D62BDA7EEC005A7DA3 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD4B8D52BDA7EEC005A7DA3 /* AboutView.swift */; };
 		4DD4B8D82BDA8CDA005A7DA3 /* AddEditAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD4B8D72BDA8CDA005A7DA3 /* AddEditAlarmView.swift */; };
 		4DD4B8DA2BDA91DA005A7DA3 /* YouDidItView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD4B8D92BDA91DA005A7DA3 /* YouDidItView.swift */; };
+		4DD4B8DC2BDA9A63005A7DA3 /* ToBedWakeUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD4B8DB2BDA9A63005A7DA3 /* ToBedWakeUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,7 @@
 		4DD4B8D52BDA7EEC005A7DA3 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		4DD4B8D72BDA8CDA005A7DA3 /* AddEditAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditAlarmView.swift; sourceTree = "<group>"; };
 		4DD4B8D92BDA91DA005A7DA3 /* YouDidItView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouDidItView.swift; sourceTree = "<group>"; };
+		4DD4B8DB2BDA9A63005A7DA3 /* ToBedWakeUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToBedWakeUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				4D2B85952BD9711200A9C436 /* EnableNotificationsView.swift */,
+				4DD4B8DB2BDA9A63005A7DA3 /* ToBedWakeUpView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				4D2B85942BD95B2400A9C436 /* ImageConstants.swift in Sources */,
 				4D63C07F2BD818F8007B6F93 /* ActivityConstants.swift in Sources */,
 				4D63C07B2BD7F5F7007B6F93 /* TimeModel.swift in Sources */,
+				4DD4B8DC2BDA9A63005A7DA3 /* ToBedWakeUpView.swift in Sources */,
 				4D7214A82BD6E56200C693BC /* AlarmApp.swift in Sources */,
 				4D2B85622BD941BF00A9C436 /* CoolCircleView.swift in Sources */,
 				4D2B85602BD940E100A9C436 /* FourCoolCirclesView.swift in Sources */,

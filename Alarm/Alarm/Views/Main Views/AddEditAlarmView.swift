@@ -23,9 +23,9 @@ struct AddEditAlarmView: View {
             VStack {
                 if showYouDidItView {
                     YouDidItView()
-                } else {
-                    Text("ToBedWakeUpView")
                 }
+                ToBedWakeUpView(currentAlarmIndex: currentAlarmIndex, alarmModel: alarmModel)
+                
             }
         }
         .onAppear {

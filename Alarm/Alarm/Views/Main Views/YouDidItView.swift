@@ -17,7 +17,7 @@ struct YouDidItView: View {
                 
                 MainGradientView(endRadius: 120, scaleX: 1.5, yellowColor: darkYellow)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
-                    .frame(height: geo.size.height / 4)
+                    .frame(height: geo.size.height / 3)
                     .overlay(
                         HStack {
                             CoolTextView(text: youDidIt, size: 18)
