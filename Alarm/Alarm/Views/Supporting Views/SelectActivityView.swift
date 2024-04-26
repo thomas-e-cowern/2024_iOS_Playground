@@ -21,25 +21,45 @@ struct SelectActivityView: View {
     }
     
     var body: some View {
-        ScrollView(.horizontal) {
-            HStack {
-                ForEach(activities, id: \.self) { activity in
-                    
-                    let isSeletedActivity = activity == currentActivity
-                    Image(systemName: activity)
-                        .font(isSeletedActivity ? .largeTitle : .subheadline)
-                        .foregroundStyle(isSeletedActivity ? currentColor : nickel)
-                        .opacity(isSeletedActivity ? 1.0 : 0.7)
-                        .onTapGesture {
-                            withAnimation {
-                                currentActivity = activity
+        HStack (spacing: 10) {
+            ScrollView(.horizontal) {
+                HStack {
+                    ForEach(activities, id: \.self) { activity in
+                        
+                        let isSeletedActivity = activity == currentActivity
+                        Image(systemName: activity)
+                            .font(isSeletedActivity ? .largeTitle : .subheadline)
+                            .foregroundStyle(isSeletedActivity ? currentColor : nickel)
+                            .opacity(isSeletedActivity ? 1.0 : 0.7)
+                            .onTapGesture {
+                                withAnimation {
+                                    currentActivity = activity
+                                    print("Activity selected: \(activity)")
+                                }
                             }
-                        }
-            
+                
+                    }
                 }
             }
+            .scrollIndicators(.hidden)
+            
+            Circle()
+                .fill(currentColor)
+                .frame(width: 20, height: 20)
+                .shadow(
+                    color: currentColor,
+                    radius: 10,
+                    x: 0,
+                    y: 5
+                )
+                .overlay {
+                    RoundedRectangle(cornerRadius: 15)
+                        .stroke(lineWidth: 3)
+                }
+                .onTapGesture {
+                    currentColorIndex = nextIndex
+                }
         }
-        .scrollIndicators(.hidden)
     }
 }
 

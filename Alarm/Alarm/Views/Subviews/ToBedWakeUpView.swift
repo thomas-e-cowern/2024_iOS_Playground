@@ -55,7 +55,7 @@ struct ToBedWakeUpView: View {
                                 .foregroundStyle(alarmModel.activityColor)
                                 .font(.headline)
                             
-                            Text("Select Activity")
+                            SelectActivityView(currentColorIndex: $alarmModel.colorIndex, currentActivity: $alarmModel.activity)
                         }
                     }
                     
