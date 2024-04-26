@@ -51,6 +51,7 @@
 		4D7214AF2BD6E56400C693BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D7214AE2BD6E56400C693BC /* Preview Assets.xcassets */; };
 		4D9B3D532BD6F1300092DEFC /* GrayedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B3D522BD6F1300092DEFC /* GrayedTextView.swift */; };
 		4D9B3D562BD712530092DEFC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D9B3D542BD712530092DEFC /* Localizable.strings */; };
+		4DB023DD2BDBD2A20042F209 /* AlarmToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB023DC2BDBD2A20042F209 /* AlarmToggleView.swift */; };
 		4DD4B8D62BDA7EEC005A7DA3 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD4B8D52BDA7EEC005A7DA3 /* AboutView.swift */; };
 		4DD4B8D82BDA8CDA005A7DA3 /* AddEditAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD4B8D72BDA8CDA005A7DA3 /* AddEditAlarmView.swift */; };
 		4DD4B8DA2BDA91DA005A7DA3 /* YouDidItView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD4B8D92BDA91DA005A7DA3 /* YouDidItView.swift */; };
@@ -109,6 +110,7 @@
 		4D9B3D592BD712DF0092DEFC /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4D9B3D5A2BD712E00092DEFC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4D9B3D5B2BD712E00092DEFC /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4DB023DC2BDBD2A20042F209 /* AlarmToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmToggleView.swift; sourceTree = "<group>"; };
 		4DD4B8D52BDA7EEC005A7DA3 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		4DD4B8D72BDA8CDA005A7DA3 /* AddEditAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditAlarmView.swift; sourceTree = "<group>"; };
 		4DD4B8D92BDA91DA005A7DA3 /* YouDidItView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouDidItView.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 				4D2B85972BD9734600A9C436 /* MainGradientView.swift */,
 				4D2B859B2BD97CFD00A9C436 /* ButtonView.swift */,
 				4DD4B8DD2BDAA7D8005A7DA3 /* CancelSaveAlarmView.swift */,
+				4DB023DC2BDBD2A20042F209 /* AlarmToggleView.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				4DD4B8D62BDA7EEC005A7DA3 /* AboutView.swift in Sources */,
 				4D63C07D2BD816CD007B6F93 /* AlarmModel.swift in Sources */,
 				4D7214AA2BD6E56200C693BC /* MainAlarmView.swift in Sources */,
+				4DB023DD2BDBD2A20042F209 /* AlarmToggleView.swift in Sources */,
 				4DD4B8D82BDA8CDA005A7DA3 /* AddEditAlarmView.swift in Sources */,
 				4D2B85962BD9711200A9C436 /* EnableNotificationsView.swift in Sources */,
 				4D2B855E2BD93C2000A9C436 /* SplashScreenView.swift in Sources */,
