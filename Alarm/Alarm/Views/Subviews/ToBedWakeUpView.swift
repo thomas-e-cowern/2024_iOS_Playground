@@ -16,6 +16,7 @@ struct ToBedWakeUpView: View {
         VStack {
 
             CancelSaveAlarmView(currentAlarmIndex: currentAlarmIndex, alarmModel: $alarmModel)
+                .padding()
             
             HStack(alignment: .center) {
                 Text("Toggle Alarm")
@@ -23,7 +24,7 @@ struct ToBedWakeUpView: View {
             
             Divider()
             
-            HStack {
+            VStack {
                 Grid {
                     GridRow {
                         HStack(alignment: .center, spacing: 5) {
