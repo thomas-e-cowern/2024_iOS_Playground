@@ -19,21 +19,24 @@ struct ToBedWakeUpView: View {
                 .padding()
             
             HStack(alignment: .center) {
-                Text("Toggle Alarm")
+                Text("alarm")
+                Spacer()
+                TheToggleView(isOn: $alarmModel.alarmEnabled)
             }
+            .padding(20)
             
             Divider()
             
             VStack {
                 Grid {
                     GridRow {
-                        HStack(alignment: .center, spacing: 5) {
+                        HStack(alignment: .center, spacing: 20) {
                             TimeOfDayIcon(date: alarmModel.start)
                                 .font(.largeTitle)
-                            VStack(alignment: .leading, spacing: 0) {
+                            VStack(alignment: .leading, spacing: 10) {
                                 GrayedTextView(text: "start")
                                 
-                                Text("Time Picker")
+                                TimePicker(time: $alarmModel.start, scale: 1.3)
                             }
                         }
                     }
@@ -65,11 +68,11 @@ struct ToBedWakeUpView: View {
                     }
                     
                     GridRow {
-                        HStack(alignment: .center, spacing: 5) {
+                        HStack(alignment: .center, spacing: 20) {
                             TimeOfDayIcon(date: alarmModel.end)
                                 .font(.largeTitle)
-                            VStack(alignment: .leading, spacing: 0) {
-                                Text("Time Picker")
+                            VStack(alignment: .leading, spacing: 10) {
+                                TimePicker(time: $alarmModel.end, scale: 1.3)
                                 GrayedTextView(text: "end")
                             }
                         }
