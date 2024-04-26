@@ -64,8 +64,13 @@ struct TheToggleView: View {
                 .fill(
                     Color(white: backgroundColor)
                 )
+                .frame(width: width * factor, height: width)
             
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            ShiftedTextView(text: onOffText, color: textColor, xShift: -xShift)
+            
+            ShiftedCircleView(color: .background, xShift: xShift)
+                .frame(width: width * factor, height: width, alignment: .center)
+                .gesture(combinedGesture)
         }
     }
 }

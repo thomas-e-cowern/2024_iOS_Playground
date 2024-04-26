@@ -10,7 +10,7 @@ import SwiftUI
 struct ShiftedTextView: View {
     
     let text: LocalizedStringKey
-    var color: Color = cardBackgroundColor
+    var color: Color
     let xShift: Double
     
     var body: some View {
@@ -22,5 +22,5 @@ struct ShiftedTextView: View {
 }
 
 #Preview {
-    ShiftedTextView(text: "alarm", xShift: 10.0)
+    ShiftedTextView(text: "alarm", color: .black, xShift: 10.0)
 }
