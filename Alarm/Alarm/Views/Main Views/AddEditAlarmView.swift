@@ -15,25 +15,31 @@ struct AddEditAlarmView: View {
     @State private var showYouDidItView = true
     
     var body: some View {
-        ZStack {
-            
-            backgroundColor
-                .ignoresSafeArea()
-            
-            VStack {
-                if showYouDidItView {
-                    YouDidItView()
-                }
-                ToBedWakeUpView(currentAlarmIndex: currentAlarmIndex, alarmModel: alarmModel)
+        VStack {
+            ZStack {
                 
-            }
-        }
-        .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-                withAnimation {
-                    showYouDidItView = false
+                backgroundColor
+                    .ignoresSafeArea()
+                
+                VStack(spacing: 10) {
+                    
+                    if showYouDidItView {
+                        YouDidItView()
+                            .frame(minHeight: 500)
+                            .padding(.top, 300)
+                    }
+                        
+                    ToBedWakeUpView(currentAlarmIndex: currentAlarmIndex, alarmModel: alarmModel)
+                    
                 }
             }
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                    withAnimation {
+                        showYouDidItView = false
+                    }
+                }
+        }
         }
     }
 }
