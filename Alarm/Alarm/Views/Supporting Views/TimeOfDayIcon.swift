@@ -28,7 +28,7 @@ struct TimeOfDayIcon: View {
             return ("sun.max.fill", .yellow)
         case 17..<20:
             return ("sun.horizon.fill", .pink)
-        case 20..<6:
+        case 20..<23:
             return ("moon.fill", .black)
         default:
             return ("moon.stars.fill", .black)

@@ -12,7 +12,7 @@ struct AlarmApp: App {
     var body: some Scene {
         WindowGroup {
 //            SplashScreenView()
-            AboutView()
+            MainAlarmView()
         }
     }
 }
