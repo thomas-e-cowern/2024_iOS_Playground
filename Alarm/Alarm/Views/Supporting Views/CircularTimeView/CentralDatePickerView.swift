@@ -13,31 +13,31 @@ struct CentralDatePickerView: View {
     var linewidth: CGFloat = 10
     @Binding var alarmModel: AlarmModel
     
-    var endTime: Date {
-        alarmModel.end
-    }
-    
-    var startTime: Date {
-        alarmModel.start
-    }
-    
-    var startDateToPercent: CGFloat {
-        dateToPercent(date: startTime)
-    }
-    
-    var endDateToPercent: CGFloat {
-        startDateToPercent + percentDifference
-    }
-    
-    var percentDifference: CGFloat {
-        let value = dateToPercent(date: endTime) - dateToPercent(date: startTime)
-        
-        return value >= 0 ? value : 1 + value
-    }
-    
-    var rotateCircleOffset: CGFloat {
-        360 * startDateToPercent
-    }
+//    var endTime: Date {
+//        alarmModel.end
+//    }
+//    
+//    var startTime: Date {
+//        alarmModel.start
+//    }
+//    
+//    var startDateToPercent: CGFloat {
+//        dateToPercent(date: startTime)
+//    }
+//    
+//    var endDateToPercent: CGFloat {
+//        startDateToPercent + percentDifference
+//    }
+//    
+//    var percentDifference: CGFloat {
+//        let value = dateToPercent(date: endTime) - dateToPercent(date: startTime)
+//        
+//        return value >= 0 ? value : 1 + value
+//    }
+//    
+//    var rotateCircleOffset: CGFloat {
+//        360 * startDateToPercent
+//    }
     
     var body: some View {
         VStack {

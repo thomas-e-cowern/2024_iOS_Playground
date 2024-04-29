@@ -22,7 +22,7 @@ struct AddEditCircularAlarmView: View {
                 Divider()
                 Spacer()
                 
-                CircularTimeView(currentAlarmIndex: currentAlarmIndex, alarmModel: alarmModel, size: geo.size.width / 2)
+                CircularTimeView(currentAlarmIndex: currentAlarmIndex, alarmModel: $alarmModel, size: geo.size.width / 2)
                 
                 Spacer()
             }
