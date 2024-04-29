@@ -15,14 +15,13 @@ struct AddEditAlarmView: View {
     @State private var showYouDidItView = true
     
     var body: some View {
-        VStack {
             ZStack {
                 
                 backgroundColor
                     .ignoresSafeArea()
                 
-                VStack(spacing: 10) {
-                    
+                VStack {
+
                     if showYouDidItView {
                         YouDidItView()
                             .frame(minHeight: 500)
@@ -30,7 +29,6 @@ struct AddEditAlarmView: View {
                     }
                         
                     ToBedWakeUpView(currentAlarmIndex: currentAlarmIndex, alarmModel: alarmModel)
-                    
                 }
             }
             .onAppear {
@@ -39,7 +37,6 @@ struct AddEditAlarmView: View {
                         showYouDidItView = false
                     }
                 }
-        }
         }
     }
 }
