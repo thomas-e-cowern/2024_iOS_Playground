@@ -17,7 +17,7 @@ struct MainAlarmView: View {
                 .ignoresSafeArea()
             
             TabView {
-                AddEditAlarmView(currentAlarmIndex: nil, alarmModel: .DefaultAlarm())
+                AlarmListView(alarmViewModels: AlarmModel.DummyAlarmData())
                     .tabItem {
                         Label("Alarms", systemImage: "alarm.fill")
                     }

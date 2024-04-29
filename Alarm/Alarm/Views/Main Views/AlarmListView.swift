@@ -16,10 +16,14 @@ struct AlarmListView: View {
             List {
                 ForEach(alarmViewModels) { alarm in
                     HStack {
-                        Image(systemName: alarm.activity)
-                            .foregroundStyle(alarm.activityColor)
-                            .padding(.bottom, 2)
-                        Text(alarm.title)
+                        NavigationLink {
+                            AddEditAlarmView(currentAlarmIndex: Int(alarm.id), alarmModel: alarm)
+                        } label: {
+                            Image(systemName: alarm.activity)
+                                .foregroundStyle(alarm.activityColor)
+                                .padding(.bottom, 2)
+                            Text(alarm.title)
+                        }
                     }
                 }
             }
@@ -35,6 +39,9 @@ struct AlarmListView: View {
                             .foregroundStyle(.black)
                     }
 
+                }
+                ToolbarItem(placement: .topBarLeading) {
+                    EditButton()
                 }
             }
         }

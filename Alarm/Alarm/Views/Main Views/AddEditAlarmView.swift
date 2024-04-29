@@ -45,5 +45,5 @@ struct AddEditAlarmView: View {
 }
 
 #Preview {
-    AddEditAlarmView(currentAlarmIndex: 1, alarmModel: .DefaultAlarm())
+    AddEditAlarmView(currentAlarmIndex: 2, alarmModel: .DefaultAlarm())
 }
