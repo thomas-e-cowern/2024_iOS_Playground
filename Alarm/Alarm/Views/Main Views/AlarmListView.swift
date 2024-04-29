@@ -20,10 +20,7 @@ struct AlarmListView: View {
                             NavigationLink {
                                 AddEditAlarmView(currentAlarmIndex: Int(alarm.id), alarmModel: alarm)
                             } label: {
-                                Image(systemName: alarm.activity)
-                                    .foregroundStyle(alarm.activityColor)
-                                    .padding(.bottom, 2)
-                                Text(alarm.title)
+                                AlarmRowView(model: alarm)
                             }
                         }
                     }
