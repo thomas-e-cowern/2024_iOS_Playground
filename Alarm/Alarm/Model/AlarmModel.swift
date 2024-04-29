@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct AlarmModel: Identifiable {
+struct AlarmModel: Identifiable, Hashable {
     let id = UUID().uuidString
     let title: String
     let body: String
