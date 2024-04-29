@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4D20EBDD2BDFCB8E006895CD /* AlarmListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D20EBDC2BDFCB8E006895CD /* AlarmListView.swift */; };
 		4D20EBDF2BE00C12006895CD /* AlarmRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D20EBDE2BE00C12006895CD /* AlarmRowView.swift */; };
+		4D20EBE12BE01FF8006895CD /* AddEditCircularAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D20EBE02BE01FF8006895CD /* AddEditCircularAlarmView.swift */; };
+		4D20EBE32BE02129006895CD /* CircularTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D20EBE22BE02129006895CD /* CircularTimeView.swift */; };
 		4D2B855E2BD93C2000A9C436 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B855D2BD93C2000A9C436 /* SplashScreenView.swift */; };
 		4D2B85602BD940E100A9C436 /* FourCoolCirclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B855F2BD940E100A9C436 /* FourCoolCirclesView.swift */; };
 		4D2B85622BD941BF00A9C436 /* CoolCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B85612BD941BF00A9C436 /* CoolCircleView.swift */; };
@@ -69,6 +71,8 @@
 /* Begin PBXFileReference section */
 		4D20EBDC2BDFCB8E006895CD /* AlarmListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmListView.swift; sourceTree = "<group>"; };
 		4D20EBDE2BE00C12006895CD /* AlarmRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRowView.swift; sourceTree = "<group>"; };
+		4D20EBE02BE01FF8006895CD /* AddEditCircularAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditCircularAlarmView.swift; sourceTree = "<group>"; };
+		4D20EBE22BE02129006895CD /* CircularTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTimeView.swift; sourceTree = "<group>"; };
 		4D2B855D2BD93C2000A9C436 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		4D2B855F2BD940E100A9C436 /* FourCoolCirclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourCoolCirclesView.swift; sourceTree = "<group>"; };
 		4D2B85612BD941BF00A9C436 /* CoolCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolCircleView.swift; sourceTree = "<group>"; };
@@ -301,6 +305,7 @@
 				4DD4B8D72BDA8CDA005A7DA3 /* AddEditAlarmView.swift */,
 				4DD4B8D92BDA91DA005A7DA3 /* YouDidItView.swift */,
 				4D20EBDC2BDFCB8E006895CD /* AlarmListView.swift */,
+				4D20EBE02BE01FF8006895CD /* AddEditCircularAlarmView.swift */,
 			);
 			path = "Main Views";
 			sourceTree = "<group>";
@@ -332,6 +337,7 @@
 				4DB023E42BDBE1450042F209 /* TimePicker.swift */,
 				4DB023E62BDBEE390042F209 /* SelectActivityView.swift */,
 				4D20EBDE2BE00C12006895CD /* AlarmRowView.swift */,
+				4D20EBE22BE02129006895CD /* CircularTimeView.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -451,6 +457,7 @@
 				4DD4B8D62BDA7EEC005A7DA3 /* AboutView.swift in Sources */,
 				4DB023DF2BDBD35C0042F209 /* TheToggleView.swift in Sources */,
 				4D63C07D2BD816CD007B6F93 /* AlarmModel.swift in Sources */,
+				4D20EBE32BE02129006895CD /* CircularTimeView.swift in Sources */,
 				4D7214AA2BD6E56200C693BC /* MainAlarmView.swift in Sources */,
 				4DB023DD2BDBD2A20042F209 /* AlarmToggleView.swift in Sources */,
 				4DD4B8D82BDA8CDA005A7DA3 /* AddEditAlarmView.swift in Sources */,
@@ -471,6 +478,7 @@
 				4D2B85602BD940E100A9C436 /* FourCoolCirclesView.swift in Sources */,
 				4DB023E12BDBDA840042F209 /* ShiftedTextView.swift in Sources */,
 				4D2B859C2BD97CFD00A9C436 /* ButtonView.swift in Sources */,
+				4D20EBE12BE01FF8006895CD /* AddEditCircularAlarmView.swift in Sources */,
 				4D9B3D532BD6F1300092DEFC /* GrayedTextView.swift in Sources */,
 				4D63C0772BD7DCFB007B6F93 /* TimeOfDayIcon.swift in Sources */,
 			);
