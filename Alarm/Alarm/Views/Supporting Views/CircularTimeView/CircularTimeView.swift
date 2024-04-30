@@ -38,7 +38,7 @@ struct CircularTimeView: View {
     var body: some View {
         ZStack {
             CentralDatePickerView(size: size,
-            alarmModel: $alarmModel
+                                  alarmModel: $alarmModel
             )
             
             // Progression - black curve
@@ -53,22 +53,19 @@ struct CircularTimeView: View {
             TimeArcView(
                 percentDifference: percentDifference,
                 strokeStyle: StrokeStyle(lineWidth: 15,
-                        dash: [1,2]),
+                                         dash: [1,2]),
                 size: size,
                 rotateCircleOffset: rotateCircleOffset,
                 color: .gray)
             
-//            // First icon
-//            DisplayIconOnCircularTimeView(
-//                time: startTime,
-//                size: size,
-//                percent: startDateToPercent)
-//            
-//            // Second icon
-//            DisplayIconOnCircularTimeView(
-//                time: endTime,
-//                size: size,
-//                percent: endDateToPercent)
+            // First Icon
+            CirclularTimeViewIcon(time: startTime, size: size, percent: startDateToPercent)
+            //
+            //            // Second icon
+            //            DisplayIconOnCircularTimeView(
+            //                time: endTime,
+            //                size: size,
+            //                percent: endDateToPercent)
         }
     }
 }

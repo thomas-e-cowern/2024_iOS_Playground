@@ -23,6 +23,15 @@ struct CirclularTimeViewIcon: View {
             .overlay(
                 TimeOfDayIcon(date: time)
             )
+            .rotation3DEffect(
+                .degrees(-percent * 360),
+                axis: (x: 0, y: 0, z: 1.0)
+            )
+            .offset(y: -size / 2)
+            .rotation3DEffect(
+                .degrees(percent * 360),
+                axis: (x: 0.0, y: 0.0, z: 1.0)
+            )
     }
 }
 
