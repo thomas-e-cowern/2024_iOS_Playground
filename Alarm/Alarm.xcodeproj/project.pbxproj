@@ -51,6 +51,7 @@
 		4D63C07D2BD816CD007B6F93 /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D63C07C2BD816CD007B6F93 /* AlarmModel.swift */; };
 		4D63C07F2BD818F8007B6F93 /* ActivityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D63C07E2BD818F8007B6F93 /* ActivityConstants.swift */; };
 		4D63C0812BD819FA007B6F93 /* SoundsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D63C0802BD819FA007B6F93 /* SoundsConstants.swift */; };
+		4D6D3A3C2BE1493600061AE5 /* CirclularTimeViewIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6D3A3B2BE1493600061AE5 /* CirclularTimeViewIcon.swift */; };
 		4D7214A82BD6E56200C693BC /* AlarmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7214A72BD6E56200C693BC /* AlarmApp.swift */; };
 		4D7214AA2BD6E56200C693BC /* MainAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7214A92BD6E56200C693BC /* MainAlarmView.swift */; };
 		4D7214AC2BD6E56400C693BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D7214AB2BD6E56400C693BC /* Assets.xcassets */; };
@@ -115,6 +116,7 @@
 		4D63C07C2BD816CD007B6F93 /* AlarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmModel.swift; sourceTree = "<group>"; };
 		4D63C07E2BD818F8007B6F93 /* ActivityConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityConstants.swift; sourceTree = "<group>"; };
 		4D63C0802BD819FA007B6F93 /* SoundsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsConstants.swift; sourceTree = "<group>"; };
+		4D6D3A3B2BE1493600061AE5 /* CirclularTimeViewIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclularTimeViewIcon.swift; sourceTree = "<group>"; };
 		4D7214A42BD6E56200C693BC /* Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D7214A72BD6E56200C693BC /* AlarmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmApp.swift; sourceTree = "<group>"; };
 		4D7214A92BD6E56200C693BC /* MainAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAlarmView.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				4D20EBE22BE02129006895CD /* CircularTimeView.swift */,
 				4D20EBE52BE0233B006895CD /* CentralDatePickerView.swift */,
 				4D20EBE72BE02DAD006895CD /* TimeArcView.swift */,
+				4D6D3A3B2BE1493600061AE5 /* CirclularTimeViewIcon.swift */,
 			);
 			path = CircularTimeView;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				4D63C0792BD7DD92007B6F93 /* TimeAndDateSupport.swift in Sources */,
 				4D2B85922BD9563800A9C436 /* CoolTextView.swift in Sources */,
 				4D2B85942BD95B2400A9C436 /* ImageConstants.swift in Sources */,
+				4D6D3A3C2BE1493600061AE5 /* CirclularTimeViewIcon.swift in Sources */,
 				4D63C07F2BD818F8007B6F93 /* ActivityConstants.swift in Sources */,
 				4DB023E72BDBEE390042F209 /* SelectActivityView.swift in Sources */,
 				4D63C07B2BD7F5F7007B6F93 /* TimeModel.swift in Sources */,
