@@ -18,7 +18,7 @@ struct AlarmListView: View {
                     ForEach(alarmViewModels) { alarm in
                         HStack {
                             NavigationLink {
-                                AddEditAlarmView(currentAlarmIndex: Int(alarm.id), alarmModel: alarm)
+                                MainAddEditAlarmView(currentAlarmIndex: Int(alarm.id), alarmModel: alarm)
                             } label: {
                                 AlarmRowView(model: alarm)
                             }
@@ -29,7 +29,7 @@ struct AlarmListView: View {
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
                         NavigationLink {
-                            AddEditAlarmView(currentAlarmIndex: nil, alarmModel: .DefaultAlarm())
+                            MainAddEditAlarmView(currentAlarmIndex: nil, alarmModel: .DefaultAlarm())
                         } label: {
                             Text("+")
                                 .font(.largeTitle)

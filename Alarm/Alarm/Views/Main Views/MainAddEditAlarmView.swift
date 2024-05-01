@@ -22,7 +22,7 @@ struct MainAddEditAlarmView: View {
         .onAppear() {
             UIPageControl
                 .appearance()
-                .currentPageIndicatorTintColor = .blue
+                .currentPageIndicatorTintColor = .gray
         }
         .tabViewStyle(.page(indexDisplayMode: .always))
         .ignoresSafeArea()
