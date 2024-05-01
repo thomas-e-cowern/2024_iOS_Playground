@@ -97,7 +97,7 @@ struct ToBedWakeUpView: View {
                                 Button(action: {
                                     alarmModel.sounds = sound
                                 }, label: {
-                                    Text(sound.rawValue)
+                                    Text(sound.rawValue.formatSoundName)
                                 })
                             }
                         }
