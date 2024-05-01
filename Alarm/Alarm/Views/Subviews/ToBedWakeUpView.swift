@@ -55,8 +55,12 @@ struct ToBedWakeUpView: View {
                                 .foregroundStyle(alarmModel.activityColor)
                                 .font(.headline)
                             
+                            Spacer()
+                                .frame(width: 20)
+                            
                             SelectActivityView(currentColorIndex: $alarmModel.colorIndex, currentActivity: $alarmModel.activity)
                         }
+                        .padding()
                     }
                     
                     GridRow {

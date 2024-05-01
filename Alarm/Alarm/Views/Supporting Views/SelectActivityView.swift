@@ -23,7 +23,7 @@ struct SelectActivityView: View {
     var body: some View {
         HStack (spacing: 10) {
             ScrollView(.horizontal) {
-                HStack {
+                HStack(spacing: 20) {
                     ForEach(activities, id: \.self) { activity in
                         
                         let isSeletedActivity = activity == currentActivity
@@ -52,13 +52,18 @@ struct SelectActivityView: View {
                     x: 0,
                     y: 5
                 )
-                .overlay {
-                    RoundedRectangle(cornerRadius: 15)
-                        .stroke(lineWidth: 3)
-                }
+                .overlay(content: {
+                    Circle()
+                    .stroke(lineWidth: 3)
+                })
                 .onTapGesture {
                     currentColorIndex = nextIndex
                 }
+        }
+        .padding(5)
+        .overlay {
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(nickel, lineWidth: 1)
         }
     }
 }
