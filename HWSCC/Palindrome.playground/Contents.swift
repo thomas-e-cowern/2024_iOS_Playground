@@ -16,7 +16,7 @@ func isPalindrome(str: String) -> Bool {
     // another way
     let lowercased = str.lowercased()
     
-    return lowercased.reversed() == Array(lowercased)
+    return lowercased.reversed() == Array(lowercased) 
 }
 
 isPalindrome(str: greeting)
