@@ -15,6 +15,7 @@
 		4D8892D12BEE6F180047DD8F /* ColoredButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8892D02BEE6F180047DD8F /* ColoredButtonStyle.swift */; };
 		4D8892D32BEE8A560047DD8F /* StripedRectangleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8892D22BEE8A560047DD8F /* StripedRectangleButtonStyle.swift */; };
 		4D8892D52BEE8E080047DD8F /* PushButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8892D42BEE8E080047DD8F /* PushButtonStyle.swift */; };
+		4D8892D82BEE9F880047DD8F /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8892D72BEE9F880047DD8F /* Color+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		4D8892D02BEE6F180047DD8F /* ColoredButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredButtonStyle.swift; sourceTree = "<group>"; };
 		4D8892D22BEE8A560047DD8F /* StripedRectangleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripedRectangleButtonStyle.swift; sourceTree = "<group>"; };
 		4D8892D42BEE8E080047DD8F /* PushButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushButtonStyle.swift; sourceTree = "<group>"; };
+		4D8892D72BEE9F880047DD8F /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		4D8892BE2BEE6DC00047DD8F /* ButtonStylePlayground */ = {
 			isa = PBXGroup;
 			children = (
+				4D8892D62BEE9F660047DD8F /* Extensions */,
 				4D8892CF2BEE6EFE0047DD8F /* Styles */,
 				4D8892BF2BEE6DC00047DD8F /* ButtonStylePlaygroundApp.swift */,
 				4D8892C12BEE6DC00047DD8F /* ContentView.swift */,
@@ -85,6 +88,14 @@
 				4D8892D42BEE8E080047DD8F /* PushButtonStyle.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		4D8892D62BEE9F660047DD8F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4D8892D72BEE9F880047DD8F /* Color+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +172,7 @@
 				4D8892D52BEE8E080047DD8F /* PushButtonStyle.swift in Sources */,
 				4D8892D32BEE8A560047DD8F /* StripedRectangleButtonStyle.swift in Sources */,
 				4D8892C22BEE6DC00047DD8F /* ContentView.swift in Sources */,
+				4D8892D82BEE9F880047DD8F /* Color+Extensions.swift in Sources */,
 				4D8892CE2BEE6E550047DD8F /* EmptyStyle.swift in Sources */,
 				4D8892C02BEE6DC00047DD8F /* ButtonStylePlaygroundApp.swift in Sources */,
 			);
