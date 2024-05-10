@@ -11,6 +11,8 @@
 		4D8892C22BEE6DC00047DD8F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8892C12BEE6DC00047DD8F /* ContentView.swift */; };
 		4D8892C42BEE6DC50047DD8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D8892C32BEE6DC50047DD8F /* Assets.xcassets */; };
 		4D8892C72BEE6DC50047DD8F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D8892C62BEE6DC50047DD8F /* Preview Assets.xcassets */; };
+		4D8892CE2BEE6E550047DD8F /* EmptyStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8892CD2BEE6E550047DD8F /* EmptyStyle.swift */; };
+		4D8892D12BEE6F180047DD8F /* ColoredButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8892D02BEE6F180047DD8F /* ColoredButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		4D8892C12BEE6DC00047DD8F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4D8892C32BEE6DC50047DD8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D8892C62BEE6DC50047DD8F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4D8892CD2BEE6E550047DD8F /* EmptyStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStyle.swift; sourceTree = "<group>"; };
+		4D8892D02BEE6F180047DD8F /* ColoredButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 		4D8892BE2BEE6DC00047DD8F /* ButtonStylePlayground */ = {
 			isa = PBXGroup;
 			children = (
+				4D8892CF2BEE6EFE0047DD8F /* Styles */,
 				4D8892BF2BEE6DC00047DD8F /* ButtonStylePlaygroundApp.swift */,
 				4D8892C12BEE6DC00047DD8F /* ContentView.swift */,
 				4D8892C32BEE6DC50047DD8F /* Assets.xcassets */,
@@ -65,6 +70,15 @@
 				4D8892C62BEE6DC50047DD8F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4D8892CF2BEE6EFE0047DD8F /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				4D8892CD2BEE6E550047DD8F /* EmptyStyle.swift */,
+				4D8892D02BEE6F180047DD8F /* ColoredButtonStyle.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D8892D12BEE6F180047DD8F /* ColoredButtonStyle.swift in Sources */,
 				4D8892C22BEE6DC00047DD8F /* ContentView.swift in Sources */,
+				4D8892CE2BEE6E550047DD8F /* EmptyStyle.swift in Sources */,
 				4D8892C02BEE6DC00047DD8F /* ButtonStylePlaygroundApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
