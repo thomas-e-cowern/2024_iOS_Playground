@@ -22,6 +22,13 @@ struct ContentView: View {
             Text("Press me")
         }
         .buttonStyle(ColoredButtonStyle(color: .green))
+        
+        Button {
+            print("pressed")
+        } label: {
+            Text("Press me")
+        }
+        .buttonStyle(StripedRectangleButtonStyle())
 
     }
 }
