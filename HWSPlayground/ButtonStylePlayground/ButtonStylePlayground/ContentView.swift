@@ -36,6 +36,17 @@ struct ContentView: View {
             Text("Press")
         }
         .buttonStyle(PushButtonStyle())
+        
+        Button {
+            print("pressed")
+        } label: {
+            HStack {
+                Image(systemName: "phone.down.fill")
+                Text("End Call")
+            }
+        }
+        .buttonStyle(GlassButtonStyle(color: .classicRed))
+        .padding(.horizontal)
 
     }
 }

@@ -16,6 +16,7 @@
 		4D8892D32BEE8A560047DD8F /* StripedRectangleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8892D22BEE8A560047DD8F /* StripedRectangleButtonStyle.swift */; };
 		4D8892D52BEE8E080047DD8F /* PushButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8892D42BEE8E080047DD8F /* PushButtonStyle.swift */; };
 		4D8892D82BEE9F880047DD8F /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8892D72BEE9F880047DD8F /* Color+Extensions.swift */; };
+		4D8892DA2BEE9FED0047DD8F /* GlassButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8892D92BEE9FED0047DD8F /* GlassButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		4D8892D22BEE8A560047DD8F /* StripedRectangleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripedRectangleButtonStyle.swift; sourceTree = "<group>"; };
 		4D8892D42BEE8E080047DD8F /* PushButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushButtonStyle.swift; sourceTree = "<group>"; };
 		4D8892D72BEE9F880047DD8F /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		4D8892D92BEE9FED0047DD8F /* GlassButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				4D8892D02BEE6F180047DD8F /* ColoredButtonStyle.swift */,
 				4D8892D22BEE8A560047DD8F /* StripedRectangleButtonStyle.swift */,
 				4D8892D42BEE8E080047DD8F /* PushButtonStyle.swift */,
+				4D8892D92BEE9FED0047DD8F /* GlassButtonStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D8892DA2BEE9FED0047DD8F /* GlassButtonStyle.swift in Sources */,
 				4D8892D12BEE6F180047DD8F /* ColoredButtonStyle.swift in Sources */,
 				4D8892D52BEE8E080047DD8F /* PushButtonStyle.swift in Sources */,
 				4D8892D32BEE8A560047DD8F /* StripedRectangleButtonStyle.swift in Sources */,
