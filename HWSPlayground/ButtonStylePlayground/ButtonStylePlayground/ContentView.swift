@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ScrollView {
-            VStack {
+            VStack(spacing: 24) {
                 Button {
                     print("pressed")
                 } label: {
