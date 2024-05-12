@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    
     var body: some View {
         ScrollView {
             VStack(spacing: 24) {
@@ -69,7 +71,7 @@ struct ContentView: View {
                     .frame(width: 300)
                 } //: End of ZStack
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color(red: 0.45, green: 0.375, blue: 0.30))
+
             }
             .padding(.top, 25)
         }
