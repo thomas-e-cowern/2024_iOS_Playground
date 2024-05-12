@@ -57,6 +57,19 @@ struct ContentView: View {
                         .font(.title)
                 }
                 .buttonStyle(AquaButtonStyle())
+                
+                ZStack {
+                    Button {
+                        print("pressed")
+                    } label: {
+                        Text("Press Me")
+                            .font(.title)
+                    }
+                    .buttonStyle(FantasyButtonStyle())
+                    .frame(width: 300)
+                } //: End of ZStack
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color(red: 0.45, green: 0.375, blue: 0.30))
             }
             .padding(.top, 25)
         }

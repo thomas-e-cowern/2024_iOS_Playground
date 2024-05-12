@@ -18,6 +18,7 @@
 		4D8892D82BEE9F880047DD8F /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8892D72BEE9F880047DD8F /* Color+Extensions.swift */; };
 		4D8892DA2BEE9FED0047DD8F /* GlassButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8892D92BEE9FED0047DD8F /* GlassButtonStyle.swift */; };
 		4DD9AE9C2BF0F6E20056D3E5 /* AquaButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9AE9B2BF0F6E20056D3E5 /* AquaButtonStyle.swift */; };
+		4DD9AE9E2BF0FFD00056D3E5 /* FantasyButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9AE9D2BF0FFD00056D3E5 /* FantasyButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		4D8892D72BEE9F880047DD8F /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		4D8892D92BEE9FED0047DD8F /* GlassButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassButtonStyle.swift; sourceTree = "<group>"; };
 		4DD9AE9B2BF0F6E20056D3E5 /* AquaButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AquaButtonStyle.swift; sourceTree = "<group>"; };
+		4DD9AE9D2BF0FFD00056D3E5 /* FantasyButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FantasyButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				4D8892D42BEE8E080047DD8F /* PushButtonStyle.swift */,
 				4D8892D92BEE9FED0047DD8F /* GlassButtonStyle.swift */,
 				4DD9AE9B2BF0F6E20056D3E5 /* AquaButtonStyle.swift */,
+				4DD9AE9D2BF0FFD00056D3E5 /* FantasyButtonStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				4D8892D12BEE6F180047DD8F /* ColoredButtonStyle.swift in Sources */,
 				4D8892D52BEE8E080047DD8F /* PushButtonStyle.swift in Sources */,
 				4DD9AE9C2BF0F6E20056D3E5 /* AquaButtonStyle.swift in Sources */,
+				4DD9AE9E2BF0FFD00056D3E5 /* FantasyButtonStyle.swift in Sources */,
 				4D8892D32BEE8A560047DD8F /* StripedRectangleButtonStyle.swift in Sources */,
 				4D8892C22BEE6DC00047DD8F /* ContentView.swift in Sources */,
 				4D8892D82BEE9F880047DD8F /* Color+Extensions.swift in Sources */,
