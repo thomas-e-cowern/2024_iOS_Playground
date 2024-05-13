@@ -78,7 +78,7 @@ struct ContentView: View {
                     } label: {
                         Image(systemName: "star")
                     }
-                    .buttonStyle(TargetButton(glowColor: Color.green))
+                    .buttonStyle(TargetButton(glowColor: Color.green, strokeColor: Color.red))
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.black)
