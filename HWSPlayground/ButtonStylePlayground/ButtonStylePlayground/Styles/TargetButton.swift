@@ -6,3 +6,12 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct TargetButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .font(.largeTitle)
+            .foregroundColor(.white)
+    }
+}

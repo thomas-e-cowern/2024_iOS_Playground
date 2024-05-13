@@ -71,7 +71,18 @@ struct ContentView: View {
                     .frame(width: 300)
                 } //: End of ZStack
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-
+                
+                ZStack {
+                    Button {
+                        print("Pressed")
+                    } label: {
+                        Image(systemName: "star")
+                    }
+                    .buttonStyle(TargetButton())
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color.black)
+                
             }
             .padding(.top, 25)
         }
