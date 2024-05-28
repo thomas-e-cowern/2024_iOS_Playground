@@ -83,6 +83,14 @@ struct ContentView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.black)
                 
+                Button {
+                    print("Animated Button Style")
+                } label: {
+                    Image(systemName: "star")
+                }
+                .buttonStyle(AnimatedButtonStyle())
+
+                
             }
             .padding(.top, 25)
         }
