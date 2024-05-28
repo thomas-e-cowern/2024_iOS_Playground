@@ -12,7 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         ScrollView {
-            VStack(spacing: 24) {
+            VStack(spacing: 48) {
                 Button {
                     print("pressed")
                 } label: {
