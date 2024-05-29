@@ -20,6 +20,13 @@ struct ContentView: View {
         ScrollView {
             VStack(spacing: 48) {
                 
+                Button(action: {
+                    print("Launching")
+                }, label: {
+                    Text("Launch")
+                })
+                .buttonStyle(CancellableButtonStyle())
+                
                 Button {
                     print("pressed")
                 } label: {
