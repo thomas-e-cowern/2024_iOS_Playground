@@ -13,6 +13,14 @@ struct ContentView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 48) {
+                
+                Button {
+                    print("pressed")
+                } label: {
+                    Text("Press me")
+                }
+                .buttonStyle(ExampleButtonStyle())
+                
                 Button {
                     print("pressed")
                 } label: {
