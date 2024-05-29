@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+#if DEBUG
+typealias CustomButtonType = DebugButtonStyle
+#else
+typealias CustomButtonType = ExampleButtonStyle
+#endif
+
 struct ContentView: View {
     
     
@@ -19,7 +25,7 @@ struct ContentView: View {
                 } label: {
                     Text("Press me")
                 }
-                .buttonStyle(ExampleButtonStyle())
+                .buttonStyle(CustomButtonType())
                 
                 Button {
                     print("pressed")

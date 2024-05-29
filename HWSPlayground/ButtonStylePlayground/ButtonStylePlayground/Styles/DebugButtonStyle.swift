@@ -19,6 +19,10 @@ struct DebugButtonStyle: PrimitiveButtonStyle {
         } label: {
             configuration.label
         }
-        .buttonStyle(DefaultButtonStyle())
+        .buttonStyle(ExampleButtonStyle())
+    }
+    
+    init(file: String = #file, line: Int = #line) {
+        location = "\(line) in \(file)"
     }
 }
