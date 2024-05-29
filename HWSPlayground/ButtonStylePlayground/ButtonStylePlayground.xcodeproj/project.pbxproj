@@ -10,6 +10,7 @@
 		4D2928D12C05FCF8004CCAEB /* AnimatedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2928D02C05FCF8004CCAEB /* AnimatedButtonStyle.swift */; };
 		4D2928D32C0788C2004CCAEB /* DebugButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2928D22C0788C2004CCAEB /* DebugButtonStyle.swift */; };
 		4D2928D52C078F12004CCAEB /* ExampleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2928D42C078F12004CCAEB /* ExampleButtonStyle.swift */; };
+		4D2928D72C07B302004CCAEB /* CancellableButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2928D62C07B302004CCAEB /* CancellableButtonStyle.swift */; };
 		4D8892C02BEE6DC00047DD8F /* ButtonStylePlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8892BF2BEE6DC00047DD8F /* ButtonStylePlaygroundApp.swift */; };
 		4D8892C22BEE6DC00047DD8F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8892C12BEE6DC00047DD8F /* ContentView.swift */; };
 		4D8892C42BEE6DC50047DD8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D8892C32BEE6DC50047DD8F /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		4D2928D02C05FCF8004CCAEB /* AnimatedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedButtonStyle.swift; sourceTree = "<group>"; };
 		4D2928D22C0788C2004CCAEB /* DebugButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugButtonStyle.swift; sourceTree = "<group>"; };
 		4D2928D42C078F12004CCAEB /* ExampleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleButtonStyle.swift; sourceTree = "<group>"; };
+		4D2928D62C07B302004CCAEB /* CancellableButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellableButtonStyle.swift; sourceTree = "<group>"; };
 		4D8892BC2BEE6DC00047DD8F /* ButtonStylePlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButtonStylePlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D8892BF2BEE6DC00047DD8F /* ButtonStylePlaygroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStylePlaygroundApp.swift; sourceTree = "<group>"; };
 		4D8892C12BEE6DC00047DD8F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				4D2928D02C05FCF8004CCAEB /* AnimatedButtonStyle.swift */,
 				4D2928D22C0788C2004CCAEB /* DebugButtonStyle.swift */,
 				4D2928D42C078F12004CCAEB /* ExampleButtonStyle.swift */,
+				4D2928D62C07B302004CCAEB /* CancellableButtonStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				4DD9AEA22BF252E40056D3E5 /* TargetButton.swift in Sources */,
 				4DD9AE9C2BF0F6E20056D3E5 /* AquaButtonStyle.swift in Sources */,
 				4DD9AE9E2BF0FFD00056D3E5 /* FantasyButtonStyle.swift in Sources */,
+				4D2928D72C07B302004CCAEB /* CancellableButtonStyle.swift in Sources */,
 				4D8892D32BEE8A560047DD8F /* StripedRectangleButtonStyle.swift in Sources */,
 				4D8892C22BEE6DC00047DD8F /* ContentView.swift in Sources */,
 				4D8892D82BEE9F880047DD8F /* Color+Extensions.swift in Sources */,
