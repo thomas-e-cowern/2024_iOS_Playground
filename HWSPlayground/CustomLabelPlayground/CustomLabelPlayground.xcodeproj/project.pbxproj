@@ -15,6 +15,7 @@
 		4D1698F82C08BFEB006B06F7 /* CircleLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1698F72C08BFEB006B06F7 /* CircleLabelStyle.swift */; };
 		4D1698FB2C08DDCD006B06F7 /* HoveringLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1698FA2C08DDCD006B06F7 /* HoveringLabelStyle.swift */; };
 		4D1698FD2C08DFA0006B06F7 /* HoveringRevealingLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1698FC2C08DFA0006B06F7 /* HoveringRevealingLabelStyle.swift */; };
+		4D1698FF2C08EB04006B06F7 /* HighlightLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1698FE2C08EB04006B06F7 /* HighlightLabelStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		4D1698F72C08BFEB006B06F7 /* CircleLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLabelStyle.swift; sourceTree = "<group>"; };
 		4D1698FA2C08DDCD006B06F7 /* HoveringLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoveringLabelStyle.swift; sourceTree = "<group>"; };
 		4D1698FC2C08DFA0006B06F7 /* HoveringRevealingLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoveringRevealingLabelStyle.swift; sourceTree = "<group>"; };
+		4D1698FE2C08EB04006B06F7 /* HighlightLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightLabelStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				4D1698F52C08BCE1006B06F7 /* VerticalLabelStyle.swift */,
 				4D1698F72C08BFEB006B06F7 /* CircleLabelStyle.swift */,
 				4D1698FC2C08DFA0006B06F7 /* HoveringRevealingLabelStyle.swift */,
+				4D1698FE2C08EB04006B06F7 /* HighlightLabelStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D1698F82C08BFEB006B06F7 /* CircleLabelStyle.swift in Sources */,
+				4D1698FF2C08EB04006B06F7 /* HighlightLabelStyle.swift in Sources */,
 				4D1698E92C08B8D1006B06F7 /* ContentView.swift in Sources */,
 				4D1698FD2C08DFA0006B06F7 /* HoveringRevealingLabelStyle.swift in Sources */,
 				4D1698F62C08BCE1006B06F7 /* VerticalLabelStyle.swift in Sources */,
