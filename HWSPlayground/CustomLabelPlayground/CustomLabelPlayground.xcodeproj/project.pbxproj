@@ -13,6 +13,7 @@
 		4D1698EE2C08B8D3006B06F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D1698ED2C08B8D3006B06F7 /* Preview Assets.xcassets */; };
 		4D1698F62C08BCE1006B06F7 /* VerticalLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1698F52C08BCE1006B06F7 /* VerticalLabelStyle.swift */; };
 		4D1698F82C08BFEB006B06F7 /* CircleLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1698F72C08BFEB006B06F7 /* CircleLabelStyle.swift */; };
+		4D1698FB2C08DDCD006B06F7 /* HoveringLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1698FA2C08DDCD006B06F7 /* HoveringLabelStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		4D1698ED2C08B8D3006B06F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D1698F52C08BCE1006B06F7 /* VerticalLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalLabelStyle.swift; sourceTree = "<group>"; };
 		4D1698F72C08BFEB006B06F7 /* CircleLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLabelStyle.swift; sourceTree = "<group>"; };
+		4D1698FA2C08DDCD006B06F7 /* HoveringLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoveringLabelStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		4D1698E52C08B8D1006B06F7 /* CustomLabelPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				4D1698F92C08DDBB006B06F7 /* Protocols */,
 				4D1698F42C08BCD0006B06F7 /* Styles */,
 				4D1698E62C08B8D1006B06F7 /* CustomLabelPlaygroundApp.swift */,
 				4D1698E82C08B8D1006B06F7 /* ContentView.swift */,
@@ -79,6 +82,14 @@
 				4D1698F72C08BFEB006B06F7 /* CircleLabelStyle.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		4D1698F92C08DDBB006B06F7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4D1698FA2C08DDCD006B06F7 /* HoveringLabelStyle.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +166,7 @@
 				4D1698E92C08B8D1006B06F7 /* ContentView.swift in Sources */,
 				4D1698F62C08BCE1006B06F7 /* VerticalLabelStyle.swift in Sources */,
 				4D1698E72C08B8D1006B06F7 /* CustomLabelPlaygroundApp.swift in Sources */,
+				4D1698FB2C08DDCD006B06F7 /* HoveringLabelStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
