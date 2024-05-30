@@ -12,6 +12,7 @@
 		4D1698EB2C08B8D3006B06F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D1698EA2C08B8D3006B06F7 /* Assets.xcassets */; };
 		4D1698EE2C08B8D3006B06F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D1698ED2C08B8D3006B06F7 /* Preview Assets.xcassets */; };
 		4D1698F62C08BCE1006B06F7 /* VerticalLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1698F52C08BCE1006B06F7 /* VerticalLabelStyle.swift */; };
+		4D1698F82C08BFEB006B06F7 /* CircleLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1698F72C08BFEB006B06F7 /* CircleLabelStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		4D1698EA2C08B8D3006B06F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D1698ED2C08B8D3006B06F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D1698F52C08BCE1006B06F7 /* VerticalLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalLabelStyle.swift; sourceTree = "<group>"; };
+		4D1698F72C08BFEB006B06F7 /* CircleLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLabelStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				4D1698F52C08BCE1006B06F7 /* VerticalLabelStyle.swift */,
+				4D1698F72C08BFEB006B06F7 /* CircleLabelStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1698F82C08BFEB006B06F7 /* CircleLabelStyle.swift in Sources */,
 				4D1698E92C08B8D1006B06F7 /* ContentView.swift in Sources */,
 				4D1698F62C08BCE1006B06F7 /* VerticalLabelStyle.swift in Sources */,
 				4D1698E72C08B8D1006B06F7 /* CustomLabelPlaygroundApp.swift in Sources */,

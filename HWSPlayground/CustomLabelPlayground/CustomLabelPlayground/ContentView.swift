@@ -16,7 +16,7 @@ struct ContentView: View {
             } icon: {
                 Image(systemName: "house")
             }
-            .labelStyle(VerticalLabelStyle())
+            .labelStyle(CircleLabelStyle())
         }
         .padding()
     }
