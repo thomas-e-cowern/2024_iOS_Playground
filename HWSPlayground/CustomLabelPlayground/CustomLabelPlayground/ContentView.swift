@@ -10,13 +10,14 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Label {
+            HoveringLabel(style: VerticalRevealingLabelStyle.self) {
                 Text("Home")
-                    .foregroundStyle(Color.red)
+                    .font(.largeTitle)
             } icon: {
                 Image(systemName: "house")
+                    .font(.largeTitle)
             }
-            .labelStyle(CircleLabelStyle())
+//            .labelStyle(CircleLabelStyle())
         }
         .padding()
     }

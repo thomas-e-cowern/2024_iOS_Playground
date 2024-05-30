@@ -14,7 +14,7 @@ protocol HoveringLabelStyle: LabelStyle {
 
 struct HoveringLabel<LabelStyle: HoveringLabelStyle, Title: View, Icon: View>: View {
     
-    let labelStyle: LabelStyle.Type
+    let style: LabelStyle.Type
     let title: () -> Title
     let icon: () -> Icon
     
@@ -22,7 +22,7 @@ struct HoveringLabel<LabelStyle: HoveringLabelStyle, Title: View, Icon: View>: V
     
     var body: some View {
         Label(title: title, icon: icon)
-            .labelStyle(labelStyle.init(hovering: isHovered))
+            .labelStyle(style.init(hovering: isHovered))
             .onHover(perform: { hovering in
                 withAnimation {
                     isHovered = hovering

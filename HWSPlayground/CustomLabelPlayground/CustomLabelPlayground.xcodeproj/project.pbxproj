@@ -14,6 +14,7 @@
 		4D1698F62C08BCE1006B06F7 /* VerticalLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1698F52C08BCE1006B06F7 /* VerticalLabelStyle.swift */; };
 		4D1698F82C08BFEB006B06F7 /* CircleLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1698F72C08BFEB006B06F7 /* CircleLabelStyle.swift */; };
 		4D1698FB2C08DDCD006B06F7 /* HoveringLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1698FA2C08DDCD006B06F7 /* HoveringLabelStyle.swift */; };
+		4D1698FD2C08DFA0006B06F7 /* HoveringRevealingLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1698FC2C08DFA0006B06F7 /* HoveringRevealingLabelStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		4D1698F52C08BCE1006B06F7 /* VerticalLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalLabelStyle.swift; sourceTree = "<group>"; };
 		4D1698F72C08BFEB006B06F7 /* CircleLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLabelStyle.swift; sourceTree = "<group>"; };
 		4D1698FA2C08DDCD006B06F7 /* HoveringLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoveringLabelStyle.swift; sourceTree = "<group>"; };
+		4D1698FC2C08DFA0006B06F7 /* HoveringRevealingLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoveringRevealingLabelStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			children = (
 				4D1698F52C08BCE1006B06F7 /* VerticalLabelStyle.swift */,
 				4D1698F72C08BFEB006B06F7 /* CircleLabelStyle.swift */,
+				4D1698FC2C08DFA0006B06F7 /* HoveringRevealingLabelStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			files = (
 				4D1698F82C08BFEB006B06F7 /* CircleLabelStyle.swift in Sources */,
 				4D1698E92C08B8D1006B06F7 /* ContentView.swift in Sources */,
+				4D1698FD2C08DFA0006B06F7 /* HoveringRevealingLabelStyle.swift in Sources */,
 				4D1698F62C08BCE1006B06F7 /* VerticalLabelStyle.swift in Sources */,
 				4D1698E72C08B8D1006B06F7 /* CustomLabelPlaygroundApp.swift in Sources */,
 				4D1698FB2C08DDCD006B06F7 /* HoveringLabelStyle.swift in Sources */,
