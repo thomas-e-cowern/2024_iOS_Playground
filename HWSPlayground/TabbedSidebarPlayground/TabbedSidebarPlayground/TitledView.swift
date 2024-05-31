@@ -12,4 +12,10 @@ struct TitledView {
     let title: String
     let icon: Image
     let view: AnyView
+    
+    init<T: View>(title: String, systemImage: String, view: T) {
+        self.title = title
+        self.icon = Image(systemName: systemImage)
+        self.view = AnyView(view)
+    }
 }
