@@ -10,11 +10,12 @@ import SwiftUI
 
 struct TabbedSidebar: View {
     @Environment(\.horizontalSizeClass) var sizeClass
+    @State private var selection: String? = ""
     private let views: [TitledView]
 
     var body: some View {
         if sizeClass == .compact {
-            TabView {
+            TabView(selection: $selection) {
                 ForEach(views, id: \.title) { item in
                     item.view
                         .tabItem {
@@ -26,9 +27,9 @@ struct TabbedSidebar: View {
             }
         } else {
             NavigationView {
-                List {
+                List(selection: $selection) {
                     ForEach(views, id: \.title) { item in
-                        NavigationLink(destination: item.view) {
+                        NavigationLink(destination: item.view, tag: item.title, selection: $selection) {
                             Label {
                                 Text(item.title)
                             } icon: {
@@ -41,5 +42,10 @@ struct TabbedSidebar: View {
                 .listStyle(SidebarListStyle())
             }
         }
+    }
+    
+    init(content: [TitledView]) {
+        views = content
+        _selection = State(wrappedValue: content[0].title)
     }
 }
