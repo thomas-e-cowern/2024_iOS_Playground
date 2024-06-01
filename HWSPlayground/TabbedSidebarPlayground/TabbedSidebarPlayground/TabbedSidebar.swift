@@ -26,7 +26,7 @@ struct TabbedSidebar: View {
                 }
             }
         } else {
-            NavigationView {
+            NavigationStack {
                 List(selection: $selection) {
                     ForEach(views, id: \.title) { item in
                         NavigationLink(destination: item.view, tag: item.title, selection: $selection) {

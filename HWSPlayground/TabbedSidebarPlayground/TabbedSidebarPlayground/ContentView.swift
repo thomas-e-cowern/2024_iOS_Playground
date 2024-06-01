@@ -9,13 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        TabbedSidebar(content: [
+            TitledView(title: "Home", systemImage: "house", view: Text("Home")),
+            TitledView(title: "Buy", systemImage: "cart", view: Text("Buy")),
+            TitledView(title: "Account", systemImage: "person.circle", view: Text("Account"))
+        ])
     }
 }
 
