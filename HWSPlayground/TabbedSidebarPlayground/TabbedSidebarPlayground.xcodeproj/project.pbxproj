@@ -12,6 +12,7 @@
 		4D9FE7072C0A3977008FCDED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9FE7062C0A3977008FCDED /* Assets.xcassets */; };
 		4D9FE70A2C0A3977008FCDED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9FE7092C0A3977008FCDED /* Preview Assets.xcassets */; };
 		4D9FE7112C0A8D5E008FCDED /* TitledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9FE7102C0A8D5E008FCDED /* TitledView.swift */; };
+		4D9FE7132C0B67B0008FCDED /* TabbedSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9FE7122C0B67B0008FCDED /* TabbedSidebar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		4D9FE7062C0A3977008FCDED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D9FE7092C0A3977008FCDED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D9FE7102C0A8D5E008FCDED /* TitledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitledView.swift; sourceTree = "<group>"; };
+		4D9FE7122C0B67B0008FCDED /* TabbedSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedSidebar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +57,10 @@
 			children = (
 				4D9FE7022C0A3975008FCDED /* TabbedSidebarPlaygroundApp.swift */,
 				4D9FE7042C0A3975008FCDED /* ContentView.swift */,
+				4D9FE7102C0A8D5E008FCDED /* TitledView.swift */,
+				4D9FE7122C0B67B0008FCDED /* TabbedSidebar.swift */,
 				4D9FE7062C0A3977008FCDED /* Assets.xcassets */,
 				4D9FE7082C0A3977008FCDED /* Preview Content */,
-				4D9FE7102C0A8D5E008FCDED /* TitledView.swift */,
 			);
 			path = TabbedSidebarPlayground;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			files = (
 				4D9FE7052C0A3975008FCDED /* ContentView.swift in Sources */,
 				4D9FE7112C0A8D5E008FCDED /* TitledView.swift in Sources */,
+				4D9FE7132C0B67B0008FCDED /* TabbedSidebar.swift in Sources */,
 				4D9FE7032C0A3975008FCDED /* TabbedSidebarPlaygroundApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
