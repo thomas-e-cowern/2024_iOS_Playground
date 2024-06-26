@@ -11,6 +11,10 @@ struct MainView: View {
     
     @State private var chatText: String = ""
     
+    private var isFormValid: Bool {
+        !chatText.isEmptyOrWhiteSpaces
+    }
+    
     var body: some View {
         VStack {
             Spacer()
@@ -25,6 +29,7 @@ struct MainView: View {
             })
             .buttonStyle(.borderless)
             .tint(.blue)
+            .disabled(!isFormValid)
         }
         .padding()
     }
