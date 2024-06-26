@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import OpenAISwift
 
 struct MainView: View {
     
@@ -15,21 +16,28 @@ struct MainView: View {
         !chatText.isEmptyOrWhiteSpaces
     }
     
+    private func performSearch() {
+        
+    }
+    
     var body: some View {
         VStack {
             Spacer()
-            TextField("Search...", text: $chatText)
-                .textFieldStyle(.roundedBorder)
-            Button(action: {
-                //action
-            }, label: {
-                Image(systemName: "paperplane.circle.fill")
-                    .font(.title)
-                    .rotationEffect(Angle(degrees: 45))
-            })
-            .buttonStyle(.borderless)
-            .tint(.blue)
-            .disabled(!isFormValid)
+            HStack {
+                TextField("Search...", text: $chatText)
+                    .textFieldStyle(.roundedBorder)
+                Button(action: {
+                    performSearch()
+                }, label: {
+                    Image(systemName: "paperplane.circle.fill")
+                        .font(.title)
+                        .rotationEffect(Angle(degrees: 45))
+                })
+                .buttonStyle(.borderless)
+                .tint(.blue)
+                .disabled(!isFormValid)
+            }
+            
         }
         .padding()
     }
