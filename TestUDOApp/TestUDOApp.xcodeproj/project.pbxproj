@@ -20,6 +20,8 @@
 		4DB6FD302C2C91AC0001C9AB /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4DB6FD2F2C2C91AC0001C9AB /* OpenAISwift */; };
 		4DB6FD342C2C9D9D0001C9AB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6FD332C2C9D9D0001C9AB /* MainView.swift */; };
 		4DB6FD352C2C9D9D0001C9AB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6FD332C2C9D9D0001C9AB /* MainView.swift */; };
+		4DB6FD382C2C9EC60001C9AB /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6FD372C2C9EC60001C9AB /* String+Extensions.swift */; };
+		4DB6FD392C2C9EC60001C9AB /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6FD372C2C9EC60001C9AB /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,7 @@
 		4DB6FD212C2C90E10001C9AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4DB6FD232C2C90E10001C9AB /* macOS_UDO_ChatGPT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS_UDO_ChatGPT.entitlements; sourceTree = "<group>"; };
 		4DB6FD332C2C9D9D0001C9AB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		4DB6FD372C2C9EC60001C9AB /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,7 @@
 		4DB6FD272C2C910B0001C9AB /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				4DB6FD362C2C9EAD0001C9AB /* Extensions */,
 				4DB6FD332C2C9D9D0001C9AB /* MainView.swift */,
 			);
 			path = Shared;
@@ -139,6 +143,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4DB6FD362C2C9EAD0001C9AB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4DB6FD372C2C9EC60001C9AB /* String+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB6FD382C2C9EC60001C9AB /* String+Extensions.swift in Sources */,
 				4DB6FD0B2C2C907A0001C9AB /* ContentView.swift in Sources */,
 				4DB6FD342C2C9D9D0001C9AB /* MainView.swift in Sources */,
 				4DB6FD092C2C907A0001C9AB /* iOS_UDO_ChatGPTApp.swift in Sources */,
@@ -262,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB6FD392C2C9EC60001C9AB /* String+Extensions.swift in Sources */,
 				4DB6FD1D2C2C90DF0001C9AB /* ContentView.swift in Sources */,
 				4DB6FD352C2C9D9D0001C9AB /* MainView.swift in Sources */,
 				4DB6FD1B2C2C90DF0001C9AB /* macOS_UDO_ChatGPTApp.swift in Sources */,

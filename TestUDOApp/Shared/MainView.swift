@@ -23,6 +23,8 @@ struct MainView: View {
                     .font(.title)
                     .rotationEffect(Angle(degrees: 45))
             })
+            .buttonStyle(.borderless)
+            .tint(.blue)
         }
         .padding()
     }
