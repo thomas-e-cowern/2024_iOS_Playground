@@ -15,7 +15,22 @@
 		4DB6FD1D2C2C90DF0001C9AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6FD1C2C2C90DF0001C9AB /* ContentView.swift */; };
 		4DB6FD1F2C2C90E10001C9AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB6FD1E2C2C90E10001C9AB /* Assets.xcassets */; };
 		4DB6FD222C2C90E10001C9AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB6FD212C2C90E10001C9AB /* Preview Assets.xcassets */; };
+		4DB6FD2A2C2C918F0001C9AB /* macOS-UDO-ChatGPT.app in Resources */ = {isa = PBXBuildFile; fileRef = 4DB6FD182C2C90DF0001C9AB /* macOS-UDO-ChatGPT.app */; };
+		4DB6FD2E2C2C91A00001C9AB /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4DB6FD2D2C2C91A00001C9AB /* OpenAISwift */; };
+		4DB6FD302C2C91AC0001C9AB /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4DB6FD2F2C2C91AC0001C9AB /* OpenAISwift */; };
+		4DB6FD342C2C9D9D0001C9AB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6FD332C2C9D9D0001C9AB /* MainView.swift */; };
+		4DB6FD352C2C9D9D0001C9AB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6FD332C2C9D9D0001C9AB /* MainView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4DB6FD2B2C2C918F0001C9AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB6FCFB2C2C8F730001C9AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DB6FD172C2C90DF0001C9AB;
+			remoteInfo = "macOS-UDO-ChatGPT";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4DB6FD052C2C907A0001C9AB /* iOS-UDO-ChatGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-UDO-ChatGPT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,6 +44,7 @@
 		4DB6FD1E2C2C90E10001C9AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DB6FD212C2C90E10001C9AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4DB6FD232C2C90E10001C9AB /* macOS_UDO_ChatGPT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS_UDO_ChatGPT.entitlements; sourceTree = "<group>"; };
+		4DB6FD332C2C9D9D0001C9AB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB6FD302C2C91AC0001C9AB /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB6FD2E2C2C91A00001C9AB /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,9 +70,11 @@
 		4DB6FCFA2C2C8F730001C9AB = {
 			isa = PBXGroup;
 			children = (
+				4DB6FD272C2C910B0001C9AB /* Shared */,
 				4DB6FD072C2C907A0001C9AB /* iOS-UDO-ChatGPT */,
 				4DB6FD192C2C90DF0001C9AB /* macOS-UDO-ChatGPT */,
 				4DB6FD062C2C907A0001C9AB /* Products */,
+				4DB6FD292C2C918F0001C9AB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +126,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		4DB6FD272C2C910B0001C9AB /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4DB6FD332C2C9D9D0001C9AB /* MainView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		4DB6FD292C2C918F0001C9AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,8 +155,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				4DB6FD2C2C2C918F0001C9AB /* PBXTargetDependency */,
 			);
 			name = "iOS-UDO-ChatGPT";
+			packageProductDependencies = (
+				4DB6FD2F2C2C91AC0001C9AB /* OpenAISwift */,
+			);
 			productName = "iOS-UDO-ChatGPT";
 			productReference = 4DB6FD052C2C907A0001C9AB /* iOS-UDO-ChatGPT.app */;
 			productType = "com.apple.product-type.application";
@@ -139,6 +178,9 @@
 			dependencies = (
 			);
 			name = "macOS-UDO-ChatGPT";
+			packageProductDependencies = (
+				4DB6FD2D2C2C91A00001C9AB /* OpenAISwift */,
+			);
 			productName = "macOS-UDO-ChatGPT";
 			productReference = 4DB6FD182C2C90DF0001C9AB /* macOS-UDO-ChatGPT.app */;
 			productType = "com.apple.product-type.application";
@@ -170,6 +212,9 @@
 				Base,
 			);
 			mainGroup = 4DB6FCFA2C2C8F730001C9AB;
+			packageReferences = (
+				4DB6FD282C2C91320001C9AB /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = 4DB6FD062C2C907A0001C9AB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -187,6 +232,7 @@
 			files = (
 				4DB6FD102C2C907C0001C9AB /* Preview Assets.xcassets in Resources */,
 				4DB6FD0D2C2C907C0001C9AB /* Assets.xcassets in Resources */,
+				4DB6FD2A2C2C918F0001C9AB /* macOS-UDO-ChatGPT.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DB6FD0B2C2C907A0001C9AB /* ContentView.swift in Sources */,
+				4DB6FD342C2C9D9D0001C9AB /* MainView.swift in Sources */,
 				4DB6FD092C2C907A0001C9AB /* iOS_UDO_ChatGPTApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,11 +263,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DB6FD1D2C2C90DF0001C9AB /* ContentView.swift in Sources */,
+				4DB6FD352C2C9D9D0001C9AB /* MainView.swift in Sources */,
 				4DB6FD1B2C2C90DF0001C9AB /* macOS_UDO_ChatGPTApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4DB6FD2C2C2C918F0001C9AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DB6FD172C2C90DF0001C9AB /* macOS-UDO-ChatGPT */;
+			targetProxy = 4DB6FD2B2C2C918F0001C9AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4DB6FCFF2C2C8F730001C9AB /* Debug */ = {
@@ -591,6 +647,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4DB6FD282C2C91320001C9AB /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4DB6FD2D2C2C91A00001C9AB /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DB6FD282C2C91320001C9AB /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+		4DB6FD2F2C2C91AC0001C9AB /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DB6FD282C2C91320001C9AB /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4DB6FCFB2C2C8F730001C9AB /* Project object */;
 }
