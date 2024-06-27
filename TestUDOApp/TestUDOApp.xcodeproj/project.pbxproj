@@ -35,7 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4D6758322C2D9F7300AF26D2 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		4D6758332C2DA1BC00AF26D2 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		4D6758342C2DA26100AF26D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4D6758352C2DA31200AF26D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4DB6FD052C2C907A0001C9AB /* iOS-UDO-ChatGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-UDO-ChatGPT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB6FD082C2C907A0001C9AB /* iOS_UDO_ChatGPTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_UDO_ChatGPTApp.swift; sourceTree = "<group>"; };
 		4DB6FD0A2C2C907A0001C9AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		4DB6FD072C2C907A0001C9AB /* iOS-UDO-ChatGPT */ = {
 			isa = PBXGroup;
 			children = (
+				4D6758342C2DA26100AF26D2 /* Info.plist */,
 				4DB6FD082C2C907A0001C9AB /* iOS_UDO_ChatGPTApp.swift */,
 				4DB6FD0A2C2C907A0001C9AB /* ContentView.swift */,
 				4DB6FD0C2C2C907C0001C9AB /* Assets.xcassets */,
@@ -113,6 +116,7 @@
 		4DB6FD192C2C90DF0001C9AB /* macOS-UDO-ChatGPT */ = {
 			isa = PBXGroup;
 			children = (
+				4D6758352C2DA31200AF26D2 /* Info.plist */,
 				4DB6FD1A2C2C90DF0001C9AB /* macOS_UDO_ChatGPTApp.swift */,
 				4DB6FD1C2C2C90DF0001C9AB /* ContentView.swift */,
 				4DB6FD1E2C2C90E10001C9AB /* Assets.xcassets */,
@@ -135,7 +139,7 @@
 			children = (
 				4DB6FD362C2C9EAD0001C9AB /* Extensions */,
 				4DB6FD332C2C9D9D0001C9AB /* MainView.swift */,
-				4D6758322C2D9F7300AF26D2 /* Config.xcconfig */,
+				4D6758332C2DA1BC00AF26D2 /* Config.xcconfig */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -297,12 +301,14 @@
 /* Begin XCBuildConfiguration section */
 		4DB6FCFF2C2C8F730001C9AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D6758332C2DA1BC00AF26D2 /* Config.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
 		};
 		4DB6FD002C2C8F730001C9AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D6758332C2DA1BC00AF26D2 /* Config.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
@@ -367,6 +373,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS-UDO-ChatGPT/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -447,6 +454,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS-UDO-ChatGPT/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -535,6 +543,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS-UDO-ChatGPT/Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -613,6 +622,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS-UDO-ChatGPT/Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
