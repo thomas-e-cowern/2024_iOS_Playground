@@ -100,3 +100,6 @@ AdvancedSwift/FilteringList/FilteringList/.DS_Store
 
 # Plist Test
 PlistPlayground/PlistPlayground/Config.xcconfig
+
+# Config file
+TestUDOApp/Shared/Config.xcconfig
