@@ -12,6 +12,8 @@
 		4D67585F2C2EEFF400AF26D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D67585E2C2EEFF400AF26D2 /* Assets.xcassets */; };
 		4D6758622C2EEFF400AF26D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D6758612C2EEFF400AF26D2 /* Preview Assets.xcassets */; };
 		4D6758692C2EF1D100AF26D2 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6758682C2EF1D100AF26D2 /* ChatViewModel.swift */; };
+		4D67586B2C2EFC3B00AF26D2 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D67586A2C2EFC3B00AF26D2 /* OpenAIService.swift */; };
+		4D67586E2C2EFC8500AF26D2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4D67586D2C2EFC8500AF26D2 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,7 @@
 		4D67585E2C2EEFF400AF26D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D6758612C2EEFF400AF26D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D6758682C2EF1D100AF26D2 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		4D67586A2C2EFC3B00AF26D2 /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D67586E2C2EFC8500AF26D2 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +62,7 @@
 				4D67585E2C2EEFF400AF26D2 /* Assets.xcassets */,
 				4D6758602C2EEFF400AF26D2 /* Preview Content */,
 				4D6758682C2EF1D100AF26D2 /* ChatViewModel.swift */,
+				4D67586A2C2EFC3B00AF26D2 /* OpenAIService.swift */,
 			);
 			path = ChatGPTTestApp;
 			sourceTree = "<group>";
@@ -86,6 +91,9 @@
 			dependencies = (
 			);
 			name = ChatGPTTestApp;
+			packageProductDependencies = (
+				4D67586D2C2EFC8500AF26D2 /* Alamofire */,
+			);
 			productName = ChatGPTTestApp;
 			productReference = 4D6758572C2EEFF000AF26D2 /* ChatGPTTestApp.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 4D67584E2C2EEFF000AF26D2;
+			packageReferences = (
+				4D67586C2C2EFC8500AF26D2 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 4D6758582C2EEFF000AF26D2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,6 +154,7 @@
 				4D67585D2C2EEFF000AF26D2 /* ChatView.swift in Sources */,
 				4D6758692C2EF1D100AF26D2 /* ChatViewModel.swift in Sources */,
 				4D67585B2C2EEFF000AF26D2 /* ChatGPTTestAppApp.swift in Sources */,
+				4D67586B2C2EFC3B00AF26D2 /* OpenAIService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +360,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4D67586C2C2EFC8500AF26D2 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4D67586D2C2EFC8500AF26D2 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D67586C2C2EFC8500AF26D2 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4D67584F2C2EEFF000AF26D2 /* Project object */;
 }
