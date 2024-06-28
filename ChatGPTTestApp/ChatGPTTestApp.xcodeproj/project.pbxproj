@@ -24,6 +24,8 @@
 		4D6758612C2EEFF400AF26D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D6758682C2EF1D100AF26D2 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		4D67586A2C2EFC3B00AF26D2 /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
+		4D6758722C2EFE8400AF26D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4D6758732C2F00C900AF26D2 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 		4D67584E2C2EEFF000AF26D2 = {
 			isa = PBXGroup;
 			children = (
+				4D6758732C2F00C900AF26D2 /* Config.xcconfig */,
 				4D6758592C2EEFF000AF26D2 /* ChatGPTTestApp */,
 				4D6758582C2EEFF000AF26D2 /* Products */,
 			);
@@ -57,6 +60,7 @@
 		4D6758592C2EEFF000AF26D2 /* ChatGPTTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				4D6758722C2EFE8400AF26D2 /* Info.plist */,
 				4D67585A2C2EEFF000AF26D2 /* ChatGPTTestAppApp.swift */,
 				4D67585C2C2EEFF000AF26D2 /* ChatView.swift */,
 				4D67585E2C2EEFF400AF26D2 /* Assets.xcassets */,
@@ -291,6 +295,7 @@
 				DEVELOPMENT_TEAM = 56F54J4H3N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChatGPTTestApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -320,6 +325,7 @@
 				DEVELOPMENT_TEAM = 56F54J4H3N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChatGPTTestApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

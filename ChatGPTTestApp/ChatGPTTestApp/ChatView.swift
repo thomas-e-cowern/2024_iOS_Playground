@@ -13,7 +13,7 @@ struct ChatView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text(Bundle.main.infoDictionary?["API_KEY"] as? String ?? "Nothing there")
         }
         .padding()
     }
