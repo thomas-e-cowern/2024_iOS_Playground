@@ -104,3 +104,5 @@ PlistPlayground/PlistPlayground/Config.xcconfig
 # Config file
 TestUDOApp/Shared/Config.xcconfig
 *.Config.xcconfig
+
+ChatGPTTestApp/ChatGPTTestApp/Config.xcconfig
