@@ -25,7 +25,7 @@
 		4D6758682C2EF1D100AF26D2 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		4D67586A2C2EFC3B00AF26D2 /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
 		4D6758722C2EFE8400AF26D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		4D6758732C2F00C900AF26D2 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		4D6758742C2F021200AF26D2 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +43,6 @@
 		4D67584E2C2EEFF000AF26D2 = {
 			isa = PBXGroup;
 			children = (
-				4D6758732C2F00C900AF26D2 /* Config.xcconfig */,
 				4D6758592C2EEFF000AF26D2 /* ChatGPTTestApp */,
 				4D6758582C2EEFF000AF26D2 /* Products */,
 			);
@@ -67,6 +66,7 @@
 				4D6758602C2EEFF400AF26D2 /* Preview Content */,
 				4D6758682C2EF1D100AF26D2 /* ChatViewModel.swift */,
 				4D67586A2C2EFC3B00AF26D2 /* OpenAIService.swift */,
+				4D6758742C2F021200AF26D2 /* Config.xcconfig */,
 			);
 			path = ChatGPTTestApp;
 			sourceTree = "<group>";
