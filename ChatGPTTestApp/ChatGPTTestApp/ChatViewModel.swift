@@ -17,9 +17,10 @@ extension ChatView {
             let newMessage = Message(id: UUID(), role: .user, content: currentInput, createdAt: Date())
             messages.append(newMessage)
             currentInput = ""
-            
+            print(messages)
             Task {
                 let response = await openAIService.sendMessage(messages: messages)
+                print(response ?? "No response")
                 guard let recievedOpenAIMessage = response?.choices.first?.messages else {
                     print("Had no recieved message")
                     return
