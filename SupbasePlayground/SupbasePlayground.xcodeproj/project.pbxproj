@@ -16,6 +16,8 @@
 		4DD733F82C3CA02C0053B481 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 4DD733F72C3CA02C0053B481 /* PostgREST */; };
 		4DD733FA2C3CA02C0053B481 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 4DD733F92C3CA02C0053B481 /* Realtime */; };
 		4DD733FC2C3CA02C0053B481 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 4DD733FB2C3CA02C0053B481 /* Storage */; };
+		4DD733FF2C3CA2440053B481 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4DD733FE2C3CA2440053B481 /* Supabase */; };
+		4DD734012C3CA2AC0053B481 /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD734002C3CA2AB0053B481 /* Supabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,7 @@
 		4DD733E82C3C9C3B0053B481 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4DD733F02C3C9C980053B481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4DD733F12C3C9DEB0053B481 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		4DD734002C3CA2AB0053B481 /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 			files = (
 				4DD733F82C3CA02C0053B481 /* PostgREST in Frameworks */,
 				4DD733F62C3CA02C0053B481 /* Functions in Frameworks */,
+				4DD733FF2C3CA2440053B481 /* Supabase in Frameworks */,
 				4DD733F42C3CA02C0053B481 /* Auth in Frameworks */,
 				4DD733FC2C3CA02C0053B481 /* Storage in Frameworks */,
 				4DD733FA2C3CA02C0053B481 /* Realtime in Frameworks */,
@@ -49,6 +53,7 @@
 			children = (
 				4DD733E02C3C9C390053B481 /* SupbasePlayground */,
 				4DD733DF2C3C9C390053B481 /* Products */,
+				4DD733FD2C3CA2440053B481 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +74,7 @@
 				4DD733E32C3C9C390053B481 /* ContentView.swift */,
 				4DD733E52C3C9C3B0053B481 /* Assets.xcassets */,
 				4DD733E72C3C9C3B0053B481 /* Preview Content */,
+				4DD734002C3CA2AB0053B481 /* Supabase.swift */,
 			);
 			path = SupbasePlayground;
 			sourceTree = "<group>";
@@ -79,6 +85,13 @@
 				4DD733E82C3C9C3B0053B481 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4DD733FD2C3CA2440053B481 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,6 +116,7 @@
 				4DD733F72C3CA02C0053B481 /* PostgREST */,
 				4DD733F92C3CA02C0053B481 /* Realtime */,
 				4DD733FB2C3CA02C0053B481 /* Storage */,
+				4DD733FE2C3CA2440053B481 /* Supabase */,
 			);
 			productName = SupbasePlayground;
 			productReference = 4DD733DE2C3C9C390053B481 /* SupbasePlayground.app */;
@@ -162,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DD733E42C3C9C390053B481 /* ContentView.swift in Sources */,
+				4DD734012C3CA2AC0053B481 /* Supabase.swift in Sources */,
 				4DD733E22C3C9C390053B481 /* SupbasePlaygroundApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +424,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4DD733F22C3CA02C0053B481 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Storage;
+		};
+		4DD733FE2C3CA2440053B481 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DD733F22C3CA02C0053B481 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
