@@ -105,5 +105,6 @@ PlistPlayground/PlistPlayground/Config.xcconfig
 TestUDOApp/Shared/Config.xcconfig
 *.Config.xcconfig
 SupbasePlayground/SupbasePlayground/Config.xcconfig
+SupabaseApp/SupabaseApp/Config.xcconfig
 
 ChatGPTTestApp/ChatGPTTestApp/Config.xcconfig
