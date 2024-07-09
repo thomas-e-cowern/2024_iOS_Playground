@@ -19,6 +19,8 @@
 		4DCCFB972C3DBC3300B37A88 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4DCCFB992C3DBC3500B37A88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DCCFB9C2C3DBC3500B37A88 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4DCCFBA32C3DBD2F00B37A88 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		4DCCFBA42C3DBD5E00B37A88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +53,12 @@
 		4DCCFB942C3DBC3300B37A88 /* SupabaseApp */ = {
 			isa = PBXGroup;
 			children = (
+				4DCCFBA42C3DBD5E00B37A88 /* Info.plist */,
 				4DCCFB952C3DBC3300B37A88 /* SupabaseAppApp.swift */,
 				4DCCFB972C3DBC3300B37A88 /* ContentView.swift */,
 				4DCCFB992C3DBC3500B37A88 /* Assets.xcassets */,
 				4DCCFB9B2C3DBC3500B37A88 /* Preview Content */,
+				4DCCFBA32C3DBD2F00B37A88 /* Config.xcconfig */,
 			);
 			path = SupabaseApp;
 			sourceTree = "<group>";
@@ -147,6 +151,7 @@
 /* Begin XCBuildConfiguration section */
 		4DCCFB9E2C3DBC3500B37A88 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DCCFBA32C3DBD2F00B37A88 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -210,6 +215,7 @@
 		};
 		4DCCFB9F2C3DBC3500B37A88 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DCCFBA32C3DBD2F00B37A88 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -275,6 +281,7 @@
 				DEVELOPMENT_TEAM = 56F54J4H3N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SupabaseApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +311,7 @@
 				DEVELOPMENT_TEAM = 56F54J4H3N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SupabaseApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
