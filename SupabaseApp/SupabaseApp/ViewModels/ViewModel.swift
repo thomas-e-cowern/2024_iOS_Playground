@@ -53,17 +53,33 @@ final class ViewModel: ObservableObject {
     // MARK: - Authentication
     
     func signUp() async throws {
+        let response = try await supabase.auth.signUp(email: email, password: password)
     }
     
     func signIn() async throws {
+        let session = try await supabase.auth.signIn(email: email, password: password)
     }
     
     func isUserAuthenticated() async {
+        do {
+            _ = try await supabase.auth.session.user
+            isAuthenticated = true
+        } catch {
+            isAuthenticated = false
+        }
     }
     
     func signOut() async throws {
+        try await supabase.auth.signOut()
+        isAuthenticated = false
     }
     
     func authorize() async throws {
+        switch authAction {
+        case .signUp:
+            try await signUp()
+        case .signIn:
+            try await signIn()
+        }
     }
 }
