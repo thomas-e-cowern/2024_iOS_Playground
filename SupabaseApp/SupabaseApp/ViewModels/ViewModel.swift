@@ -50,7 +50,19 @@ final class ViewModel: ObservableObject {
     }
     
     func update(_ feature: Feature, with text: String) async {
+        guard let id = feature.id else {
+            print("Can't update feature")
+            return
+        }
         
+        var toUpdate = feature
+        toUpdate.text = text
+        
+        do {
+            try await supabase.from("Features").update(toUpdate).eq("id", value: id).execute()
+        } catch {
+            print("Error updating: \(error.localizedDescription)")
+        }
     }
     
     func deleteFeature(at id: Int) async throws {
