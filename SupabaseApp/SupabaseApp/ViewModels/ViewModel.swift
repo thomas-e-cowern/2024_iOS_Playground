@@ -19,9 +19,6 @@ enum AuthAction: String, CaseIterable {
 
 final class ViewModel: ObservableObject {
     
-    let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? String ?? "API Key dictionary failure"
-    let projectUrl = URL(string: Bundle.main.infoDictionary?["PROJECT_URL"] as? String ?? "Project URL dictionary failure")
-    
     @Published var isAuthenticated = false
     @Published var authAction: AuthAction = .signUp
     
@@ -40,6 +37,11 @@ final class ViewModel: ObservableObject {
     }
     
     func fetchFeatureRequests() async throws {
+        let features: [Feature] = try await supabase.from("Features").select().order("created_at", ascending: false).execute().value
+        
+        DispatchQueue.main.async {
+            self.features = features
+        }
     }
     
     func update(_ feature: Feature, with text: String) async {
