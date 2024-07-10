@@ -9,34 +9,39 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    
+    // SwiftData environment variables
     @Environment(\.modelContext)  var modelContext
-    @Query var destinations: [Destination]
+    
+    // State variables
     @State private var path = [Destination]()
+    @State private var sortOrder = SortDescriptor(\Destination.name)
     
     var body: some View {
         NavigationStack(path: $path) {
-            List {
-                ForEach(destinations) { destination in
-                    NavigationLink(value: destination) {
-                        VStack(alignment: .leading, content: {
-                            Text(destination.name)
-                                .font(.headline)
-                            
-                            Text(destination.date.formatted(date: .long, time: .shortened))
-                        })
+            DestinationListingView(sort: sortOrder)
+                .navigationTitle("iTour")
+                .navigationDestination(for: Destination.self, destination: EditDestinationView.init)
+                .toolbar {
+                    Button("Add Samples", action: addSamples)
+                    Button("Add Destination", action: addDestination)
+                    
+                    Menu("Sort", systemImage: "arrow.up.arrow.down") {
+                        Picker("Sort", selection: $sortOrder) {
+                            Text("Name")
+                                .tag(SortDescriptor(\Destination.name))
+                            Text("Priority")
+                                .tag(SortDescriptor(\Destination.priority))
+                            Text("Date")
+                                .tag(SortDescriptor(\Destination.date))
+                        }
+                        .pickerStyle(.inline)
                     }
                 }
-                .onDelete(perform: deleteDestination)
-            }
-            .navigationTitle("iTour")
-            .navigationDestination(for: Destination.self, destination: EditDestinationView.init)
-            .toolbar {
-                Button("Add Samples", action: addSamples)
-                Button("Add Destination", action: addDestination)
-            }
         }
     }
     
+    // Functionas and methods supporting CRUD operations and sample data
     func addSamples() {
         let miami = Destination(name: "Miami")
         let fortlauderdale = Destination(name: "Fort Lauderdale")
@@ -45,14 +50,6 @@ struct ContentView: View {
         modelContext.insert(miami)
         modelContext.insert(fortlauderdale)
         modelContext.insert(orlando)
-        
-    }
-    
-    func deleteDestination(_ indexsSet: IndexSet) {
-        for index in indexsSet {
-            let destination = destinations[index]
-            modelContext.delete(destination)
-        }
     }
     
     func addDestination() {
