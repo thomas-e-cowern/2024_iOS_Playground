@@ -12,6 +12,7 @@
 		4DCCFBD32C3F00BB00B37A88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DCCFBD22C3F00BB00B37A88 /* Assets.xcassets */; };
 		4DCCFBD62C3F00BB00B37A88 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DCCFBD52C3F00BB00B37A88 /* Preview Assets.xcassets */; };
 		4DCCFBDD2C3F012000B37A88 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCCFBDC2C3F012000B37A88 /* Destination.swift */; };
+		4DCCFBE12C3F217100B37A88 /* EditDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCCFBE02C3F217100B37A88 /* EditDestinationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		4DCCFBD22C3F00BB00B37A88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DCCFBD52C3F00BB00B37A88 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4DCCFBDC2C3F012000B37A88 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		4DCCFBE02C3F217100B37A88 /* EditDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDestinationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		4DCCFBCD2C3F00B800B37A88 /* iTour */ = {
 			isa = PBXGroup;
 			children = (
+				4DCCFBDF2C3F215A00B37A88 /* Views */,
 				4DCCFBDE2C3F01C800B37A88 /* Models */,
 				4DCCFBCE2C3F00B800B37A88 /* iTourApp.swift */,
 				4DCCFBD02C3F00B800B37A88 /* ContentView.swift */,
@@ -76,6 +79,14 @@
 				4DCCFBDC2C3F012000B37A88 /* Destination.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4DCCFBDF2C3F215A00B37A88 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4DCCFBE02C3F217100B37A88 /* EditDestinationView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 				4DCCFBD12C3F00B800B37A88 /* ContentView.swift in Sources */,
 				4DCCFBCF2C3F00B800B37A88 /* iTourApp.swift in Sources */,
 				4DCCFBDD2C3F012000B37A88 /* Destination.swift in Sources */,
+				4DCCFBE12C3F217100B37A88 /* EditDestinationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
