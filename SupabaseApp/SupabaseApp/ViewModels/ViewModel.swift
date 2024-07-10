@@ -19,6 +19,9 @@ enum AuthAction: String, CaseIterable {
 
 final class ViewModel: ObservableObject {
     
+    let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? String ?? "API Key dictionary failure"
+    let projectUrl = URL(string: Bundle.main.infoDictionary?["PROJECT_URL"] as? String ?? "Project URL dictionary failure")
+    
     @Published var isAuthenticated = false
     @Published var authAction: AuthAction = .signUp
     
@@ -29,6 +32,7 @@ final class ViewModel: ObservableObject {
     @Published var password = ""
     
     let supabase = SupabaseClient(supabaseURL: Secrets.projectURL, supabaseKey: Secrets.apiKey)
+    
     
     // MARK: - Database
     
