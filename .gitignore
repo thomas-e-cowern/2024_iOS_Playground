@@ -108,3 +108,6 @@ SupbasePlayground/SupbasePlayground/Config.xcconfig
 SupabaseApp/SupabaseApp/Config.xcconfig
 
 ChatGPTTestApp/ChatGPTTestApp/Config.xcconfig
+
+# SupabaseApp Secrets
+SupabaseApp/SupabaseApp/Helpers/Secrets.swift
