@@ -34,6 +34,11 @@ final class ViewModel: ObservableObject {
     // MARK: - Database
     
     func createFeatureRequest(text: String) async throws {
+        let user = try await supabase.auth.session.user
+        
+        let feature = Feature(createdAt: Date(), text: text, isComplete: false, userID: user.id)
+        
+        try await supabase.from("Features").insert(feature).execute()
     }
     
     func fetchFeatureRequests() async throws {
@@ -45,6 +50,7 @@ final class ViewModel: ObservableObject {
     }
     
     func update(_ feature: Feature, with text: String) async {
+        
     }
     
     func deleteFeature(at id: Int) async throws {
