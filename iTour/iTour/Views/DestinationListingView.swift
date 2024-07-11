@@ -16,9 +16,11 @@ struct DestinationListingView: View {
     // SwiftData query variables
     @Query(sort: [SortDescriptor(\Destination.priority, order: .reverse), SortDescriptor(\Destination.name)]) var destinations: [Destination]
     
-    init(sort:SortDescriptor<Destination>) {
+    init(sort: SortDescriptor<Destination>) {
+        let now = Date.now
+
         _destinations = Query(filter: #Predicate {
-            $0.priority >= 2
+            $0.date > now
         }, sort: [sort])
     }
     
