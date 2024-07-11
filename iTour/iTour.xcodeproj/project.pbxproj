@@ -14,6 +14,7 @@
 		4DCCFBDD2C3F012000B37A88 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCCFBDC2C3F012000B37A88 /* Destination.swift */; };
 		4DCCFBE12C3F217100B37A88 /* EditDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCCFBE02C3F217100B37A88 /* EditDestinationView.swift */; };
 		4DCCFBE32C3F285C00B37A88 /* DestinationListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCCFBE22C3F285C00B37A88 /* DestinationListingView.swift */; };
+		4DCCFBE52C405C2E00B37A88 /* Sight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCCFBE42C405C2E00B37A88 /* Sight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		4DCCFBDC2C3F012000B37A88 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		4DCCFBE02C3F217100B37A88 /* EditDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDestinationView.swift; sourceTree = "<group>"; };
 		4DCCFBE22C3F285C00B37A88 /* DestinationListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationListingView.swift; sourceTree = "<group>"; };
+		4DCCFBE42C405C2E00B37A88 /* Sight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				4DCCFBDC2C3F012000B37A88 /* Destination.swift */,
+				4DCCFBE42C405C2E00B37A88 /* Sight.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				4DCCFBD12C3F00B800B37A88 /* ContentView.swift in Sources */,
 				4DCCFBCF2C3F00B800B37A88 /* iTourApp.swift in Sources */,
 				4DCCFBDD2C3F012000B37A88 /* Destination.swift in Sources */,
+				4DCCFBE52C405C2E00B37A88 /* Sight.swift in Sources */,
 				4DCCFBE12C3F217100B37A88 /* EditDestinationView.swift in Sources */,
 				4DCCFBE32C3F285C00B37A88 /* DestinationListingView.swift in Sources */,
 			);
