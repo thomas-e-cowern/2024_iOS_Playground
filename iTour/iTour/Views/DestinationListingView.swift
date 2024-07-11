@@ -17,7 +17,9 @@ struct DestinationListingView: View {
     @Query(sort: [SortDescriptor(\Destination.priority, order: .reverse), SortDescriptor(\Destination.name)]) var destinations: [Destination]
     
     init(sort:SortDescriptor<Destination>) {
-        _destinations = Query(sort: [sort])
+        _destinations = Query(filter: #Predicate {
+            $0.priority >= 2
+        }, sort: [sort])
     }
     
     var body: some View {
@@ -30,7 +32,17 @@ struct DestinationListingView: View {
                         
                         Text(destination.date.formatted(date: .long, time: .shortened))
                         
-                        Text("\(destination.priority)")
+                        switch destination.priority {
+                        case 1:
+                            Text("Priority: Meh")
+                        case 2:
+                            Text("Priority: Maybe")
+                        case 3:
+                            Text("Priority: Must")
+                        default:
+                            Text("Priority: Maybe")
+                        }
+//                        Text("\(destination.priority)")
                     })
                 }
             }
