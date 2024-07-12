@@ -14,12 +14,14 @@ class Destination {
     var details: String
     var date: Date
     var priority: Int
+    var status: Bool
     @Relationship(deleteRule: .cascade) var sights = [Sight]()
     
-    init(name: String = "", details: String = "", date: Date = .now, priority: Int = 2) {
+    init(name: String = "", details: String = "", date: Date = .now, priority: Int = 2, status: Bool = false) {
         self.name = name
         self.details = details
         self.date = date
         self.priority = priority
+        self.status = status
     }
 }

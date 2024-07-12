@@ -18,7 +18,10 @@ struct EditDestinationView: View {
             TextField("Name", text: $destination.name)
             TextField("Details", text: $destination.details, axis: .vertical)
             DatePicker("Date", selection: $destination.date)
-
+            Toggle(isOn: $destination.status) {
+                Text("Visited")
+            }
+            
             Section("Priority") {
                 Picker("Priority", selection: $destination.priority) {
                     Text("Meh").tag(1)

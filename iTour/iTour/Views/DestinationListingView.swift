@@ -30,24 +30,31 @@ struct DestinationListingView: View {
         List {
             ForEach(destinations) { destination in
                 NavigationLink(value: destination) {
-                    VStack(alignment: .leading, content: {
-                        Text(destination.name)
-                            .font(.headline)
-                        
-                        Text(destination.date.formatted(date: .long, time: .shortened))
-                        
-                        switch destination.priority {
-                        case 1:
-                            Text("Priority: Meh")
-                        case 2:
-                            Text("Priority: Maybe")
-                        case 3:
-                            Text("Priority: Must")
-                        default:
-                            Text("Priority: Maybe")
+                    HStack {
+                        if destination.status == true {
+                            Image(systemName: "checkmark.seal.fill")
+                                .font(.title)
+                                .foregroundStyle(Color.green)
+                                .padding(.trailing, 10)
                         }
-//                        Text("\(destination.priority)")
-                    })
+                        VStack(alignment: .leading, content: {
+                            Text(destination.name)
+                                .font(.headline)
+                            
+                            Text(destination.date.formatted(date: .long, time: .shortened))
+                            
+                            switch destination.priority {
+                            case 1:
+                                Text("Priority: Meh")
+                            case 2:
+                                Text("Priority: Maybe")
+                            case 3:
+                                Text("Priority: Must")
+                            default:
+                                Text("Priority: Maybe")
+                            }
+                        })
+                    }
                 }
             }
             .onDelete(perform: deleteDestination)

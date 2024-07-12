@@ -25,7 +25,7 @@ struct ContentView: View {
                 .navigationDestination(for: Destination.self, destination: EditDestinationView.init)
                 .searchable(text: $searchText)
                 .toolbar {
-                    Button("Add Samples", action: addSamples)
+//                    Button("Add Samples", action: addSamples)
                     Button("Add Destination", action: addDestination)
                     
                     Menu("Sort", systemImage: "arrow.up.arrow.down") {
@@ -44,15 +44,15 @@ struct ContentView: View {
     }
     
     // Functionas and methods supporting CRUD operations and sample data
-    func addSamples() {
-        let miami = Destination(name: "Miami")
-        let fortlauderdale = Destination(name: "Fort Lauderdale")
-        let orlando = Destination(name: "Orlando")
-        
-        modelContext.insert(miami)
-        modelContext.insert(fortlauderdale)
-        modelContext.insert(orlando)
-    }
+//    func addSamples() {
+//        let miami = Destination(name: "Miami")
+//        let fortlauderdale = Destination(name: "Fort Lauderdale")
+//        let orlando = Destination(name: "Orlando")
+//        
+//        modelContext.insert(miami)
+//        modelContext.insert(fortlauderdale)
+//        modelContext.insert(orlando)
+//    }
     
     func addDestination() {
         let destination = Destination()
