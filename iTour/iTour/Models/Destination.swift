@@ -16,6 +16,7 @@ class Destination {
     var priority: Int
     var status: Bool
     @Relationship(deleteRule: .cascade, inverse: \Sight.destination) var sights = [Sight]()
+    @Attribute(.externalStorage) var image: Data?
     
     init(name: String = "", details: String = "", date: Date = .now, priority: Int = 2, status: Bool = false) {
         self.name = name

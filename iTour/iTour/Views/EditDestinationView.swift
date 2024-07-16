@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import PhotosUI
 
 struct EditDestinationView: View {
     
@@ -15,6 +16,7 @@ struct EditDestinationView: View {
     
     @Bindable var destination: Destination
     @State private var newSightName = ""
+    @State private var photosItem: PhotosPickerItem?
     
     var sortedSights: [Sight] {
         destination.sights.sorted {
@@ -51,6 +53,23 @@ struct EditDestinationView: View {
 
                     Button("Add", action: addSight)
                 }
+            }
+            .onChange(of: photosItem) {
+                Task {
+                    destination.image = try? await photosItem?.loadTransferable(type: Data.self)
+                }
+            }
+            
+            Section {
+                if let imageData = destination.image {
+                    if let image = UIImage(data: imageData) {
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFit()
+                    }
+                }
+
+                PhotosPicker("Attach a photo", selection: $photosItem, matching: .images)
             }
         }
         .navigationTitle("Edit Destination")
