@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D5816472C46CF9F00837B67 /* SightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5816462C46CF9F00837B67 /* SightsView.swift */; };
 		4DCCFBCF2C3F00B800B37A88 /* iTourApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCCFBCE2C3F00B800B37A88 /* iTourApp.swift */; };
 		4DCCFBD12C3F00B800B37A88 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCCFBD02C3F00B800B37A88 /* ContentView.swift */; };
 		4DCCFBD32C3F00BB00B37A88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DCCFBD22C3F00BB00B37A88 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D5816462C46CF9F00837B67 /* SightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightsView.swift; sourceTree = "<group>"; };
 		4DCCFBCB2C3F00B800B37A88 /* iTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DCCFBCE2C3F00B800B37A88 /* iTourApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTourApp.swift; sourceTree = "<group>"; };
 		4DCCFBD02C3F00B800B37A88 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				4DCCFBE02C3F217100B37A88 /* EditDestinationView.swift */,
 				4DCCFBE22C3F285C00B37A88 /* DestinationListingView.swift */,
+				4D5816462C46CF9F00837B67 /* SightsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DCCFBD12C3F00B800B37A88 /* ContentView.swift in Sources */,
+				4D5816472C46CF9F00837B67 /* SightsView.swift in Sources */,
 				4DCCFBCF2C3F00B800B37A88 /* iTourApp.swift in Sources */,
 				4DCCFBDD2C3F012000B37A88 /* Destination.swift in Sources */,
 				4DCCFBE52C405C2E00B37A88 /* Sight.swift in Sources */,
