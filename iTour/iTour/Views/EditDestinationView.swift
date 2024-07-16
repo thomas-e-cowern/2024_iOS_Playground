@@ -16,6 +16,12 @@ struct EditDestinationView: View {
     @Bindable var destination: Destination
     @State private var newSightName = ""
     
+    var sortedSights: [Sight] {
+        destination.sights.sorted {
+            $0.name < $1.name
+        }
+    }
+    
     var body: some View {
         Form {
             TextField("Name", text: $destination.name)
@@ -35,7 +41,7 @@ struct EditDestinationView: View {
             }
             
             Section("Sights") {
-                ForEach(destination.sights) { sight in
+                ForEach(sortedSights) { sight in
                     Text(sight.name)
                 }
                 .onDelete(perform: deleteSight)
@@ -64,7 +70,7 @@ struct EditDestinationView: View {
     // Function to delete destination
     func deleteSight(_ indexSet: IndexSet) {
         for index in indexSet {
-            let sight = destination.sights[index]
+            let sight = sortedSights[index]
             modelContext.delete(sight)
         }
     }
