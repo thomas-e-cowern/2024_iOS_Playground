@@ -16,12 +16,12 @@ struct DestinationListingView: View {
     // SwiftData query variables
     @Query(sort: [SortDescriptor(\Destination.priority, order: .reverse), SortDescriptor(\Destination.name)]) var destinations: [Destination]
     
-    init(sort: [SortDescriptor<Destination>], searchString: String) {
+    init(sort: [SortDescriptor<Destination>], searchString: String, minimumDate: Date) {
         _destinations = Query(filter: #Predicate {
             if searchString.isEmpty {
-                return true
+                return $0.date > minimumDate
             } else {
-                return $0.name.localizedStandardContains(searchString)
+                return $0.name.localizedStandardContains(searchString) && $0.date > minimumDate
             }
         }, sort: sort)
     }
@@ -71,5 +71,5 @@ struct DestinationListingView: View {
 }
 
 #Preview {
-    DestinationListingView(sort: [SortDescriptor(\Destination.name)], searchString: "")
+    DestinationListingView(sort: [SortDescriptor(\Destination.name)], searchString: "", minimumDate: .distantPast)
 }

@@ -17,10 +17,12 @@ struct ContentView: View {
     @State private var path = [Destination]()
     @State private var sortOrder = [SortDescriptor(\Destination.name)]
     @State private var searchText = ""
+    @State private var minimumDate = Date.distantPast
+    let currentDate = Date.now
     
     var body: some View {
         NavigationStack(path: $path) {
-            DestinationListingView(sort: sortOrder, searchString: searchText)
+            DestinationListingView(sort: sortOrder, searchString: searchText, minimumDate: minimumDate)
                 .navigationTitle("iTour")
                 .navigationDestination(for: Destination.self, destination: EditDestinationView.init)
                 .searchable(text: $searchText)
@@ -47,6 +49,15 @@ struct ContentView: View {
                                     SortDescriptor(\Destination.date),
                                     SortDescriptor(\Destination.name),
                                 ])
+                        }
+                        .pickerStyle(.inline)
+                        
+                        Picker("Filter", selection: $minimumDate) {
+                            Text("Show all destinations")
+                                .tag(Date.distantPast)
+
+                            Text("Show upcoming destinations")
+                                .tag(currentDate)
                         }
                         .pickerStyle(.inline)
                     }
