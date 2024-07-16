@@ -16,14 +16,14 @@ struct DestinationListingView: View {
     // SwiftData query variables
     @Query(sort: [SortDescriptor(\Destination.priority, order: .reverse), SortDescriptor(\Destination.name)]) var destinations: [Destination]
     
-    init(sort: SortDescriptor<Destination>, searchString: String) {
+    init(sort: [SortDescriptor<Destination>], searchString: String) {
         _destinations = Query(filter: #Predicate {
             if searchString.isEmpty {
                 return true
             } else {
                 return $0.name.localizedStandardContains(searchString)
             }
-        }, sort: [sort])
+        }, sort: sort)
     }
     
     var body: some View {
@@ -71,5 +71,5 @@ struct DestinationListingView: View {
 }
 
 #Preview {
-    DestinationListingView(sort: SortDescriptor(\Destination.name), searchString: "")
+    DestinationListingView(sort: [SortDescriptor(\Destination.name)], searchString: "")
 }
