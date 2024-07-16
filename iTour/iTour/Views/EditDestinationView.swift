@@ -44,13 +44,19 @@ struct EditDestinationView: View {
             
             Section("Sights") {
                 ForEach(sortedSights) { sight in
-                    Text(sight.name)
+                    
+                    Button {
+                        openMaps(sight.name)
+                    } label: {
+                        Text(sight.name)
+                    }
+                    
                 }
                 .onDelete(perform: deleteSight)
-
+                
                 HStack {
                     TextField("Add a new sight in \(destination.name)", text: $newSightName)
-
+                    
                     Button("Add", action: addSight)
                 }
             }
@@ -68,7 +74,7 @@ struct EditDestinationView: View {
                             .scaledToFit()
                     }
                 }
-
+                
                 PhotosPicker("Attach a photo", selection: $photosItem, matching: .images)
             }
         }
@@ -78,7 +84,7 @@ struct EditDestinationView: View {
     
     func addSight() {
         guard newSightName.isEmpty == false else { return }
-
+        
         withAnimation {
             let sight = Sight(name: newSightName)
             destination.sights.append(sight)
@@ -93,17 +99,26 @@ struct EditDestinationView: View {
             modelContext.delete(sight)
         }
     }
+    
+    // Function to open sight URL
+    func openMaps(_ sight: String) {
+        let targetURL = NSURL(string: "http://maps.apple.com/?q=\(sight)")!
+        
+        if let url = URL(string: "\(targetURL)"), !url.absoluteString.isEmpty {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
 }
 
 #Preview {
     do {
-            let config = ModelConfiguration(isStoredInMemoryOnly: true)
-            let container = try ModelContainer(for: Destination.self, configurations: config)
-
-            let example = Destination(name: "Example Destination", details: "Example details go here and will automatically expand vertically as they are edited.")
-            return EditDestinationView(destination: example)
-                .modelContainer(container)
-        } catch {
-            fatalError("Failed to create model container.")
-        }
+        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let container = try ModelContainer(for: Destination.self, configurations: config)
+        
+        let example = Destination(name: "Example Destination", details: "Example details go here and will automatically expand vertically as they are edited.")
+        return EditDestinationView(destination: example)
+            .modelContainer(container)
+    } catch {
+        fatalError("Failed to create model container.")
+    }
 }
