@@ -10,5 +10,12 @@ import SwiftUI
 import Supabase
 
 struct SupabaseEnvironmentValues: EnvironmentKey {
-    static var defaultValue: SupabaseClient = SupabaseClient(supabaseURL: <#T##URL#>, supabaseKey: <#T##String#>)
+    static var defaultValue: SupabaseClient = .development
+}
+
+extension EnvironmentValues {
+    var supabaseClient: SupabaseClient {
+        get { self[SupabaseEnvironmentValues.self] }
+        set { self[SupabaseEnvironmentValues.self] = newValue }
+    }
 }
