@@ -24,7 +24,7 @@ struct ContentView: View {
         List(budgets) { budget in
             HStack {
                 Text(budget.name)
-                Text("\(budget.limit)")
+                Text(String(format: "%.2f", budget.limit))
             }
 
         }
