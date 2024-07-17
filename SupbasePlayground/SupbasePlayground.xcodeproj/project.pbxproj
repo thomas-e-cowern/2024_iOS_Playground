@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DC4C5302C47EA9B00D83E3A /* SupabaseEnvironmentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4C52F2C47EA9B00D83E3A /* SupabaseEnvironmentValues.swift */; };
 		4DD733E22C3C9C390053B481 /* SupbasePlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD733E12C3C9C390053B481 /* SupbasePlaygroundApp.swift */; };
 		4DD733E42C3C9C390053B481 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD733E32C3C9C390053B481 /* ContentView.swift */; };
 		4DD733E62C3C9C3B0053B481 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DD733E52C3C9C3B0053B481 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4DC4C52F2C47EA9B00D83E3A /* SupabaseEnvironmentValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseEnvironmentValues.swift; sourceTree = "<group>"; };
 		4DD733DE2C3C9C390053B481 /* SupbasePlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SupbasePlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DD733E12C3C9C390053B481 /* SupbasePlaygroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupbasePlaygroundApp.swift; sourceTree = "<group>"; };
 		4DD733E32C3C9C390053B481 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +50,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DC4C52E2C47EA8400D83E3A /* EnvionmentValues */ = {
+			isa = PBXGroup;
+			children = (
+				4DC4C52F2C47EA9B00D83E3A /* SupabaseEnvironmentValues.swift */,
+			);
+			path = EnvionmentValues;
+			sourceTree = "<group>";
+		};
 		4DD733D52C3C9C390053B481 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +78,7 @@
 		4DD733E02C3C9C390053B481 /* SupbasePlayground */ = {
 			isa = PBXGroup;
 			children = (
+				4DC4C52E2C47EA8400D83E3A /* EnvionmentValues */,
 				4DD733F12C3C9DEB0053B481 /* Config.xcconfig */,
 				4DD733F02C3C9C980053B481 /* Info.plist */,
 				4DD733E12C3C9C390053B481 /* SupbasePlaygroundApp.swift */,
@@ -178,6 +189,7 @@
 				4DD733E42C3C9C390053B481 /* ContentView.swift in Sources */,
 				4DD734012C3CA2AC0053B481 /* Supabase.swift in Sources */,
 				4DD733E22C3C9C390053B481 /* SupbasePlaygroundApp.swift in Sources */,
+				4DC4C5302C47EA9B00D83E3A /* SupabaseEnvironmentValues.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
