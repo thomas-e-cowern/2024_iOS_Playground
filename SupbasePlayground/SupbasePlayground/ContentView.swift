@@ -16,9 +16,9 @@ struct Budgets: Decodable, Identifiable {
 
 struct ContentView: View {
     
-    @State var budgets: [Budgets] = []
+    @Environment(\.supabaseClient) private var supabaseClient
     
-    let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? String ?? "Nothing there"
+    @State var budgets: [Budgets] = []
     
     var body: some View {
         List(budgets) { budget in
@@ -26,12 +26,9 @@ struct ContentView: View {
                 Text(budget.name)
                 Text("\(budget.limit)")
             }
+
         }
         .padding()
-        .onAppear {
-            
-            connectToSupabase()
-        }
         .task {
             do {
                 budgets = try await supabase.from("budgets").select().execute().value
@@ -40,15 +37,9 @@ struct ContentView: View {
             }
         }
     }
-    
-    func connectToSupabase () {
-        let supabase = SupabaseClient(
-          supabaseURL: URL(string: "https://xwtkxisitnsrfuqvpbld.supabase.co")!,
-          supabaseKey: apiKey
-        )
-    }
 }
 
 #Preview {
     ContentView()
+        .environment(\.supabaseClient, .development)
 }
