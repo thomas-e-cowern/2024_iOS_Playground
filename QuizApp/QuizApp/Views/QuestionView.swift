@@ -18,11 +18,31 @@ struct QuestionView: View {
                 .font(.headline)
             
             ForEach(question.choices, id: \.self) { choice in
-                Text(choice)
+                HStack {
+                    Button {
+                        print(choice)
+                        question.selection = choice
+                    } label: {
+                        if question.selection == choice {
+                            Circle()
+                                .shadow(radius: 3)
+                                .frame(width: 24, height: 24)
+                                .foregroundStyle(Color("AppColor"))
+                        } else {
+                            Circle()
+                                .stroke()
+                                .shadow(radius: 3)
+                                .frame(width: 24, height: 24)
+                        }
+                    }
+                    
+                    Text(choice)
+                }
+                .foregroundStyle(Color(uiColor: .secondaryLabel))
             }
         }
         .padding(.horizontal)
-        .frame(height: 550)
+        .frame(width: 300, height: 550, alignment: .leading)
         .background(Color(uiColor: .systemGray6))
         .clipShape(RoundedRectangle(cornerRadius: 20))
         .shadow(color: Color(uiColor: .label).opacity(0.2), radius: 15)

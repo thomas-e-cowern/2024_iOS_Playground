@@ -13,4 +13,5 @@ struct Question: Identifiable {
     let title: String
     let answer: String
     let choices: [String]
+    var selection: String?
 }
