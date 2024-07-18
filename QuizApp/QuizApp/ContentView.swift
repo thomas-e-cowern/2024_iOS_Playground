@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var manager = QuizManager()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            ForEach(manager.mockQuestions, id: \.id) { question in
+                QuestionView(question: question)
+            }
         }
-        .padding()
+        .tabViewStyle(.page)
     }
 }
 

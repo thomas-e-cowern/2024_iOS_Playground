@@ -8,7 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct Question {
+struct Question: Identifiable {
+    var id = UUID()
     let title: String
     let answer: String
     let choices: [String]
