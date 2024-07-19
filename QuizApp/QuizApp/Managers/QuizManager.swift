@@ -19,4 +19,14 @@ class QuizManager: ObservableObject {
     func canSubmitQuiz() -> Bool {
         return mockQuestions.filter({ $0.selection == nil }).isEmpty
     }
+    
+    func gradeQuiz() -> String {
+        var correct: CGFloat = 0
+        for question in mockQuestions {
+            if question.answer == question.selection {
+                correct += 1
+            }
+        }
+        return "\((correct/CGFloat(mockQuestions.count)) * 100) %"
+    }
 }

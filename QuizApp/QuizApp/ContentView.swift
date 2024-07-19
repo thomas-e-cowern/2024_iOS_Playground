@@ -10,17 +10,25 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var manager = QuizManager()
+    @State private var submitted: Bool = false
     
     var body: some View {
         TabView {
             ForEach(manager.mockQuestions.indices, id: \.self) { index in
                 VStack {
+                    if submitted {
+                        Text("Score: \(manager.gradeQuiz())")
+                            .font(.title)
+                        .padding(.bottom, 12)
+                    }
+                    
                     QuestionView(question: $manager.mockQuestions[index])
                 
                     if let lastQuestion = manager.mockQuestions.last, lastQuestion.id == $manager.mockQuestions[index].id {
                         
                         Button(action: {
-                            print("Submit")
+                            print(manager.gradeQuiz())
+                            submitted = true
                         }, label: {
                             Text("Submit")
                                 .padding(10)
