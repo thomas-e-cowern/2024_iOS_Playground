@@ -31,6 +31,8 @@ struct ContentView: View {
                                 
                         })
                         .padding(.top, 10)
+                        .buttonStyle(.plain)
+                        .disabled(!manager.canSubmitQuiz())
                     }
                 }
             }
