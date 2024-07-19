@@ -13,11 +13,11 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            ForEach(manager.mockQuestions, id: \.id) { question in
+            ForEach(manager.mockQuestions.indices, id: \.self) { index in
                 VStack {
-                    QuestionView(question: question)
+                    QuestionView(question: $manager.mockQuestions[index])
                 
-                    if let lastQuestion = manager.mockQuestions.last, lastQuestion.id == question.id {
+                    if let lastQuestion = manager.mockQuestions.last, lastQuestion.id == $manager.mockQuestions[index].id {
                         
                         Button(action: {
                             print("Submit")

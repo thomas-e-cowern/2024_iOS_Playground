@@ -9,7 +9,7 @@ import SwiftUI
 
 struct QuestionView: View {
     
-    @State var question = Question(title: "When was the iPhone first released?", answer: "A", choices: ["A", "B", "C", "D"])
+    @Binding var question: Question
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -50,5 +50,5 @@ struct QuestionView: View {
 }
 
 #Preview {
-    QuestionView()
+    QuestionView(question: .constant(Question(title: "Test title", answer: "A", choices: ["A", "B", "C"])))
 }
