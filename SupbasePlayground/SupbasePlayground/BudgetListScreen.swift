@@ -40,7 +40,11 @@ struct BudgetListScreen: View {
                     })
                 }
             }
-            .sheet(isPresented: $isPresented, content: {
+            .sheet(isPresented: $isPresented, onDismiss: {
+                 Task {
+                     await fetchBudgets()
+                }
+            }, content: {
                 NavigationStack {
                     AddBudgetScreen()
                 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Budget: Decodable, Identifiable {
+struct Budget: Codable, Identifiable {
     var id: Int?
     var name: String
     var limit: Float
