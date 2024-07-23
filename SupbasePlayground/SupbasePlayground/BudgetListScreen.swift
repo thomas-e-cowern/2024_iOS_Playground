@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  BudgetListScreen.swift
 //  SupbasePlayground
 //
 //  Created by Thomas Cowern on 7/8/24.
@@ -14,25 +14,23 @@ struct Budgets: Decodable, Identifiable {
     var limit: Float
 }
 
-struct ContentView: View {
+struct BudgetListScreen: View {
     
     @Environment(\.supabaseClient) private var supabaseClient
     
     @State private var budgets: [Budget] = []
     
     var body: some View {
-        List(budgets) { budget in
-            BudgetCellView(budget: budget)
-
-        }
-        .padding()
-        .task {
-            await fetchBudgets()
-//            do {
-//                budgets = try await supabase.from("budgets").select().execute().value
-//            } catch {
-//                dump(error)
-//            }
+        VStack {
+            List(budgets) { budget in
+                BudgetCellView(budget: budget)
+                
+            }
+            .padding()
+            .task {
+                await fetchBudgets()
+            }
+            .navigationTitle("Budgets")
         }
     }
     
@@ -40,15 +38,17 @@ struct ContentView: View {
         do {
             budgets = try await supabaseClient.from("budgets").select().execute().value
         } catch {
-            print("Error getting budget :|\(error.localizedDescription)")
+            print("Error getting budget : \(error.localizedDescription)")
         }
         
     }
 }
 
 #Preview {
-    ContentView()
-        .environment(\.supabaseClient, .development)
+    NavigationStack {
+        BudgetListScreen()
+            .environment(\.supabaseClient, .development)
+    }
 }
 
 struct BudgetCellView: View {
