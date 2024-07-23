@@ -37,6 +37,15 @@ struct ContentView: View {
             }
         }
     }
+    
+    private func fetchBudgets() async {
+        do {
+            try await supabaseClient.from("budgets").select().execute().value
+        } catch {
+            print("Error getting budget :|\(error.localizedDescription)")
+        }
+        
+    }
 }
 
 #Preview {
