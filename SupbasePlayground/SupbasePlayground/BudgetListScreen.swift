@@ -19,18 +19,30 @@ struct BudgetListScreen: View {
     @Environment(\.supabaseClient) private var supabaseClient
     
     @State private var budgets: [Budget] = []
+    @State private var isPresented: Bool = false
     
     var body: some View {
         VStack {
             List(budgets) { budget in
                 BudgetCellView(budget: budget)
-                
             }
-            .padding()
             .task {
                 await fetchBudgets()
             }
             .navigationTitle("Budgets")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(action: {
+                        // Add budget
+                        isPresented = true
+                    }, label: {
+                        Text("Add Budget")
+                    })
+                }
+            }
+            .sheet(isPresented: $isPresented, content: {
+                AddBudgetScreen()
+            })
         }
     }
     
