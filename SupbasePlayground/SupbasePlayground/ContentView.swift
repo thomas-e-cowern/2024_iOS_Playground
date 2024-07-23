@@ -22,10 +22,7 @@ struct ContentView: View {
     
     var body: some View {
         List(budgets) { budget in
-            HStack {
-                Text(budget.name)
-                Text(String(format: "%.2f", budget.limit))
-            }
+            BudgetCellView(budget: budget)
 
         }
         .padding()
@@ -52,4 +49,17 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .environment(\.supabaseClient, .development)
+}
+
+struct BudgetCellView: View {
+    
+    let budget: Budget
+    
+    var body: some View {
+        HStack {
+            Text(budget.name)
+            Spacer()
+            Text(budget.limit, format: .currency(code: Locale.current.currency!.identifier))
+        }
+    }
 }
