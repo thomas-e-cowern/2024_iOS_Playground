@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D363EA92C500A8C007D81EF /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D363EA82C500A8C007D81EF /* Budget.swift */; };
+		4D363EAC2C501071007D81EF /* AddBudgetScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D363EAB2C501071007D81EF /* AddBudgetScreen.swift */; };
 		4DC4C5302C47EA9B00D83E3A /* SupabaseEnvironmentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4C52F2C47EA9B00D83E3A /* SupabaseEnvironmentValues.swift */; };
 		4DC4C5332C47EB3400D83E3A /* SupabaseClient+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4C5322C47EB3400D83E3A /* SupabaseClient+Extensions.swift */; };
 		4DD733E22C3C9C390053B481 /* SupbasePlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD733E12C3C9C390053B481 /* SupbasePlaygroundApp.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		4D363EA82C500A8C007D81EF /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
+		4D363EAB2C501071007D81EF /* AddBudgetScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudgetScreen.swift; sourceTree = "<group>"; };
 		4DC4C52F2C47EA9B00D83E3A /* SupabaseEnvironmentValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseEnvironmentValues.swift; sourceTree = "<group>"; };
 		4DC4C5322C47EB3400D83E3A /* SupabaseClient+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SupabaseClient+Extensions.swift"; sourceTree = "<group>"; };
 		4DD733DE2C3C9C390053B481 /* SupbasePlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SupbasePlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				4DD733E32C3C9C390053B481 /* BudgetListScreen.swift */,
+				4D363EAB2C501071007D81EF /* AddBudgetScreen.swift */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				4DC4C5332C47EB3400D83E3A /* SupabaseClient+Extensions.swift in Sources */,
 				4D363EA92C500A8C007D81EF /* Budget.swift in Sources */,
 				4DD734012C3CA2AC0053B481 /* Supabase.swift in Sources */,
+				4D363EAC2C501071007D81EF /* AddBudgetScreen.swift in Sources */,
 				4DD733E22C3C9C390053B481 /* SupbasePlaygroundApp.swift in Sources */,
 				4DC4C5302C47EA9B00D83E3A /* SupabaseEnvironmentValues.swift in Sources */,
 			);

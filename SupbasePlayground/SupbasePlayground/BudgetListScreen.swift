@@ -41,7 +41,9 @@ struct BudgetListScreen: View {
                 }
             }
             .sheet(isPresented: $isPresented, content: {
-                AddBudgetScreen()
+                NavigationStack {
+                    AddBudgetScreen()
+                }
             })
         }
     }
