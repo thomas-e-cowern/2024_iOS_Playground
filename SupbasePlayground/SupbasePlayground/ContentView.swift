@@ -18,7 +18,7 @@ struct ContentView: View {
     
     @Environment(\.supabaseClient) private var supabaseClient
     
-    @State var budgets: [Budgets] = []
+    @State private var budgets: [Budget] = []
     
     var body: some View {
         List(budgets) { budget in
@@ -30,17 +30,18 @@ struct ContentView: View {
         }
         .padding()
         .task {
-            do {
-                budgets = try await supabase.from("budgets").select().execute().value
-            } catch {
-                dump(error)
-            }
+            await fetchBudgets()
+//            do {
+//                budgets = try await supabase.from("budgets").select().execute().value
+//            } catch {
+//                dump(error)
+//            }
         }
     }
     
     private func fetchBudgets() async {
         do {
-            try await supabaseClient.from("budgets").select().execute().value
+            budgets = try await supabaseClient.from("budgets").select().execute().value
         } catch {
             print("Error getting budget :|\(error.localizedDescription)")
         }

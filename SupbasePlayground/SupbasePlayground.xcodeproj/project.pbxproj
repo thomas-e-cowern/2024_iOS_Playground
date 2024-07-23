@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D363EA92C500A8C007D81EF /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D363EA82C500A8C007D81EF /* Budget.swift */; };
 		4DC4C5302C47EA9B00D83E3A /* SupabaseEnvironmentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4C52F2C47EA9B00D83E3A /* SupabaseEnvironmentValues.swift */; };
 		4DC4C5332C47EB3400D83E3A /* SupabaseClient+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4C5322C47EB3400D83E3A /* SupabaseClient+Extensions.swift */; };
 		4DD733E22C3C9C390053B481 /* SupbasePlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD733E12C3C9C390053B481 /* SupbasePlaygroundApp.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D363EA82C500A8C007D81EF /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 		4DC4C52F2C47EA9B00D83E3A /* SupabaseEnvironmentValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseEnvironmentValues.swift; sourceTree = "<group>"; };
 		4DC4C5322C47EB3400D83E3A /* SupabaseClient+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SupabaseClient+Extensions.swift"; sourceTree = "<group>"; };
 		4DD733DE2C3C9C390053B481 /* SupbasePlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SupbasePlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D363EA72C500A74007D81EF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4D363EA82C500A8C007D81EF /* Budget.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4DC4C52E2C47EA8400D83E3A /* EnvionmentValues */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +98,7 @@
 		4DD733E02C3C9C390053B481 /* SupbasePlayground */ = {
 			isa = PBXGroup;
 			children = (
+				4D363EA72C500A74007D81EF /* Models */,
 				4DC4C5312C47EB2300D83E3A /* Extensions */,
 				4DC4C52E2C47EA8400D83E3A /* EnvionmentValues */,
 				4DD733F12C3C9DEB0053B481 /* Config.xcconfig */,
@@ -199,6 +210,7 @@
 			files = (
 				4DD733E42C3C9C390053B481 /* ContentView.swift in Sources */,
 				4DC4C5332C47EB3400D83E3A /* SupabaseClient+Extensions.swift in Sources */,
+				4D363EA92C500A8C007D81EF /* Budget.swift in Sources */,
 				4DD734012C3CA2AC0053B481 /* Supabase.swift in Sources */,
 				4DD733E22C3C9C390053B481 /* SupbasePlaygroundApp.swift in Sources */,
 				4DC4C5302C47EA9B00D83E3A /* SupabaseEnvironmentValues.swift in Sources */,
