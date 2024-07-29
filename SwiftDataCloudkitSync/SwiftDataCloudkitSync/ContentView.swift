@@ -10,7 +10,7 @@ import SwiftData
 
 struct ContentView: View {
     
-    @Environment(\.modelContext) private var conttext
+    @Environment(\.modelContext) private var context
     @Query private var vegatables: [Vegetable]
     @State private var name: String = ""
     
@@ -21,14 +21,14 @@ struct ContentView: View {
                     .textFieldStyle(.roundedBorder)
                     .onSubmit {
                         let vegetable = Vegetable(name: name)
-                        conttext.insert(vegetable)
+                        context.insert(vegetable)
                         name = ""
                     }
                 Spacer()
                 List {
                     ForEach(vegatables, id: \.self) { vegetable in
                         NavigationLink {
-                            NoteListScreen()
+                            NoteListScreen(vegetable: vegetable)
                         } label: {
                             Text(vegetable.name)
                         }
@@ -41,7 +41,7 @@ struct ContentView: View {
     }
 }
 
-#Preview {
+#Preview { @MainActor in
     ContentView()
-        .modelContainer(for: [Vegetable.self])
+        .modelContainer(previewContainer)
 }
