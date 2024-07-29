@@ -5,6 +5,10 @@
 //  Created by Thomas Cowern on 7/29/24.
 //
 
+
+
+// This provides dummy data for previews
+
 import Foundation
 import SwiftData
 
@@ -13,6 +17,11 @@ let previewContainer: ModelContainer = {
     
     do {
         let container = try ModelContainer(for: Vegetable.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
+        
+        SampleData.vegatables.forEach { vegetable in
+            container.mainContext.insert(vegetable)
+        }
+        
         return container
     } catch {
         fatalError("Failed to create container")
