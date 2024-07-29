@@ -10,6 +10,8 @@ import SwiftData
 
 struct ContentView: View {
     
+    @Environment(\.modelContext) private var conttext
+    @Query private var vegatables: [Vegetable]
     @State private var name: String = ""
     
     var body: some View {
@@ -18,9 +20,16 @@ struct ContentView: View {
                TextField("Name", text: $name)
                     .textFieldStyle(.roundedBorder)
                     .onSubmit {
-                        <#code#>
+                        let vegetable = Vegetable(name: name)
+                        conttext.insert(vegetable)
+                        name = ""
                     }
                 Spacer()
+                List {
+                    ForEach(vegatables, id: \.self) { vegetable in
+                        Text(vegetable.name)
+                    }
+                }
             }
             .padding()
             .navigationTitle("Garden Greens")
