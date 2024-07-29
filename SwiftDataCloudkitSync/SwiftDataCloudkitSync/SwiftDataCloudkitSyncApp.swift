@@ -13,5 +13,6 @@ struct SwiftDataCloudkitSyncApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: [Vegetable.self])
     }
 }

@@ -12,6 +12,7 @@
 		4D193E452C5145C600A45B94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D193E442C5145C600A45B94 /* Assets.xcassets */; };
 		4D193E482C5145C600A45B94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D193E472C5145C600A45B94 /* Preview Assets.xcassets */; };
 		4DAA6CDE2C57F9AA009F465B /* Vegetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA6CDD2C57F9AA009F465B /* Vegetable.swift */; };
+		4DAA6CE02C57FF5D009F465B /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA6CDF2C57FF5D009F465B /* Note.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		4D193E442C5145C600A45B94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D193E472C5145C600A45B94 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4DAA6CDD2C57F9AA009F465B /* Vegetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vegetable.swift; sourceTree = "<group>"; };
+		4DAA6CDF2C57FF5D009F465B /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				4DAA6CDD2C57F9AA009F465B /* Vegetable.swift */,
+				4DAA6CDF2C57FF5D009F465B /* Note.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				4D193E432C5145C400A45B94 /* ContentView.swift in Sources */,
 				4DAA6CDE2C57F9AA009F465B /* Vegetable.swift in Sources */,
 				4D193E412C5145C400A45B94 /* SwiftDataCloudkitSyncApp.swift in Sources */,
+				4DAA6CE02C57FF5D009F465B /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
