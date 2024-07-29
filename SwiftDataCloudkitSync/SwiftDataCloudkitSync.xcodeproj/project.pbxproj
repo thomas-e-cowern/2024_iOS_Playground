@@ -11,6 +11,7 @@
 		4D193E432C5145C400A45B94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D193E422C5145C400A45B94 /* ContentView.swift */; };
 		4D193E452C5145C600A45B94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D193E442C5145C600A45B94 /* Assets.xcassets */; };
 		4D193E482C5145C600A45B94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D193E472C5145C600A45B94 /* Preview Assets.xcassets */; };
+		4DAA6CDE2C57F9AA009F465B /* Vegetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA6CDD2C57F9AA009F465B /* Vegetable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		4D193E422C5145C400A45B94 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4D193E442C5145C600A45B94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D193E472C5145C600A45B94 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4DAA6CDD2C57F9AA009F465B /* Vegetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vegetable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		4D193E3F2C5145C400A45B94 /* SwiftDataCloudkitSync */ = {
 			isa = PBXGroup;
 			children = (
+				4DAA6CDC2C57F999009F465B /* Models */,
 				4D193E402C5145C400A45B94 /* SwiftDataCloudkitSyncApp.swift */,
 				4D193E422C5145C400A45B94 /* ContentView.swift */,
 				4D193E442C5145C600A45B94 /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				4D193E472C5145C600A45B94 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4DAA6CDC2C57F999009F465B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4DAA6CDD2C57F9AA009F465B /* Vegetable.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D193E432C5145C400A45B94 /* ContentView.swift in Sources */,
+				4DAA6CDE2C57F9AA009F465B /* Vegetable.swift in Sources */,
 				4D193E412C5145C400A45B94 /* SwiftDataCloudkitSyncApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
