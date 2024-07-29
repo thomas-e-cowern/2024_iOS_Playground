@@ -27,7 +27,11 @@ struct ContentView: View {
                 Spacer()
                 List {
                     ForEach(vegatables, id: \.self) { vegetable in
-                        Text(vegetable.name)
+                        NavigationLink {
+                            NoteListScreen()
+                        } label: {
+                            Text(vegetable.name)
+                        }
                     }
                 }
             }
