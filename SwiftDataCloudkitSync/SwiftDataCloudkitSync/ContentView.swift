@@ -6,19 +6,29 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
+    
+    @State private var name: String = ""
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            VStack {
+               TextField("Name", text: $name)
+                    .textFieldStyle(.roundedBorder)
+                    .onSubmit {
+                        <#code#>
+                    }
+                Spacer()
+            }
+            .padding()
+            .navigationTitle("Garden Greens")
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
+        .modelContainer(for: [Vegetable.self])
 }
