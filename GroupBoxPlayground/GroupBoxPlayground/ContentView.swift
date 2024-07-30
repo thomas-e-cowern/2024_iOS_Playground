@@ -10,10 +10,11 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            GroupBox(label: Text("Hellow World"), content: {
+                Text("This is the content and it grow")
+            })
+            .groupBoxStyle(CustomGroupBoxStyle())
+            .frame(width: 300)
         }
         .padding()
     }
