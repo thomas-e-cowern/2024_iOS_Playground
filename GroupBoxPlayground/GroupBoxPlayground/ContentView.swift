@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var isSunny: Bool = false
+    
     var body: some View {
         VStack {
             GroupBox(label: Text("Hellow World"), content: {
