@@ -13,6 +13,7 @@
 		4DE7DBAF2C592DE800D1AEC1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DE7DBAE2C592DE800D1AEC1 /* Preview Assets.xcassets */; };
 		4DE7DBB62C592EA200D1AEC1 /* CustomGroupBoxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7DBB52C592EA200D1AEC1 /* CustomGroupBoxStyle.swift */; };
 		4DE7DBB82C5936F500D1AEC1 /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7DBB72C5936F500D1AEC1 /* GroupView.swift */; };
+		4DE7DBBA2C59393C00D1AEC1 /* WeatherCustomStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7DBB92C59393C00D1AEC1 /* WeatherCustomStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		4DE7DBAE2C592DE800D1AEC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4DE7DBB52C592EA200D1AEC1 /* CustomGroupBoxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGroupBoxStyle.swift; sourceTree = "<group>"; };
 		4DE7DBB72C5936F500D1AEC1 /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
+		4DE7DBB92C59393C00D1AEC1 /* WeatherCustomStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCustomStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,10 +59,11 @@
 			children = (
 				4DE7DBA72C592DE600D1AEC1 /* GroupBoxPlaygroundApp.swift */,
 				4DE7DBA92C592DE600D1AEC1 /* ContentView.swift */,
-				4DE7DBAB2C592DE800D1AEC1 /* Assets.xcassets */,
-				4DE7DBAD2C592DE800D1AEC1 /* Preview Content */,
 				4DE7DBB52C592EA200D1AEC1 /* CustomGroupBoxStyle.swift */,
 				4DE7DBB72C5936F500D1AEC1 /* GroupView.swift */,
+				4DE7DBAB2C592DE800D1AEC1 /* Assets.xcassets */,
+				4DE7DBAD2C592DE800D1AEC1 /* Preview Content */,
+				4DE7DBB92C59393C00D1AEC1 /* WeatherCustomStyle.swift */,
 			);
 			path = GroupBoxPlayground;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DE7DBAA2C592DE600D1AEC1 /* ContentView.swift in Sources */,
+				4DE7DBBA2C59393C00D1AEC1 /* WeatherCustomStyle.swift in Sources */,
 				4DE7DBB62C592EA200D1AEC1 /* CustomGroupBoxStyle.swift in Sources */,
 				4DE7DBB82C5936F500D1AEC1 /* GroupView.swift in Sources */,
 				4DE7DBA82C592DE600D1AEC1 /* GroupBoxPlaygroundApp.swift in Sources */,

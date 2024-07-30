@@ -16,7 +16,6 @@ struct ContentView: View {
             GroupBox(label: Text("Hellow World"), content: {
                 Text("This is the content and it grow")
             })
-            .groupBoxStyle(CustomGroupBoxStyle())
             .frame(width: 300)
         }
         .padding()
