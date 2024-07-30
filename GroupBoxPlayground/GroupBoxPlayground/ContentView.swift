@@ -13,10 +13,11 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            GroupBox(label: Text("Hellow World"), content: {
-                Text("This is the content and it grow")
-            })
-            .frame(width: 300)
+            GroupView(isSunny: false)
+            Spacer()
+                .frame(height: 50)
+            GroupView(isSunny: true)
+            
         }
         .padding()
     }

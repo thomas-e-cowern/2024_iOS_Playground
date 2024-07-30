@@ -20,7 +20,7 @@ struct GroupView: View {
             Image(systemName: isSunny ? "cloud.sun.fill" : "cloud.drizzle.fill")
             Text("\(temperature)° F")
         }, content: {
-            HStack {
+            HStack(alignment: .center, spacing: 50) {
                 VStack {
                     Image(systemName: "wind")
                     Text("\(windSpeed) mph")
@@ -34,6 +34,7 @@ struct GroupView: View {
                     Text("\(rainTotoal) in")
                 }
             }
+            .frame(width: 290)
         })
         .groupBoxStyle(WeatherCustomStyle(backgroundImage: Image(isSunny ? "sunny-sky" : "rain-in-mountains")))
     }

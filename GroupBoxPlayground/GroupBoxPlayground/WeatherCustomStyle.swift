@@ -12,6 +12,7 @@ struct WeatherCustomStyle: GroupBoxStyle {
     
     var backgroundImage : Image
     
+    @State private var moveUp = false
     
     func makeBody(configuration: Configuration) -> some View {
         VStack(alignment: .leading) {
@@ -19,10 +20,15 @@ struct WeatherCustomStyle: GroupBoxStyle {
                 .font(.system(size: 80))
                 .padding(.bottom, 4)
                 .foregroundStyle(.white)
+                .offset(y: moveUp ? -5 : 5)
+                .animation(.easeInOut(duration: 1), value: moveUp)
+                .onAppear {
+                    moveUp.toggle()
+                }
             configuration.content
                 .padding()
                 .font(.system(size: 20))
-                .background(.white.opacity(0.3))
+                .background(.blue.opacity(0.4))
                 .clipShape(RoundedRectangle(cornerRadius: 8))
                 .frame(width: 300)
                 .foregroundStyle(.white)
@@ -31,7 +37,7 @@ struct WeatherCustomStyle: GroupBoxStyle {
         .padding()
         .background(
             backgroundImage.resizable()
-                .scaledToFit()
+                .scaledToFill()
         )
         .overlay(Color.black.opacity(0.1))
         .clipShape(RoundedRectangle(cornerRadius: 10))
