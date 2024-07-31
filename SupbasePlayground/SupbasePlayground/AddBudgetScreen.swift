@@ -16,6 +16,8 @@ struct AddBudgetScreen: View {
     @State private var name: String = ""
     @State private var limit: Float?
     
+    @Binding var budgets: [Budget]
+    
     var body: some View {
         Form {
             TextField("Name", text: $name)
@@ -50,7 +52,9 @@ struct AddBudgetScreen: View {
         let budget = Budget(name: name, limit: limit)
         
         do {
-            let _: Budget = try await supabase.from("budgets").insert(budget).select().single().execute().value
+            let newBudget: Budget = try await supabase.from("budgets").insert(budget).select().single().execute().value
+            
+            budgets.append(newBudget)
             
             dismiss()
         } catch {
@@ -63,6 +67,6 @@ struct AddBudgetScreen: View {
 
 #Preview {
     NavigationStack {
-        AddBudgetScreen()
+        AddBudgetScreen(budgets: .constant([]))
     }
 }
