@@ -27,6 +27,13 @@ struct BudgetListScreen: View {
                 ForEach(budgets) { budget in
                     BudgetCellView(budget: budget)
                 }
+                .onDelete(perform: { IndexSet in
+                    guard let index = IndexSet.last else { return }
+                    let budget = budgets[index]
+                    Task {
+                        await deleteBudget(budget)  
+                    }
+                })
             } // MARK: End of list
             .task {
                 await fetchBudgets()
@@ -50,13 +57,28 @@ struct BudgetListScreen: View {
         } //: End of toolbar
     }
     
+    // Functions
     private func fetchBudgets() async {
         do {
             budgets = try await supabaseClient.from("budgets").select().execute().value
         } catch {
             print("Error getting budget : \(error.localizedDescription)")
         }
+    }
+    
+    private func deleteBudget(_ budget: Budget) async {
+        print("Deleting...")
+        guard let id = budget.id else {
+            print("Problem with id in deleteBudget")
+            return
+        }
         
+        do {
+            try await supabaseClient.from("budgets").delete().eq("id", value: id).execute()
+            budgets = budgets.filter { $0.id! != id }
+        } catch {
+            print("Error deleting budget : \(error.localizedDescription)")
+        }
     }
 }
 
