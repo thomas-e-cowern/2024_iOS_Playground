@@ -23,29 +23,31 @@ struct BudgetListScreen: View {
     
     var body: some View {
         VStack {
-            List(budgets) { budget in
-                BudgetCellView(budget: budget)
-            }
+            List {
+                ForEach(budgets) { budget in
+                    BudgetCellView(budget: budget)
+                }
+            } // MARK: End of list
             .task {
                 await fetchBudgets()
-            }
-            .navigationTitle("Budgets")
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: {
-                        // Add budget
-                        isPresented = true
-                    }, label: {
-                        Text("Add Budget")
-                    })
-                }
             }
             .sheet(isPresented: $isPresented, content: {
                 NavigationStack {
                     AddBudgetScreen(budgets: $budgets)
                 }
-            })
-        }
+            })  //: End of Sheet
+        } //: End of VStack
+        .navigationTitle("Budgets")
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button(action: {
+                    // Add budget
+                    isPresented = true
+                }, label: {
+                    Text("Add Budget")
+                })
+            }
+        } //: End of toolbar
     }
     
     private func fetchBudgets() async {
