@@ -8,9 +8,10 @@
 import XCTest
 @testable import UnitTestingBootcamp
 
-// Naming structure: test_UnitOfWork_StateUnderTest_ExpectedBehavior
+// Name Structure: test_UnitOfWork_StateUnderTest_ExpectedBehavior
+// Name Structure: test_[struct or class]_[variable or function]_[expected result]
 
-// Testing structre: Given, When, Then
+// Testing Structure: Given, When, Then
 
 final class UnitTestingBootcampViewModel_Tests: XCTestCase {
 
@@ -21,8 +22,8 @@ final class UnitTestingBootcampViewModel_Tests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func text_UnitTestingBootcampViewModel_isPremium_shouldBeTrue() {
+    
+    func test_UnitTestingBootcampViewModel_isPremium_shouldBeTrue() {
         // Given
         let userIsPremium: Bool = true
         
@@ -32,5 +33,41 @@ final class UnitTestingBootcampViewModel_Tests: XCTestCase {
         // Then
         XCTAssertTrue(vm.isPremium)
     }
-
+    
+    func test_UnitTestingBootcampViewModel_isPremium_shouldBeFalse() {
+        // Given
+        let userIsPremium: Bool = false
+        
+        // When
+        let vm = UnitTestingBootcampViewModel(isPremium: userIsPremium)
+        
+        // Then
+        XCTAssertFalse(vm.isPremium)
+    }
+    
+    func test_UnitTestingBootcampViewModel_isPremium_shouldBeInjectedValue() {
+        // Given
+        let userIsPremium: Bool = Bool.random()
+        
+        // When
+        let vm = UnitTestingBootcampViewModel(isPremium: userIsPremium)
+        
+        // Then
+        XCTAssertEqual(vm.isPremium, userIsPremium)
+    }
+    
+    func test_UnitTestingBootcampViewModel_isPremium_shouldBeInjectedValueStree() {
+        for _ in 0..<10 {
+            // Given
+            let userIsPremium: Bool = Bool.random()
+            
+            // When
+            let vm = UnitTestingBootcampViewModel(isPremium: userIsPremium)
+            
+            // Then
+            XCTAssertEqual(vm.isPremium, userIsPremium)
+        }
+    }
 }
+
+
