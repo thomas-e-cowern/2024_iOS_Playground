@@ -22,39 +22,41 @@ struct BudgetListScreen: View {
     @State private var isPresented: Bool = false
     
     var body: some View {
-        VStack {
-            List {
-                ForEach(budgets) { budget in
-                    BudgetCellView(budget: budget)
-                }
-                .onDelete(perform: { IndexSet in
-                    guard let index = IndexSet.last else { return }
-                    let budget = budgets[index]
-                    Task {
-                        await deleteBudget(budget)  
+        NavigationStack {
+            VStack {
+                List {
+                    ForEach(budgets) { budget in
+                        BudgetCellView(budget: budget)
                     }
-                })
-            } // MARK: End of list
-            .task {
-                await fetchBudgets()
-            }
-            .sheet(isPresented: $isPresented, content: {
-                NavigationStack {
-                    AddBudgetScreen(budgets: $budgets)
+                    .onDelete(perform: { IndexSet in
+                        guard let index = IndexSet.last else { return }
+                        let budget = budgets[index]
+                        Task {
+                            await deleteBudget(budget)
+                        }
+                    })
+                } // MARK: End of list
+                .navigationTitle("Budgets")
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button(action: {
+                            // Add budget
+                            isPresented = true
+                        }, label: {
+                            Text("Add Budget")
+                        })
+                    }
+                } //: End of toolbar
+                .task {
+                    await fetchBudgets()
                 }
-            })  //: End of Sheet
-        } //: End of VStack
-        .navigationTitle("Budgets")
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                Button(action: {
-                    // Add budget
-                    isPresented = true
-                }, label: {
-                    Text("Add Budget")
-                })
+                .sheet(isPresented: $isPresented, content: {
+                    NavigationStack {
+                        AddBudgetScreen(budgets: $budgets)
+                    }
+                })  //: End of Sheet
             }
-        } //: End of toolbar
+        } //: End of VStack
     }
     
     // Functions
