@@ -8,17 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject private var vm: UnitTestingBootcampViewModel
+    
+    init(isPremium: Bool) {
+        _vm = StateObject(wrappedValue: UnitTestingBootcampViewModel(isPremium: isPremium))
+    }
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text(vm.isPremium.description)
         }
         .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(isPremium: true)
 }

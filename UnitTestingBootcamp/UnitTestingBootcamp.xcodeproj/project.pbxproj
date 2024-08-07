@@ -11,6 +11,7 @@
 		4D08E8FE2C63A5A00088DFC2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D08E8FD2C63A5A00088DFC2 /* ContentView.swift */; };
 		4D08E9002C63A5A20088DFC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D08E8FF2C63A5A20088DFC2 /* Assets.xcassets */; };
 		4D08E9032C63A5A20088DFC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D08E9022C63A5A20088DFC2 /* Preview Assets.xcassets */; };
+		4D08E90A2C63A66A0088DFC2 /* UnitTestingBootcampViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D08E9092C63A66A0088DFC2 /* UnitTestingBootcampViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		4D08E8FD2C63A5A00088DFC2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4D08E8FF2C63A5A20088DFC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D08E9022C63A5A20088DFC2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4D08E9092C63A66A0088DFC2 /* UnitTestingBootcampViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingBootcampViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				4D08E8FB2C63A5A00088DFC2 /* UnitTestingBootcampApp.swift */,
 				4D08E8FD2C63A5A00088DFC2 /* ContentView.swift */,
+				4D08E9092C63A66A0088DFC2 /* UnitTestingBootcampViewModel.swift */,
 				4D08E8FF2C63A5A20088DFC2 /* Assets.xcassets */,
 				4D08E9012C63A5A20088DFC2 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D08E90A2C63A66A0088DFC2 /* UnitTestingBootcampViewModel.swift in Sources */,
 				4D08E8FE2C63A5A00088DFC2 /* ContentView.swift in Sources */,
 				4D08E8FC2C63A5A00088DFC2 /* UnitTestingBootcampApp.swift in Sources */,
 			);
