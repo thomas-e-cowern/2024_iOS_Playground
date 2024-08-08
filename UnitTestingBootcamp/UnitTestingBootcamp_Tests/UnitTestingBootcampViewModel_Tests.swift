@@ -56,7 +56,7 @@ final class UnitTestingBootcampViewModel_Tests: XCTestCase {
         XCTAssertEqual(vm.isPremium, userIsPremium)
     }
     
-    func test_UnitTestingBootcampViewModel_isPremium_shouldBeInjectedValueStree() {
+    func test_UnitTestingBootcampViewModel_isPremium_shouldBeInjectedValueStress() {
         for _ in 0..<10 {
             // Given
             let userIsPremium: Bool = Bool.random()
@@ -67,6 +67,73 @@ final class UnitTestingBootcampViewModel_Tests: XCTestCase {
             // Then
             XCTAssertEqual(vm.isPremium, userIsPremium)
         }
+    }
+    
+    func test_UnitTestingBootcampViewModel_dataArray_shouldBeEmpty() {
+        // Given
+        
+        // When
+        let vm = UnitTestingBootcampViewModel(isPremium: Bool.random())
+        
+        // Then
+        XCTAssertTrue(vm.dataArray.isEmpty)
+        XCTAssertEqual(vm.dataArray.count, 0)
+    }
+    
+    func test_UnitTestingBootcampViewModel_dataArray_shouldAddItems() {
+        // Given
+        let vm = UnitTestingBootcampViewModel(isPremium: Bool.random())
+        
+        // Function to generate a random string
+        func randomString(length: Int) -> String {
+          let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+          return String((0..<length).map{ _ in letters.randomElement()! })
+        }
+        
+        let testString = randomString(length: 5)
+        
+        // When
+//        vm.addItem(item: UUID().uuidString) // Or
+//        vm.addItem(item: testString)
+        
+        // Add multiple items:
+        let loopCount: Int = Int.random(in: 1..<50)
+        for _ in 0..<loopCount {
+            vm.addItem(item: UUID().uuidString)
+        }
+        
+        // Then
+        XCTAssertTrue(!vm.dataArray.isEmpty)
+        XCTAssertFalse(vm.dataArray.isEmpty)
+        XCTAssertEqual(vm.dataArray.count, loopCount)
+        XCTAssertNotEqual(vm.dataArray.count, 0)
+        XCTAssertGreaterThan(vm.dataArray.count, 0)
+    }
+    
+    func test_UnitTestingBootcampViewModel_dataArray_shouldNotAddItems_itemEmpty() {
+        // Given
+        let vm = UnitTestingBootcampViewModel(isPremium: Bool.random())
+        
+        // When
+        vm.addItem(item: "")
+        
+        // Then
+        XCTAssertTrue(vm.dataArray.isEmpty)
+        XCTAssertFalse(!vm.dataArray.isEmpty)
+        XCTAssertEqual(vm.dataArray.count, 0)
+        XCTAssertNotEqual(vm.dataArray.count, 1)
+        XCTAssertLessThan(vm.dataArray.count, 1)
+    }
+    
+    func test_UnitTestingBootcampViewModel_selectedItem_shouldStartAsNil () {
+        // Given
+        
+        // When
+        let vm = UnitTestingBootcampViewModel(isPremium: Bool.random())
+        
+        // Then
+        XCTAssertTrue(vm.selectedItem == nil)
+        XCTAssertNil(vm.selectedItem)
     }
 }
 
