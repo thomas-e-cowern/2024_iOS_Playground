@@ -167,6 +167,29 @@ final class UnitTestingBootcampViewModel_Tests: XCTestCase {
         XCTAssertNotNil(vm.selectedItem)
         XCTAssertEqual(vm.selectedItem, newItem)
     }
+    
+    func test_UnitTestingBootcampViewModel_selectedItem_shouldBeSelected_Stress () {
+        // Given
+        let vm = UnitTestingBootcampViewModel(isPremium: Bool.random())
+        
+        // When
+        let loopCount: Int = Int.random(in: 1..<50)
+        var itemsArray: [String] = []
+        for _ in 0..<loopCount {
+            let newItem = UUID().uuidString
+            vm.addItem(item: newItem)
+            itemsArray.append(newItem)
+        }
+
+        
+        var randomItem = itemsArray.randomElement()
+        guard let randomItem = randomItem else { return }
+        vm.selectItem(item: randomItem)
+        
+        // Then
+        XCTAssertNotNil(vm.selectedItem)
+        XCTAssertEqual(vm.selectedItem, randomItem)
+    }
 }
 
 
