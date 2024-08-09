@@ -26,7 +26,11 @@ struct BudgetListScreen: View {
             VStack {
                 List {
                     ForEach(budgets) { budget in
-                        BudgetCellView(budget: budget)
+                        NavigationLink {
+                            BudgetDetailScreen(budget: budget)
+                        } label:  {
+                            BudgetCellView(budget: budget)
+                        }
                     }
                     .onDelete(perform: { IndexSet in
                         guard let index = IndexSet.last else { return }

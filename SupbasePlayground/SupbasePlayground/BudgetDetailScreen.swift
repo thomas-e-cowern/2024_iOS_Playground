@@ -6,16 +6,56 @@
 //
 
 import SwiftUI
+import Supabase
 
 struct BudgetDetailScreen: View {
     
+    @Environment(\.dismiss) private var dismiss
+    @Environment(\.supabaseClient) private var supabase
+    
     let budget: Budget
+    
+    @State private var name: String = ""
+    @State private var limit: Float?
     
     var body: some View {
         VStack {
-            Text("more to come...")
+            Form {
+                TextField("Enter name", text: $name)
+                TextField("Enter limit", value: $limit, format: .number)
+                Button(action: {
+                    // update action
+                    Task {
+                        await updateBudget()
+                        dismiss()
+                    }
+                }, label: {
+                    Text("Update")
+                })
+            }
+            .onAppear {
+                name = budget.name
+                limit = budget.limit
+            }
         }
         .navigationTitle(budget.name)
+    }
+    
+    private func updateBudget() async {
+        
+        guard let limit = limit else { return }
+        
+        let updatedBudget = Budget(name: name, limit: limit)
+        
+        do {
+            try await supabase
+                .from("budgets")
+                .update(updatedBudget)
+                .eq("id", value: budget.id)
+            .execute()
+        } catch {
+            print("Error updating updateBudget: \(error.localizedDescription)")
+        }
     }
 }
 
