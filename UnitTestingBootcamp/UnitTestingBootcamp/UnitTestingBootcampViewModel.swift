@@ -31,5 +31,21 @@ class UnitTestingBootcampViewModel: ObservableObject {
         }
     }
     
+    func saveItem(item: String) throws {
+        
+        guard !item.isEmpty else {
+            throw DataError.noData
+        }
+        
+        if let x = dataArray.first(where: { $0 == item }) {
+            print("Save item here... \(x)")
+        } else {
+            throw DataError.itemNotFound
+        }
+    }
     
+    enum DataError: LocalizedError {
+        case noData
+        case itemNotFound
+    }
 }
