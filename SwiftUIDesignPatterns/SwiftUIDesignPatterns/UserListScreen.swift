@@ -8,14 +8,43 @@
 import SwiftUI
 
 struct UserListScreen: View {
+    
+    let httpClient = HTTPClient()
+    @State private var users: [User] = []
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            List(users) { user in
+                VStack(alignment: .leading) {
+                    Text("Name: \(user.name)")
+                    Text("Age: \(user.age)")
+                    Text("Email: \(user.email)")
+                }
+            }
+            .task {
+                await loadUsers()
+            }
         }
         .padding()
+    }
+    
+    private func loadUsers() async {
+        do {
+            users = try await httpClient.fetchUsers()
+        } catch {
+            print("Error getting users: \(error.localizedDescription)")
+        }
+    }
+}
+
+struct HTTPClient {
+    func fetchUsers() async throws  -> [User] {
+        try! await Task.sleep(for: .seconds(3.0))
+        return [
+            User(name: "Bob Smith", age: 47, email: "bsmith@job.com"),
+            User(name: "Bill Jone", age: 57, email: "bjones@job.com"),
+            User(name: "Lisa Doe", age: 35, email: "ldoe@job.com")
+        ]
     }
 }
 
