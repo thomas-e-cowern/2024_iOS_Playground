@@ -9,9 +9,13 @@ import SwiftUI
 
 struct AddUserScreen: View {
     
+    @Environment(\.dismiss) private var dismiss
+    
     @State private var name: String = ""
     @State private var age: Int = 18
     @State private var email: String = ""
+    
+    let addUser: (User) -> Void
     
     var body: some View {
         Form {
@@ -20,11 +24,13 @@ struct AddUserScreen: View {
             TextField("Email", text: $email)
             Button("Save new user") {
                 let user = User(name: name, age: age, email: email)
+                addUser(user)
+                dismiss()
             }
         }
     }
 }
 
 #Preview {
-    AddUserScreen()
+    return AddUserScreen(addUser: { _ in })
 }

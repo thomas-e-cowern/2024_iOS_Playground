@@ -9,6 +9,7 @@ import SwiftUI
 
 struct UserListScreen: View {
     
+    
     let httpClient = HTTPClient()
     @State private var users: [User] = []
     @State private var isPresented: Bool = false
@@ -34,7 +35,7 @@ struct UserListScreen: View {
                     }
                 })
                 .sheet(isPresented: $isPresented, content: {
-                    AddUserScreen()
+                    AddUserScreen(addUser: addUser)
                 })
             }
             .padding()
@@ -47,6 +48,10 @@ struct UserListScreen: View {
         } catch {
             print("Error getting users: \(error.localizedDescription)")
         }
+    }
+    
+    private func addUser(_ user: User) {
+        users.append(user)
     }
 }
 
