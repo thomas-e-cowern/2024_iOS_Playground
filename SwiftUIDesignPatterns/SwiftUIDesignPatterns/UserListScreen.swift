@@ -11,21 +11,34 @@ struct UserListScreen: View {
     
     let httpClient = HTTPClient()
     @State private var users: [User] = []
+    @State private var isPresented: Bool = false
     
     var body: some View {
-        VStack {
-            List(users) { user in
-                VStack(alignment: .leading) {
-                    Text("Name: \(user.name)")
-                    Text("Age: \(user.age)")
-                    Text("Email: \(user.email)")
+        NavigationStack {
+            VStack {
+                List(users) { user in
+                    VStack(alignment: .leading) {
+                        Text("Name: \(user.name)")
+                        Text("Age: \(user.age)")
+                        Text("Email: \(user.email)")
+                    }
                 }
+                .task {
+                    await loadUsers()
+                }
+                .toolbar(content: {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button("Add New User") {
+                            isPresented = true
+                        }
+                    }
+                })
+                .sheet(isPresented: $isPresented, content: {
+                    AddUserScreen()
+                })
             }
-            .task {
-                await loadUsers()
-            }
+            .padding()
         }
-        .padding()
     }
     
     private func loadUsers() async {
