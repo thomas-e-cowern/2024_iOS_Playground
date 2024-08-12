@@ -14,8 +14,11 @@ struct AddUserScreen: View {
     @State private var name: String = ""
     @State private var age: Int = 18
     @State private var email: String = ""
+    // Can also be done using a binding
+    @Binding var users: [User]
     
-    let addUser: (User) -> Void
+    // One way to do it using a callback function
+    // let addUser: (User) -> Void
     
     var body: some View {
         Form {
@@ -24,7 +27,7 @@ struct AddUserScreen: View {
             TextField("Email", text: $email)
             Button("Save new user") {
                 let user = User(name: name, age: age, email: email)
-                addUser(user)
+                users.append(user)
                 dismiss()
             }
         }
@@ -32,5 +35,5 @@ struct AddUserScreen: View {
 }
 
 #Preview {
-    return AddUserScreen(addUser: { _ in })
+    return AddUserScreen(users: .constant([User(name: "Bob", age: 23, email: "bob@job.com")]))
 }

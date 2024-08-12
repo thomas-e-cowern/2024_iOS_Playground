@@ -35,7 +35,7 @@ struct UserListScreen: View {
                     }
                 })
                 .sheet(isPresented: $isPresented, content: {
-                    AddUserScreen(addUser: addUser)
+                    AddUserScreen(users: $users)
                 })
             }
             .padding()
@@ -50,9 +50,10 @@ struct UserListScreen: View {
         }
     }
     
-    private func addUser(_ user: User) {
-        users.append(user)
-    }
+    // When using a function to update
+    // private func addUser(_ user: User) {
+    //    users.append(user)
+    // }
 }
 
 struct HTTPClient {
