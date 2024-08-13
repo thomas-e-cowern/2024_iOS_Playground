@@ -97,7 +97,7 @@ final class UnitTestingBootcampViewModel_Tests: XCTestCase {
           return String((0..<length).map{ _ in letters.randomElement()! })
         }
         
-        let testString = randomString(length: 5)
+        _ = randomString(length: 5)
         
         // When
 //        vm.addItem(item: UUID().uuidString) // Or
@@ -189,7 +189,7 @@ final class UnitTestingBootcampViewModel_Tests: XCTestCase {
         }
 
         
-        var randomItem = itemsArray.randomElement()
+        let randomItem = itemsArray.randomElement()
         guard let randomItem = randomItem else { return }
         vm.selectItem(item: randomItem)
         
@@ -277,6 +277,28 @@ final class UnitTestingBootcampViewModel_Tests: XCTestCase {
 
         
         vm.downloadWithEscaping()
+        
+        // Then
+        wait(for: [expectation], timeout: 5)
+        XCTAssertGreaterThan(vm.dataArray.count, 0)
+    }
+    
+    func test_UnitTestingBootcampViewModel_downloadwWithCombine_shouldReturnItems () {
+        // Given
+        let vm = UnitTestingBootcampViewModel(isPremium: Bool.random())
+        
+        // When
+        let expectation = XCTestExpectation(description: "Should return items after a second")
+        
+        vm.$dataArray
+            .dropFirst()
+            .sink { returnedItems in
+            expectation.fulfill()
+        }
+        .store(in: &cancellables)
+
+        
+        vm.downloadWithCombine()
         
         // Then
         wait(for: [expectation], timeout: 5)
