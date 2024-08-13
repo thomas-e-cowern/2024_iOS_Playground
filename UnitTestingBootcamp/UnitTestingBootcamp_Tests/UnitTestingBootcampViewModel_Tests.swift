@@ -14,13 +14,17 @@ import XCTest
 // Testing Structure: Given, When, Then
 
 final class UnitTestingBootcampViewModel_Tests: XCTestCase {
+    
+    var viewModel: UnitTestingBootcampViewModel?
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        viewModel = UnitTestingBootcampViewModel(isPremium: Bool.random())
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        viewModel = nil
     }
     
     func test_UnitTestingBootcampViewModel_isPremium_shouldBeTrue() {
