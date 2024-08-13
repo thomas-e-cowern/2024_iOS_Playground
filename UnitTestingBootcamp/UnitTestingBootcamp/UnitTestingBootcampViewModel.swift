@@ -7,6 +7,39 @@
 
 import Foundation
 import SwiftUI
+import Combine
+
+protocol NewDataServiceProtocol {
+    func downloadItemWithEscaping(completion: @escaping (_ items: [String]) -> ())
+    func downloadItemsWithCombine() -> AnyPublisher<[String], Error>
+}
+
+class NewMockDataService: NewDataServiceProtocol {
+    
+    let items: [String]
+    
+    init(items: [String]?) {
+        self.items = items ?? ["one", "two", "three"]
+    }
+    
+    func downloadItemWithEscaping(completion: @escaping (_ items: [String]) -> ()) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            completion(self.items)
+        }
+    }
+    
+    func downloadItemsWithCombine() -> AnyPublisher<[String], Error> {
+        Just(items)
+            .tryMap({ publishedItems in
+                guard !publishedItems.isEmpty else {
+                    throw URLError(.badServerResponse)
+                }
+                
+                return publishedItems
+            })
+            .eraseToAnyPublisher()
+    }
+}
 
 class UnitTestingBootcampViewModel: ObservableObject {
     
@@ -14,8 +47,11 @@ class UnitTestingBootcampViewModel: ObservableObject {
     @Published var dataArray: [String] = []
     @Published var selectedItem: String? = nil
     
-    init(isPremium: Bool) {
+    let dataService: NewDataServiceProtocol
+    
+    init(isPremium: Bool, dataService: NewDataServiceProtocol = NewMockDataService(items: nil)) {
         self.isPremium = isPremium
+        self.dataService = dataService
     }
     
     func addItem(item: String) {
@@ -41,6 +77,12 @@ class UnitTestingBootcampViewModel: ObservableObject {
             print("Save item here... \(x)")
         } else {
             throw DataError.itemNotFound
+        }
+    }
+    
+    func downloadWithEscaping() {
+        dataService.downloadItemWithEscaping { returnedItems in
+            self.dataArray = returnedItems
         }
     }
     
