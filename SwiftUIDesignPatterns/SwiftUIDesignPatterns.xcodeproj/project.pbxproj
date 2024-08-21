@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D42DE672C74F04600004D3F /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D42DE662C74F04600004D3F /* UserStore.swift */; };
+		4DB61F842C764C82006A20DB /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB61F832C764C82006A20DB /* HTTPClient.swift */; };
 		4DFD1B602C67F4AC00E94F3F /* SwiftUIDesignPatternsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFD1B5F2C67F4AC00E94F3F /* SwiftUIDesignPatternsApp.swift */; };
 		4DFD1B622C67F4AC00E94F3F /* UserListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFD1B612C67F4AC00E94F3F /* UserListScreen.swift */; };
 		4DFD1B642C67F4B000E94F3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DFD1B632C67F4B000E94F3F /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		4D42DE662C74F04600004D3F /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
+		4DB61F832C764C82006A20DB /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		4DFD1B5C2C67F4AC00E94F3F /* SwiftUIDesignPatterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDesignPatterns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DFD1B5F2C67F4AC00E94F3F /* SwiftUIDesignPatternsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDesignPatternsApp.swift; sourceTree = "<group>"; };
 		4DFD1B612C67F4AC00E94F3F /* UserListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListScreen.swift; sourceTree = "<group>"; };
@@ -38,6 +40,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DB61F852C764CB5006A20DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4DFD1B6D2C67F50800E94F3F /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4DB61F862C764CC7006A20DB /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4DFD1B612C67F4AC00E94F3F /* UserListScreen.swift */,
+				4DFD1B6F2C67F82B00E94F3F /* AddUserScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4DB61F872C764CDC006A20DB /* DataHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				4D42DE662C74F04600004D3F /* UserStore.swift */,
+				4DB61F832C764C82006A20DB /* HTTPClient.swift */,
+			);
+			path = DataHelpers;
+			sourceTree = "<group>";
+		};
 		4DFD1B532C67F4AC00E94F3F = {
 			isa = PBXGroup;
 			children = (
@@ -57,13 +85,12 @@
 		4DFD1B5E2C67F4AC00E94F3F /* SwiftUIDesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				4DB61F872C764CDC006A20DB /* DataHelpers */,
+				4DB61F862C764CC7006A20DB /* Screens */,
+				4DB61F852C764CB5006A20DB /* Models */,
 				4DFD1B5F2C67F4AC00E94F3F /* SwiftUIDesignPatternsApp.swift */,
-				4DFD1B612C67F4AC00E94F3F /* UserListScreen.swift */,
-				4DFD1B6D2C67F50800E94F3F /* User.swift */,
-				4DFD1B6F2C67F82B00E94F3F /* AddUserScreen.swift */,
 				4DFD1B632C67F4B000E94F3F /* Assets.xcassets */,
 				4DFD1B652C67F4B000E94F3F /* Preview Content */,
-				4D42DE662C74F04600004D3F /* UserStore.swift */,
 			);
 			path = SwiftUIDesignPatterns;
 			sourceTree = "<group>";
@@ -148,6 +175,7 @@
 			files = (
 				4DFD1B622C67F4AC00E94F3F /* UserListScreen.swift in Sources */,
 				4D42DE672C74F04600004D3F /* UserStore.swift in Sources */,
+				4DB61F842C764C82006A20DB /* HTTPClient.swift in Sources */,
 				4DFD1B602C67F4AC00E94F3F /* SwiftUIDesignPatternsApp.swift in Sources */,
 				4DFD1B702C67F82B00E94F3F /* AddUserScreen.swift in Sources */,
 				4DFD1B6E2C67F50800E94F3F /* User.swift in Sources */,
