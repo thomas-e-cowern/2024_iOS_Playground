@@ -8,8 +8,7 @@
 import Foundation
 import SwiftUI
 
-@Observable
-class UserStore {
+class UserStore: ObservableObject {
     let httpClient: HTTPClient
     
     var users: [User] = []
