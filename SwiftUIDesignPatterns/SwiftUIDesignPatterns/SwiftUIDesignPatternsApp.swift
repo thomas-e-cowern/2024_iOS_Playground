@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct SwiftUIDesignPatternsApp: App {
+    
+    @Environment(UserStore.self) private var userStore
+    
     var body: some Scene {
         WindowGroup {
             UserListScreen()
+                .environmentObject(UserStore(httpClient: HTTPClient()))
         }
     }
 }

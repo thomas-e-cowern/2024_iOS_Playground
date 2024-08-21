@@ -9,15 +9,15 @@ import SwiftUI
 
 struct UserListScreen: View {
     
-    
-    let httpClient = HTTPClient()
-    @State private var users: [User] = []
+    @Environment(UserStore.self) private var userStore
+//    let httpClient = HTTPClient()
+//    @State private var users: [User] = []
     @State private var isPresented: Bool = false
     
     var body: some View {
         NavigationStack {
             VStack {
-                List(users) { user in
+                List(userStore.users) { user in
                     VStack(alignment: .leading) {
                         Text("Name: \(user.name)")
                         Text("Age: \(user.age)")
@@ -25,7 +25,7 @@ struct UserListScreen: View {
                     }
                 }
                 .task {
-                    await loadUsers()
+                    await userStore.loadUsers()
                 }
                 .toolbar(content: {
                     ToolbarItem(placement: .topBarTrailing) {
@@ -35,20 +35,20 @@ struct UserListScreen: View {
                     }
                 })
                 .sheet(isPresented: $isPresented, content: {
-                    AddUserScreen(users: $users)
+                    AddUserScreen()
                 })
             }
             .padding()
         }
     }
     
-    private func loadUsers() async {
-        do {
-            users = try await httpClient.fetchUsers()
-        } catch {
-            print("Error getting users: \(error.localizedDescription)")
-        }
-    }
+//    private func loadUsers() async {
+//        do {
+//            users = try await httpClient.fetchUsers()
+//        } catch {
+//            print("Error getting users: \(error.localizedDescription)")
+//        }
+//    }
     
     // When using a function to update
     // private func addUser(_ user: User) {

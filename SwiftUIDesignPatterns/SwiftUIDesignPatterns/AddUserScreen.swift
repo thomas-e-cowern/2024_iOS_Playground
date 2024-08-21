@@ -10,12 +10,13 @@ import SwiftUI
 struct AddUserScreen: View {
     
     @Environment(\.dismiss) private var dismiss
+    @Environment(UserStore.self) private var userStore
     
     @State private var name: String = ""
     @State private var age: Int = 18
     @State private var email: String = ""
     // Can also be done using a binding
-    @Binding var users: [User]
+//    @Binding var users: [User]
     
     // One way to do it using a callback function
     // let addUser: (User) -> Void
@@ -27,7 +28,7 @@ struct AddUserScreen: View {
             TextField("Email", text: $email)
             Button("Save new user") {
                 let user = User(name: name, age: age, email: email)
-                users.append(user)
+                userStore.users.append(user)
                 dismiss()
             }
         }
@@ -35,5 +36,5 @@ struct AddUserScreen: View {
 }
 
 #Preview {
-    return AddUserScreen(users: .constant([User(name: "Bob", age: 23, email: "bob@job.com")]))
+    return AddUserScreen()
 }

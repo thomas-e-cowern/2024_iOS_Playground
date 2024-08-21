@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 @Observable
 class UserStore {
@@ -21,7 +22,7 @@ class UserStore {
         users.append(user)
     }
     
-    private func loadUsers() async {
+    func loadUsers() async {
         do {
             users = try await httpClient.fetchUsers()
         } catch {
