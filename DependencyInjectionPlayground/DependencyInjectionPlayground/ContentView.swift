@@ -1,13 +1,11 @@
 //
 //  ContentView.swift
-//  MultistepFormPlayground
+//  DependencyInjectionPlayground
 //
 //  Created by Thomas Cowern on 8/21/24.
 //
 
 import SwiftUI
-
-
 
 struct ContentView: View {
     var body: some View {
