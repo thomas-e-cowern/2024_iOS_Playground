@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+@Observable
 class UserStore: ObservableObject {
     let httpClient: HTTPClient
     

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UserListScreen: View {
     
-    @Environment(UserStore) private var userStore
+    @Environment(UserStore.self) private var userStore
 //    let httpClient = HTTPClient()
 //    @State private var users: [User] = []
     @State private var isPresented: Bool = false
@@ -69,4 +69,5 @@ struct HTTPClient {
 
 #Preview {
     UserListScreen()
+        .environment(UserStore(httpClient: HTTPClient()))
 }

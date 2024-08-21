@@ -10,10 +10,12 @@ import SwiftUI
 @main
 struct SwiftUIDesignPatternsApp: App {
     
+    let userStore = UserStore(httpClient: HTTPClient())
+    
     var body: some Scene {
         WindowGroup {
             UserListScreen()
-                .environmentObject(UserStore(httpClient: HTTPClient()))
+                .environmentObject(userStore)
         }
     }
 }
