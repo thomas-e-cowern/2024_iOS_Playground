@@ -9,7 +9,7 @@ import Foundation
 
 struct FEMAApplication {
     var personal: Personal = Personal()
-    var damage: Damage = Damage()
+    var damage: Damage = Damage(type: DamageType.minor)
     var address: Address = Address()
 }
 
@@ -27,7 +27,7 @@ struct Personal {
 }
 
 struct Damage: Hashable {
-    var type: String = ""
+    var type: DamageType
 }
 
 enum DamageType: CaseIterable, Identifiable, CustomStringConvertible {

@@ -28,7 +28,7 @@ struct ContentView: View {
                     case .address:
                         AddressView(address: $femaApplication.address)
                     case .review:
-                        Text("Review")
+                        ReviewView(completedApplication: femaApplication)
                     }
                     
                     HStack {

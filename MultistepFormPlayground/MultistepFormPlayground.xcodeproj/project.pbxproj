@@ -12,6 +12,7 @@
 		4D4CE7972C77820B0042B772 /* PersonalInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CE7962C77820B0042B772 /* PersonalInfoView.swift */; };
 		4D4CE7992C77BC420042B772 /* DamageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CE7982C77BC420042B772 /* DamageView.swift */; };
 		4D4CE79B2C77ECB20042B772 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CE79A2C77ECB20042B772 /* AddressView.swift */; };
+		4D4CE79D2C77EEE20042B772 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CE79C2C77EEE20042B772 /* ReviewView.swift */; };
 		4DB61F5C2C7619EE006A20DB /* MultistepFormPlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB61F5B2C7619EE006A20DB /* MultistepFormPlaygroundApp.swift */; };
 		4DB61F5E2C7619EE006A20DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB61F5D2C7619EE006A20DB /* ContentView.swift */; };
 		4DB61F602C7619F1006A20DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB61F5F2C7619F1006A20DB /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		4D4CE7962C77820B0042B772 /* PersonalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoView.swift; sourceTree = "<group>"; };
 		4D4CE7982C77BC420042B772 /* DamageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamageView.swift; sourceTree = "<group>"; };
 		4D4CE79A2C77ECB20042B772 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		4D4CE79C2C77EEE20042B772 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		4DB61F582C7619EE006A20DB /* MultistepFormPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultistepFormPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB61F5B2C7619EE006A20DB /* MultistepFormPlaygroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultistepFormPlaygroundApp.swift; sourceTree = "<group>"; };
 		4DB61F5D2C7619EE006A20DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				4D4CE7962C77820B0042B772 /* PersonalInfoView.swift */,
 				4D4CE7982C77BC420042B772 /* DamageView.swift */,
 				4D4CE79A2C77ECB20042B772 /* AddressView.swift */,
+				4D4CE79C2C77EEE20042B772 /* ReviewView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D4CE79D2C77EEE20042B772 /* ReviewView.swift in Sources */,
 				4D4CE79B2C77ECB20042B772 /* AddressView.swift in Sources */,
 				4D4CE7972C77820B0042B772 /* PersonalInfoView.swift in Sources */,
 				4D4CE7942C77809A0042B772 /* ApplicationStep.swift in Sources */,

@@ -13,16 +13,17 @@ struct DamageView: View {
     
     var body: some View {
         Form {
-            Picker("Select Damage Level", selection: $damage) {
-                ForEach(DamageType.allCases) { type in
+            Picker("Select Damage Level", selection: $damage.type) {
+                ForEach(DamageType.allCases, id: \.self) { type in
                     Text(type.description)
                 }
             }
             .pickerStyle(.wheel)
+            Text(damage.type.description)
         }
     }
 }
 
 #Preview {
-    DamageView(damage: .constant(Damage()))
+    DamageView(damage: .constant(Damage(type: DamageType.catastrophic)))
 }
