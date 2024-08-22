@@ -34,14 +34,16 @@ struct ContentView: View {
                     HStack {
                         Spacer()
                         Button("Previous") {
-                            //
+                            currentStep = currentStep.previous!
                         }
+                        .disabled(currentStep.previous == nil)
                         
                         Spacer()
                         
                         Button("Next") {
-                            //
+                            currentStep = currentStep.next!
                         }
+                        .disabled(currentStep.next == nil)
                         Spacer()
                     }
                 }
