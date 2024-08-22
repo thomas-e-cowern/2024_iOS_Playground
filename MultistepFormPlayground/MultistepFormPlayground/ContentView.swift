@@ -30,6 +30,20 @@ struct ContentView: View {
                     case .review:
                         Text("Review")
                     }
+                    
+                    HStack {
+                        Spacer()
+                        Button("Previous") {
+                            //
+                        }
+                        
+                        Spacer()
+                        
+                        Button("Next") {
+                            //
+                        }
+                        Spacer()
+                    }
                 }
                 .padding()
             }
