@@ -40,10 +40,16 @@ struct ContentView: View {
                         
                         Spacer()
                         
-                        Button("Next") {
-                            currentStep = currentStep.next!
+                        Button(currentStep == .review ? "Submit" : "Next") {
+                            
+                            if currentStep == .review {
+                                print("Submitted")
+                                print("Personal Info: \(femaApplication.personal.firstName)")
+                                print("Personal Info: \(femaApplication.personal.lasstName)")
+                            } else {
+                                currentStep = currentStep.next!
+                            }
                         }
-                        .disabled(currentStep.next == nil)
                         Spacer()
                     }
                 }
