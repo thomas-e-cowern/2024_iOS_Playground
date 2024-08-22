@@ -8,8 +8,7 @@
 import Foundation
 
 struct FEMAApplication {
-    var firstName: String = ""
-    var lasstName: String = ""
+    var personal: Personal = Personal()
     var damage: String = ""
     var address: Address = Address()
 }
@@ -20,4 +19,9 @@ struct Address {
     var town: String = ""
     var state: String = ""
     var zipCode: String = ""
+}
+
+struct Personal {
+    var firstName: String = ""
+    var lasstName: String = ""
 }

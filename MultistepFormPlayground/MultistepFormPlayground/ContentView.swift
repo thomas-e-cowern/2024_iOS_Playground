@@ -20,7 +20,7 @@ struct ContentView: View {
             // Move to seperate view
             switch currentStep {
             case .personal:
-                Text("Personal")
+                PersonalInfoView(personal: $femaApplication.personal)
             case .damage:
                 Text("Damage")
             case .address:
