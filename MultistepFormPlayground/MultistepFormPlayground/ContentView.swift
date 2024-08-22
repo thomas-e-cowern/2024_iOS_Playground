@@ -15,21 +15,27 @@ struct ContentView: View {
     @State private var femaApplication = FEMAApplication()
     
     var body: some View {
-        VStack {
-            
-            // Move to seperate view
-            switch currentStep {
-            case .personal:
-                PersonalInfoView(personal: $femaApplication.personal)
-            case .damage:
-                Text("Damage")
-            case .address:
-                Text("Address")
-            case .review:
-                Text("Review")
+        NavigationStack {
+            VStack {
+                VStack {
+                    
+                    // Move to seperate view
+                    switch currentStep {
+                    case .personal:
+                        PersonalInfoView(personal: $femaApplication.personal)
+                    case .damage:
+                        Text("Damage")
+                    case .address:
+                        Text("Address")
+                    case .review:
+                        Text("Review")
+                    }
+                }
+                .padding()
             }
+            .navigationTitle(currentStep.title)
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .padding()
     }
 }
 

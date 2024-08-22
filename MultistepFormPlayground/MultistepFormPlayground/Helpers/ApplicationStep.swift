@@ -12,4 +12,13 @@ enum ApplicationStep {
     case damage
     case address
     case review
+    
+    var title: String {
+        switch self {
+            case .personal: return "Personal Information"
+            case .damage: return "Damage Information"
+            case .address: return "Address Information"
+            case .review: return "Review Application"
+        }
+    }
 }
