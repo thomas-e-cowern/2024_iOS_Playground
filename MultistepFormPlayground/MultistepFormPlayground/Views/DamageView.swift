@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct DamageView: View {
+    
+    @Binding var damage: Damage
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            Picker("Select Damage Level", selection: $damage) {
+                ForEach(DamageType.allCases) { type in
+                    Text(type.description)
+                }
+            }
+            .pickerStyle(.wheel)
+        }
     }
 }
 
 #Preview {
-    DamageView()
+    DamageView(damage: .constant(Damage()))
 }

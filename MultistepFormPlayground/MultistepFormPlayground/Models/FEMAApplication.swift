@@ -26,16 +26,19 @@ struct Personal {
     var lasstName: String = ""
 }
 
-struct Damage {
+struct Damage: Hashable {
     var type: String = ""
 }
 
-enum DamageType {
+enum DamageType: CaseIterable, Identifiable, CustomStringConvertible {
+   
     case minor
     case major
     case catastrophic
     
-    var damageText: String {
+    var id: Self { self }
+    
+    var description: String {
         switch self {
         case .minor: return "Minor Damage"
         case .major: return "Major Damage"
