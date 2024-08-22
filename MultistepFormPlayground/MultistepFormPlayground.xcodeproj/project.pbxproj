@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D4CE7912C777F710042B772 /* FEMAApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CE7902C777F710042B772 /* FEMAApplication.swift */; };
 		4DB61F5C2C7619EE006A20DB /* MultistepFormPlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB61F5B2C7619EE006A20DB /* MultistepFormPlaygroundApp.swift */; };
 		4DB61F5E2C7619EE006A20DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB61F5D2C7619EE006A20DB /* ContentView.swift */; };
 		4DB61F602C7619F1006A20DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB61F5F2C7619F1006A20DB /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D4CE7902C777F710042B772 /* FEMAApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FEMAApplication.swift; sourceTree = "<group>"; };
 		4DB61F582C7619EE006A20DB /* MultistepFormPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultistepFormPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB61F5B2C7619EE006A20DB /* MultistepFormPlaygroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultistepFormPlaygroundApp.swift; sourceTree = "<group>"; };
 		4DB61F5D2C7619EE006A20DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +37,7 @@
 		4D4CE78F2C777EFB0042B772 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4D4CE7902C777F710042B772 /* FEMAApplication.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D4CE7912C777F710042B772 /* FEMAApplication.swift in Sources */,
 				4DB61F5E2C7619EE006A20DB /* ContentView.swift in Sources */,
 				4DB61F5C2C7619EE006A20DB /* MultistepFormPlaygroundApp.swift in Sources */,
 			);
