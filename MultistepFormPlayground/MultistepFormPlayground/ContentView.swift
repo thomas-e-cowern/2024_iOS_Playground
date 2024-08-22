@@ -26,7 +26,7 @@ struct ContentView: View {
                     case .damage:
                         DamageView(damage: $femaApplication.damage)
                     case .address:
-                        Text("Address")
+                        AddressView(address: $femaApplication.address)
                     case .review:
                         Text("Review")
                     }
