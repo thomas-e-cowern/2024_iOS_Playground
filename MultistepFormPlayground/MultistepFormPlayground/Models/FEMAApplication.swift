@@ -9,7 +9,7 @@ import Foundation
 
 struct FEMAApplication {
     var personal: Personal = Personal()
-    var damage: String = ""
+    var damage: Damage = Damage()
     var address: Address = Address()
 }
 
@@ -24,4 +24,22 @@ struct Address {
 struct Personal {
     var firstName: String = ""
     var lasstName: String = ""
+}
+
+struct Damage {
+    var type: String = ""
+}
+
+enum DamageType {
+    case minor
+    case major
+    case catastrophic
+    
+    var damageText: String {
+        switch self {
+        case .minor: return "Minor Damage"
+        case .major: return "Major Damage"
+        case .catastrophic: return "Catastrophic Damage"
+        }
+    }
 }
