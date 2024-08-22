@@ -10,12 +10,24 @@ import SwiftUI
 
 
 struct ContentView: View {
+    
+    @State private var currentStep: ApplicationStep = .personal
+    @State private var femaApplication = FEMAApplication()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            
+            // Move to seperate view
+            switch currentStep {
+            case .personal:
+                Text("Personal")
+            case .damage:
+                Text("Damage")
+            case .address:
+                Text("Address")
+            case .review:
+                Text("Review")
+            }
         }
         .padding()
     }
