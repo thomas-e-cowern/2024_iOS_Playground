@@ -11,6 +11,7 @@
 		4D4E41D92C82057A0075D1E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4E41D82C82057A0075D1E7 /* ContentView.swift */; };
 		4D4E41DB2C82057D0075D1E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D4E41DA2C82057D0075D1E7 /* Assets.xcassets */; };
 		4D4E41DE2C82057D0075D1E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D4E41DD2C82057D0075D1E7 /* Preview Assets.xcassets */; };
+		4D4E41E52C8206CF0075D1E7 /*  UITestingBootcampViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4E41E42C8206CF0075D1E7 /*  UITestingBootcampViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		4D4E41D82C82057A0075D1E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4D4E41DA2C82057D0075D1E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D4E41DD2C82057D0075D1E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4D4E41E42C8206CF0075D1E7 /*  UITestingBootcampViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " UITestingBootcampViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				4D4E41D82C82057A0075D1E7 /* ContentView.swift */,
 				4D4E41DA2C82057D0075D1E7 /* Assets.xcassets */,
 				4D4E41DC2C82057D0075D1E7 /* Preview Content */,
+				4D4E41E42C8206CF0075D1E7 /*  UITestingBootcampViewModel.swift */,
 			);
 			path = UITestingBootcamp;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D4E41E52C8206CF0075D1E7 /*  UITestingBootcampViewModel.swift in Sources */,
 				4D4E41D92C82057A0075D1E7 /* ContentView.swift in Sources */,
 				4D4E41D72C82057A0075D1E7 /* UITestingBootcampApp.swift in Sources */,
 			);
