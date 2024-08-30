@@ -59,7 +59,6 @@
 				4D4E41E72C82089B0075D1E7 /* ViewModels */,
 				4D4E41E62C8208930075D1E7 /* Views */,
 				4D4E41D62C82057A0075D1E7 /* UITestingBootcampApp.swift */,
-				4D4E41D82C82057A0075D1E7 /* ContentView.swift */,
 				4D4E41DA2C82057D0075D1E7 /* Assets.xcassets */,
 				4D4E41DC2C82057D0075D1E7 /* Preview Content */,
 			);
@@ -77,6 +76,7 @@
 		4D4E41E62C8208930075D1E7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4D4E41D82C82057A0075D1E7 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
