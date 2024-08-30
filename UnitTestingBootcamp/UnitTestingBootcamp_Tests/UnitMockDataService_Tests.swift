@@ -86,4 +86,40 @@ final class UnitMockDataService_Tests: XCTestCase {
         wait(for: [expectation], timeout: 5)
         XCTAssertEqual(items.count, dataService.items.count)
     }
+    
+    func test_NewMockDataService_downloadItemsWithCombine_doesThrowError() {
+        // Given
+        let dataService = NewMockDataService(items: [])
+        
+        // When
+        var items: [String] = []
+        
+        let expectation = XCTestExpectation(description: "Does throw an error")
+        let expectation2 = XCTestExpectation(description: "Does throw URLError.badServerResponse")
+        
+        dataService.downloadItemsWithCombine()
+            .sink { completion in
+                switch completion {
+                case .finished:
+                    XCTFail()
+                case.failure(let error):
+                    expectation.fulfill()
+                    
+                    let urlError = error as! URLError
+                    XCTAssertEqual(urlError, URLError(.badServerResponse))
+                    
+                    if urlError == URLError(.badServerResponse) {
+                        expectation2.fulfill()
+                    }
+                }
+            } receiveValue: { returnedItems in
+                items = returnedItems
+            }
+            .store(in: &cancellables)
+
+
+        // Then
+        wait(for: [expectation, expectation2], timeout: 5)
+        XCTAssertEqual(items.count, dataService.items.count)
+    }
 }
