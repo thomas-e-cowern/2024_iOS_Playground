@@ -17,10 +17,7 @@ struct ContentView: View {
                 .ignoresSafeArea()
             
             if vm.currentUserIsSignedIn {
-                 Text("Signed In dude!")
-                    .foregroundStyle(Color.white)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .transition(.move(edge: .trailing))
+                 SignedInHomeView()
             } else {
                 signUpLayer
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
