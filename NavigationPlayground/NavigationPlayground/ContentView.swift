@@ -18,12 +18,33 @@ struct ContentView: View {
                 Button("Go to patient list screen") {
                     navigate(.patient(.list))
                 }
+                
+                Button("Go to doctor list screen") {
+                    navigate(.doctor(.list))
+                }
             }
-            .padding()
         }
     }
 }
 
+struct ContentContainerView: View {
+    
+    @State private var routes: [Route] = []
+    
+    var body: some View {
+        NavigationStack(path: $routes) {
+            ContentView()
+                .navigationDestination(for: Route.self) { route in
+                    route.destination
+                }
+        }
+        .environment(\.navigate, NavigateAction(action: { route in
+            routes.append(route)
+        }))
+    }
+    
+}
+
 #Preview {
-    ContentView()
+    ContentContainerView()
 }
