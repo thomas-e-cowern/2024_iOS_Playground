@@ -87,19 +87,33 @@ final class UITestingBootcampView_UITests: XCTestCase {
         app/*@START_MENU_TOKEN@*/.buttons["Sign up button"]/*[[".buttons[\"Sign Up\"]",".buttons[\"Sign up button\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         
         app.buttons["Show welcome message"].tap()
-//        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
 
         let signupAlert = app.alerts["Welcome"].scrollViews.otherElements.buttons["OK"]
         
         // Then
         XCTAssertTrue(signupAlert.exists)
-        
-        
-       
-        
     }
     
     func test_SignedInHomeView_ShowAlertButton_shouldDisplayAndDismissAlert() {
         
+        // Given
+        app/*@START_MENU_TOKEN@*/.textFields["Sign up text field"]/*[[".textFields[\"Add your name...\"]",".textFields[\"Sign up text field\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        // When
+        let aKey = app/*@START_MENU_TOKEN@*/.keys["A"]/*[[".keyboards.keys[\"A\"]",".keys[\"A\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        aKey.tap()
+        
+        let aKey2 = app/*@START_MENU_TOKEN@*/.keys["a"]/*[[".keyboards.keys[\"a\"]",".keys[\"a\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        aKey2.tap()
+        aKey2.tap()
+
+        app/*@START_MENU_TOKEN@*/.buttons["Sign up button"]/*[[".buttons[\"Sign Up\"]",".buttons[\"Sign up button\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.buttons["Show welcome message"].tap()
+        let tapAlert = app.alerts["Welcome"].scrollViews.otherElements.buttons["OK"]
+        tapAlert.tap()
+        
+        // Then
+        XCTAssertFalse(tapAlert.exists)
+
     }
 }
