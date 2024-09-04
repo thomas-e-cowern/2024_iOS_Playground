@@ -7,8 +7,26 @@
 
 import SwiftUI
 
-struct NavigationAction {
+struct NavigateAction {
+    typealias Action = (Route) -> Void
+    let action: Action
     
+    func callAsFunction(_ route: Route) {
+        action(route)
+    }
+}
+
+struct NavigateEnvironmentKey: EnvironmentKey {
+    static var defaultValue: NavigateAction = NavigateAction { _ in
+        
+    }
+}
+
+extension EnvironmentValues {
+    var navigate: (NavigateAction) {
+        get { self[NavigateEnvironmentKey.self] }
+        set { self[NavigateEnvironmentKey.self] = newValue }
+    }
 }
 
 enum PatientRoute: Hashable {
