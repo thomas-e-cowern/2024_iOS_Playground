@@ -69,4 +69,14 @@ enum DoctorRoute: Hashable {
 enum Route: Hashable {
     case patient(PatientRoute)
     case doctor(DoctorRoute)
+    
+    @ViewBuilder
+    var destination: some View {
+        switch self {
+        case .patient(let patientRoute):
+            patientRoute.destination
+        case .doctor(let doctorRoute):
+            doctorRoute.destination
+        }
+    }
 }

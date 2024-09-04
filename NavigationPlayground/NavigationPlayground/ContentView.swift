@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @Environment(\.navigate) var navigate: NavigateAction
+    @State private var route: [Route] = []
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack(path: $route) {
+            VStack {
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
+                Text("Hello, world!")
+                    .navigationDestination(for: Route.self) { route in
+                        route.destination
+                    }
+
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
