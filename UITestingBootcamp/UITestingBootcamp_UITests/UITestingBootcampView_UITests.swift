@@ -69,5 +69,37 @@ final class UITestingBootcampView_UITests: XCTestCase {
 
     }
     
+    func test_SignedInHomeView_ShowAlertButton_shouldDisplayAlert() {
+        
+        // Given
+        let signUpTextFieldTextField = app/*@START_MENU_TOKEN@*/.textFields["Sign up text field"]/*[[".textFields[\"Add your name...\"]",".textFields[\"Sign up text field\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        
+        // When
+        signUpTextFieldTextField.tap()
+
+        app/*@START_MENU_TOKEN@*/.keys["A"]/*[[".keyboards.keys[\"A\"]",".keys[\"A\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        let aKey = app/*@START_MENU_TOKEN@*/.keys["a"]/*[[".keyboards.keys[\"a\"]",".keys[\"a\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        aKey.tap()
+        aKey.tap()
+        aKey.tap()
+        
+        app/*@START_MENU_TOKEN@*/.buttons["Sign up button"]/*[[".buttons[\"Sign Up\"]",".buttons[\"Sign up button\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        app.buttons["Show welcome message"].tap()
+//        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
+
+        let signupAlert = app.alerts["Welcome"].scrollViews.otherElements.buttons["OK"]
+        
+        // Then
+        XCTAssertTrue(signupAlert.exists)
+        
+        
+       
+        
+    }
     
+    func test_SignedInHomeView_ShowAlertButton_shouldDisplayAndDismissAlert() {
+        
+    }
 }

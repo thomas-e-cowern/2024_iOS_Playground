@@ -29,6 +29,7 @@ struct SignedInHomeView: View {
                 .alert("Welcome", isPresented: $showAlert) {
                     // Something happens here
                 }
+                .accessibilityIdentifier("Show welcome message")
                 
                 NavigationLink("Destination") {
                     Text("Destination Arrived")
