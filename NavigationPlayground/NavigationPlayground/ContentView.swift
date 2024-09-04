@@ -15,14 +15,9 @@ struct ContentView: View {
     var body: some View {
         NavigationStack(path: $route) {
             VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                Text("Hello, world!")
-                    .navigationDestination(for: Route.self) { route in
-                        route.destination
-                    }
-
+                Button("Go to patient list screen") {
+                    navigate(.patient(.list))
+                }
             }
             .padding()
         }
