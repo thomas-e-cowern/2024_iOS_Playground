@@ -40,6 +40,7 @@ struct SignedInHomeView: View {
                 .foregroundStyle(Color.white)
                 .background(Color.black)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
+                .accessibilityIdentifier("Destination")
                 
             } //: End of VStack
             .padding()
