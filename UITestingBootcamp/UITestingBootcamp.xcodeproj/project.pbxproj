@@ -16,6 +16,7 @@
 		4DBB68682C824A3E000C2B82 /* SignedInHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBB68672C824A3E000C2B82 /* SignedInHomeView.swift */; };
 		4DBB68702C8255BC000C2B82 /* UITestingBootcamp_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBB686F2C8255BC000C2B82 /* UITestingBootcamp_UITests.swift */; };
 		4DBB68722C8255BC000C2B82 /* UITestingBootcamp_UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBB68712C8255BC000C2B82 /* UITestingBootcamp_UITestsLaunchTests.swift */; };
+		4DBB68792C825750000C2B82 /* UITestingBootcampView_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBB68782C825750000C2B82 /* UITestingBootcampView_UITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		4DBB686D2C8255BC000C2B82 /* UITestingBootcamp_UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITestingBootcamp_UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBB686F2C8255BC000C2B82 /* UITestingBootcamp_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestingBootcamp_UITests.swift; sourceTree = "<group>"; };
 		4DBB68712C8255BC000C2B82 /* UITestingBootcamp_UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestingBootcamp_UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4DBB68782C825750000C2B82 /* UITestingBootcampView_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestingBootcampView_UITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			children = (
 				4DBB686F2C8255BC000C2B82 /* UITestingBootcamp_UITests.swift */,
 				4DBB68712C8255BC000C2B82 /* UITestingBootcamp_UITestsLaunchTests.swift */,
+				4DBB68782C825750000C2B82 /* UITestingBootcampView_UITests.swift */,
 			);
 			path = UITestingBootcamp_UITests;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DBB68722C8255BC000C2B82 /* UITestingBootcamp_UITestsLaunchTests.swift in Sources */,
+				4DBB68792C825750000C2B82 /* UITestingBootcampView_UITests.swift in Sources */,
 				4DBB68702C8255BC000C2B82 /* UITestingBootcamp_UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
