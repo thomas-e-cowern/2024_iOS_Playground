@@ -16,6 +16,7 @@ extension ContentView {
                 .padding()
                 .background(Color.white)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
+                .accessibilityIdentifier("Sign up text field")
             
             Button("Sign Up") {
                 withAnimation(.spring()) {
@@ -28,6 +29,7 @@ extension ContentView {
             .foregroundStyle(Color.white)
             .background(Color.blue)
             .clipShape(RoundedRectangle(cornerRadius: 10))
+            .accessibilityIdentifier("Sign up button")
         }
         .padding()
     }
