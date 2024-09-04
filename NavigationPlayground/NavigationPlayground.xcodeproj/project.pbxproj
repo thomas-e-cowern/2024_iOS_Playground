@@ -11,6 +11,9 @@
 		4D5C2ADB2C890F5600B2C543 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C2ADA2C890F5600B2C543 /* ContentView.swift */; };
 		4D5C2ADD2C890F5700B2C543 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C2ADC2C890F5700B2C543 /* Assets.xcassets */; };
 		4D5C2AE02C890F5700B2C543 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C2ADF2C890F5700B2C543 /* Preview Assets.xcassets */; };
+		4D5C2AE72C890FD500B2C543 /* NavigationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C2AE62C890FD500B2C543 /* NavigationAction.swift */; };
+		4D5C2AE92C89107800B2C543 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C2AE82C89107800B2C543 /* Patient.swift */; };
+		4D5C2AEB2C8910C500B2C543 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C2AEA2C8910C500B2C543 /* Doctor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		4D5C2ADA2C890F5600B2C543 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4D5C2ADC2C890F5700B2C543 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D5C2ADF2C890F5700B2C543 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4D5C2AE62C890FD500B2C543 /* NavigationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAction.swift; sourceTree = "<group>"; };
+		4D5C2AE82C89107800B2C543 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		4D5C2AEA2C8910C500B2C543 /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,9 @@
 			children = (
 				4D5C2AD82C890F5600B2C543 /* NavigationPlaygroundApp.swift */,
 				4D5C2ADA2C890F5600B2C543 /* ContentView.swift */,
+				4D5C2AE62C890FD500B2C543 /* NavigationAction.swift */,
+				4D5C2AEA2C8910C500B2C543 /* Doctor.swift */,
+				4D5C2AE82C89107800B2C543 /* Patient.swift */,
 				4D5C2ADC2C890F5700B2C543 /* Assets.xcassets */,
 				4D5C2ADE2C890F5700B2C543 /* Preview Content */,
 			);
@@ -137,6 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D5C2AE72C890FD500B2C543 /* NavigationAction.swift in Sources */,
+				4D5C2AEB2C8910C500B2C543 /* Doctor.swift in Sources */,
+				4D5C2AE92C89107800B2C543 /* Patient.swift in Sources */,
 				4D5C2ADB2C890F5600B2C543 /* ContentView.swift in Sources */,
 				4D5C2AD92C890F5600B2C543 /* NavigationPlaygroundApp.swift in Sources */,
 			);
