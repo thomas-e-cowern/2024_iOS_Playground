@@ -67,18 +67,12 @@
 		4D125ADF2C89FB1E0012F8ED /* NavigationStackPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				4D125AFE2C8A29ED0012F8ED /* Views */,
+				4D125AFF2C8A2A030012F8ED /* Models */,
 				4D125AE02C89FB1E0012F8ED /* NavigationStackPlaygroundApp.swift */,
 				4D125AE22C89FB1E0012F8ED /* ContentView.swift */,
-				4D125AEE2C89FB7C0012F8ED /* NavigationItem.swift */,
-				4D125AF02C89FC1C0012F8ED /* CompassView.swift */,
-				4D125AF22C89FC3F0012F8ED /* CardReflectionView.swift */,
 				4D125AE42C89FB1F0012F8ED /* Assets.xcassets */,
 				4D125AE62C89FB1F0012F8ED /* Preview Content */,
-				4D125AF42C89FC5E0012F8ED /* ChartView.swift */,
-				4D125AF62C89FC6C0012F8ED /* RadialLayoutView.swift */,
-				4D125AF82C89FC7C0012F8ED /* HalfSheetView.swift */,
-				4D125AFA2C89FC890012F8ED /* GooeyView.swift */,
-				4D125AFC2C89FC960012F8ED /* ActionButtonView.swift */,
 			);
 			path = NavigationStackPlayground;
 			sourceTree = "<group>";
@@ -89,6 +83,28 @@
 				4D125AE72C89FB1F0012F8ED /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4D125AFE2C8A29ED0012F8ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4D125AF02C89FC1C0012F8ED /* CompassView.swift */,
+				4D125AF22C89FC3F0012F8ED /* CardReflectionView.swift */,
+				4D125AF42C89FC5E0012F8ED /* ChartView.swift */,
+				4D125AF62C89FC6C0012F8ED /* RadialLayoutView.swift */,
+				4D125AF82C89FC7C0012F8ED /* HalfSheetView.swift */,
+				4D125AFA2C89FC890012F8ED /* GooeyView.swift */,
+				4D125AFC2C89FC960012F8ED /* ActionButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4D125AFF2C8A2A030012F8ED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4D125AEE2C89FB7C0012F8ED /* NavigationItem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
