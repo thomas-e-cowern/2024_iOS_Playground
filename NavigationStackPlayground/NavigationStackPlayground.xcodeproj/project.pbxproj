@@ -11,6 +11,14 @@
 		4D125AE32C89FB1E0012F8ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D125AE22C89FB1E0012F8ED /* ContentView.swift */; };
 		4D125AE52C89FB1F0012F8ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D125AE42C89FB1F0012F8ED /* Assets.xcassets */; };
 		4D125AE82C89FB1F0012F8ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D125AE72C89FB1F0012F8ED /* Preview Assets.xcassets */; };
+		4D125AEF2C89FB7C0012F8ED /* NavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D125AEE2C89FB7C0012F8ED /* NavigationItem.swift */; };
+		4D125AF12C89FC1C0012F8ED /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D125AF02C89FC1C0012F8ED /* CompassView.swift */; };
+		4D125AF32C89FC3F0012F8ED /* CardReflectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D125AF22C89FC3F0012F8ED /* CardReflectionView.swift */; };
+		4D125AF52C89FC5E0012F8ED /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D125AF42C89FC5E0012F8ED /* ChartView.swift */; };
+		4D125AF72C89FC6C0012F8ED /* RadialLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D125AF62C89FC6C0012F8ED /* RadialLayoutView.swift */; };
+		4D125AF92C89FC7C0012F8ED /* HalfSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D125AF82C89FC7C0012F8ED /* HalfSheetView.swift */; };
+		4D125AFB2C89FC890012F8ED /* GooeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D125AFA2C89FC890012F8ED /* GooeyView.swift */; };
+		4D125AFD2C89FC960012F8ED /* ActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D125AFC2C89FC960012F8ED /* ActionButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,14 @@
 		4D125AE22C89FB1E0012F8ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4D125AE42C89FB1F0012F8ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D125AE72C89FB1F0012F8ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4D125AEE2C89FB7C0012F8ED /* NavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationItem.swift; sourceTree = "<group>"; };
+		4D125AF02C89FC1C0012F8ED /* CompassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
+		4D125AF22C89FC3F0012F8ED /* CardReflectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardReflectionView.swift; sourceTree = "<group>"; };
+		4D125AF42C89FC5E0012F8ED /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		4D125AF62C89FC6C0012F8ED /* RadialLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialLayoutView.swift; sourceTree = "<group>"; };
+		4D125AF82C89FC7C0012F8ED /* HalfSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfSheetView.swift; sourceTree = "<group>"; };
+		4D125AFA2C89FC890012F8ED /* GooeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooeyView.swift; sourceTree = "<group>"; };
+		4D125AFC2C89FC960012F8ED /* ActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +69,16 @@
 			children = (
 				4D125AE02C89FB1E0012F8ED /* NavigationStackPlaygroundApp.swift */,
 				4D125AE22C89FB1E0012F8ED /* ContentView.swift */,
+				4D125AEE2C89FB7C0012F8ED /* NavigationItem.swift */,
+				4D125AF02C89FC1C0012F8ED /* CompassView.swift */,
+				4D125AF22C89FC3F0012F8ED /* CardReflectionView.swift */,
 				4D125AE42C89FB1F0012F8ED /* Assets.xcassets */,
 				4D125AE62C89FB1F0012F8ED /* Preview Content */,
+				4D125AF42C89FC5E0012F8ED /* ChartView.swift */,
+				4D125AF62C89FC6C0012F8ED /* RadialLayoutView.swift */,
+				4D125AF82C89FC7C0012F8ED /* HalfSheetView.swift */,
+				4D125AFA2C89FC890012F8ED /* GooeyView.swift */,
+				4D125AFC2C89FC960012F8ED /* ActionButtonView.swift */,
 			);
 			path = NavigationStackPlayground;
 			sourceTree = "<group>";
@@ -137,8 +161,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D125AF72C89FC6C0012F8ED /* RadialLayoutView.swift in Sources */,
+				4D125AEF2C89FB7C0012F8ED /* NavigationItem.swift in Sources */,
+				4D125AF12C89FC1C0012F8ED /* CompassView.swift in Sources */,
 				4D125AE32C89FB1E0012F8ED /* ContentView.swift in Sources */,
+				4D125AF32C89FC3F0012F8ED /* CardReflectionView.swift in Sources */,
+				4D125AF92C89FC7C0012F8ED /* HalfSheetView.swift in Sources */,
 				4D125AE12C89FB1E0012F8ED /* NavigationStackPlaygroundApp.swift in Sources */,
+				4D125AF52C89FC5E0012F8ED /* ChartView.swift in Sources */,
+				4D125AFD2C89FC960012F8ED /* ActionButtonView.swift in Sources */,
+				4D125AFB2C89FC890012F8ED /* GooeyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
