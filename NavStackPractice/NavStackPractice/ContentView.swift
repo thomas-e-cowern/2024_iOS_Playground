@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var showDetails: Bool = false
+    
     var body: some View {
-        
-        @State var showDetails: Bool = false
         
         NavigationStack {
             
@@ -46,19 +47,15 @@ struct ContentView: View {
                 Button("Update detail") {
                     showDetails = true
                 }
-                .navigationDestination(isPresented: $showDetails) {
-                    Text("Testing")
+            }
+            .navigationDestination(isPresented: $showDetails) {
+                VStack {
+                    Text("Deails was updated")
+                    Button("close") {
+                        showDetails = false
+                    }
                 }
             }
-            
-//            .navigationDestination(isPresented: $showDetails) {
-//                VStack {
-//                    Text("Deails was updated")
-//                    Button("close") {
-//                        showDetails = false
-//                    }
-//                }
-//            }
         }
     }
 }
