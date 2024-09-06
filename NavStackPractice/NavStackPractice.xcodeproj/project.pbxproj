@@ -11,6 +11,7 @@
 		4D125B292C8B53570012F8ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D125B282C8B53570012F8ED /* ContentView.swift */; };
 		4D125B2B2C8B53590012F8ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D125B2A2C8B53590012F8ED /* Assets.xcassets */; };
 		4D125B2E2C8B53590012F8ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D125B2D2C8B53590012F8ED /* Preview Assets.xcassets */; };
+		4D125B352C8B97770012F8ED /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D125B342C8B97770012F8ED /* PersonModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		4D125B282C8B53570012F8ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4D125B2A2C8B53590012F8ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D125B2D2C8B53590012F8ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4D125B342C8B97770012F8ED /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				4D125B282C8B53570012F8ED /* ContentView.swift */,
 				4D125B2A2C8B53590012F8ED /* Assets.xcassets */,
 				4D125B2C2C8B53590012F8ED /* Preview Content */,
+				4D125B342C8B97770012F8ED /* PersonModel.swift */,
 			);
 			path = NavStackPractice;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D125B352C8B97770012F8ED /* PersonModel.swift in Sources */,
 				4D125B292C8B53570012F8ED /* ContentView.swift in Sources */,
 				4D125B272C8B53570012F8ED /* NavStackPracticeApp.swift in Sources */,
 			);

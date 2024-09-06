@@ -55,7 +55,27 @@ struct ContentView: View {
                         showDetails = false
                     }
                 }
+            } // MARK: End of Navigation
+            
+            Spacer()
+                .frame(height: 20)
+            
+            // Navigation destination of different types
+            VStack {
+                NavigationLink("Go to int screen", value: 1)
+                Spacer().frame(height: 10)
+                NavigationLink("Go to person screen", value: PersonModel(name: "Mark", age: 32))
+                
+            } //: End of VStack
+            .navigationDestination(for: String.self) { value in
+                Text("This is a string screen with value: \(value)")
             }
+            .navigationDestination(for: Int.self) { value in
+                Text("This is a int screen with value: \(value)")
+            }
+            .navigationDestination(for: PersonModel.self) { value in
+                Text("This is a int Person with,\nName: \(value.name), Age: \(value.age)")
+            } // MARK: End of Navigation
         }
     }
 }
