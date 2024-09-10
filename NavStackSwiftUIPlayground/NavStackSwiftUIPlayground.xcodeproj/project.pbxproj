@@ -11,6 +11,7 @@
 		4DB6A7B12C90B04A004733D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6A7B02C90B04A004733D1 /* ContentView.swift */; };
 		4DB6A7B32C90B04C004733D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB6A7B22C90B04C004733D1 /* Assets.xcassets */; };
 		4DB6A7B62C90B04C004733D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB6A7B52C90B04C004733D1 /* Preview Assets.xcassets */; };
+		4DB6A7BE2C90B0C3004733D1 /* HarryPotterCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6A7BD2C90B0C3004733D1 /* HarryPotterCharacter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		4DB6A7B02C90B04A004733D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4DB6A7B22C90B04C004733D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DB6A7B52C90B04C004733D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4DB6A7BD2C90B0C3004733D1 /* HarryPotterCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryPotterCharacter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		4DB6A7AD2C90B04A004733D1 /* NavStackSwiftUIPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				4DB6A7BC2C90B098004733D1 /* Models */,
 				4DB6A7AE2C90B04A004733D1 /* NavStackSwiftUIPlaygroundApp.swift */,
 				4DB6A7B02C90B04A004733D1 /* ContentView.swift */,
 				4DB6A7B22C90B04C004733D1 /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				4DB6A7B52C90B04C004733D1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4DB6A7BC2C90B098004733D1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4DB6A7BD2C90B0C3004733D1 /* HarryPotterCharacter.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB6A7BE2C90B0C3004733D1 /* HarryPotterCharacter.swift in Sources */,
 				4DB6A7B12C90B04A004733D1 /* ContentView.swift in Sources */,
 				4DB6A7AF2C90B04A004733D1 /* NavStackSwiftUIPlaygroundApp.swift in Sources */,
 			);
