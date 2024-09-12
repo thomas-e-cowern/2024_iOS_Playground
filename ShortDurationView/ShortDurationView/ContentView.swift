@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var isVisible: Bool = false
+    @State private var textIsVisible: Bool = false
+    @State private var circleIsVisible: Bool = false
     
     var body: some View {
         VStack {
@@ -18,15 +19,21 @@ struct ContentView: View {
                 .foregroundStyle(.tint)
             Text("Hello, world!")
             Button("Show") {
-                isVisible = true
+                textIsVisible = true
+                circleIsVisible = true
             }
+            
+            Circle()
+                .fill(.blue)
+                .frame(width: 100)
+                .show(duration: .seconds(4), isVisible: $circleIsVisible)
             
             Text("This is the message you will see for 2 seconds")
                 .padding()
                 .foregroundStyle(Color.white)
                 .background(.green)
                 .clipShape(RoundedRectangle(cornerRadius: 4))
-                .show(duration: .seconds(2), isVisible: $isVisible)
+                .show(duration: .seconds(2), isVisible: $textIsVisible)
         }
     }
 }

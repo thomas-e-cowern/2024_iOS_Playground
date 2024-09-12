@@ -58,9 +58,9 @@
 				4DB52AF92C93174300C461D2 /* ShortDurationViewApp.swift */,
 				4DB52AFB2C93174300C461D2 /* ContentView.swift */,
 				4DB52B072C93183300C461D2 /* MessageView.swift */,
+				4DB52B092C9318F000C461D2 /* ShowView.swift */,
 				4DB52AFD2C93174500C461D2 /* Assets.xcassets */,
 				4DB52AFF2C93174500C461D2 /* Preview Content */,
-				4DB52B092C9318F000C461D2 /* ShowView.swift */,
 			);
 			path = ShortDurationView;
 			sourceTree = "<group>";
