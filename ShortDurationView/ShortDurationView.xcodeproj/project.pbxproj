@@ -11,6 +11,7 @@
 		4DB52AFC2C93174300C461D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB52AFB2C93174300C461D2 /* ContentView.swift */; };
 		4DB52AFE2C93174500C461D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB52AFD2C93174500C461D2 /* Assets.xcassets */; };
 		4DB52B012C93174500C461D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB52B002C93174500C461D2 /* Preview Assets.xcassets */; };
+		4DB52B082C93183300C461D2 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB52B072C93183300C461D2 /* MessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		4DB52AFB2C93174300C461D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4DB52AFD2C93174500C461D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DB52B002C93174500C461D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4DB52B072C93183300C461D2 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				4DB52AF92C93174300C461D2 /* ShortDurationViewApp.swift */,
 				4DB52AFB2C93174300C461D2 /* ContentView.swift */,
+				4DB52B072C93183300C461D2 /* MessageView.swift */,
 				4DB52AFD2C93174500C461D2 /* Assets.xcassets */,
 				4DB52AFF2C93174500C461D2 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB52B082C93183300C461D2 /* MessageView.swift in Sources */,
 				4DB52AFC2C93174300C461D2 /* ContentView.swift in Sources */,
 				4DB52AFA2C93174300C461D2 /* ShortDurationViewApp.swift in Sources */,
 			);
