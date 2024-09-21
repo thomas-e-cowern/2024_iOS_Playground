@@ -11,6 +11,7 @@ struct ContentView: View {
     
     @Environment(ChatStore.self) private var chatStore
     
+    
     var body: some View {
         VStack {
             TabView {
@@ -18,13 +19,13 @@ struct ContentView: View {
                     .tabItem {
                         Label("Posts", systemImage: "list.dash")
                     }
-
+                
                 UserListView()
                     .tabItem {
                         Label("Users", systemImage: "person.crop.circle")
                     }
             }
-
+            
         }
     }
 }
