@@ -14,7 +14,7 @@ struct MessageListView: View {
     var body: some View {
         VStack {
             List(chatStore.messages) { message in
-                PostView(post: message)
+                PostView(post: message, userId: message.userId)
             }
         }
         .task {

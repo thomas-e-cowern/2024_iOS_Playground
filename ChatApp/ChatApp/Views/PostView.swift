@@ -12,11 +12,17 @@ struct PostView: View {
     @Environment(ChatStore.self) private var chatStore
     
     var post: Post
-    var user: User?
+    var userId: Int
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(user?.username ?? "")
+            HStack {
+                Text(chatStore.user?.username ?? "No User Found")
+                    .frame(width: 300, height: 32)
+                
+            }
+            
+            .background(.yellow)
             Text(post.title)
                 .font(.largeTitle)
             Text(post.body)
@@ -24,9 +30,9 @@ struct PostView: View {
         }
         .task {
             do {
-                try await chatStore.loadUsers(id: post.userId)
+                try await chatStore.loadUserInfo(id: userId)
             } catch {
-                print("Problem loading users in PostView")
+                print("Error in PostView: \(error.localizedDescription)")
             }
         }
     }
@@ -34,7 +40,7 @@ struct PostView: View {
 
 #Preview {
     NavigationStack {
-        PostView(post: Post(userId: 1, id: 1, title: "Sample Post", body: "Sample Post Body"), user: User(id: 1, name: "Sue Smith", username: "SSmith", email: "ssmith@yahoo.com"))
+        PostView(post: Post(userId: 1, id: 1, title: "Sample Post", body: "Sample Post Body"), userId: 1)
     }
     .environment(ChatStore(httpClient: HTTPClient()))
 }
