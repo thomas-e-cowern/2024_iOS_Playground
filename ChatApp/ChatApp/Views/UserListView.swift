@@ -14,7 +14,8 @@ struct UserListView: View {
     var body: some View {
         VStack {
             List(chatStore.users) { user in
-                Text(user.name)
+                UserDetailView(user: user)
+                    .border(.black)
             }
         }
         .task {
@@ -24,6 +25,7 @@ struct UserListView: View {
                 print("Error fetching messages: \(error.localizedDescription)")
             }
         }
+        .padding(.vertical)
     }
 }
 
