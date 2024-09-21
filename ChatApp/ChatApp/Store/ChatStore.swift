@@ -13,6 +13,7 @@ class ChatStore {
     
     let httpClient: HTTPClient
     private(set) var messages: [Post] = []
+    private(set) var user: User?
     
     init(httpClient: HTTPClient) {
         self.httpClient = httpClient
@@ -22,5 +23,10 @@ class ChatStore {
         print("inside load message")
         let resource = Resource(url: Constants.Urls.posts, modelType: [Post].self)
         messages = try await httpClient.load(resource)
+    }
+    
+    func loadUsers(id: Int) async throws {
+        let resource = Resource(url: Constants.Urls.getUserInfo(id: id), modelType: User.self)
+        user = try await httpClient.load(resource)
     }
 }
