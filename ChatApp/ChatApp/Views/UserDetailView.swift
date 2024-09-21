@@ -38,7 +38,6 @@ struct UserDetailView: View {
                 Text("\(user.email)")
             }
         }
-        .padding()
     }
 }
 

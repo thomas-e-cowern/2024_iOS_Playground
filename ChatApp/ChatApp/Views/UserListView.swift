@@ -15,7 +15,11 @@ struct UserListView: View {
         VStack {
             List(chatStore.users) { user in
                 UserDetailView(user: user)
-                    .border(.black)
+                    .padding()
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 16)
+                            .stroke(.blue, lineWidth: 4)
+                    )
             }
         }
         .task {
@@ -25,7 +29,6 @@ struct UserListView: View {
                 print("Error fetching messages: \(error.localizedDescription)")
             }
         }
-        .padding(.vertical)
     }
 }
 
