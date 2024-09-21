@@ -12,6 +12,6 @@ struct Constants {
     
     struct Urls {
         
-        static let posts = URL(string: "\(baseUrlPath)/posts")
+        static let posts = URL(string: "\(baseUrlPath)/posts")!
     }
 }

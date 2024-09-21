@@ -18,9 +18,9 @@ class ChatStore {
         self.httpClient = httpClient
     }
     
-    func loadMessages() {
-        httpClient.load(messages: .init())
-            .receive(on: DispatchQueue.main)
-            .sink(receiveValue: { self.messages = $0 })
+    func loadMessages() async throws {
+        print("inside load message")
+        let resource = Resource(url: Constants.Urls.posts, modelType: [Message].self)
+        messages = try await httpClient.load(resource)
     }
 }

@@ -9,13 +9,27 @@ import SwiftUI
 
 struct MessageListView: View {
     
-    
+    @Environment(ChatStore.self) private var chatStore
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            List(chatStore.messages) { message in
+                Text(message.title)
+            }
+        }
+        .task {
+            do {
+                try await chatStore.loadMessages()
+            } catch {
+                print("Error fetching messages: \(error.localizedDescription)")
+            }
+        }
     }
 }
 
 #Preview {
-    MessageListView()
+    NavigationStack {
+        MessageListView()
+    }
+    .environment(ChatStore(httpClient: HTTPClient()))
 }
