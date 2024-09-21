@@ -11,7 +11,7 @@ import SwiftUI
 struct ChatAppApp: App {
     var body: some Scene {
         WindowGroup {
-            MessageListView()
+            ContentView()
         }
         .environment(ChatStore(httpClient: HTTPClient()))
     }

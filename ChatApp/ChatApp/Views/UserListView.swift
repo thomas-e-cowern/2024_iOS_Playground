@@ -1,36 +1,35 @@
 //
-//  MessageListView.swift
+//  UserListView.swift
 //  ChatApp
 //
-//  Created by Thomas Cowern on 9/19/24.
+//  Created by Thomas Cowern on 9/21/24.
 //
 
 import SwiftUI
 
-struct MessageListView: View {
+struct UserListView: View {
     
     @Environment(ChatStore.self) private var chatStore
     
     var body: some View {
         VStack {
-            List(chatStore.messages) { message in
-                PostView(post: message, userId: message.userId)
+            List(chatStore.users) { user in
+                Text(user.name)
             }
         }
         .task {
             do {
-                try await chatStore.loadMessages()
+                try await chatStore.loadUsers()
             } catch {
                 print("Error fetching messages: \(error.localizedDescription)")
             }
         }
-        .padding(.vertical)
     }
 }
 
 #Preview {
     NavigationStack {
-        MessageListView()
+        UserListView()
     }
     .environment(ChatStore(httpClient: HTTPClient()))
 }

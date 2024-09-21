@@ -8,17 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @Environment(ChatStore.self) private var chatStore
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            TabView {
+                MessageListView()
+                    .tabItem {
+                        Label("Posts", systemImage: "list.dash")
+                    }
+
+                UserListView()
+                    .tabItem {
+                        Label("Users", systemImage: "person.crop.circle")
+                    }
+            }
+
         }
-        .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    NavigationStack {
+        ContentView()
+    }
+    .environment(ChatStore(httpClient: HTTPClient()))
 }
