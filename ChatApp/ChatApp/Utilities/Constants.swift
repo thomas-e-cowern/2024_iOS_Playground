@@ -13,5 +13,11 @@ struct Constants {
     struct Urls {
         
         static let posts = URL(string: "\(baseUrlPath)/posts")!
+        
+        static let user = URL(string: "\(baseUrlPath)/users/id")
+        
+        static func getUserInfo(id: Int) -> URL {
+            URL(string: "\(baseUrlPath)/users/\(id)")!
+        }
     }
 }
