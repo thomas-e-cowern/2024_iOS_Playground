@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Message: Codable, Identifiable {
+struct Post: Codable, Identifiable {
     var userId: Int
     var id: Int
     var title: String

@@ -12,7 +12,7 @@ import Observation
 class ChatStore {
     
     let httpClient: HTTPClient
-    private(set) var messages: [Message] = []
+    private(set) var messages: [Post] = []
     
     init(httpClient: HTTPClient) {
         self.httpClient = httpClient
@@ -20,7 +20,7 @@ class ChatStore {
     
     func loadMessages() async throws {
         print("inside load message")
-        let resource = Resource(url: Constants.Urls.posts, modelType: [Message].self)
+        let resource = Resource(url: Constants.Urls.posts, modelType: [Post].self)
         messages = try await httpClient.load(resource)
     }
 }
