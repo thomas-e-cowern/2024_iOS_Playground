@@ -21,17 +21,13 @@ class ChatStore {
     }
     
     func loadMessages() async throws {
-        print("inside load message")
         let resource = Resource(url: Constants.Urls.posts, modelType: [Post].self)
         messages = try await httpClient.load(resource)
     }
     
     func loadUsers() async throws {
-        print("Inside load users")
         let resource = Resource(url: Constants.Urls.users, modelType: [User].self)
-        print(resource)
         users = try await httpClient.load(resource)
-        print(users)
     }
     
     func loadUserInfo(id: Int) async throws {
