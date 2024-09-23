@@ -12,19 +12,21 @@ struct MessageListView: View {
     @Environment(ChatStore.self) private var chatStore
     
     var body: some View {
-        VStack {
-            List(chatStore.messages) { message in
-                PostView(post: message, userId: message.userId)
+        NavigationStack {
+            VStack {
+                List(chatStore.messages) { message in
+                    PostView(post: message, userId: message.userId)
+                }
             }
-        }
-        .task {
-            do {
-                try await chatStore.loadMessages()
-            } catch {
-                print("Error fetching messages: \(error.localizedDescription)")
+            .task {
+                do {
+                    try await chatStore.loadMessages()
+                } catch {
+                    print("Error fetching messages: \(error.localizedDescription)")
+                }
             }
+            .padding(.vertical)
         }
-        .padding(.vertical)
     }
 }
 

@@ -19,5 +19,9 @@ struct Constants {
         static func getUserInfo(id: Int) -> URL {
             URL(string: "\(baseUrlPath)/users/\(id)")!
         }
+        
+        static func getComments(postId: Int) -> URL {
+            URL(string: "\(baseUrlPath)/comments?postId=\(postId)")!
+        }
     }
 }

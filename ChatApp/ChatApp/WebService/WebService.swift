@@ -80,6 +80,7 @@ struct HTTPClient {
                     throw NetworkError.badRequest
                 }
                 request.url = url
+            print("\(url)")
                 
             case .post(let data), .put(let data):
                 request.httpMethod = resource.method.name

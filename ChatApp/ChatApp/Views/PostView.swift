@@ -16,17 +16,24 @@ struct PostView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
+            Text("\(post.id)")
             HStack {
-                Text(chatStore.user?.username ?? "No User Found")
-                    .frame(width: 300, height: 32)
-                
+                NavigationLink {
+                    CommentView(postId: post.id)
+                } label: {
+                    VStack(alignment: .leading) {
+                        Text(chatStore.user?.username ?? "No User Found")
+                            .frame(width: 300, height: 32)
+                            .background(.yellow)
+                        Text(post.title)
+                            .font(.largeTitle)
+                        Text(post.body)
+                            .font(.headline)
+                        
+                    }
+                }
+
             }
-            
-            .background(.yellow)
-            Text(post.title)
-                .font(.largeTitle)
-            Text(post.body)
-                .font(.headline)
         }
         .task {
             do {

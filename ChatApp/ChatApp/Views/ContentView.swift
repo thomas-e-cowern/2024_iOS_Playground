@@ -25,7 +25,6 @@ struct ContentView: View {
                         Label("Users", systemImage: "person.crop.circle")
                     }
             }
-            
         }
     }
 }
