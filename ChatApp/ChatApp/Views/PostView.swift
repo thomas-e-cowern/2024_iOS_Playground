@@ -16,7 +16,6 @@ struct PostView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("\(post.id)")
             HStack {
                 NavigationLink {
                     CommentView(postId: post.id)

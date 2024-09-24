@@ -17,7 +17,6 @@ struct CommentView: View {
             VStack(alignment: .leading) {
                 ForEach(chatStore.comments) { comment in
                     HStack {
-                        Text("\(comment.postId)")
                         Text("Email -")
                         Text(comment.email)
                     }
