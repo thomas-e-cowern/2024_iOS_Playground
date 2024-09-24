@@ -37,9 +37,7 @@ class ChatStore {
     }
     
     func loadComments(postId: Int) async throws {
-        let resource = Resource(url: Constants.Urls.getComments(postId: postId), modelType: [Comment].self)
-        print(resource)
+        let resource = Resource(url: Constants.Urls.getComments(postId: postId), method: .get([URLQueryItem(name: "postId", value: String(postId))]), modelType: [Comment].self)
         comments = try await httpClient.load(resource)
-        print(comments)
     }
 }

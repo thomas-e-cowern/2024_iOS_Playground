@@ -74,7 +74,9 @@ struct HTTPClient {
         // Set HTTP method and body if needed
         switch resource.method {
             case .get(let queryItems):
-                var components = URLComponents(url: resource.url, resolvingAgainstBaseURL: false)
+            print("Items: \(queryItems)")
+            var components = URLComponents(url: resource.url, resolvingAgainstBaseURL: true)
+            print("Components: \(String(describing: components))")
                 components?.queryItems = queryItems
                 guard let url = components?.url else {
                     throw NetworkError.badRequest

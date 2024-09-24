@@ -21,7 +21,7 @@ struct Constants {
         }
         
         static func getComments(postId: Int) -> URL {
-            URL(string: "\(baseUrlPath)/comments?postId=\(postId)")!
+            URL(string: "\(baseUrlPath)/comments?postId=" + String(postId))!
         }
     }
 }
