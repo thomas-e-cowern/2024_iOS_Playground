@@ -11,7 +11,7 @@ import SwiftUI
 struct HWSCareerAcceleratorApp: App {
     var body: some Scene {
         WindowGroup {
-            EasyOptionals()
+            GoupingSequences()
         }
     }
 }
