@@ -26,6 +26,11 @@ struct GoupingSequences: View {
     
     var favoriteTVShows = ["Red Dwarf", "Blackadder", "Red Dwarf", "Fawlty Towers", "Red Dwarf"]
     
+    let gameHeroes: KeyValuePairs = [
+        "Mario": ["Mario Kart", "Super Mario Bros"],
+        "Link": ["Breath of the Wild", "Tears of the Kingdom"],
+        "Mario": ["Super Mario World", "Super Mario Galaxy"]
+    ]
     
     var body: some View {
         ForEach(movies, id: \.self) { movie in
@@ -40,7 +45,13 @@ struct GoupingSequences: View {
             for show in favoriteTVShows {
                 favoriteCounts[show, default: 0] += 1
             }
-            dump(favoriteCounts)
+            dump(gameHeroes)
+            print(gameHeroes[1].key)
+            print(gameHeroes[1].value)
+            
+            for hero in gameHeroes {
+                print("\(hero.key): \(hero.value.formatted(.list(type: .and)))")
+            }
         }
     }
 }
