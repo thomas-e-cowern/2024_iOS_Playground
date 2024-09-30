@@ -13,17 +13,27 @@ struct ContentView: View {
     
     
     var body: some View {
-        VStack {
-            TabView {
-                MessageListView()
-                    .tabItem {
-                        Label("Posts", systemImage: "list.dash")
+        NavigationStack {
+            VStack {
+                TabView {
+                    MessageListView()
+                        .tabItem {
+                            Label("Posts", systemImage: "list.dash")
+                        }
+                    
+                    UserListView()
+                        .tabItem {
+                            Label("Users", systemImage: "person.crop.circle")
+                        }
+                }
+            }
+            .navigationTitle("Chats")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button("New Chat") {
+                        
                     }
-                
-                UserListView()
-                    .tabItem {
-                        Label("Users", systemImage: "person.crop.circle")
-                    }
+                }
             }
         }
     }

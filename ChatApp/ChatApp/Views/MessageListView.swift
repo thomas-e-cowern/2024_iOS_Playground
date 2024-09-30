@@ -18,14 +18,6 @@ struct MessageListView: View {
                     PostView(post: message, userId: message.userId)
                 }
             }
-            .navigationTitle("Chats")
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button("New Chat") {
-                        
-                    }
-                }
-            }
             .task {
                 do {
                     try await chatStore.loadMessages()
