@@ -11,6 +11,10 @@ struct User {
     var name: String
 }
 
+enum UserError: Error {
+    case notTaylor
+}
+
 struct EasyOptionals: View {
     
     let users = [
@@ -23,7 +27,8 @@ struct EasyOptionals: View {
     
     var body: some View {
         Button("Map usernames") {
-            mapUserNames()
+//            mapUserNames()
+            let username = try? getUsername(for: 24601)
         }
     }
     
@@ -34,6 +39,15 @@ struct EasyOptionals: View {
         
         for case let user? in users {
             print(user.name)
+        }
+    }
+    
+    func getUsername(for id: Int) throws -> String {
+        if id == 1989 {
+            "tswift"
+        } else {
+            print("Not Taylor")
+            throw UserError.notTaylor
         }
     }
 }
