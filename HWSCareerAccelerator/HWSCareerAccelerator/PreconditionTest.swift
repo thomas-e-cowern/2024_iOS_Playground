@@ -7,16 +7,47 @@
 
 import SwiftUI
 
+extension Array {
+    subscript(safe idx: Int) -> Element? {
+        if idx >= 0 && idx < count {
+            return self[idx]
+        } else {
+            return nil
+        }
+    }
+}
+
+extension Array {
+    subscript(idx: Int, default default: Element) -> Element {
+        if idx >= 0 && idx < count {
+            return self[idx]
+        } else {
+            return `default`
+        }
+    }
+}
+
+
 struct PreconditionTest: View {
     
-    @State var name: String = ""
+    @State var setName: String = ""
+    let names = ["Gary", "Jack", "Quinn"]
     
     var body: some View {
-        TextField("Enter your name", text: $name)
+        TextField("Enter your name", text: $setName)
         
         Button("Click to set name") {
-            setName(to: name)
+            setName(to: setName)
+//            if let name = names[safe: 3] {
+//                setName = name
+//            } else {
+//                setName = "Name not found."
+//            }
+            
+            setName = names[3, default: "Anonymous"]
         }
+        
+        Text("\(setName)")
             
     }
     
