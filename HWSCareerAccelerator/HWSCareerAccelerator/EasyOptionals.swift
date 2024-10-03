@@ -28,7 +28,7 @@ struct EasyOptionals: View {
     var body: some View {
         Button("Map usernames") {
 //            mapUserNames()
-            let username = try? getUsername(for: 24601)
+            _ = try? getUsername(for: 24601)
         }
     }
     
