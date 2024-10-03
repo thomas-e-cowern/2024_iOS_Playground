@@ -11,15 +11,24 @@ enum PasswordError: Error {
     case obvious(detailedError: String)
 }
 
+extension String: @retroactive Error {}
+extension String: @retroactive LocalizedError {
+    public var errorDescription: String? {
+        self
+    }
+}
+
 struct RemovingOptionals: View {
     
     let numberStrings = ["1", "2", "Three"]
     let urlStrings = ["https://apple.com", "https://swift.org", "", nil]
     let maybeNumbers = [1, nil, 2, nil, 3]
+//    let sequenceNumbers: [any Sequence] = [1, nil, 2, nil, 3]
     @State var numberInts: [Int] = []
     @State var urls: [URL] = []
     @State var definitelyNumbers: [Int] = []
     @State var encryptResult: String = ""
+    @State var afterCompact: [Int] = []
     
     var body: some View {
         VStack {
@@ -61,12 +70,14 @@ struct RemovingOptionals: View {
         numberInts = numberStrings.compactMap { Int($0) }
         urls = urlStrings.compactMap { URL(string: $0 ?? "") }
         definitelyNumbers = maybeNumbers.compactMap { $0 }
+//        let afterCompact = sequenceNumbers.compacted()
     }
     
     func encrypt(key: String) throws -> String? {
         if key == "12345" {
-            print("I have the same key on my luggage.")
-            throw PasswordError.obvious(detailedError: "I have the same key on my luggage.")
+//            print("I have the same key on my luggage.")
+//            throw PasswordError.obvious(detailedError: "I have the same key on my luggage.")
+            throw "I have the same key on my luggage."
         }
 
         return "Encryption complete"
