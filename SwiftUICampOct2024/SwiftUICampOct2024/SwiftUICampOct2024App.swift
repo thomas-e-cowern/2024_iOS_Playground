@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct SwiftUICampOct2024App: App {
+    
+    @State private var appController = AppController()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(appController)
         }
     }
 }

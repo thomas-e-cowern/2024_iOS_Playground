@@ -11,19 +11,20 @@ struct ContentView: View {
     
     @State private var privateData = "Hello World"
 //    @State private var name = ""
-    @State private var viewModel = ContentViewModel()
+//    @State private var viewModel = ContentViewModel()
+    @Environment(AppController.self) private var appController
     
     var body: some View {
         VStack {
 //            Image(systemName: "globe")
 //                .imageScale(.large)
 //                .foregroundStyle(.tint)
-            Text(viewModel.name)
-            MyTextField(name: $viewModel.name)
+            Text(appController.profile.name)
+//            MyTextField(name: Bindable(appController.profile.name ?? ""))
             Button("Tap me") {
 //                privateData = "Hello SwiftUI camp"
 //                name = "Bobby"
-                viewModel.changeToBobby()
+                appController.changeToBobby()
             }
             
             // Pull in view example
@@ -40,13 +41,14 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environment(AppController())
 }
 
-@Observable
-class ContentViewModel {
-    var name = ""
-    
-    func changeToBobby() {
-        name = "Bobby"
-    }
-}
+//@Observable
+//class ContentViewModel {
+//    var profile = Profile(name: "")
+//    
+//    func changeToBobby() {
+//        profile.name = "Bobby"
+//    }
+//}
