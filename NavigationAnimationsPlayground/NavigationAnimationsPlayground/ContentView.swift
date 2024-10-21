@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @Namespace private var namespace
+    
     var body: some View {
         VStack {
-            NavigationLink("Destination View") {
+            NavigationLink {
                 DestinationView()
+                    .navigationTransition(.zoom(sourceID: "zoom", in: namespace))
+            } label: {
+                SourceView()
+                    .matchedTransitionSource(id: "zoom", in: namespace)
             }
+
         }
         .padding()
     }
