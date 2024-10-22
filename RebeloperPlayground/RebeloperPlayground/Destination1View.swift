@@ -8,7 +8,10 @@ import SwiftUI
 
 struct Destination1View: View {
     var body: some View {
-        Text("Destination 1 View")
-            .font(.largeTitle)
+        List {
+            NavigationLink(value: Root1NavigationLinkValues.destination2(title: "New Title")) {
+                Text("Destination 2")
+            }
+        }
     }
 }

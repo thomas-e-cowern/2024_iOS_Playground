@@ -9,7 +9,10 @@ import SwiftUI
 
 struct Root1View: View {
     var body: some View {
-        Text("Root 1 View")
-            .font(.largeTitle)
+        List {
+            NavigationLink(value: Root1NavigationLinkValues.destination1) {
+                Text("Destination 1")
+            }
+        }
     }
 }

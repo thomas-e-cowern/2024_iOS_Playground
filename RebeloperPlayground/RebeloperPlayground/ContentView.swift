@@ -10,10 +10,12 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            Root1View()
-                .tabItem {
-                    Image(systemName: "1.circle")
-                }
+            NavigationStack {
+                Root1View()
+                    .tabItem {
+                        Image(systemName: "1.circle")
+                    }
+            }
             Root2View()
                 .tabItem {
                     Image(systemName: "2.circle")
