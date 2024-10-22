@@ -17,6 +17,13 @@ struct Root1View: View {
                 Text("Destination 1")
             }
             
+            NavigationModal(.sheet, value: Root1NavigationLinkValues.destination1, data: Root1NavigationLinkValues.self) {
+                print("Dismissed")
+            }  label: {
+                Text("Destination 1 Sheet Navigation")
+            }
+
+            
             Button("Sheet Navigation") {
                 isSheetPresented.toggle()
             }
