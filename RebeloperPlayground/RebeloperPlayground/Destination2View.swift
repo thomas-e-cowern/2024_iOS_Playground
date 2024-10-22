@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct Destination2View: View {
+    
+    var title: String
+    
     var body: some View {
-        Text("Destination 2 View")
+        Text(title)
             .font(.largeTitle)
     }
+}
+
+#Preview {
+    Destination2View(title: "Destination 2")
 }
