@@ -13,6 +13,8 @@ struct ContentView: View {
 //    @State private var name = ""
 //    @State private var viewModel = ContentViewModel()
     @Environment(AppController.self) private var appController
+    // for local storage of small stuff
+    @AppStorage("isLoggedIn") private var isLoggedIn: Bool = false
     
     var body: some View {
         VStack {
