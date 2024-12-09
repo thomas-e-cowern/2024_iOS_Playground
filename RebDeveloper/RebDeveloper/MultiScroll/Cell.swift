@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct Cell: View {
+    
+    let color: Color
+    
+    init(color: Color) {
+        self.color = color
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Color.clear
+            .background {
+                RoundedRectangle(cornerRadius: 15)
+                    .fill(color)
+                    .padding(6)
+            }
+            .overlay {
+                Text(color.description)
+                    .font(.largeTitle)
+            }
     }
 }
 
 #Preview {
-    Cell()
+    Cell(color: .red)
 }
