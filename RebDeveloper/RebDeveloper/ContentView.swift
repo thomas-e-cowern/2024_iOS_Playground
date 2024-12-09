@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var colorsArray: [[Color]] = [
+        [.red, .blue, .green, .yellow],
+        [.orange, .red, .blue, .green, .yellow],
+        [.purple, .orange, .red, .blue, .green, .yellow]
+    ]
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        GeometryReader { geo in
+            ScrollView(.horizontal) {
+                LazyHStack(spacing: 0) {
+                    ForEach(0..<colorsArray.count, id: \.self) { index in
+                        Page(colorsArray[index], geometry: geo)
+                    }
+                }
+            }
+            .scrollTargetBehavior(.paging)
         }
-        .padding()
     }
 }
 

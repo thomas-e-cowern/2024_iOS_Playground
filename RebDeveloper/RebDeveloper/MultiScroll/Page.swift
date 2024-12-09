@@ -27,12 +27,17 @@ struct Page: View {
                     }
                 }
             }
+            .frame(height: geometry.size.height - 100)
             
+            ScrollView(.horizontal) {
+                LazyHStack(spacing: 0) {
+                    ForEach(0..<colors.count, id: \.self) { index in
+                        Cell(colors[index])
+                            .frame(width: 160, height: 100)
+                    }
+                }
+            }
             
         }
     }
-}
-
-#Preview {
-    Page(colors: [.red, .blue, .green, .yellow], geometry: <#GeometryProxy#>)
 }
