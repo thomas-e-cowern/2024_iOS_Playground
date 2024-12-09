@@ -11,7 +11,7 @@ struct Cell: View {
     
     let color: Color
     
-    init(color: Color) {
+    init(_ color: Color) {
         self.color = color
     }
     
@@ -30,5 +30,5 @@ struct Cell: View {
 }
 
 #Preview {
-    Cell(color: .red)
+    Cell(.red)
 }
