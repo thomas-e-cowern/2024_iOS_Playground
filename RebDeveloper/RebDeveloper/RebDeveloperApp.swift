@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct RebDeveloperApp: App {
+    
+    @State private var appService: AppService = AppService()
+    
     var body: some Scene {
         WindowGroup {
             MSContentView()
+                .environment(appService)
         }
     }
 }

@@ -9,33 +9,25 @@ import SwiftUI
 
 struct MVSUContentView: View {
     
-    @State private var viewModel: ViewModel = ViewModel()
+    @Environment(AppService.self) private var appService
     
     var body: some View {
+        
+        @Bindable var appService = appService
+        
         VStack {
-            Text("Hello, \(viewModel.profile.name)")
+            Text("Hello, \(appService.profile.name)")
             Button("Change Name") {
-                viewModel.changeName()
+                appService.changeName()
             }
+            TextField("Name", text: $appService.profile.name)
+                .textFieldStyle(.roundedBorder)
         }
+        .padding()
     }
 }
 
 #Preview {
     MVSUContentView()
-}
-
-
-extension MVSUContentView {
-    
-    @Observable
-    class ViewModel {
-        var profile: Profile = Profile()
-        
-        func changeName() {
-            profile.name = "Thomas Cowern"
-        }
-    }
-    
-    
+        .environment(AppService())
 }
