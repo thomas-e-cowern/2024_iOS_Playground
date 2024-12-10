@@ -11,6 +11,6 @@ class AppService {
     var profile: Profile = Profile()
     
     func changeName() {
-        profile.name = "Thomas Cowern"
+        profile.name = APIUtility.fetchName()
     }
 }
