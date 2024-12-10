@@ -10,7 +10,7 @@ import SwiftUI
 struct Profile {
     var name: String
     
-    init(name: String) {
+    init(_ name: String = "") {
         self.name = name
     }
 }
