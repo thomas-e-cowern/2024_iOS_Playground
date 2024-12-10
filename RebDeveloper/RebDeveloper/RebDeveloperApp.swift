@@ -11,7 +11,7 @@ import SwiftUI
 struct RebDeveloperApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MSContentView()
         }
     }
 }

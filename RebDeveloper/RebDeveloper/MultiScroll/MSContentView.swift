@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MSContentView.swift
 //  RebDeveloper
 //
 //  Created by Thomas Cowern on 12/9/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MSContentView: View {
     
     @State private var colorsArray: [[Color]] = [
         [.red, .blue, .green, .yellow],
@@ -30,5 +30,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    MSContentView()
 }
