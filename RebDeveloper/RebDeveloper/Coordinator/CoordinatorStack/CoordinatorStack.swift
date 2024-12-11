@@ -7,8 +7,19 @@
 
 import SwiftUI
 
-struct CoordinatorStack<CoordinatorPage: Coordinatable>: View {    
+struct CoordinatorStack<CoordinatorPage: Coordinatable>: View {
+    
+    @State private var coordinator = Coordinator<CoordinatorPage>()
+    
+    let root: CoordinatorPage
+    
+    init(root: CoordinatorPage) {
+        self.root = root
+    }
+    
     var body: some View {
-        coordinator?.fullScreenCover() ?? EmptyView()
+        NavigationStack(path: $coordinator.path) {
+            root
+        }
     }
 }
