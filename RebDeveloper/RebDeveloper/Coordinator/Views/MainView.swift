@@ -18,7 +18,7 @@ struct MainView: View {
             }
             .padding(10)
             Button("Login") {
-                mainCoordinator.push(.login(title: "Please log in..."))
+                mainCoordinator.push(.login(title: "Please log in..."), type: .sheet)
             }
             .padding(10)
             

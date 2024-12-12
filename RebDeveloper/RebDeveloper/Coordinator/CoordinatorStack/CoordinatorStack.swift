@@ -13,7 +13,7 @@ struct CoordinatorStack<CoordinatorPage: Coordinatable>: View {
     
     let root: CoordinatorPage
     
-    init(root: CoordinatorPage) {
+    init(_ root: CoordinatorPage) {
         self.root = root
     }
     

@@ -20,7 +20,7 @@ enum CoordinatorPages: Coordinatable {
         case .root:
             MainView()
         case .login(let title):
-            Text("Login: \(title)")
+            CoordinatorStack(LoginCoordinatorPages.root(title: title))
         case .signUp:
             SignUpView()
         }
@@ -36,7 +36,7 @@ enum LoginCoordinatorPages: Coordinatable {
     var body: some View {
         switch self {
         case .root(title: let title):
-            Text("Login: \(title)")
+            LoginView(title: title)
         case .forgotPassword:
             ForgotPasswordView()
         }

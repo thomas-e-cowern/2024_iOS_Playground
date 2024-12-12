@@ -37,7 +37,7 @@ class Coordinator<CoordinatorPage: Coordinatable> {
         }
     }
     
-    func pop(type: PopType = .link(last: 1)) {
+    func pop(_ type: PopType = .link(last: 1)) {
         switch type {
         case .link(let last):
             path.removeLast(last)
