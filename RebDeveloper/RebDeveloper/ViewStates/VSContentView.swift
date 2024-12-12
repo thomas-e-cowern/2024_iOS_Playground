@@ -12,23 +12,26 @@ struct VSContentView: View {
     @State private var viewModel: ViewModel = .init()
     
     var body: some View {
-        Group {
-            switch viewModel.viewState {
-            case .loading:
-                ProgressView()
-                    .redacted(reason: .placeholder)
-                    .task {
-                        await viewModel.load()
+        NavigationStack {
+            Group {
+                switch viewModel.viewState {
+                case .loading:
+                    ProgressView()
+                        .redacted(reason: .placeholder)
+                        .task {
+                            await viewModel.load()
+                        }
+                case let .loaded(profiles):
+                    ProfilesListView(profiles: profiles)
+                case let .empty(message):
+                    ViewStateEmptyView(message: message)
+                case let .error(message):
+                    ViewStateErrorView(message: message) {
+                        viewModel.viewState = .loading
                     }
-            case let .loaded(profiles):
-                ProfilesListView(profiles: profiles)
-            case let .empty(message):
-                ViewStateEmptyView(message: message)
-            case let .error(message):
-                ViewStateErrorView(message: message) {
-                    viewModel.viewState = .loading
                 }
             }
+            .navigationTitle("\(viewModel.viewState == .loading ? "Loading..." : "Profiles")")
         }
     }
 }
