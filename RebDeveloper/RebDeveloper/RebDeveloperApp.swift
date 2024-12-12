@@ -14,7 +14,8 @@ struct RebDeveloperApp: App {
     
     var body: some Scene {
         WindowGroup {
-            CoordinatorStack(CoordinatorPages.root)
+//            CoordinatorStack(CoordinatorPages.root)
+            VSContentView()
         }
     }
 }
