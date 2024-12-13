@@ -9,7 +9,30 @@ import SwiftUI
 
 struct GradientContentView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            Rectangle()
+//                .fill(.blue.gradient)
+                .foregroundStyle(.blue.gradient)
+                .frame(height: 100, alignment: .center)
+            
+            Rectangle()
+                .fill(
+                    LinearGradient(gradient: Gradient(colors: [.white, .blue, .black]), startPoint: .top, endPoint: .bottom)
+                )
+                .frame(height: 100, alignment: .center)
+            
+            Circle()
+                .fill(
+                    AngularGradient(gradient: Gradient(colors: [.red, .green, .blue, .purple, .yellow, .orange]), center: .center)
+                )
+                .frame(height: 300, alignment: .center)
+            
+            Circle()
+                .fill(
+                    AngularGradient(gradient: Gradient(colors: [.red, .green, .blue, .purple, .yellow, .orange]), center: .center, startAngle: .zero, endAngle: .degrees(180))
+                )
+                .frame(height: 300, alignment: .center)
+        }
     }
 }
 
