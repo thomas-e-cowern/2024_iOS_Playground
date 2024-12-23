@@ -16,7 +16,8 @@ struct RebDeveloperApp: App {
         WindowGroup {
 //            CoordinatorStack(CoordinatorPages.root)
 //            VSContentView()
-            GradientContentView()
+//            GradientContentView()
+            TFValidationContentVIew()
         }
     }
 }
